@@ -1,11 +1,7 @@
 <?php
 /**
- * 入口文件
- *
  * 统一入口，进行初始化信息
- *
- *
- *by  www.yywxx.com 运营版 
+ *by www.yywxx.com 运营版 
  */
 
 error_reporting(E_ALL & ~E_NOTICE);
