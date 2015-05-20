@@ -59,7 +59,7 @@
     <?php }?>
     <?php }?>
   </p>
-    <p>Copyright 2015 shopX项目小组 All rights reserved.</p>
+    <p>Copyright 2015 shopx项目小组 All rights reserved.</p>
 <?php if (C('debug') == 1){?>
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
