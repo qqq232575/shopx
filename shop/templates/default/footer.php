@@ -59,8 +59,7 @@
     <?php }?>
     <?php }?>
   </p>
-  <?php echo $output['setting_config']['shopx_version'];?> <?php echo $output['setting_config']['icp_number']; ?><br />
-  <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
+    <p>Copyright 2015 shopx项目小组 All rights reserved.</p>
 <?php if (C('debug') == 1){?>
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
