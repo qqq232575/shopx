@@ -2,7 +2,7 @@
 /**
  * 实物订单行为
  *
- * 好商城 V3 shopx
+ * shopx V3 shopx
  */
 defined('In_OS') or exit('Access Invalid!');
 class orderLogic {

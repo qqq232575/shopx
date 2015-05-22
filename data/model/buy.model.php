@@ -2,7 +2,7 @@
 /**
  * 下单业务模型
  *
- * by shopx 好商城欢迎您使用 
+ * by shopx shopx欢迎您使用 
  */
 defined('In_OS') or exit('Access Invalid!');
 class buyModel {
