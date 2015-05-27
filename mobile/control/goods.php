@@ -7,7 +7,7 @@
  *
  */
 //by shopx
-//use shopx\Tpl;
+//
 
 defined('In_OS') or exit('Access Invalid!');
 class goodsControl extends mobileHomeControl{

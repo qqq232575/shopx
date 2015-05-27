@@ -32,7 +32,7 @@
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
     <legend><?php echo $lang['nc_debug_trace_title'];?></legend>
-    <div> <?php print_r(\shopx\Tpl::showTrace());?> </div>
+    <div> <?php print_r(Tpl::showTrace());?> </div>
   </fieldset>
 </div>
 <?php }?>

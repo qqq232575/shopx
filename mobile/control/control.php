@@ -6,7 +6,7 @@
  * by shopx  运营版
  */
 
-use shopx\Tpl;
+
 
 defined('In_OS') or exit('Access Invalid!');
 

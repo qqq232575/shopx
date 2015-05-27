@@ -8,7 +8,7 @@
  * by shopx  运营版
  */
 defined('In_OS') or exit('Access Invalid!');
-use shopx\Tpl;
+
 class member_chatControl extends mobileMemberControl {
 
 	public function __construct(){
