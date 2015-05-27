@@ -37,7 +37,7 @@ class goodsControl extends BaseGoodsControl {
 		$goods_info['goods_salenum'] = $count;
 		//  添加 end
         $this->getStoreInfo($goods_info['store_id']);
-var_dump($goods_detail['goods_image']);
+
         Tpl::output('spec_list', $goods_detail['spec_list']);
         Tpl::output('spec_image', $goods_detail['spec_image']);
         Tpl::output('goods_image', $goods_detail['goods_image']);

@@ -142,13 +142,9 @@ else {document.cookie='uid='+uid[1];}
 <!--首页底部保障结束-->
 <!--StandardLayout Begin-->
 <div class="nav_Sidebar">
-<a class="nav_Sidebar_1" href="javascript:;" ></a>
-<a class="nav_Sidebar_2" href="javascript:;" ></a>
-<a class="nav_Sidebar_3" href="javascript:;" ></a>
-<a class="nav_Sidebar_4" href="javascript:;" ></a>
-<a class="nav_Sidebar_5" href="javascript:;" ></a>
-<a class="nav_Sidebar_6" href="javascript:;" ></a> 
-<a class="nav_Sidebar_7" href="javascript:;" ></a>
-<a class="nav_Sidebar_8" href="javascript:;" ></a>
+<?php foreach($output['arr_floor'] as $key => $value){ ?>
+<a class="nav_Sidebar_<?php echo $key; ?>" href="javascript:;" ><?php echo $value['floor_level']; ?></a>
+<?php } ?>
+
 </div>
 <!--StandardLayout End-->

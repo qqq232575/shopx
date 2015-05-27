@@ -152,3 +152,13 @@
 .nch-breadcrumb span.arrow { font-family: "宋体"; line-height: 20px; color: #AAA; margin: 0 6px;}
 .nch-breadcrumb a { color: #777; display: block; }
 .nch-breadcrumb a:hover { color: #D93600;}
+
+.change_search_bar{
+	position:fixed;
+	top:0px;
+	color:#fff;
+	z-index:1000;
+	background:rgba(0, 0, 0, 0.8) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+	filter:Alpha(opacity=80); background:#000;/*实现IE背景透明*/}
+	height:50px;
+}

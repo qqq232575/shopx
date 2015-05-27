@@ -46,6 +46,20 @@ class indexControl extends BaseHomeControl{
 		$web_html = $model_web_config->getWebHtml('index');
 		Tpl::output('web_html',$web_html);
 
+		$condition['web_page'] = 'index';
+		$condition['web_show'] = '1';
+		$arr=Model()->table('web')->field('web_name,web_html')->where($condition)->select();
+		foreach($arr as $key => $value){
+		    $arr_floor[$key]['web_name']=$value['web_name'];
+
+		    preg_match_all("|<span>(.*?)<\/span>|", $value['web_html'],$floor_level);
+		    preg_match_all("|<h2 title=\"(.*?)\">.*?<\/h2>|", $value['web_html'],$floor_name);
+
+		    $arr_floor[$key]['floor_level']=$floor_level[1][0];
+		    $arr_floor[$key]['floor_name']=$floor_name[1][0];		    
+		}
+		Tpl::output('arr_floor',$arr_floor);
+
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');
 	}

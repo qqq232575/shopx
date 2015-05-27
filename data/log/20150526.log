@@ -1,0 +1,6 @@
+[2015-05-26 15:48:54] /shopx/shop/ ( act=index&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index add web_show = 1 LIMIT 1000' at line 1
+SELECT web_name,web_html FROM `shopx_web` WHERE web_page = index add web_show = 1 LIMIT 1000  
+[2015-05-26 15:49:33] /shopx/shop/ ( act=index&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index LIMIT 1000' at line 1
+SELECT web_name,web_html FROM `shopx_web` WHERE web_page = index LIMIT 1000  

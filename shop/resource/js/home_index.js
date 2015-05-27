@@ -274,9 +274,25 @@ $(function(){
 	$(".right-side-focus").jfocus();
 	$(".groupbuy").jfocus({time:8000});
 	$("#saleDiscount").jfocus({time:8000});
+
+
 	/*监听滚动条和左侧菜单点击事件 start b y 33 hao.com*/
             var _arr = [];
             window.onscroll = function(){
+            	if(300 < $(document).scrollTop()){
+
+                    $('.header-wrap').addClass("change_search_bar").fadeIn('slow');
+                    $('.public-head-layout ').css({'height':'50px'})
+                    $('.keyword,.head-app,.head-user-menu,.head-search-bar .tab').css({'display':'none'});
+                    $('.public-head-layout .site-logo').css({'margin-right':'150px','height':'50px'});
+                    $('.head-search-bar').css({'padding-top':'13px'});
+                }else{
+                	$('.header-wrap').removeClass("change_search_bar");
+                	$('.public-head-layout').css({'height':'100px'})
+                    $('.keyword,.head-app,.head-user-menu,.head-search-bar .tab').css({'display':'block'});
+                    $('.public-head-layout .site-logo').css({'margin-right':'10px'});
+                    $('.head-search-bar').css({'padding-top':'28px'});
+                }
                 if(800 < $(document).scrollTop()){
                     $('.nav_Sidebar').fadeIn('slow');
                 }else{
@@ -290,7 +306,7 @@ $(function(){
                     }
                 }); 
                 if(_arr.length){
-                    $('.nav_Sidebar a').eq(_arr[_arr.length-1]).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon-hover.png)'}).addClass('current').siblings().css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon.png)'}).removeClass('current');
+                    $('.nav_Sidebar a').eq(_arr[_arr.length-1]).css({'background-color':'#d90000','color':'#fff'}).addClass('current').siblings().css({'background-color':'#fff','color':'#d90000'}).removeClass('current');
                     _arr = [];
                 }
             }
@@ -301,13 +317,13 @@ $(function(){
                     if($(this).hasClass('current')){
                         return;
                     }else{
-                        $(this).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon-hover2.png)'});
+                        $(this).css({'background-color':'#d90000','color':'#fff'});
                     }
                 }).mouseout(function(){
                     if($(this).hasClass('current')){
                         return;
                     }else{
-                        $(this).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon.png)'});
+                        $(this).css({'background-color':'#fff','color':'#d90000'});
                     }
                 });
             });
