@@ -60,8 +60,6 @@ class indexControl extends BaseHomeControl{
 		}
 		Tpl::output('arr_floor',$arr_floor);
 
-		Tpl::output('fixed_search_bar','1');
-
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');
 	}
