@@ -15,6 +15,12 @@ else {document.cookie='uid='+uid[1];}
 </style>
 <div class="clear"></div>
 
+<?php 
+if($output['fixed_search_bar'] == 1){
+    require_once template('plugin/fixed_search_bar');
+}
+?>
+
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
   <div class="right-sidebar">
