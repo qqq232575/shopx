@@ -10,7 +10,7 @@
 $_SERVER['argv'][1] = $_GET['act'];
 @$_SERVER['argv'][2] = $_GET['op'];
 
-if (empty($_SERVER['argv'][1])) exit('Access Invalid!');
+// if (empty($_SERVER['argv'][1])) exit('Access Invalid!');
 
 define('APP_ID','crontab');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
