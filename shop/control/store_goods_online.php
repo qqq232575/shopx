@@ -217,6 +217,7 @@ class store_goods_onlineControl extends BaseSellerControl {
     public function edit_save_goodsOp() {
 
         $common_id = intval ( $_POST ['commonid'] );
+        var_dump($common_id);die;
         if (!chksubmit() || $common_id <= 0) {
             showDialog(L('store_goods_index_goods_edit_fail'), urlShop('store_goods_online', 'index'));
         }

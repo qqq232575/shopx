@@ -18,6 +18,7 @@ class minutesControl extends BaseCronControl {
         $this->_cron_common();
         $this->_web_index_update();
         $this->_cron_mail_send();
+        $this->_cron_1();
     }
 
     /**
