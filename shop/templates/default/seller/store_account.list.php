@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="tabmenu">
   <?php include template('layout/submenu');?>
   <a href="javascript:void(0)" class="ncsc-btn ncsc-btn-green" onclick="go('index.php?act=store_account&op=account_add');" title="添加账号">添加账号</a> </div>

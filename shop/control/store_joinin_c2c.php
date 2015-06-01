@@ -5,9 +5,9 @@
  * 
  *
  *
- *  by shopx
+ *  by yywxx.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class store_joinin_c2cControl extends BaseHomeControl {
 

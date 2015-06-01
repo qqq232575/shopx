@@ -2,9 +2,9 @@
 /**
  * 下单业务模型
  *
- * by shopx shopx欢迎您使用 
+ * by yywxx.com shopx欢迎您使用 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class buyModel {
 
     /**
@@ -188,11 +188,14 @@ class buyModel {
             if (!intval($goods['gc_id'])) continue;
             if (!in_array($goods['gc_id'],(array)$store_gc_id_list[$goods['store_id']])) {
                 if (in_array($goods['store_id'],array(DEFAULT_PLATFORM_STORE_ID))) {
-                    //平台店铺佣金为0
-                    $store_gc_id_commis_rate[$goods['store_id']][$goods['gc_id']] = 0;
+                    //平台店铺佣金为0 shopx
+                    //$store_gc_id_commis_rate[$goods['store_id']][$goods['gc_id']] = 0;
                 } else {
-                    $store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
+                    //$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
                 }
+				//shopx
+				$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
+				
             }
         }
 

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['flea_index_setting']     = '閒置頁面設置';
 $lang['flea_index_seo_setting'] = 'SEO設置';

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 交易管理 語言包
  */

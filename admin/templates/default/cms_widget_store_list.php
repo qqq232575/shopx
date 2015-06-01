@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if(!empty($output['store_list']) && is_array($output['store_list'])){ ?>
 <div class="store-select-box">
     <div class="arrow"></div>

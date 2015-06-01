@@ -2,9 +2,9 @@
 /**
  * 支付行为
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class paymentLogic {
 
     /**
@@ -38,7 +38,16 @@ class paymentLogic {
         $pay_amount = 0;
         if (!empty($order_list)) {
             foreach ($order_list as $order_info) {
-                $pay_amount += ncPriceFormat(floatval($order_info['order_amount']) - floatval($order_info['pd_amount']));
+			//修复 第三方支付时 货到付款及充值卡没算在内BUG 33 hao .com 好 商城V3	
+			$payed_amount = floatval($order_info['rcb_amount'])+floatval($order_info['pd_amount']);
+            if ($order_info['payment_code'] != 'offline') {
+                if ($order_info['order_state'] == ORDER_STATE_NEW) {
+                    $pay_amount_online += ncPriceFormat(floatval($order_info['order_amount'])-$payed_amount);
+                }
+                $pay_amount += floatval($order_info['order_amount']) - $payed_amount;
+            } else {
+                $pay_amount_offline += floatval($order_info['order_amount']);
+            }
             }            
         }
 
@@ -73,7 +82,9 @@ class paymentLogic {
         $order_info['pay_sn'] = $order_sn;
 
         //计算本次需要在线支付的订单总金额
-        $pay_amount = ncPriceFormat(floatval($order_info['order_amount']) - floatval($order_info['pd_amount']));
+        //$pay_amount = ncPriceFormat(floatval($order_info['order_amount']) - floatval($order_info['pd_amount']));
+		//修复 第三方支付时 充值卡没算在内BUG 33 hao .com 好 商城V3
+		$pay_amount = ncPriceFormat(floatval($order_info['order_amount']) - floatval($order_info['pd_amount']) - floatval($order_info['rcb_amount']));
 
         $order_info['api_pay_amount'] = $pay_amount;
     
@@ -174,6 +185,10 @@ class paymentLogic {
         $model_pd = Model('predeposit');
         try {
             $model_pd->beginTransaction();
+			$pdnum=$model_pd->getPdRechargeCount(array('pdr_sn'=>$recharge_info['pdr_sn'],'pdr_payment_state'=>1));
+			if (intval($pdnum)>0) {
+                throw new Exception('订单已经处理');
+            }
             //更改充值状态
             $state = $model_pd->editPdRecharge($update,$condition);
             if (!$state) {

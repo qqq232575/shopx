@@ -1,8 +1,8 @@
 <?php
 /**
- * 分享设置*by www.yywxx.com 运营版*/
+ * 分享设置*by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class sns_sharesettingControl extends SystemControl{
 	private $app_arr = array();
 

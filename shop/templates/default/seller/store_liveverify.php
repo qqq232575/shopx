@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="ncsc-form-default pt10">
   <form id="add_form" action="index.php?act=store_liveorder&op=store_liveverify" method="post"  onsubmit="ajaxpost('add_form','','','onerror')">

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['cut_working_area']	= '工作区域';
 $lang['cut_preview']		= '裁切预览';

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * index
  */
@@ -21,4 +21,4 @@ $lang['login_index_checkcode_pattern']			= '验证码为4个字符';
 $lang['login_index_close_checkcode']			= '关闭';
 $lang['login_index_change_checkcode']			= '看不清,点击更换验证码';
 $lang['login_index_button_login']				= '登录';
-$lang['login_index_shopx']						= '';
+$lang['login_index_shopnc']						= 'shopx';

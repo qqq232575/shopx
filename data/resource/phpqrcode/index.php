@@ -33,7 +33,7 @@ class PhpQRCode{
 	private $matrixPointSize = 3;				// 1 2 3 4 5 6 7 8 9 10
 	
 	
-	private $date = 'shopx';
+	private $date = 'shopnc';
 	
 	
 	private $pngTempDir		= '';
@@ -56,7 +56,7 @@ class PhpQRCode{
 	    if (!file_exists($this->pngTempDir))
 	        mkdir($this->pngTempDir);
 	
-	    if ($this->date != 'shopx') { 
+	    if ($this->date != 'shopnc') { 
 	            
 	        // user data
 	        if ($this->pngTempName != '') {

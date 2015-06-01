@@ -10,7 +10,7 @@
 define('APP_ID','circle');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/shopx.php')) exit('shopx.php isn\'t exists!');
 
 if (!@include(BASE_PATH.'/config/config.ini.php')){
 	@header("Location: install/index.php");die;

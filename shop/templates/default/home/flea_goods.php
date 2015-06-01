@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/slider.js" charset="utf-8"></Script>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/flea_info.css" rel="stylesheet" type="text/css">

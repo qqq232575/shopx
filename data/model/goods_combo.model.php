@@ -2,9 +2,9 @@
 /**
  * 商品推荐组合模型
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class goods_comboModel extends Model {
     public function __construct(){
         parent::__construct('goods_combo');

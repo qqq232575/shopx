@@ -3,7 +3,7 @@
  * 闲置物品类别模型
  *by 3 3hao .com 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class flea_classModel{
 	/**
 	 * 类别列表

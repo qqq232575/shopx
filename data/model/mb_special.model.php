@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class mb_specialModel extends Model{
 
     //专题项目不可用状态
@@ -153,6 +153,9 @@ class mb_specialModel extends Model{
                 $item_data['rectangle2_image'] = getMbSpecialImageUrl($item_data['rectangle2_image']);
             break;
             case 'goods':
+	                 // yywxx.com v3-10
+			  case 'goods1':
+			  case 'goods2':
                 $new_item = array();
                 foreach ((array) $item_data['item'] as $value) {
                     $value['goods_image'] = cthumb($value['goods_image']);
@@ -229,7 +232,8 @@ class mb_specialModel extends Model{
     private function _initMbSpecialItemData($item_data, $item_type) {
         if(!empty($item_data)) {
             $item_data = unserialize($item_data);
-            if($item_type == 'goods') {
+	    // yywxx.com v3-10
+            if($item_type == 'goods'||$item_type == 'goods1'||$item_type == 'goods2') {
                 $item_data = $this->_initMbSpecialItemGoodsData($item_data, $item_type);
             }
         } else {
@@ -311,12 +315,19 @@ class mb_specialModel extends Model{
     public function addMbSpecialItem($param) {
         $param['item_usable'] = self::SPECIAL_ITEM_UNUSABLE;
         $param['item_sort'] = 255;
+		//2015推荐 2016团购 yywxx.com v3-10
+			if($param['item_type']=='goods1'){
+				$param['item_id']=2015;
+			  }else if($param['item_type']=='goods2'){
+				  $param['item_id']=2016;
+			  }
         $result = $this->table('mb_special_item')->insert($param);
         //删除缓存
         if($result) {
             //删除缓存
             $this->_delMbSpecialCache($param['special_id']);
-            $param['item_id'] = $result;
+            
+				$param['item_id'] = $result;
             return $param;
         } else {
             return false;
@@ -405,6 +416,12 @@ class mb_specialModel extends Model{
         $module_list['home3'] = array('name' => 'home3' , 'desc' => '模型版块布局C');
         $module_list['home4'] = array('name' => 'home4' , 'desc' => '模型版块布局D');
         $module_list['goods'] = array('name' => 'goods' , 'desc' => '商品版块');
+	// yywxx.com v3-10
+    if(!$_GET['special_id']) {
+    	$module_list['goods1'] = array('name' => 'goods1' , 'desc' => '限时商品');
+		$module_list['goods2'] = array('name' => 'goods2' , 'desc' => '团购商品');
+	}
+		
         return $module_list;
     }
 

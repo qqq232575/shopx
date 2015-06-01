@@ -3,7 +3,7 @@
  * 支付接口
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 require_once("lib/alipay_submit.class.php");
 class alipay {

@@ -3,9 +3,11 @@
  * 压缩解压缩类
  *
  * 文件的压缩解压缩操作
- * @package    shopx team
+ *
+ *
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class phpzip
     {
         private $ctrl_dir     = array();

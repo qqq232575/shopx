@@ -1,11 +1,11 @@
 <?php
-/**
- * 微信支付通知地址
- *
- * 
- * by shopx  运营版
+/* *
+ * 功能：微信异步通知页面
  */
-$_GET['act']	= 'payment';
-$_GET['op']		= 'notify';
-$_GET['payment_code'] = 'wxpay';
+
+
+$_GET['act'] = 'payment';
+$_GET['op']	= 'notify_weixin';
+$_GET['payment_code']	= 'wxpay';
 require_once(dirname(__FILE__).'/../../../index.php');
+?>

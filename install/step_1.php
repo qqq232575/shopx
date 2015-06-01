@@ -19,7 +19,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php echo $html_header;?>
 <div class="main">
   <div class="step-box" id="step1">

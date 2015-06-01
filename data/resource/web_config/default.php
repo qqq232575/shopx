@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="home-standard-layout wrapper style-<?php echo $output['style_name'];?>">
   <div class="left-sidebar">

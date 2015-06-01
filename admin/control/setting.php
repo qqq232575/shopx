@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class settingControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=setting&op=base','lang'=>'web_set'),
@@ -34,7 +34,7 @@ class settingControl extends SystemControl{
 					showMessage($upload->error,'','','error');
 				}
 			}
-			//二维码微信图片 by shopx
+			//二维码微信图片 by yywxx.com
 			if (!empty($_FILES['site_logowx']['name'])){
 				$upload = new UploadFile();
 				$upload->set('default_dir',ATTACH_COMMON);
@@ -86,7 +86,7 @@ class settingControl extends SystemControl{
 				$update_array['seller_center_logo'] = $_POST['seller_center_logo'];
 			}
 			$update_array['icp_number'] = $_POST['icp_number'];
-			//设置表 400电话 by shopx
+			//设置表 400电话 by yywxx.com
 			$update_array['site_tel400'] = $_POST['site_tel400'];
 			$update_array['site_status'] = $_POST['site_status'];
 			$update_array['closed_reason'] = $_POST['closed_reason'];

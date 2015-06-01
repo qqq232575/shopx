@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <style>
 .size182 {height: 182px;width: 182px;}
 .box_arr .table_btn {width: 222px;}

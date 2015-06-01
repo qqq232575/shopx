@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class dashboardControl extends SystemControl{
 	public function __construct(){
@@ -39,7 +39,7 @@ class dashboardControl extends SystemControl{
 
         // shopx c extension
         try {
-            $r = new ReflectionExtension('shopx');
+            $r = new ReflectionExtension('shopnc');
             $statistics['php_version'] .= ' / ' . $r->getVersion();
         } catch (ReflectionException $ex) {
         }

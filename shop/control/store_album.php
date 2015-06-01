@@ -1,10 +1,10 @@
 <?php
 /**
  * 图片空间操作
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class store_albumControl extends BaseSellerControl {
 	public function indexOp(){
 		$this->album_cateOp();

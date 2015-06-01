@@ -1,10 +1,10 @@
 <?php
 /**
  * 积分管理
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class member_pointsControl extends BaseMemberControl {
 	public function indexOp(){
 		$this->points_logOp();

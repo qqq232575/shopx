@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class store_waybillModel extends Model{
 
     const STORE_WAYBILL_DEFAULT = 1;

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="explain"><i></i><?php echo $output['joinin_message'];?></div>
 <div class="bottom">

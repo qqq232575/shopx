@@ -4,9 +4,9 @@
  *
  * 
  *
- *  by  33 hao.com 
+ *  by  33 hao.com shopx
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class dbControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

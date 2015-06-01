@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class mall_consultModel extends Model{
     public function __construct() {
         parent::__construct('mall_consult');

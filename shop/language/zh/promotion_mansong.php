@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['promotion_unavailable'] = '商品促銷功能尚未開啟';
 $lang['promotion_mansong'] = '滿即送';

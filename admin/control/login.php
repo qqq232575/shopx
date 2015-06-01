@@ -4,9 +4,9 @@
  *
  * 包括 登录 验证 退出 操作
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class LoginControl extends SystemControl {
 
 	/**

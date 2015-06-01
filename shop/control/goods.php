@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class goodsControl extends BaseGoodsControl {
     public function __construct() {
@@ -28,7 +28,7 @@ class goodsControl extends BaseGoodsControl {
         if (empty($goods_info)) {
             showMessage(L('goods_index_no_goods'), '', 'html', 'error');
         }
-		// by shopx
+		// by yywxx.com
 		$rs = $model_goods->getGoodsList(array('goods_commonid'=>$goods_info['goods_commonid']));
 		$count = 0;
 		foreach($rs as $v){

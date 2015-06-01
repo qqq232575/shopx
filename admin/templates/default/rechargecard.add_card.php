@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <style>
 .switch-tab-title {font-size:14px; margin-right:15px; }
 </style>

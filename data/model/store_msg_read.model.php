@@ -2,9 +2,9 @@
 /**
  * 店铺消息阅读模板模型
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class store_msg_readModel extends Model{
     public function __construct() {
         parent::__construct('store_msg_read');

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="clear">&nbsp;</div>
 <div id="tbox">
@@ -26,7 +26,7 @@
   <fieldset id="querybox">
     <legend><?php echo $lang['nc_debug_trace_title'];?></legend>
     <div>
-      <?php print_r(Tpl::showTrace());?>
+      <?php print_r(\Shopnc\Tpl::showTrace());?>
     </div>
   </fieldset>
 </div>

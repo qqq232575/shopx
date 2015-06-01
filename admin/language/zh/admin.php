@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['limit_admin']			= '管理員';
 $lang['limit_gadmin']			= '權限組';

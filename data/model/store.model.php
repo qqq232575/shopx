@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class storeModel extends Model {
 
     /**
@@ -286,7 +286,7 @@ class storeModel extends Model {
         }
         return $hot_collect_list;
     }
-	//by shopx 店铺列表新增项
+	//by yywxx.com 店铺列表新增项
 /**
      * 获取店铺列表页附加信息
      *
@@ -383,7 +383,8 @@ class storeModel extends Model {
     
     	foreach ($store_array as $value) {
     		$goods_count = rcache($value['store_id'],'store_goods_count');
-    		if($goods_count !== FALSE) {
+			
+    		if(!empty($goods_count)&&$goods_count !== FALSE) {
     			//有缓存的直接赋值
     			$value['goods_count'] = $goods_count;
     		} else {
@@ -395,6 +396,7 @@ class storeModel extends Model {
     	}
     
     	if(!empty($no_cache_store)) {
+			
     		//从数据库读取店铺商品数赋值并缓存
     		$no_cache_store = rtrim($no_cache_store,',');
     		$condition = array();

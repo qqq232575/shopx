@@ -1575,6 +1575,8 @@ td.trigger i:hover { color: #27A9E3;}
 .mb-special-layout .module-list .module_home3 { background-position: -440px -320px; height: 102px;}
 .mb-special-layout .module-list .module_home4 { background-position: -440px -430px; height: 115px;}
 .mb-special-layout .module-list .module_goods { background-position: -440px -550px; height: 228px;}
+.mb-special-layout .module-list .module_goods1 { background-position: -440px -550px; height: 228px;}
+.mb-special-layout .module-list .module_goods2 { background-position: -440px -550px; height: 228px;}
 
 .mb-item-edit-content { vertical-align: top;}
 .mb-item-edit-content h3 { font: 700 14px/20px "microsoft yahei"; color: #333;}

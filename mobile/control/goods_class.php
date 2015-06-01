@@ -4,12 +4,12 @@
  *
  *
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
 
+//use Shopnc\Tpl;
 
-
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class goods_classControl extends mobileHomeControl{
 
 	public function __construct() {

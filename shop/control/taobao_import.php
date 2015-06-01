@@ -5,7 +5,7 @@
  * by 3 3 h a o.c o m
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class taobao_importControl extends BaseSellerControl {
 	private function checkStore(){
         if(!checkPlatformStore()){

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 歡迎頁面
  */
@@ -39,9 +39,9 @@ $lang['dashboard_aboutus_designer']		= '設計師';
 $lang['dashboard_aboutus_designer_name']	= '<a href="http://user.qzone.qq.com/624827" target="_blank"  class="qzone">韓冰</a>';
 $lang['dashboard_aboutus_near_us']		= '走近我們';
 $lang['dashboard_aboutus_bbs']			= '官方論壇';
-$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流的使用心得，獲得幫助，擴展等，您也可以在此給我們獻言獻策，讓shopx變得更好更加適合您';
+$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流shopx的使用心得，獲得幫助，擴展等，您也可以在此給我們獻言獻策，讓shopx變得更好更加適合您';
 $lang['dashboard_aboutus_website']		= '官方網站';
-$lang['dashboard_aboutus_website_tip']	= '您可以在此獲知的最新動態，獲得個性化的服務或獲取我們的聯繫方式';
+$lang['dashboard_aboutus_website_tip']	= '您可以在此獲知shopx的最新動態，獲得個性化的服務或獲取我們的聯繫方式';
 $lang['dashboard_aboutus_thanks']		= '貢獻者';
 $lang['dashboard_aboutus_thanks_content']	= '非常感謝我們的貢獻者';
 $lang['dashboard_aboutus_thanks_developer_name'] = '王德斌，周斌';

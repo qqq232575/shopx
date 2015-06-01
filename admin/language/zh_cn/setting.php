@@ -1,8 +1,10 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 设置 语言包
  */
+$lang['flea_isuse']		   = '开启闲置';
+$lang['flea_isuse_notice'] = '开启闲置市场，会员可以通过发布自己的闲置商品';
 
 $lang['update_cycle_only_number'] = '更新周期 必须为数字类型';
 $lang['user_info_del_ok']     = '清除成功！';

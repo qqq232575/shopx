@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php require CMS_BASE_TPL_PATH.'/layout/top.php';?>
 <style type="text/css">
 .search-cms { display: none !important;}

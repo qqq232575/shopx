@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>">
 <?php ob_end_clean();
 ob_start();

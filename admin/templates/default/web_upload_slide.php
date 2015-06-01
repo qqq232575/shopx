@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <script type="text/javascript">
 	parent.slide_adv("<?php echo $output['pic']['pic_id'];?>","<?php echo $output['pic']['pic_img'];?>");
 </script>

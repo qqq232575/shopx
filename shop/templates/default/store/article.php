@@ -1,5 +1,5 @@
 
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
   <div class="wrapper" >
     <div class="ncs-article">
       <div class="ncs-main-container">

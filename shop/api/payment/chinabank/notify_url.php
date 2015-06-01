@@ -3,7 +3,7 @@
  * 网银在线自动对账文件
  *
  * 
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
 error_reporting(7);
 $_GET['act']	= 'payment';

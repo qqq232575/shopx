@@ -11,9 +11,9 @@
  * backup_tables 需要备份的表名列表，为数组格式
  * md5 加密后缀
  * 
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class dbModel{
 	/**

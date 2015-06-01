@@ -2,9 +2,9 @@
 /**
  * 生成Excel文件类
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class Excel{
 	/**
 	* excel文档头(返回的行)

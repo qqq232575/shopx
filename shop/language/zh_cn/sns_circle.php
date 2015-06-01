@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 // control
 $lang['sns_my_theme']	= '我发布的话题';
 $lang['sns_TA_theme']	= 'TA发布的话题';

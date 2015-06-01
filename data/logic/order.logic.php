@@ -2,9 +2,9 @@
 /**
  * 实物订单行为
  *
- * shopx V3 shopx
+ * shopx V3 yywxx.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class orderLogic {
 
     /**
@@ -320,7 +320,9 @@ class orderLogic {
 
             $data = array();
             $data['api_pay_state'] = 1;
-            $update = $model_order->editOrderPay($data,array('pay_sn'=>$order_info['pay_sn']));
+	    // shopx 
+	      $update = $model_order->editOrderPay($data,array('pay_sn'=>$order_list[0]['pay_sn']));
+            //$update = $model_order->editOrderPay($data,array('pay_sn'=>$order_info['pay_sn']));
             if (!$update) {
                 throw new Exception('更新支付单状态失败');
             }
@@ -368,7 +370,8 @@ class orderLogic {
         }
 
         foreach($order_list as $order_info) {
-
+			//防止重复发送消息 v 3 - 3 3 h a o . c o m
+			if ($order_info['order_state'] != ORDER_STATE_NEW) continue;
             $order_id = $order_info['order_id'];
             // 支付成功发送买家消息
             $param = array();

@@ -3,7 +3,7 @@
  * 支付宝返回地址
  *
  * 
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
 $_GET['act']	= 'payment';
 $_GET['op']		= 'return';

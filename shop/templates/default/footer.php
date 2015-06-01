@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php //echo getChat($layout);?>
 <div id="faq">
   <div class="faq-wrapper">
@@ -59,7 +59,8 @@
     <?php }?>
     <?php }?>
   </p>
-    <p>Copyright 2015 shopx项目小组 All rights reserved.</p>
+  <?php echo $output['setting_config']['shopnc_version'];?> <?php echo $output['setting_config']['icp_number']; ?><br />
+  <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
 <?php if (C('debug') == 1){?>
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">

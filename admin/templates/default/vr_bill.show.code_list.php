@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="homepage-focus">
 <h4>兑换码列表</h4>
 <ul class="tab-menu">

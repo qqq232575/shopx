@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="page">
   <div class="fixed-bar">
@@ -12,7 +12,18 @@
     <input type="hidden" name="form_submit" value="ok" />
     <table class="table tb-type2">
       <tbody>
-                <!-- 促销开启 -->
+      	<!-- 开启闲置市场 -->
+      	<tr class="noborder">
+          <td colspan="2" class="required"><label><?php echo $lang['flea_isuse'];?>:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform onoff"><label for="flea_isuse_1" class="cb-enable <?php if($output['list_setting']['flea_isuse'] == '1'){ ?>selected<?php } ?>" title="<?php echo $lang['open'];?>"><span><?php echo $lang['open'];?></span></label>
+            <label for="flea_isuse_0" class="cb-disable <?php if($output['list_setting']['flea_isuse'] == '0'){ ?>selected<?php } ?>" title="<?php echo $lang['close'];?>"><span><?php echo $lang['close'];?></span></label>
+            <input type="radio" id="flea_isuse_1" name="flea_isuse" value="1" <?php echo $output['list_setting']['flea_isuse'] ==1?'checked=checked':''; ?>>
+            <input type="radio" id="flea_isuse_0" name="flea_isuse" value="0" <?php echo $output['list_setting']['flea_isuse'] ==0?'checked=checked':''; ?>>
+          <td class="vatop tips"><?php echo $lang['flea_isuse_notice'];?></td>
+        </tr>
+        <!-- 促销开启 -->
         <tr class="noborder">
           <td colspan="2" class="required"><label><?php echo $lang['promotion_allow'];?>:</label></td>
         </tr>

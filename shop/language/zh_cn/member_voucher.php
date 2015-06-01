@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['voucher_unavailable']    = '代金券功能尚未开启';
 $lang['voucher_applystate_new']    = '待审核';
 $lang['voucher_applystate_verify']    = '已审核';

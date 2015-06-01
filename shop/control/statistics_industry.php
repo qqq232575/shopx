@@ -1,10 +1,10 @@
 <?php
 /**
  * 行业分析
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class statistics_industryControl extends BaseSellerControl{
     private $search_arr;//处理后的参数

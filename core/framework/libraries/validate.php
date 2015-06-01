@@ -2,9 +2,9 @@
 /**
  * 验证类
  * 
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 Class Validate{
 	/**
 	 * 存放验证信息

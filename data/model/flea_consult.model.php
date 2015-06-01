@@ -3,7 +3,7 @@
  * 闲置物品咨询管理
  *by 3 3hao .com 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class flea_consultModel {
 	/**
 	 * 添加咨询

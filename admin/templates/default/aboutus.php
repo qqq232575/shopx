@@ -8,7 +8,7 @@
     <tbody>
       <tr>
         <td class="w12"></td>
-        <td>欢迎使用【-shopx】程序，祝君生意兴隆。<a href="http://shopx项目小组?v3" title="技术支持" target="_blank">技术支持</a></td>
+        <td>欢迎使用【shopx-shopx】程序，祝君生意兴隆。<a href="http://bbs.yywxx.com?v3" title="技术支持" target="_blank">技术支持</a></td>
       </tr>
     </tbody><tfoot>
       <tr class="tfoot">

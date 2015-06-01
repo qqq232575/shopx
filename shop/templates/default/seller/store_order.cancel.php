@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="eject_con">
   <div id="warning"></div>
   <form method="post" id="order_cancel_form" onsubmit="ajaxpost('order_cancel_form', '', '', 'onerror');return false;" action="index.php?act=store_order&op=change_state&state_type=order_cancel&order_id=<?php echo $output['order_id']; ?>">

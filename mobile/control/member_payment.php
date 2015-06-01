@@ -5,12 +5,12 @@
  *
  *
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
 
+//use Shopnc\Tpl;
 
-
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class member_paymentControl extends mobileMemberControl {
 
@@ -18,6 +18,7 @@ class member_paymentControl extends mobileMemberControl {
 
 	public function __construct() {
 		parent::__construct();
+        $this->payment_code = isset($_GET['payment_code']) && trim($_GET['payment_code']) != '' ? trim($_GET['payment_code']) :'alipay';
 	}
 
     /**

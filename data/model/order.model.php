@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class orderModel extends Model {
 
     /**
@@ -487,6 +487,12 @@ class orderModel extends Model {
         	    $state = ($order_info['order_state'] == ORDER_STATE_NEW) ||
         	       ($order_info['payment_code'] == 'offline' && $order_info['order_state'] == ORDER_STATE_PAY);
         	    $state = floatval($order_info['shipping_fee']) > 0 && $state;
+        	   break;
+	    //调整商品价格
+        	case 'spay_price':
+        	    $state = ($order_info['order_state'] == ORDER_STATE_NEW) ||
+        	       ($order_info['payment_code'] == 'offline' && $order_info['order_state'] == ORDER_STATE_PAY);
+				   $state = floatval($order_info['goods_amount']) > 0 && $state;
         	   break;
 
         	//发货

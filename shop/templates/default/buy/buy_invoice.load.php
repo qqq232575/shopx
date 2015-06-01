@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <ul>
   <?php foreach($output['inv_list'] as $k=>$val){ ?>
   <li class="inv_item <?php echo $k == 0 ? 'ncc-selected-item' : null; ?>">

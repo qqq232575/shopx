@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <!-- 文章　-->
 <div class="cms-module-assembly-flash">
     <div class="content-box">

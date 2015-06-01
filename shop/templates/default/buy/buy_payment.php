@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="ncc-receipt-info" id="paymentCon">
   <div class="ncc-receipt-info-title">

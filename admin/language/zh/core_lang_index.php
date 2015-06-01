@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 /**
  * core簡體語言包
@@ -11,7 +11,7 @@ $lang['solution'] = '解決方案';
 $lang['please_login_in'] = '請登錄';
 $lang['shopx_bbs'] = '官方論壇';
 $lang['found_answer'] = '，將您發現的問題告訴我們，並尋求幫助！';
-$lang['company_name'] = '';
+$lang['company_name'] = 'shopx';
 
 $lang['has_been_canceled'] = '已取消';
 $lang['pending_payment'] = '待付款';

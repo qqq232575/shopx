@@ -5,12 +5,12 @@
  * 商城板块初始化文件，引用框架初始化文件
  *
  *
- *by shopx team 
+ *by shopx www.yywxx.com 开发修正
  */
 define('APP_ID','microshop');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/shopx.php')) exit('shopx.php isn\'t exists!');
 
 if (!@include(BASE_PATH.'/config/config.ini.php')){
 	@header("Location: install/index.php");die;

@@ -5,9 +5,9 @@
  * 建议每天触发一次
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class arrival_noticeControl {
     private $_num = 100; // 每次通知消息数量

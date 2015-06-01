@@ -2,9 +2,9 @@
 /**
  * 积分礼品购物车
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class pointorderModel extends Model{
 	private $product_sn;	//订单编号

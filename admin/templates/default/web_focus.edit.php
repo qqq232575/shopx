@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <script type="text/javascript">
 var SHOP_SITE_URL = "<?php echo SHOP_SITE_URL; ?>";
 var UPLOAD_SITE_URL = "<?php echo UPLOAD_SITE_URL; ?>";

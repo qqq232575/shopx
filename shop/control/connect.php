@@ -3,10 +3,10 @@
  * QQ互联登录
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class connectControl extends BaseHomeControl{
 	public function __construct(){
@@ -41,6 +41,14 @@ class connectControl extends BaseHomeControl{
 			$this->registerOp();
 		}
 	}
+
+    private function checkWapQQlogin(){
+        if(!empty($_SESSION['m'])){
+            return true;
+        }
+        return false;
+    }
+
 	/**
 	 * qq绑定新用户
 	 */
@@ -101,7 +109,10 @@ class connectControl extends BaseHomeControl{
 			}
 			if($result) {
 				Tpl::output('user_passwd',$user_passwd);
-				$avatar	= @copy($qquser_info['figureurl_qq_2'],BASE_UPLOAD_PATH.'/'.ATTACH_AVATAR."/avatar_$result.jpg");
+                $img = self::get_nr($qquser_info['figureurl_qq_2']);
+                $a = 'avatar_'.$result.'.jpg';
+                file_put_contents(BASE_UPLOAD_PATH.'/'.ATTACH_AVATAR."/".a,$img);
+				$avatar	= $a;
 				$update_info	= array();
 				if($avatar) {
 				    $update_info['member_avatar'] 	= "avatar_$result.jpg";
@@ -110,12 +121,18 @@ class connectControl extends BaseHomeControl{
 				}
 				$user_array['member_id']		= $result;
 				$model_member->createSession($user_array);
-				Tpl::showpage('connect_register');
+                if($this->checkWapQQlogin()){
+                    @header('location: '.MOBILE_SITE_URL.'/index.php?act=login&type=qq');
+                    exit;
+                }else{
+                    Tpl::showpage('connect_register');
+                }
 			} else {
 				showMessage(Language::get('login_usersave_regist_fail'),SHOP_SITE_URL.'/index.php?act=login&op=register','html','error');//"会员注册失败"
 			}
 		}
 	}
+	
 	/**
 	 * 已有用户绑定QQ
 	 */
@@ -139,6 +156,7 @@ class connectControl extends BaseHomeControl{
 			showMessage(Language::get('home_qqconnect_binding_fail'),'index.php?act=member_connect&op=qqbind','html','error');//'绑定QQ失败'
 		}
 	}
+
 	/**
 	 * 绑定qq后自动登录
 	 */
@@ -153,8 +171,13 @@ class connectControl extends BaseHomeControl{
 				showMessage(Language::get('nc_notallowed_login'),'','html','error');
 			}
 			$model_member->createSession($member_info);
-			$success_message = Language::get('login_index_login_success');
-			showMessage($success_message,SHOP_SITE_URL);
+            if($this->checkWapQQlogin()){
+                @header('location: '.MOBILE_SITE_URL.'/index.php?act=login&type=qq');
+                exit;
+            }else{
+                $success_message = Language::get('login_index_login_success');
+                showMessage($success_message,SHOP_SITE_URL);
+            }
 		}
 	}
 	/**
@@ -169,4 +192,23 @@ class connectControl extends BaseHomeControl{
 		@header('Location:'.SHOP_SITE_URL.'/api.php?act=toqq');
 		exit;
 	}
+
+    public static function get_nr( $url , $ref = '' , $coo = '' )
+    {
+        $header = array( "Referer: " . $ref . "" , "Cookie: " . $coo );
+        $ch     = curl_init();
+        curl_setopt( $ch , CURLOPT_URL , $url );
+        curl_setopt( $ch , CURLOPT_TIMEOUT , 5 );
+        //----
+        curl_setopt( $ch , CURLOPT_HTTPHEADER , $header );
+        curl_setopt( $ch , CURLOPT_FOLLOWLOCATION , 1 );
+        //$contents = curl_exec($ch);
+        ob_start();
+        curl_exec( $ch );
+        $contents = ob_get_contents();
+        ob_end_clean();
+        curl_close( $ch );
+        return $contents;
+    }
+
 }

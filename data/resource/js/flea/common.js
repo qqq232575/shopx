@@ -352,7 +352,7 @@ function collect_goods(fav_id,jstype,jsobj){
 //}
 
 //动态加载js，css
-//$.include(['http://www.shopx.net/script/a.js','/css/css.css']);
+//$.include(['http://www.shopnc.net/script/a.js','/css/css.css']);
 $.extend({
     include: function(file)
     {

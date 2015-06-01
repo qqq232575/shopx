@@ -235,7 +235,12 @@ $(function (){
                           });
                         return;
                     }
-                    if (buynum > data.goods_info.goods_storage) {
+
+                    buynum = Number(buynum);
+                    var havenum = Number(data.goods_info.goods_storage);
+
+                    if (buynum > havenum) {
+                    //if (buynum > data.goods_info.goods_storage) {
                           $.sDialog({
                               skin:"red",
                               content:'库存不足！',

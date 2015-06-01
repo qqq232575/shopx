@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="page">
   <div class="fixed-bar">
     <div class="item-title">
@@ -28,7 +28,7 @@
         </th>
       </tr>
       <tr>
-        <td>shopx提醒：请仔细阅读以下各注意事项：<ul>
+        <td>yywxx.com提醒：请仔细阅读以下各注意事项：<ul>
             <li>登录密码长度不能小于6</li>
             <li>会员名称，用于登录会员中心</li>
             <li>店主卖家账号，用于登录商家中心，可与店主账号不同</li>

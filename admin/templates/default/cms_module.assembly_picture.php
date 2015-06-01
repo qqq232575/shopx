@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <!-- 图片 -->
 <div class="cms-module-assembly-image">
     <div class="content-box">

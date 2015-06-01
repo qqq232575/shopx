@@ -1,6 +1,6 @@
 <?php
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 取广告内容
  *

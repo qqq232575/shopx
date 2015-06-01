@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="page">
   <div class="fixed-bar">
@@ -75,6 +75,21 @@
           <td class="vatop rowform"><input id="commis_rate" class="w60" type="text" value="<?php echo $output['class_array']['commis_rate'];?>" name="commis_rate">
             % </td>
           <td class="vatop tips">必须为0-100的整数</td>
+        </tr>
+	<!--v3-10 yywxx.com-->
+	<tr>
+          <td colspan="2" class="required"><label for="parent_id"><?php echo $lang['goods_class_add_sup_class'];?>:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><select name="gc_parent_id" id="gc_parent_id">
+              <option value="<?php echo $output['class_array']['gc_parent_id'];?>">不更改所属分类（更改下拉）</option>
+              <?php if(!empty($output['parent_list']) && is_array($output['parent_list'])){ ?>
+              <?php foreach($output['parent_list'] as $k => $v){ ?>
+              <option <?php if($output['gc_parent_id'] == $v['gc_id']){ ?>selected='selected'<?php } ?> value="<?php echo $v['gc_id'];?>"><?php echo $v['gc_name'];?></option>
+              <?php } ?>
+              <?php } ?>
+            </select></td>
+          <td class="vatop tips"><?php echo $lang['goods_class_add_sup_class_notice'];?></td>
         </tr>
         <tr>
           <td colspan="2" class="required"><label class="validation"><?php echo $lang['goods_class_add_type'];?>:</label>

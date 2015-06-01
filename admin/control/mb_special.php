@@ -5,12 +5,12 @@
  *
  *
  *
- * by shopx team 
+ * by shopx www.yywxx.com 开发修正
  */
 
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class mb_specialControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();
@@ -140,6 +140,22 @@ class mb_specialControl extends SystemControl{
                 echo json_encode(array('error' => '广告条板块只能添加一个'));die;
             }
         }
+	//推荐只能添加一个 yywxx.com v3-10
+        if($param['item_type'] == 'goods1') {
+            $result = $model_mb_special->isMbSpecialItemExist($param);
+            if($result) {
+                echo json_encode(array('error' => '限时板块只能添加一个'));die;
+            }
+        }
+	//团购只能添加一个
+        if($param['item_type'] == 'goods2') {
+            $result = $model_mb_special->isMbSpecialItemExist($param);
+            if($result) {
+                echo json_encode(array('error' => '团购板块只能添加一个'));die;
+            }
+        }
+	
+	//end
 
         $item_info = $model_mb_special->addMbSpecialItem($param);
         if($item_info) {
@@ -171,8 +187,9 @@ class mb_specialControl extends SystemControl{
      */
     public function special_item_editOp() {
         $model_mb_special = Model('mb_special');
-
-        $item_info = $model_mb_special->getMbSpecialItemInfoByID($_GET['item_id']);
+	// yywxx.com v3-10
+	$theitemid=$_GET['item_id'];
+        $item_info = $model_mb_special->getMbSpecialItemInfoByID($theitemid);
         Tpl::output('item_info', $item_info);
 
         if($item_info['special_id'] == 0) {
@@ -180,6 +197,12 @@ class mb_specialControl extends SystemControl{
         } else {
             $this->show_menu('special_item_list');
         }
+		//2015推荐 2016团购
+		if($theitemid==2015){
+			Tpl::showpage('mb_special_item.edit1');
+		}else if($theitemid==2016){
+			Tpl::showpage('mb_special_item.edit2');
+		}
         Tpl::showpage('mb_special_item.edit');
     }
 
@@ -187,6 +210,7 @@ class mb_specialControl extends SystemControl{
      * 专题项目保存
      */
     public function special_item_saveOp() {
+	
         $model_mb_special = Model('mb_special');
 
         $result = $model_mb_special->editMbSpecialItemByID(array('item_data' => $_POST['item_data']), $_POST['item_id'], $_POST['special_id']); 
@@ -225,17 +249,40 @@ class mb_specialControl extends SystemControl{
     }
 
     /**
-     * 商品列表
+     * 商品列表  yywxx.com v3-10
      */
-    public function goods_listOp() {
-        $model_goods = Model('goods');
-
-        $condition = array();
-        $condition['goods_name'] = array('like', '%' . $_POST['keyword'] . '%');
-        $goods_list = $model_goods->getGoodsOnlineList($condition, 'goods_id,goods_name,goods_promotion_price,goods_image', 10);
+	 
+    public function goods_listOp() {	
+		$keyw=$_POST['keyword'];		
+		$condition = array();
+		$model_true_goods=Model('goods');
+		if($keyw=='2015'){
+		$model_goods = Model('p_xianshi_goods');		
+       $condition['goods_name'] = array('like', '%%');
+	   $goods_id_list=$model_goods->getXianshiGoodsExtendIds($condition);		
+				
+		$goods_list = $model_true_goods->getGoodsOnlineListAndPromotionByIdArray($goods_id_list);
+		 
+        Tpl::output('goods_list', $goods_list);
+        Tpl::output('show_page', $model_true_goods->showpage());
+        Tpl::showpage('mb_special_widget.goods1', 'null_layout');
+		}else if($keyw=='2016'){			
+			$model_goods_ids = Model('groupbuy');
+			$condition['goods_name'] = array('like', '%%');
+			$goods_list_arr=$model_goods_ids->getGroupbuyGoodsExtendIds($condition);			
+			$goods_list=$model_true_goods->getGoodsOnlineListAndPromotionByIdArray($goods_list_arr);
+			//showMessage($goods_list[1]['goods_id']);
+			Tpl::output('goods_list', $goods_list);
+        Tpl::output('show_page', $model_true_goods->showpage());
+        Tpl::showpage('mb_special_widget.goods2', 'null_layout');
+		}else{
+		$model_goods = Model('goods');
+       $condition['goods_name'] = array('like', '%' . $_POST['keyword'] . '%');
+		$goods_list = $model_goods->getGoodsOnlineList($condition, 'goods_id,goods_name,goods_promotion_price,goods_image', 10);
         Tpl::output('goods_list', $goods_list);
         Tpl::output('show_page', $model_goods->showpage());
         Tpl::showpage('mb_special_widget.goods', 'null_layout');
+		}
     }
 
     /**

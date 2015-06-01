@@ -3,7 +3,7 @@
  * 地区管理
  *by 3 3hao .com 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class flea_areaModel{	
 	/**
 	 * 读取系统设置列表

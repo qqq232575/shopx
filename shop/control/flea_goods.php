@@ -1,19 +1,15 @@
 <?php
 /**
  * 前台闲置物品展示
- * by shopx
+ * by yywxx.com
  */
-defined('In_OS') or exit('Access Invalid!');
-class flea_goodsControl extends BaseHomeControl {
+defined('IN_OS') or exit('Access Invalid!');
+class flea_goodsControl extends BaseFleaControl {
 	/**
 	 *	验证是否开启闲置功能
 	 */
 	public function __construct(){
 		parent::__construct();
-		Language::read('home_flea_index');
-		if($GLOBALS['setting_config']['flea_isuse']!='1'){
-			showMessage(Language::get('flea_index_unable'),'index.php');
-		}
 	}
 	/**
 	 * 单个闲置物品信息页

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <ul>
   <?php foreach((array)$output['address_list'] as $k=>$val){ ?>

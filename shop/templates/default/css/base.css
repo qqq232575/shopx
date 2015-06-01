@@ -267,9 +267,9 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 -------------------------------------- */
 .public-top-layout { font-family: Arial, "宋体"; line-height: 20px; color: #777; background-color: #FAFAFA; border-bottom: solid 1px #F0F0F0;}
 .public-top-layout .topbar { height: 30px;}
-.public-top-layout .user-entry { width: 50%; height: 20px; float: left; padding: 5px 0;}
+.public-top-layout .user-entry { width: 45%; height: 20px; float: left; padding: 5px 0;}
 .public-top-layout .user-entry a { color: #333333}
-.public-top-layout .quick-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: right; width: 50%; height: 30px; float: right;}
+.public-top-layout .quick-menu { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: right; width: 55%; height: 30px; float: right;}
 .public-top-layout .quick-menu a { color: #777 !important;}
 .public-top-layout .quick-menu dl { text-align: left; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display:inline/*IE6、7*/; width: 80px; height: 30px; position: relative; z-index: 999; *zoom:1/*IE6、7*/;}
 .public-top-layout .quick-menu dl dt { font-size: 12px; line-height: 20px; height: 20px; padding: 5px 0; position: absolute; z-index: 2; top: 0px; left: 12px;}
@@ -281,8 +281,8 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 .public-top-layout .quick-menu dl dd ul { width: 78px; margin: 30px 0 0 0; }
 .public-top-layout .quick-menu dl dd ul li a { font-size: 12px; line-height: 24px; display: block; clear: both; padding: 2px 0 2px 11px;}
 .public-top-layout .quick-menu dl dd ul li a:hover { text-decoration: none; background-color: #F7F7F7;}
-.public-top-layout .quick-menu dl.weixin { width: 114px;}
-.public-top-layout .quick-menu dl.weixin dt { background:url(../images/weixin.png) no-repeat 10px 8px; padding-left: 30px;}
+.public-top-layout .quick-menu dl.weixin { width: 100px;}
+.public-top-layout .quick-menu dl.weixin dt { background:url(../images/weixin.png) no-repeat 0 8px; padding-left: 20px;}
 .public-top-layout .quick-menu dl.weixin dd { width: auto; padding: 5px; right: 0; left: auto; text-align:center;}
 .public-top-layout .quick-menu dl.weixin dd h4 { line-height: 18px; color:#F98016; text-align: center; margin: 30px 0 5px 0; font-size: 12px;}
 .public-top-layout .quick-menu dl.weixin dd img { max-width: 96px; max-height: 96px; margin:10px 0}

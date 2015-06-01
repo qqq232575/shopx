@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php 
 $control_flag = false;
 if($_GET['op'] == 'decoration_edit' || $_GET['op'] == 'decoration_block_add') { 

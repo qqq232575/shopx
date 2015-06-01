@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit ('Access Invalid!');
+defined('IN_OS') or exit ('Access Invalid!');
 class store_goods_onlineControl extends BaseSellerControl {
     public function __construct() {
         parent::__construct ();
@@ -217,7 +217,6 @@ class store_goods_onlineControl extends BaseSellerControl {
     public function edit_save_goodsOp() {
 
         $common_id = intval ( $_POST ['commonid'] );
-        var_dump($common_id);die;
         if (!chksubmit() || $common_id <= 0) {
             showDialog(L('store_goods_index_goods_edit_fail'), urlShop('store_goods_online', 'index'));
         }
@@ -251,7 +250,7 @@ class store_goods_onlineControl extends BaseSellerControl {
 
         // 三方店铺验证是否绑定了该分类
         if (!checkPlatformStore()) {
-            //商品分类 by shopx team. com 提供批量显示所有分类插件
+            //商品分类 by shopx. com 提供批量显示所有分类插件
             $model_bind_class = Model('store_bind_class');
             $goods_class = Model('goods_class')->getGoodsClassForCacheModel();
             $where['store_id'] = $_SESSION['store_id'];

@@ -4,9 +4,9 @@
  *
  * 公共方法
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 function output_data($datas, $extend_data = array()) {
     $data = array();

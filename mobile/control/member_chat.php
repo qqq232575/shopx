@@ -5,10 +5,10 @@
  *
  *
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
-
+defined('IN_OS') or exit('Access Invalid!');
+//use Shopnc\Tpl;
 class member_chatControl extends mobileMemberControl {
 
 	public function __construct(){

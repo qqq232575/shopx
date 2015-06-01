@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['flea_index_unable']		='闲置市场功能未开启';
 $lang['flea_index_mouth']		='月';
 $lang['flea_index_day']			='天';

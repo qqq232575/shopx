@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="circle-share">
   <form method="post" action="<?php echo CIRCLE_SITE_URL;?>/index.php?act=theme_share&c_id=<?php echo $output['c_id'];?>&t_id=<?php echo $output['t_id'];?>" id="share_form" class="feededitor">

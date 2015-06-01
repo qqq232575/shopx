@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');
+<?php defined('IN_OS') or exit('Access Invalid!');
 
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 $uachar = "/(nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|mobile)/i";
@@ -7,9 +7,17 @@ if(($ua == '' || preg_match($uachar, $ua))&& !strpos(strtolower($_SERVER['REQUES
 	global $config;
         if(!empty($config['wap_site_url'])){
             $url = $config['wap_site_url'];
-            if($_GET['act'] == 'goods') {
-                $url .= '/tmpl/product_detail.html?goods_id=' . $_GET['goods_id'];
-            }
+            switch ($_GET['act']){
+			case 'goods':
+			  $url .= '/tmpl/product_detail.html?goods_id=' . $_GET['goods_id'];
+			  break;
+			case 'store_list':
+			  $url .= '/shop.html';
+			  break;
+			case 'show_store':
+			  $url .= '/tmpl/go_store.html?store_id=' . $_GET['store_id'];
+			  break;
+			}
         } else {
             $url = $config['site_url'];
         }
@@ -22,6 +30,7 @@ if(($ua == '' || preg_match($uachar, $ua))&& !strpos(strtolower($_SERVER['REQUES
     }
 }
 ?>
+
 <!doctype html>
 <html lang="zh">
 <head>
@@ -36,7 +45,7 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
 ?>/css/csshover.htc);
 }
 </style>
-<link rel="shortcut icon" href="<?php echo ROOT_PATH;?>/favicon.ico" />
+<link rel="shortcut icon" href="<?php echo BASE_SITE_URL;?>/favicon.ico" />
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/base.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/home_header.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/home_login.css" rel="stylesheet" type="text/css">
@@ -185,7 +194,7 @@ $(function(){
 <!-- 顶部广告展开效果-->
 <div class="header-wrap">
   <header class="public-head-layout wrapper">
-    <h1 class="site-logo"><a href="<?php echo ROOT_PATH;?>"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.$output['setting_config']['site_logo']; ?>" class="pngFix"></a></h1>
+    <h1 class="site-logo"><a href="<?php echo BASE_SITE_URL;?>"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.$output['setting_config']['site_logo']; ?>" class="pngFix"></a></h1>
     <?php if (C('mobile_isuse') && C('mobile_app')){?>
     <div class="head-app"><span class="pic"></span>
       <div class="download-app">
@@ -309,7 +318,7 @@ $(function(){
       <?php require template('layout/home_goods_class');?>
     </div>
     <ul class="site-menu">
-      <li><a href="<?php echo SHOP_SITE_URL;?>" <?php if($output['index_sign'] == 'index' && $output['index_sign'] != '0') {echo 'class="current"';} ?>><?php echo $lang['nc_index'];?></a></li>
+      <li><a href="<?php echo BASE_SITE_URL;?>" <?php if($output['index_sign'] == 'index' && $output['index_sign'] != '0') {echo 'class="current"';} ?>><?php echo $lang['nc_index'];?></a></li>
       <?php if (C('groupbuy_allow')){ ?>
       <li><a href="<?php echo urlShop('show_groupbuy', 'index');?>" <?php if($output['index_sign'] == 'groupbuy' && $output['index_sign'] != '0') {echo 'class="current"';} ?>> <?php echo $lang['nc_groupbuy'];?></a></li>
       <?php } ?>

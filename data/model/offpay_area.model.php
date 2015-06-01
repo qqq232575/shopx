@@ -2,9 +2,9 @@
 /**
  * 货到付款地区设置
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class offpay_areaModel extends Model {
     public function __construct() {

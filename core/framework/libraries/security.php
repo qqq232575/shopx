@@ -7,9 +7,9 @@
  * 输出：直接在模板上调用getToken
  * 验证：在验证位置调用checkToken
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class Security{
 	/**

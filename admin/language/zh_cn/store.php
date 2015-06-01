@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 店铺管理 语言包
  */
@@ -83,7 +83,7 @@ $lang['need_verify_pwd']           = '需要验证密码';
 $lang['if_open_domain']          = '是否启用二级域名';
 $lang['open_domain_document']    = '启用二级域名需要您的服务器支持泛域名解析';
 $lang['suffix']                  = '二级域名后缀';
-$lang['demo']                    = '如店铺的二级域名是"test.shopx", 则要填写"shopx"';
+$lang['demo']                    = '如店铺的二级域名是"test.yywxx.com", 则要填写"yywxx.com"';
 $lang['reservations_domain']     = '保留域名';
 $lang['please_input_domain']     = '保留的二级域名，多个保留域名之间请用","隔开';
 $lang['length_limit']            = '长度限制';

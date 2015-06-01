@@ -2,9 +2,9 @@
 /**
  * SNS好友管理
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class sns_friendModel{
 	/**
 	 * 好友添加

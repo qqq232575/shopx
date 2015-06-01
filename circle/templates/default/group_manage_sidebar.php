@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="my-info">
   <div class="avatar"><img src="<?php echo getMemberAvatarForID($_SESSION['member_id']);?>" /><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_information&op=avatar" title="<?php echo $lang['nc_edit_avatar'];?>"><?php echo $lang['nc_edit_avatar'];?></a></div>

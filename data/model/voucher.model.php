@@ -1,9 +1,9 @@
 <?php
 /**
  * 代金券模型
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class voucherModel extends Model {
     const VOUCHER_STATE_UNUSED = 1;
     const VOUCHER_STATE_USED = 2;

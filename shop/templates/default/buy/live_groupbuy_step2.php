@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="ncc-main">
   <div class="ncc-title">
     <h3><?php echo $lang['cart_index_payment'];?></h3>

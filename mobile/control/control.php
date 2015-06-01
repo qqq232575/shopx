@@ -3,12 +3,12 @@
  * mobile父类
  *
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
 
+//use Shopnc\Tpl;
 
-
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 /********************************** 前台control父类 **********************************************/
 

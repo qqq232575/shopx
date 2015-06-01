@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if(!empty($output['goods_list']) && is_array($output['goods_list'])){?>
 <ul class="goods-list">
   <?php foreach($output['goods_list'] as $key=>$val){?>

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if(!empty($output['comment_list']) && is_array($output['comment_list'])){ ?>
 <div class="article-comment-list-title">
   <h3><?php echo $lang['cms_comment_new'];?></h3>

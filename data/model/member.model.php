@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class memberModel extends Model {
 
     public function __construct(){
@@ -185,14 +185,14 @@ class memberModel extends Model {
 		$member_info['member_name']		= $register_info['username'];
 		$member_info['member_passwd']	= $register_info['password'];
 		$member_info['member_email']		= $register_info['email'];
-		//添加邀请人(推荐人)会员积分 by shopx
+		//添加邀请人(推荐人)会员积分 by yywxx.com
 		$member_info['inviter_id']		= $register_info['inviter_id'];
 		$insert_id	= $this->addMember($member_info);
 		if($insert_id) {
 		    //添加会员积分
 			if (C('points_isuse')){
 				Model('points')->savePointsLog('regist',array('pl_memberid'=>$insert_id,'pl_membername'=>$register_info['username']),false);
-				//添加邀请人(推荐人)会员积分 by shopx
+				//添加邀请人(推荐人)会员积分 by yywxx.com
 				$inviter_name = Model('member')->table('member')->getfby_member_id($member_info['inviter_id'],'member_name');
 				Model('points')->savePointsLog('inviter',array('pl_memberid'=>$register_info['inviter_id'],'pl_membername'=>$inviter_name,'invited'=>$member_info['member_name']));
 			}
@@ -247,7 +247,7 @@ class memberModel extends Model {
 		    $member_info['member_qqinfo']		= $param['member_qqinfo'];
 		    $member_info['member_sinaopenid']	= $param['member_sinaopenid'];
 		    $member_info['member_sinainfo']	= $param['member_sinainfo'];
-		    //添加邀请人(推荐人)会员积分 by shopx
+		    //添加邀请人(推荐人)会员积分 by yywxx.com
 		    $member_info['inviter_id']	        = $param['inviter_id'];
 		    $insert_id	= $this->table('member')->insert($member_info);
 		    if (!$insert_id) {

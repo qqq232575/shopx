@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
   <table class="table tb-type2 nobdb">
   	<thead class="thead">
 		<tr class="space">

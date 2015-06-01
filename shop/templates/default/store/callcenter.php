@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="ncs-message-bar">
   <div class="default">
     <h5><?php echo $output['store_info']['store_name']; ?></h5>

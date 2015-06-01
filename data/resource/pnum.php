@@ -1,10 +1,10 @@
 <?php
 /**
- shopx 提供
+shopx yywxx.com 提供
 
 网址：www.yywxx.com
 
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  */
 $pnum = $_GET['pnum'];

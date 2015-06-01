@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div id="chatLogList" class="ncsc-chat-log-list">
   <?php if (is_array($output['list']) && !empty($output['list'])) { ?>

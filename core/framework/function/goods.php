@@ -7,7 +7,7 @@
  * @package    function* www.yywxx.com 专业团队 提供售后服务
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 /**
  * 取得商品缩略图的完整URL路径，接收商品信息数组，返回所需的商品缩略图的完整URL

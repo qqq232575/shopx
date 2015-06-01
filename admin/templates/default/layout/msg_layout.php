@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <div class="page">
   <div class="fixed-bar">
     <div class="item-title">
-      <h3><?php echo $lang['nc_shopx_message'];?></h3>
+      <h3><?php echo $lang['nc_shopnc_message'];?></h3>
     </div>
   </div>
   <div class="fixed-empty"></div>

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
   <div class="tabmenu">
   	<?php include template('layout/submenu');?>
     <a class="ncsc-btn ncsc-btn-green" href="index.php?act=store_livegroup&op=groupbuy_add" title=""><i class="icon-plus-sign"></i>新增线下抢</a>

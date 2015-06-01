@@ -2,9 +2,9 @@
 /**
  * 虚拟商品购买行为
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class buy_virtualLogic {
 
     /**

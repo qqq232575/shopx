@@ -1,10 +1,10 @@
 <?php
 /**
  * 积分礼品购物车操作
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class pointcartControl extends BasePointShopControl {
 	public function __construct() {
 		parent::__construct();

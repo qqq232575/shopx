@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="clear">&nbsp;</div>
 <div id="faq">
   <div class="faq-wrapper">
@@ -59,7 +59,7 @@
     <?php }?>
     <?php }?>
   </p>
-  <?php echo $output['setting_config']['shopx_version'];?> <?php echo $output['setting_config']['icp_number']; ?><br />
+  <?php echo $output['setting_config']['shopnc_version'];?> <?php echo $output['setting_config']['icp_number']; ?><br />
   <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
 <?php if ($GLOBALS['setting_config']['debug'] == 1){?>
 <div id="think_page_trace" class="trace">

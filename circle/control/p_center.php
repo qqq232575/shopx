@@ -5,7 +5,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class p_centerControl extends BaseCirclePersonalControl{
 	public function __construct(){

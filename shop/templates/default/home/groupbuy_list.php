@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php require('groupbuy_head.php');?>
 <form id="search_form">
   <input name="act" type="hidden" value="show_groupbuy" />

@@ -2,14 +2,14 @@
 /**
  * 商品
  *
- * by shopx 
+ * by yywxx.com shopx
  *
  *
  */
-//by shopx
-//
+//by yywxx.com
+//use Shopnc\Tpl;
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class goodsControl extends mobileHomeControl{
 
 	public function __construct() {
@@ -166,7 +166,7 @@ class goodsControl extends mobileHomeControl{
         $goods_detail['store_info']['store_id'] = $store_info['store_id'];
         $goods_detail['store_info']['store_name'] = $store_info['store_name'];
         $goods_detail['store_info']['member_id'] = $store_info['member_id'];
-	//显示QQ及旺旺 
+	//显示QQ及旺旺 shopx
 	$goods_detail['store_info']['store_qq'] = $store_info['store_qq'];
 	$goods_detail['store_info']['store_ww'] = $store_info['store_ww'];
         $goods_detail['store_info']['member_name'] = $store_info['member_name'];

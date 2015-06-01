@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['member_printorder_ordererror']		= '订单信息错误';
 
 $lang['member_printorder_title']			= '发货单';

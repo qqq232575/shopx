@@ -2,11 +2,11 @@
 /**
  * 店铺列表
  *
- * by shopx
+ * by 33h ao.c om 好商 城 v3
 */
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class store_listControl extends BaseHomeControl {
 	/**
@@ -18,7 +18,7 @@ class store_listControl extends BaseHomeControl {
 		$lang	= Language::getLangContent();
 				
 		//店铺类目快速搜索
-		$class_list = ($h = F('store_class')) ? $h : rcache('store_class',true,'file');
+		$class_list = ($h = F('store_class')) ? $h : rkcache('store_class',true,'file');
 		if (!key_exists($_GET['cate_id'],$class_list)) $_GET['cate_id'] = 0;
 		Tpl::output('class_list',$class_list);
 

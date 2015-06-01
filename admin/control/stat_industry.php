@@ -1,9 +1,9 @@
 <?php
 /**
  * 行业分析
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class stat_industryControl extends SystemControl{
     private $links = array(

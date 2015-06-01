@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="banner">
   <div class="user-box">
     <?php if($_SESSION['is_login'] == '1'){?>

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 
   <?php if(!empty($output['goods_class']) && is_array($output['goods_class'])){ ?>

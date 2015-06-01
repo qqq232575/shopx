@@ -1,9 +1,9 @@
 <?php
 /**
  * 压缩框架
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 压缩框架文件
  *
@@ -55,7 +55,7 @@ function build(){
 	$compile .= "\nLanguage::appendLanguage(\$lang);";
 
 	$compile .= "\nBase::run();";
-	file_put_contents(RUNCOREPATH,compress_code("<?php defined('In_OS') or exit('Access Invalid!');".$compile));
+	file_put_contents(RUNCOREPATH,compress_code("<?php defined('IN_OS') or exit('Access Invalid!');".$compile));
 }
 
 /**
@@ -68,7 +68,7 @@ function compile($filename) {
     $content = file_get_contents($filename);
     //过滤不需要编译的内容
     $content = preg_replace('/\/\/\[NC_SKIPBUILD\](.*?)\/\/\[\/NC_SKIPBUILD\]/s', '', $content);
-    $content = str_ireplace("defined('In_OS') or exit('Access Invalid!')", '', $content);
+    $content = str_ireplace("defined('IN_OS') or exit('Access Invalid!')", '', $content);
     $content = substr(trim($content), 5);
     if ('?>' == substr($content, -2))
         $content = substr($content, 0, -2);

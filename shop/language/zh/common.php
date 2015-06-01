@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['error']				= '在處理您的請求時出現了問題:<br />';
 $lang['homepage']			= '首頁';
 $lang['cur_location']		= '當前位置';

@@ -5,9 +5,9 @@
 *
 *
 *
-* by shopx team   
+* by shopx shopx  www.yywxx.com 开发
 */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 ini_set('default_socket_timeout', -1);
 class queueControl extends BaseCronControl {
 

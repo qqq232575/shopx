@@ -3,9 +3,9 @@
  * 网银在线接口类
  *
  * 
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class chinabank{
 	/**

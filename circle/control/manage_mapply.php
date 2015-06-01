@@ -5,7 +5,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class manage_mapplyControl extends BaseCircleManageControl{
 	public function __construct(){

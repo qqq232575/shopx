@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['error']				= '在处理您的请求时出现了问题:<br />';
 $lang['homepage']			= '首页';
 $lang['nc_groupbuy']		= "抢购";

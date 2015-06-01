@@ -3,9 +3,9 @@
  * 线下抢购订单管理
  *
  * 
- *by shopx  运营版
+ *by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class live_orderModel extends Model {
 
     public function __construct(){

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['stat_newmember']				= '新增会员';
 $lang['stat_memberanalyze']			= '会员分析';

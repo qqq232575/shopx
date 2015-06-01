@@ -1,10 +1,10 @@
 <?php
 /**
  * 会员中心——积分兑换信息
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class member_pointorderControl extends BaseMemberControl{
 	public function __construct() {

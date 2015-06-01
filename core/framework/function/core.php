@@ -4,12 +4,12 @@
  *
  * 公共方法
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
 
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 /**
  * 产生验证码
@@ -1384,7 +1384,7 @@ function write_file($filepath, $data, $mode = null)
 
     $data = var_export($data, true);
 
-    $data = "<?php defined('In_OS') or exit('Access Invalid!'); return ".$data.";";
+    $data = "<?php defined('IN_OS') or exit('Access Invalid!'); return ".$data.";";
     $mode = $mode == 'append' ? FILE_APPEND : null;
     if (false === file_put_contents($filepath,($data),$mode)){
         return false;

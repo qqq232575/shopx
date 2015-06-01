@@ -1,9 +1,9 @@
 <?php
 /**
  * 平台客观咨询管理
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class mall_consultControl extends SystemControl{
     public function __construct(){

@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class goods_classControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=goods_class&op=goods_class','lang'=>'nc_manage'),
@@ -186,7 +186,8 @@ class goods_classControl extends SystemControl{
 			$update_array['commis_rate']    = intval($_POST['commis_rate']);
 			$update_array['gc_sort']		= intval($_POST['gc_sort']);
             $update_array['gc_virtual']     = intval($_POST['gc_virtual']);
-
+            //shopx v3-b10
+	    $update_array['gc_parent_id']	= intval($_POST['gc_parent_id']);
 			$result = $model_class->editGoodsClass($update_array, $where);
 			if (!$result){
 				$this->log(L('nc_edit,goods_class_index_class').'['.$_POST['gc_name'].']',0);

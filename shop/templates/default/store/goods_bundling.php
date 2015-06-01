@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if((!empty($output['bundling_array']) && !empty($output['b_goods_array'])) || !empty($output['gcombo_list'])){?>
 
 <div class="ncs-goods-title-nav" nctype="gbc_nav">

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <!--店铺街推荐排行-->
 <?php $store_list_count = count($output['store_list']);?>
 

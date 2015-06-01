@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="page">
   <form id="admin_form" method="post" action='index.php?act=index&op=modifypw' name="adminForm">

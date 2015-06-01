@@ -3,9 +3,9 @@
  * 根据url获取商品信息
  *
  * 
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class goods_info_by_urlModel{
 
     /**

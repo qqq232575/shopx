@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="share-widget">
 <?php if (!empty($output['app_arr'])){?>
 <input nc_type="share_app_switch" name="share_app_switch" type="checkbox" class="input-checkbox"/>

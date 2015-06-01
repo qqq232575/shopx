@@ -2,9 +2,9 @@
 /**
  * 分享店铺
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class sns_sharestoreModel{
 	/**
 	 * 新增分享店铺

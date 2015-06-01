@@ -6,9 +6,9 @@
  *
  *
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class GdImage{
 	/**
 	 * 输入图片的文件名(必须包含路径名)

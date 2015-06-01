@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="page">
   <form method="post" name="form1" id="form1" action="<?php echo urlAdmin('goods', 'goods_verify');?>">

@@ -5,9 +5,9 @@
  * 邮件操作类，目前只支持smtp服务的邮件发送
  *
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 final class Csv{
 	public $filename;
 	public function export($data){

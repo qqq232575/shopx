@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if(!empty($output['member_list']) && is_array($output['member_list'])){ ?>
 <div class="member-select-box">
     <div class="arrow"></div>

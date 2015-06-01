@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="ncm-flow-layout">
   <div id="ncmInformFlow" class="ncm-flow-container">

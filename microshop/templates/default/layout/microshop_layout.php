@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php require MICROSHOP_BASE_TPL_PATH.'/layout/top.php';?>
 
 <div id="microshop-content" class="pt20">

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if ($output['edit_goods_sign']) {?>
 <div class="tabmenu">
   <?php include template('layout/submenu');?>

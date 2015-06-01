@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['microshop_text_zai'] = '在';
 $lang['microshop_text_le'] = '了';

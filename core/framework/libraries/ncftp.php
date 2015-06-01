@@ -2,9 +2,9 @@
 /**
  * 缓存文件 
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class NcFtp{
 	const FTP_ERR_SERVER_DISABLED = -100;

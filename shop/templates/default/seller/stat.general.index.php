@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="alert mt10" style="clear:both;">
 	<ul class="mt5">
 		<li>1、<?php echo $lang['stat_validorder_explain'];?></li>

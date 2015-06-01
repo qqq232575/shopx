@@ -3,7 +3,7 @@
  *
  *
  *
- * @package    shopx team
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
  */
 class sendStoreMsg {
     private $code = '';

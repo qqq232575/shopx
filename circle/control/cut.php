@@ -3,7 +3,7 @@
  * 裁剪
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class cutControl extends BaseCircleControl {
 	public function __construct(){

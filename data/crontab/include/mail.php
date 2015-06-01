@@ -5,9 +5,9 @@
  * 建议10分钟触发一次
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class mailControl {
     private $_num = 50; // 每次发送消息数量

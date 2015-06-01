@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <ul class="circle-theme-list">
   <?php if(!empty($output['theme_list']) && is_array($output['theme_list'])) {?>

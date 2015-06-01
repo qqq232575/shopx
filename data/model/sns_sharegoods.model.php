@@ -2,9 +2,9 @@
 /**
  * 分享和喜欢商品
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class sns_sharegoodsModel{
 	/**
 	 * 新增分享商品

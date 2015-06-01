@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <script type="text/javascript">
 $(document).ready(function(){
 		$('#salelog_demo').find('.demo').ajaxContent({

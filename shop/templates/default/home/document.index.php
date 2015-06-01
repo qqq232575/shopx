@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/layout.css" rel="stylesheet" type="text/css">
 <div class="nch-article-con" style="margin:0 auto 20px; width:960px">
   <h1><?php echo $output['doc']['doc_title'];?></h1>

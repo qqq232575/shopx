@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <!-- 公司资质 -->
 
@@ -29,21 +29,22 @@
           <td><input name="bank_name" type="text" class="w200" />
             <span></span></td>
         </tr>
-        <tr>
+        <!--shopx 简化 tr>
           <th><i>*</i>支行联行号：</th>
           <td><input name="bank_code" type="text" class="w200" />
             <span></span></td>
-        </tr>
+        </tr-->
         <tr>
           <th><i>*</i>开户银行所在地：</th>
           <td><input id="bank_address" name="bank_address" type="hidden" />
             <span></span></td>
         </tr>
-        <tr>
+	<!-- shopx v3-10 简化-->
+        <!--<tr>
           <th><i>*</i>开户银行许可证电子版：</th>
           <td><input name="bank_licence_electronic" type="file" />
             <span class="block">请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
-        </tr>
+        </tr> end-->
         <tr>
           <th></th>
           <td><input id="is_settlement_account" name="is_settlement_account" type="checkbox" />
@@ -79,11 +80,12 @@
             <td><input id="settlement_bank_name" name="settlement_bank_name" type="text" class="w200"/>
               <span></span></td>
           </tr>
-          <tr>
+	  <!-- shopx v3-10 简化-->
+          <!--tr>
             <th><i>*</i>支行联行号：</th>
             <td><input id="settlement_bank_code" name="settlement_bank_code" type="text" class="w200"/>
               <span></span></td>
-          </tr>
+          </tr-->
           <tr>
             <th><i>*</i>开户银行所在地：</th>
             <td><input id="settlement_bank_address" name="settlement_bank_address" type="hidden" />
@@ -109,11 +111,12 @@
           <td><input name="tax_registration_certificate" type="text" class="w200"/>
             <span></span></td>
         </tr>
-        <tr>
+	<!--shopx v3-10 简化-->
+        <!--tr>
           <th><i>*</i>纳税人识别号：</th>
           <td><input name="taxpayer_id" type="text" class="w200"/>
             <span></span></td>
-        </tr>
+        </tr-->
         <tr>
           <th><i>*</i>税务登记证号电子版：</th>
           <td><input name="tax_registration_certificate_electronic" type="file" />
@@ -142,7 +145,8 @@ $(document).ready(function(){
             $("#settlement_bank_account_name").val("");
             $("#settlement_bank_account_number").val("");
             $("#settlement_bank_name").val("");
-            $("#settlement_bank_code").val("");
+	     //shopx v3-10 简化
+            //$("#settlement_bank_code").val("");
             $("#settlement_bank_address").val("");
         } else {
             use_settlement_account = true;  
@@ -167,16 +171,18 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 50 
             },
-            bank_code: {
+	     //shopx v3-10 简化
+           /*  bank_code: {
                 required: true,
                 maxlength: 20 
-            },
+            }, */
             bank_address: {
                 required: true
             },
-            bank_licence_electronic: {
+	     //shopx v3-10 简化
+           /*  bank_licence_electronic: {
                 required: true
-            },
+            }, */
             settlement_bank_account_name: {
                 required: function() { return use_settlement_account; },    
                 maxlength: 50 
@@ -189,10 +195,11 @@ $(document).ready(function(){
                 required: function() { return use_settlement_account; },
                 maxlength: 50 
             },
-            settlement_bank_code: {
+	     //shopx v3-10 简化
+          /*   settlement_bank_code: {
                 required: function() { return use_settlement_account; },
                 maxlength: 20 
-            },
+            }, */
             settlement_bank_address: {
                 required: function() { return use_settlement_account; }
             },
@@ -200,10 +207,11 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 20
             },
-            taxpayer_id: {
+	     //shopx v3-10 简化
+          /*   taxpayer_id: {
                 required: true,
                 maxlength: 20
-            },
+            }, */
             tax_registration_certificate_electronic: {
                 required: true  
             }
@@ -222,16 +230,18 @@ $(document).ready(function(){
                 required: '请填写开户银行支行名称',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-            bank_code: {
+	     //shopx v3-10 简化
+           /*  bank_code: {
                 required: '请填写支行联行号',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
+            }, */
             bank_address: {
                 required: '请选择开户银行所在地'
             },
-            bank_licence_electronic: {
+	    //shopx v3-10 简化
+         /*   ank_licence_electronic: {
                 required: '请选择上传开户银行许可证电子版文件'
-            },
+            }, */
             settlement_bank_account_name: {
                 required: '请填写银行开户名',
                 maxlength: jQuery.validator.format("最多{0}个字")
@@ -244,10 +254,11 @@ $(document).ready(function(){
                 required: '请填写开户银行支行名称',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-            settlement_bank_code: {
+	     //shopx v3-10 简化
+        /*     settlement_bank_code: {
                 required: '请填写支行联行号',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
+            }, */
             settlement_bank_address: {
                 required: '请选择开户银行所在地'
             },
@@ -255,10 +266,11 @@ $(document).ready(function(){
                 required: '请填写税务登记证号',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-            taxpayer_id: {
+	     //shopx v3-10 简化
+          /*   taxpayer_id: {
                 required: '请填写纳税人识别号',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
+            }, */
             tax_registration_certificate_electronic: {
                 required: '请选择上传税务登记证号电子版文件'
             }

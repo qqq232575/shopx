@@ -3,7 +3,7 @@
  * SNS首页
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class member_snsindexControl extends BaseCircleControl {
 	const MAX_RECORDNUM = 20;//允许插入新记录的最大条数(注意在sns中该常量是一样的，注意与member_snshome中的该常量一致)

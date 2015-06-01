@@ -5,7 +5,7 @@
  * @copyright  QQ355716601
  * @link       http://shopxcom.taobao.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class specialControl extends BaseHomeControl{
 
     public function __construct() {

@@ -1,13 +1,13 @@
 <?php
 /**
- shopx 提供
+shopx yywxx.com 提供
 
 网址：www.yywxx.com
 
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class flea_class_indexControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

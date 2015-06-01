@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="ncc-form-default">
   <form method="POST" id="addr_form" action="index.php">
     <input type="hidden" value="buy" name="act">

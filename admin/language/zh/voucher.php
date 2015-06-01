@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['admin_voucher_unavailable']    = '請確認代金券、積分、金幣均以開啟';
 $lang['admin_voucher_applystate_new']    = '待審核';
 $lang['admin_voucher_applystate_verify']    = '已審核';

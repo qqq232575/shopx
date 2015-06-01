@@ -3,7 +3,7 @@
  * 队列
  *
  *
- * 计划任务触发 by shopx 项目小组
+ * 计划任务触发 by yywxx.com
  */
 
 
@@ -16,7 +16,7 @@ define('APP_ID','crontab');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 define('TRANS_MASTER',true);
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/shopx.php')) exit('shopx.php isn\'t exists!');
 
 if (PHP_SAPI == 'cli') {
     $_GET['act'] = $_SERVER['argv'][1];

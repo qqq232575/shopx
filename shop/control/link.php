@@ -3,10 +3,10 @@
  * 友情连接展示页面
  *
  *
- *  shopx
+ * shopx yywxx.com
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class linkControl extends BaseHomeControl{
 	public function indexOp(){
 		Language::read('home_index_index');

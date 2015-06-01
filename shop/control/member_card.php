@@ -1,7 +1,11 @@
 <?php
 /**
  * The AJAX call member information
- * by shopx team   
+ *
+ *
+ *
+ *
+ * by shopx shopx  www.yywxx.com 开发
  */
 
 class member_cardControl extends BaseHomeControl{

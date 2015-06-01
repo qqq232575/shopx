@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 $lang['cms_isuse'] = 'CMS開關';
 $lang['cms_url'] = 'CMS地址';
 $lang['cms_url_explain'] = '填寫為CMS配置的二級域名，沒有配置請留空。';

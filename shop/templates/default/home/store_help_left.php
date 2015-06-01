@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
     <div class="content">
       <?php if(!empty($output['list']) && is_array($output['list'])){ ?>
       <?php foreach($output['list'] as $key => $val){ ?>

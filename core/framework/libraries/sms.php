@@ -4,9 +4,9 @@
  *
  *
  *
- * @package    library* www.yywxx.com为你提供售后服务 以便你更好的了解
+ * @package    library* www.yywxx.comshopx为你提供售后服务 以便你更好的了解
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class Sms {
     /**

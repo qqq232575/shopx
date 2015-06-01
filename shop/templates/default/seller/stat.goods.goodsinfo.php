@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if($output['stat_msg']){ ?>
 	<div class="alert alert-info mt10" style="clear:both;"><?php echo $output['stat_msg'];?></div>
 <?php } else {?>

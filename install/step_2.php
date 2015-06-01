@@ -56,7 +56,7 @@ $(document).ready(function(){
     <div class="select-install">
       <label>
       <input type="radio" name="iCheck" value="full" id="radio-1" class="green-radio" checked >
-      <h4>完全安装 shopx</h4>
+      <h4>完全安装 ShopNC【B2B2C】</h4>
       <h5>电商系统</h5>
       </label>
     </div>
@@ -67,25 +67,25 @@ $(document).ready(function(){
           <input type="checkbox" name="cms" id="cms" value="1" checked="checked"  disabled="">
           <div class="ico"></div>
           <h4>商城</h4>
-          <p>shopx商城模块是一套功能完善的多用户商城系统，也是整套电商门户的核心程序...</p>
+          <p>ShopNC商城模块是一套功能完善的多用户商城系统，也是整套电商门户的核心程序...</p>
         </li>
         <li class="shop">
           <input type="checkbox" name="shop" id="shop" value="1" checked="checked" disabled="">
           <div class="ico"></div>
           <h4>CMS</h4>
-          <p>shopx CMS模块拥有文章、画报、专题发布等功能，自定义编辑模板,可在文章内容中关联商品...</p>
+          <p>ShopNC CMS模块拥有文章、画报、专题发布等功能，自定义编辑模板,可在文章内容中关联商品...</p>
         </li>
         <li class="circle">
           <input type="checkbox" name="circle" value="1" checked="checked" disabled="">
           <div class="ico"></div>
           <h4>圈子</h4>
-          <p>shopx圈子模块是会员交流互动的理想环境，增强站点人气。主题帖中可与商品关联，特色鲜明...</p>
+          <p>ShopNC圈子模块是会员交流互动的理想环境，增强站点人气。主题帖中可与商品关联，特色鲜明...</p>
         </li>
         <li class="microshop">
           <input type="checkbox" name="microshop" value="1" checked="checked" disabled="">
           <div class="ico"></div>
           <h4>微商城</h4>
-          <p>shopx微商城模块以新颖的形式展示会员已购商品、实物秀图，提高商品浏览量，促进商城经营...</p>
+          <p>ShopNC微商城模块以新颖的形式展示会员已购商品、实物秀图，提高商品浏览量，促进商城经营...</p>
         </li>
       </ul>
     </div>

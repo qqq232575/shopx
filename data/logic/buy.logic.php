@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team  
+ * by shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class buyLogic {
 
     /**
@@ -543,7 +543,8 @@ class buyLogic {
         $store_final_order_total = $this->_logic_buy_1->reCalcGoodsTotal($store_final_goods_total,$store_freight_total,'freight');
 
         //计算店铺分类佣金[改由任务计划]
-//         $store_gc_id_commis_rate_list = Model('store_bind_class')->getStoreGcidCommisRateList($goods_list);
+	// shopx 
+         $store_gc_id_commis_rate_list = Model('store_bind_class')->getStoreGcidCommisRateList($goods_list);
 
         //将赠品追加到购买列表(如果库存0，则不送赠品)
         $append_premiums_to_cart_list = $this->_logic_buy_1->appendPremiumsToCartList($store_cart_list,$store_premiums_list,$store_mansong_rule_list,$this->_member_info['member_id']);
@@ -558,7 +559,8 @@ class buyLogic {
         $this->_order_data['store_final_order_total'] = $store_final_order_total;
         $this->_order_data['store_freight_total'] = $store_freight_total;
         $this->_order_data['store_promotion_total'] = $store_promotion_total;
-//         $this->_order_data['store_gc_id_commis_rate_list'] = $store_gc_id_commis_rate_list;
+	// shopx 
+         $this->_order_data['store_gc_id_commis_rate_list'] = $store_gc_id_commis_rate_list;
         $this->_order_data['store_mansong_rule_list'] = $store_mansong_rule_list;
         $this->_order_data['store_cart_list'] = $store_cart_list;
         $this->_order_data['goods_buy_quantity'] = $goods_buy_quantity;
@@ -641,6 +643,11 @@ class buyLogic {
             $order['shipping_fee'] = $store_freight_total[$store_id];
             $order['goods_amount'] = $order['order_amount'] - $order['shipping_fee'];
             $order['order_from'] = $order_from;
+			//如果支持方式为空时，默认为货到付款 shopx
+			if( $order['payment_code']=="")
+			{
+				$order['payment_code']="offline";
+			}
             $order_id = $model_order->addOrder($order);
             if (!$order_id) {
                 throw new Exception('订单保存失败[未生成订单数据]');
@@ -702,7 +709,9 @@ class buyLogic {
                         $order_goods[$i]['goods_type'] = 1;
                     }
                     $order_goods[$i]['promotions_id'] = $goods_info['promotions_id'] ? $goods_info['promotions_id'] : 0;
-                    $order_goods[$i]['commis_rate'] = 200;
+		   //shopx
+                    $order_goods[$i]['commis_rate'] =floatval($store_gc_id_commis_rate_list[$store_id][$goods_info['gc_id']]);
+
                     $order_goods[$i]['gc_id'] = $goods_info['gc_id'];
                     //计算商品金额
                     $goods_total = $goods_info['goods_price'] * $goods_info['goods_num'];
@@ -734,7 +743,8 @@ class buyLogic {
                         $order_goods[$i]['buyer_id'] = $member_id;
                         $order_goods[$i]['goods_type'] = 4;
                         $order_goods[$i]['promotions_id'] = $bl_goods_info['bl_id'];
-                        $order_goods[$i]['commis_rate'] = 200;
+                        // shopx 
+			$order_goods[$i]['commis_rate'] = floatval($store_gc_id_commis_rate_list[$store_id][$goods_info['gc_id']]);
                         $order_goods[$i]['gc_id'] = $bl_goods_info['gc_id'];
     
                         //计算商品实际支付金额(goods_price减去分摊优惠金额后的值)

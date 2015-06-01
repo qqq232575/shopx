@@ -2623,15 +2623,15 @@ INSERT INTO `#__goods_images` (`goods_image_id`, `goods_commonid`, `store_id`, `
 INSERT INTO `#__groupbuy` (`groupbuy_id`, `groupbuy_name`, `start_time`, `end_time`, `goods_id`, `goods_commonid`, `goods_name`, `store_id`, `store_name`, `goods_price`, `groupbuy_price`, `groupbuy_rebate`, `virtual_quantity`, `upper_limit`, `buyer_count`, `buy_quantity`, `groupbuy_intro`, `state`, `recommended`, `views`, `class_id`, `groupbuy_image`, `groupbuy_image1`, `remark`) VALUES(2, '228元任选一箱，国际大赛权威推荐“金奖”葡萄酒！', 1388995740, 1577721600, 231, 100085, '至尊金奖 法国原瓶进口AOC红酒 任选一箱 红沙城堡红葡萄酒 原装进口', 1, '官方店铺', '899.00', '228.00', '2.54', 0, 5, 0, 0, '<img src="../data/upload/shop/store/goods/1/1_04423392645620711_1280.jpg" alt="image" />', 20, 1, 21, 0, '1_04423393922882448.jpg', '1_04423395187054760.jpg', '全国唯一支持开瓶试饮7天无理由退换货'),
 (3, '东阿阿胶桃花姬阿胶糕300g，芝麻香，核桃脆，上品阿胶，养颜', 1388997900, 1577721600, 232, 100086, '中华老字号 东阿阿胶桃花姬阿胶糕300g', 1, '官方店铺', '150.00', '95.00', '6.33', 0, 3, 0, 0, '<img src="../data/upload/shop/store/goods/1/1_04423412221350722_1280.jpg" alt="image" />', 20, 1, 10, 0, '1_04423413554692434.jpg', '1_04423415305032356.jpg', '闪电发货 48小时送达');
 
-INSERT INTO `#__groupbuy_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopx', '官方店铺', 1388995313, 1577721600);
+INSERT INTO `#__groupbuy_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopnc', '官方店铺', 1388995313, 1577721600);
 
-INSERT INTO `#__p_xianshi` (`xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `quota_id`, `start_time`, `end_time`, `member_id`, `store_id`, `member_name`, `store_name`, `lower_limit`, `state`) VALUES(7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 5, 1389167520, 1577721600, 1, 1, 'shopx', '官方店铺', 2, 1);
+INSERT INTO `#__p_xianshi` (`xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `quota_id`, `start_time`, `end_time`, `member_id`, `store_id`, `member_name`, `store_name`, `lower_limit`, `state`) VALUES(7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 5, 1389167520, 1577721600, 1, 1, 'shopnc', '官方店铺', 2, 1);
 
 INSERT INTO `#__p_xianshi_goods` (`xianshi_goods_id`, `xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `goods_id`, `store_id`, `goods_name`, `goods_price`, `xianshi_price`, `goods_image`, `start_time`, `end_time`, `lower_limit`, `state`, `xianshi_recommend`) VALUES(24, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 49, 1, '春装 披肩式 超短款 针织 衫开衫 女装 青鸟 黑色', '129.00', '100.00', '1_04418240955916042.jpg', 1389167520, 1577721600, 2, 1, 0),
 (25, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 52, 1, '新款 女款 拼接 不规则摆 长袖针织衫开衫 杏雨 白色', '99.00', '58.00', '1_04418253240878850.jpg', 1389167520, 1577721600, 2, 1, 0),
 (26, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 38, 1, '正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色', '189.00', '158.00', '1_04418207207476705.jpg', 1389167520, 1577721600, 2, 1, 0);
 
-INSERT INTO `#__p_xianshi_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopx', '官方店铺', 1389167180, 1577721600);
+INSERT INTO `#__p_xianshi_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopnc', '官方店铺', 1389167180, 1577721600);
 
 INSERT INTO `#__cron` (`id`, `type`, `exeid`, `exetime`) VALUES 
 (1, 6, 100086, 1414684800),
@@ -2827,8 +2827,8 @@ INSERT INTO `#__live_groupbuy` (`groupbuy_id`, `groupbuy_name`, `groupbuy_remark
 
 INSERT INTO `#__link` (`link_id`, `link_title`, `link_url`, `link_pic`, `link_sort`) VALUES
 (1, 'shopx', 'http://www.yywxx.com', 'shopxlogo.png', 0),
-(2, '演示站点', 'http://v3.shopx', 'shopxlogo.png', 1),
-(4, '支持论坛', 'http://shopx项目小组', '', 1),
+(2, '演示站点', 'http://v3.yywxx.com', 'shopxlogo.png', 1),
+(4, '支持论坛', 'http://bbs.yywxx.com', '', 1),
 (5, '淘宝店', 'http://shopxcom.taobao.com', '', 0);
 
 INSERT INTO `#__flea_area` (`flea_area_id`, `flea_area_name`, `flea_area_deep`, `flea_area_parent_id`, `flea_area_sort`,`flea_area_hot`) VALUES

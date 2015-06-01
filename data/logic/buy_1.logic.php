@@ -2,9 +2,9 @@
 /**
  * 购买行为
  *
- * by shopx  运营版
+ * by yywxx.com shopx 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class buy_1Logic {
 
     /**
@@ -872,6 +872,7 @@ class buy_1Logic {
     public function getGroupbuyInfo(& $goods_info = array()) {
         if (!C('groupbuy_allow') || empty($goods_info['groupbuy_info'])) return ;
         $groupbuy_info = $goods_info['groupbuy_info'];
+
         $goods_info['goods_price'] = $groupbuy_info['groupbuy_price'];
         if ($groupbuy_info['upper_limit'] && $goods_info['goods_num'] > $groupbuy_info['upper_limit']) {
             $goods_info['goods_num'] = $groupbuy_info['upper_limit'];
@@ -879,6 +880,22 @@ class buy_1Logic {
         $goods_info['upper_limit'] = $groupbuy_info['upper_limit'];
         $goods_info['promotions_id'] = $goods_info['groupbuy_id'] = $groupbuy_info['groupbuy_id'];
         $goods_info['ifgroupbuy'] = true;
+		//v3-b10 
+		//$goods_model=Model('order');
+		  $ordergoods=Model()->table('order_goods')->where(array('buyer_id'=>$_SESSION['member_id'],'goods_type'=>2,'promotions_id'=>$groupbuy_info['groupbuy_id']))->sum('goods_num');
+		  if(!empty($ordergoods)&&intval($ordergoods)>0)
+		  {
+		   $tnum=intval($groupbuy_info['upper_limit'])-intval($ordergoods);//-intval($goods_info['goods_num']);
+		   if($tnum<=0)
+			$goods_info=null;
+			//return;
+		   else{
+			if($goods_info['goods_num']>$tnum){
+			 $goods_info['goods_num'] = $tnum;
+			}
+		   }
+		  }
+		//end
     }
 
     /**

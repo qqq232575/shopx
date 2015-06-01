@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 
 <div class="cms-index-module-adv1">
   <ul id="adv_content" nctype="object_module_edit">

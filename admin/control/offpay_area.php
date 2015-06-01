@@ -4,7 +4,7 @@
  *
  * by www.yywxx.com shopx 开发调试*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class offpay_areaControl extends SystemControl {
 	public function __construct(){

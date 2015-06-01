@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <?php if(!empty($output['brand_list']) && is_array($output['brand_list'])){ ?>
 
 <div class="brand-select-box">

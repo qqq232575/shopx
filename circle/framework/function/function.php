@@ -5,7 +5,7 @@
  * 公共方法
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 /**
  * 返回模板文件所在完整目录

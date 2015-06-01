@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <link type="text/css" rel="stylesheet" href="<?php echo SHOP_SITE_URL;?>/templates/default/css/home_login.css">
 <script type="text/javascript">
 $(document).ready(function(){

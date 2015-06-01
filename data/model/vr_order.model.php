@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class vr_orderModel extends Model {
 
     /**
@@ -47,6 +47,11 @@ class vr_orderModel extends Model {
      * @return int 返回 insert_id
      */
     public function addOrderCode($order_info) {
+	// 好商 城提供二次开发
+	$vrc_num=Model()->table('vr_order_code')->where(array('order_id'=>$order_info['order_id']))->count();
+	if (!empty($vrc_num)&&intval($vrc_num)>=intval($order_info['goods_num']))
+	return false;
+  
         if (empty($order_info)) return false;
 
         //均摊后每个兑换码支付金额

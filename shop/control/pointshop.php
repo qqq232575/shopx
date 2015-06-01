@@ -1,9 +1,9 @@
 <?php
 /**
  * 积分中心
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class pointshopControl extends BasePointShopControl {
 	public function __construct() {
 	    parent::__construct();

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <style type="text/css">
 .jcarousel-container { width: 700px; margin: 10px 0;}
 .jcarousel-container .goods-pic { width: 175px; height: 175px;}

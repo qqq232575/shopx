@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <style type="text/css">
 .mb-item-edit-content { background: #EFFAFE url(<?php echo ADMIN_TEMPLATES_URL;?>/images/cms_edit_bg_line.png) repeat-y scroll 0 0;}
 </style>

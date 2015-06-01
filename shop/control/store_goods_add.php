@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by shopx www.yywxx.com 运营版*/
 
 
-defined('In_OS') or exit ('Access Invalid!');
+defined('IN_OS') or exit ('Access Invalid!');
 class store_goods_addControl extends BaseSellerControl {
     /**
      * 三方店铺验证，商品数量，有效期

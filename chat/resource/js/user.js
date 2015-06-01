@@ -1,4 +1,4 @@
-// by shopx 调出图片
+// by yywxx.com 调出图片
 	var interval = 1;//断开后计时
 	var new_interval = 1;//消息提醒计时
 	var connect = 0;//连接状态
@@ -70,7 +70,7 @@
 		    var n = send_state();
 			if (n > 0) setTimeout("getconnect()",2000);
 			$("#chat_show_user").click(function() {
-			    $('div[nctype="barLoginBox"]').toggle();
+			    $('div[nctype="a-barLoginBox"]').trigger("click");
 			});
 		}
 		$('#dialog_clear,#dialog_right_clear').live('click', function() {

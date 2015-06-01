@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 	<div id="container_<?php echo $output['stat_field'];?>" class="w100pre close_float" style="height:400px"></div>
 	
   <table class="table tb-type2 nobdb">

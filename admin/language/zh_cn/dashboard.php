@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 /**
  * 欢迎页面
  */
@@ -58,7 +58,7 @@ $lang['dashboard_aboutus_designer']		= '设计师';
 $lang['dashboard_aboutus_designer_name']	= '本仙一死';
 $lang['dashboard_aboutus_near_us']		= '关于我们';
 $lang['dashboard_aboutus_bbs']			= '官方论坛';
-$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流shopx的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让shopx变得更好更加适合您';
+$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流shopx的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让ShopNC变得更好更加适合您';
 $lang['dashboard_aboutus_website']		= '官方网站';
 $lang['dashboard_aboutus_website_tip']	= '您可以在此获知shopx的最新动态，获得个性化的服务或获取我们的联系方式';
 $lang['dashboard_aboutus_thanks']		= '感谢有您';

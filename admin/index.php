@@ -3,11 +3,11 @@
  * 商城板块初始化文件
  *
  *
- * by shopx team */ 
+ * * by shopx www.yywxx.com 运营版 */
 
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/shopx.php')) exit('shopx.php isn\'t exists!');
 define('TPL_NAME',TPL_ADMIN_NAME);
 define('ADMIN_TEMPLATES_URL',ADMIN_SITE_URL.'/templates/'.TPL_NAME);
 define('BASE_TPL_PATH',BASE_PATH.'/templates/'.TPL_NAME);

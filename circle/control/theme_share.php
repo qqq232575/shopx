@@ -5,7 +5,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 class theme_shareControl extends BaseCircleControl{
 	protected $c_id = 0;		// 圈子id

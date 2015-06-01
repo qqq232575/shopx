@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <style type="text/css">
 h3.dialog_head { margin: 0 !important;}
 .dialog_content { padding: 0 15px 15px !important; overflow: hidden;}

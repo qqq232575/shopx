@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 
 $lang['store_goods_index_goods_limit']			= '您已經達到了添加商品的上限';
 $lang['store_goods_index_goods_limit1']			= '個，如果您想繼續增加商品，請到“店舖設置”升級店舖等級';

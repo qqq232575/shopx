@@ -5,12 +5,12 @@
  *
  *
  *
- * by shopx team 
+ * by shopx www.yywxx.com 开发修正
  */
 
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class cms_articleControl extends SystemControl{
     //文章状态草稿箱
     const ARTICLE_STATE_DRAFT = 1;

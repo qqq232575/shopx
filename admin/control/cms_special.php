@@ -5,12 +5,12 @@
  *
  *
  *
- * by shopx team 
+ * by shopx www.yywxx.com 开发修正
  */
 
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class cms_specialControl extends SystemControl{
 
     const LINK_CMS_SPECIAL = 'index.php?act=cms_special&op=cms_special_list';

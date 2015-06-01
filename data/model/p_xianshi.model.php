@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by shopx shopx  www.yywxx.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('IN_OS') or exit('Access Invalid!');
 class p_xianshiModel extends Model{
 
     const XIANSHI_STATE_NORMAL = 1;

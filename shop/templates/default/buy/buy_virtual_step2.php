@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="ncc-main">
  <div class="ncc-title">
     <h3>填写核对购物信息</h3>

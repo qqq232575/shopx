@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('IN_OS') or exit('Access Invalid!');?>
 <div class="block-style-one">
     <div class="title">
         <h3><?php echo $lang['cms_article_tag'];?></h3>
