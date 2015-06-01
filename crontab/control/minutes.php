@@ -15,6 +15,7 @@ class minutesControl extends BaseCronControl {
      * 默认方法
      */
     public function indexOp() {
+
         $this->_cron_common();
         $this->_web_index_update();
         $this->_cron_mail_send();
@@ -65,7 +66,7 @@ class minutesControl extends BaseCronControl {
             $cron_array[$v['type']][$v['exeid']] = $v;
         }
         foreach ($cron_array as $k=>$v) {
-            // 如果方法不存是，直接删除id
+            // 如果方法不存在，直接删除id
             if (!method_exists($this,'_cron_'.$k)) {
                 $tmp = current($v);
                 $cronid[] = $tmp['id'];continue;
