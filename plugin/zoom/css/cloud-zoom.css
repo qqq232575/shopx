@@ -5,7 +5,7 @@ img{border:none;}
 
 /* zoom-section */
 .zoom-section{clear:both;margin-top:20px;margin:0 auto;position:relative;}
-.zoom-desc{float:left;margin-left:0px;margin-bottom:20px;position:absolute;top:380px;width: 408px;
+.zoom-desc{float:left;margin-left:0px;margin-bottom:20px;position:absolute;top:368px;width: 408px;
 	height: 60px;}
 .zoom-desc span{float: left;
 
@@ -38,10 +38,10 @@ img{border:none;}
 .current{
 	border:1px solid #FF4400;
 }
-.zoom-desc .small div a{width:70px;height:70px;float:left;margin-left:2px}
-.zoom-desc .small div img{width:68px;height:68px;float:left;} 
-.zoom-small-image{float:left;margin-bottom:20px;position:absolute;width:360px;height:360px;top:-2px;border:1px solid #ccc}
-.zoom-small-image img{width:360px;height:360px}
+.zoom-desc .small div a{width:65px;height:65px;float:left;margin-left:2.7px}
+.zoom-desc .small div img{width:63px;height:63px;float:left;} 
+.zoom-small-image{float:left;margin-bottom:20px;position:absolute;width:365px;height:365px;top:-2px;border:1px solid #ccc}
+.zoom-small-image img{width:365px;height:365px}
 .zoom-tiny-image{border:1px solid #CCC;margin:0px;}
 .zoom-tiny-image:hover{border:1px solid #FF4400;}
 
