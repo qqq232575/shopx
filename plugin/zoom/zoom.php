@@ -1,9 +1,5 @@
 <?php defined('IN_OS') or exit('Access Invalid!');?>
 
-
-	                <?php if (!empty($output['goods_image'])) {?>
-	                <?php echo implode(',', $output['goods_image']);?>
-	                <?php }?>
 <link href="<?php echo BASE_SITE_URL;?>/plugin/zoom/css/cloud-zoom.css" rel="stylesheet" type="text/css" />
 <style>
 .ncs-handle {
@@ -27,20 +23,33 @@
 		<div class="zoom-desc">  
 			<span class="left disable">&lt;</span>
 		  <div class="small">
-			<div>		              
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>
-<a href-lcl='<?php echo BASE_SITE_URL;?>/plugin/zoom/images/3.png' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo BASE_SITE_URL;?>/plugin/zoom/images/2.png'"><img class="zoom-tiny-image" src="<?php echo BASE_SITE_URL;?>/plugin/zoom/images/1.png" /></a>			
-		    </div>
+			<div>	
+<?php 
+    if (!empty($output['goods_image'])) {
+        foreach($output['goods_image'] as $key => $value){
+            $arr[$key]=explode(',',$value);
+?>           
+<a href-lcl='<?php echo $value[0];?>' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' <?php echo $value[0];?>'"><img class="zoom-tiny-image" src="<?php echo $value[0];?>" /></a>
+
+<?php }
+var_dump($arr);
+}
+?>
+</div>
 		  </div>
 			<span class="right">&gt;</span>			
 		</div>
 	</div>
 
+
+<?php 
+    if (!empty($output['goods_image'])) {
+        foreach($output['goods_image'] as $key => $value){
+            $arr[$key]=explode(',',$value);
+        }
+        var_dump($arr);
+    }
+?>
 	<!-- 左右滚动代码start -->
 <script type="text/javascript">
 $(function(){
