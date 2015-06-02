@@ -192,6 +192,7 @@ $(function(){
 <!-- PublicHeadLayout Begin -->
 <!-- 顶部广告展开效果-->
 <!-- 顶部广告展开效果-->
+<?php  require_once BASE_ROOT_PATH.'/plugin/fixed_search_bar.php';?>
 <div class="header-wrap">
   <header class="public-head-layout wrapper">
     <h1 class="site-logo"><a href="<?php echo BASE_SITE_URL;?>"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.$output['setting_config']['site_logo']; ?>" class="pngFix"></a></h1>

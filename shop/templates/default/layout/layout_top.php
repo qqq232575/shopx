@@ -69,7 +69,7 @@
       <?php if (!$output['hidden_rtoolbar_compare']) { ?>
       <li><a href="javascript:void(0);" id="compare" class="compare">对比</a></li>
       <?php } ?>
-      <li><a href="javascript:void(0);" id="gotop" class="gotop">顶部</a></li>
+      <?php  require_once BASE_ROOT_PATH.'/plugin/gotop.php';?>
     </ul>
 
     <div class="content-box" id="content-compare">
@@ -97,30 +97,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-//返回顶部
-backTop=function (btnId){
-	var btn=document.getElementById(btnId);
-	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-	window.onscroll=set;
-	btn.onclick=function (){
-		btn.style.opacity="0.5";
-		window.onscroll=null;
-		this.timer=setInterval(function(){
-		    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			scrollTop-=Math.ceil(scrollTop*0.1);
-			if(scrollTop==0) clearInterval(btn.timer,window.onscroll=set);
-			if (document.documentElement.scrollTop > 0) document.documentElement.scrollTop=scrollTop;
-			if (document.body.scrollTop > 0) document.body.scrollTop=scrollTop;
-		},10);
-	};
-	function set(){
-	    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-	    btn.style.opacity=scrollTop?'1':"0.5";
-	}
-};
-backTop('gotop');
-</script>
+
 <?php } ?>
 <div class="public-top-layout w">
   <div class="topbar wrapper">

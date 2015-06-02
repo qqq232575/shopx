@@ -17,7 +17,7 @@ else {document.cookie='uid='+uid[1];}
 .category { display: block !important; }
 </style>
 <div class="clear"></div>
-
+<?php  require_once BASE_ROOT_PATH.'/plugin/fixed_search_bar.php';?>
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
   <div class="right-sidebar">
@@ -144,14 +144,7 @@ else {document.cookie='uid='+uid[1];}
 <?php require_once template('layout/index_ensure');?>
 <!--首页底部保障结束-->
 <!--StandardLayout Begin-->
-<div class="nav_Sidebar">
-<a class="nav_Sidebar_1" href="javascript:;" ></a>
-<a class="nav_Sidebar_2" href="javascript:;" ></a>
-<a class="nav_Sidebar_3" href="javascript:;" ></a>
-<a class="nav_Sidebar_4" href="javascript:;" ></a>
-<a class="nav_Sidebar_5" href="javascript:;" ></a>
-<a class="nav_Sidebar_6" href="javascript:;" ></a> 
-<a class="nav_Sidebar_7" href="javascript:;" ></a>
-<a class="nav_Sidebar_8" href="javascript:;" ></a>
-</div>
+
+<?php  require_once BASE_ROOT_PATH.'/plugin/floor_map.php';?>
+
 <!--StandardLayout End-->

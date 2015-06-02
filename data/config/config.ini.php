@@ -2,7 +2,7 @@
 // defined('IN_OS') or exit('Access Invalid!');
 
 $config = array();
-$config_host='http://localhost/haov3b8/';
+$config_host='http://localhost/shopx/';
 $config['base_site_url'] 		= $config_host;
 $config['shop_site_url'] 		= $config_host.'shop';
 $config['cms_site_url'] 		= $config_host.'cms';
