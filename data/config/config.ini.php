@@ -2,7 +2,7 @@
 // defined('IN_OS') or exit('Access Invalid!');
 
 $config = array();
-$config_host='http://localhost/shopx/';
+$config_host='http://localhost/';
 $config['base_site_url'] 		= $config_host;
 $config['shop_site_url'] 		= $config_host.'shop';
 $config['cms_site_url'] 		= $config_host.'cms';
@@ -23,8 +23,8 @@ $config['tablepre']		= '33hao_';
 $config['db']['1']['dbhost']       = 'localhost';
 $config['db']['1']['dbport']       = '3306';
 $config['db']['1']['dbuser']       = 'root';
-$config['db']['1']['dbpwd']        = '123456';
-$config['db']['1']['dbname']       = '33haov3b8';
+$config['db']['1']['dbpwd']        = '';
+$config['db']['1']['dbname']       = 'shopx';
 $config['db']['1']['dbcharset']    = 'UTF-8';
 $config['db']['slave']                  = $config['db']['master'];
 $config['session_expire'] 	= 3600;
