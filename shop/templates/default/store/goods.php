@@ -10,7 +10,6 @@
   <div class="ncs-detail<?php if ($output['store_info']['is_own_shop']) echo ' ownshop'; ?>">
     <!-- S 商品图片 -->
     <div id="ncs-goods-picture" class="ncs-goods-picture image_zoom"> </div>
-    <?php  require_once BASE_ROOT_PATH.'/plugin/zoom/zoom.php';?>
     <!-- S 商品基本信息 -->
     <div class="ncs-goods-summary">
       <div class="name">
@@ -466,7 +465,66 @@
 <script type="text/javascript">
 /** 辅助浏览 **/
 jQuery(function($){
+	//产品图片
+	$.getScript('<?php echo SHOP_RESOURCE_SITE_URL?>/js/ImageZoom.js', function(){
+		var
+		zoomController,
+		zoomControllerUl,
+		zoomControllerUlLeft = 0,
+		shell = $('#ncs-goods-picture'),
+		shellPanel = shell.parent(),
+		heightNcsDetail = $('div[class="ncs-detail"]').height();
+		heightOffset = 60,
+		minGallerySize = [360, 360],
+		imageZoom = new ImageZoom({
+			shell: shell,
+			basePath: '',
+			levelASize: [60, 60],
+			levelBSize: [320, 320],
+			gallerySize: minGallerySize,
+			onBeforeZoom: function(index, level){
+				if(!zoomController){
+					zoomController = shell.find('div.controller');
+				}
 
+				var
+				self = this,
+				duration = 320,
+				width = minGallerySize[0],
+				height = minGallerySize[1],
+				zoomFx = function(){
+					self.ops.gallerySize = [width, height];
+					self.galleryPanel.stop().animate({width:width, height:height}, duration);
+					shellPanel.stop().animate({height:height + heightOffset}, duration).css('overflow', 'visible');
+					zoomController.animate({width:width-22}, duration);
+					shell.stop().animate({width:width}, duration);
+				};
+				if(level !== this.level && this.level !== 0){
+					if(this.level === 1 && level > 1){
+						height = Math.max(480, shellPanel.height());
+						width = shellPanel.width();
+						zoomFx();
+					}
+					else if(level === 1){
+						zoomFx();
+						shellPanel.stop().animate({height:heightNcsDetail}, duration);
+					}
+				}
+			},
+			onZoom: function(index, level, prevIndex){
+				shell.find('a.prev,a.next')[level<3 ? 'removeClass' : 'addClass']('hide');
+				shell.find('a.close').css('display', [level>1 ? 'block' : 'none']);
+			},
+			items: [
+	                <?php if (!empty($output['goods_image'])) {?>
+	                <?php echo implode(',', $output['goods_image']);?>
+	                <?php }?>
+					]
+		});
+		shell.data('imageZoom', imageZoom);
+	});
+
+});
 
     //收藏分享处下拉操作
     jQuery.divselect = function(divselectid,inputselectid) {
