@@ -17,7 +17,7 @@ else {document.cookie='uid='+uid[1];}
 .category { display: block !important; }
 </style>
 <div class="clear"></div>
-<?php  require_once BASE_ROOT_PATH.'/plugin/fixed_search_bar.php';?>
+<?php  require_once BASE_ROOT_PATH.'/plugin/bar_fixed_search.php';?>
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
   <div class="right-sidebar">

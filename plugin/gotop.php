@@ -1,5 +1,5 @@
 <?php defined('IN_OS') or exit('Access Invalid!'); ?>
-<li><a href="javascript:void(0);" id="gotop" class="gotop">顶部</a></li>
+<li><a href="javascript:void(0);" id="gotop" class="gotop"><i class="iconfont">&#xE63A;</i></a></li>
 <script type="text/javascript">
 $(document).ready(function(){
 	//首先将#back-to-top隐藏
