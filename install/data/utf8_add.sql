@@ -2826,10 +2826,17 @@ INSERT INTO `#__live_groupbuy` (`groupbuy_id`, `groupbuy_name`, `groupbuy_remark
 (1, '仅售345元！可享俏江南原价500元储值卡1张！全国72家门店通兑！', '仅售345元！可享俏江南原价500元储值卡1张！全国72家门店通兑！', 1399878000, 1431360000, 1436630400, 1, '俏江南', '500.00', '345.00', 10000, 5, 0, '<p>俏江南创立于2000年,首家餐厅在北京CBD国贸中心开业,品牌定位于服务城市核心商务区。2002年在上海开设了第一家非京区域的连锁餐厅,从此步入了跨区域连锁的时代。</p>\r\n<p>专精于将中华经典美食与时尚现代设计的结合,体现在不断追求菜品的创新与融合,餐厅设计上标新立意,由国际级设计师量身定做,将中国古典的江南小桥流水进行西式设计,以中西合璧的餐厅环境,带来时尚、健康、高雅的就餐体验。</p>', '1_04532212795183385.jpg', '1_04532212870644310.jpg', 1399877398, 1, 1, 1, 3, 320, 2, 10, 2);
 
 INSERT INTO `#__link` (`link_id`, `link_title`, `link_url`, `link_pic`, `link_sort`) VALUES
+<<<<<<< HEAD
 (1, '好商城', 'http://www.33hao.com', '33haologo.png', 0),
 (2, '演示站点', 'http://v3.33hao.com', '33haologo.png', 1),
 (4, '支持论坛', 'http://bbs.33hao.com', '', 1),
 (5, '淘宝店', 'http://33haocom.taobao.com', '', 0);
+=======
+(1, 'shopx', 'http://www.yywxx.com', 'shopxlogo.png', 0),
+(2, '演示站点', 'http://v3.yywxx.com', 'shopxlogo.png', 1),
+(4, '支持论坛', 'http://bbs.yywxx.com', '', 1),
+(5, '淘宝店', 'http://shopxcom.taobao.com', '', 0);
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 INSERT INTO `#__flea_area` (`flea_area_id`, `flea_area_name`, `flea_area_deep`, `flea_area_parent_id`, `flea_area_sort`,`flea_area_hot`) VALUES
 (1, '直辖市', 1, 0, 0, 0),

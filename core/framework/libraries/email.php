@@ -5,9 +5,15 @@
  * 邮件操作类，目前只支持smtp服务的邮件发送
  *
  *
+<<<<<<< HEAD
  * @package    library* www.33hao.com 专业团队 提供售后服务
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 final class Email{
 	/**
 	 * 邮件服务器

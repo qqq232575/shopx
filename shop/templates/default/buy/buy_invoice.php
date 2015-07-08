@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="ncc-receipt-info"><div class="ncc-receipt-info-title">
   <h3>发票信息</h3>

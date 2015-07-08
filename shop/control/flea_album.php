@@ -1,9 +1,15 @@
 <?php
 /**
  * 闲置图片上传操作
+<<<<<<< HEAD
  * by 33hao.com
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * by yywxx.com
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class flea_albumControl extends BaseFleaMemberControl {
 	/**
 	 *	验证是否开启闲置功能

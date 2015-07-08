@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <script type="text/javascript">
 var SHOP_SITE_URL = "<?php echo SHOP_SITE_URL; ?>";
 var UPLOAD_SITE_URL = "<?php echo UPLOAD_SITE_URL; ?>";

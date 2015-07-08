@@ -1,9 +1,16 @@
 <?php
 /**
+<<<<<<< HEAD
 好商城V3 33hao.com 提供
 
 网址：www.33hao.com
 
+=======
+shopx yywxx.com 提供
+
+网址：www.yywxx.com
+
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  */

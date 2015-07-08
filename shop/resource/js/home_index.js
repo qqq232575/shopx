@@ -274,6 +274,7 @@ $(function(){
 	$(".right-side-focus").jfocus();
 	$(".groupbuy").jfocus({time:8000});
 	$("#saleDiscount").jfocus({time:8000});
+<<<<<<< HEAD
 	/*监听滚动条和左侧菜单点击事件 start b y 33 hao.com*/
             var _arr = [];
             window.onscroll = function(){
@@ -320,6 +321,9 @@ $(function(){
                 }
                 
             }
+=======
+
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			/*end*/
 				//$("#js_banner_top").show();
 				$("#js_banner_top").slideDown(800);

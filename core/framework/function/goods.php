@@ -7,7 +7,11 @@
  * @package    function* www.33hao.com 专业团队 提供售后服务
  */
 
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 /**
  * 取得商品缩略图的完整URL路径，接收商品信息数组，返回所需的商品缩略图的完整URL

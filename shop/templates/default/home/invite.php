@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 .container { width:1010px; margin:0 auto; }
 .button { border-radius: 2px; background: -moz-linear-gradient(center top, #f93, #c60) repeat scroll 0 0 rgba(0, 0, 0, 0); border: 1px solid #c93; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); color: #fff !important; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; line-height: normal; margin: 0 2px; min-width: 80px; outline: medium none; padding: 5px 13px 6px; text-align: center; text-decoration: none; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); transition: all 0.2s linear 0s; vertical-align: middle; width: auto !important; }

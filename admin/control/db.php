@@ -4,9 +4,15 @@
  *
  * 
  *
+<<<<<<< HEAD
  *  by  33 hao.com 好商城V3
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ *  by  33 hao.com shopx
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class dbControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

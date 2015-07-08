@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div id="footer">
   <p><a href="<?php echo SHOP_SITE_URL;?>"><?php echo $lang['nc_index'];?></a>

@@ -1,13 +1,21 @@
 <?php
 /**
  *
+<<<<<<< HEAD
  * 好商城V3 instller
+=======
+ * shopx instller
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  *
  *
  */
 // 设置最大执行时间
 set_time_limit(0);
+<<<<<<< HEAD
 define('InShopNC',true);
+=======
+define('IN_OS',true);
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 @ini_set ('memory_limit', '512M');
 @set_magic_quotes_runtime(0);
@@ -55,7 +63,11 @@ function runquery($sql) {
 
 	if(!isset($sql) || empty($sql)) return;
 
+<<<<<<< HEAD
 	$sql = str_replace("\r", "\n", str_replace('33hao_', $tablepre, $sql));
+=======
+	$sql = str_replace("\r", "\n", str_replace('shopx_', $tablepre, $sql));
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	$ret = array();
 	$num = 0;
 	foreach(explode(";\n", trim($sql)) as $query) {
@@ -94,7 +106,11 @@ function showjsmessage($message,$n=1) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< HEAD
 <title>好商城V3插件/升级包</title>
+=======
+<title>shopx插件/升级包</title>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <link href="install.css" rel="stylesheet" type="text/css">
 <meta content="ShopNC" name="Copyright" />
@@ -102,8 +118,13 @@ function showjsmessage($message,$n=1) {
 	<div class="header">
       <div class="layout">
         <div class="title">
+<<<<<<< HEAD
           <h5>好商城V3提供升级包</h5>
           <h2>好商城V3-b10升级包</h2>
+=======
+          <h5>shopx提供升级包</h5>
+          <h2>shopx-b10升级包</h2>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         </div>
         <div class="version">版本: 2015.05.23</div>
       </div>
@@ -118,15 +139,24 @@ function showjsmessage($message,$n=1) {
 				<div class="main">
 				<div class="text-box" id="text-box">
 				<?php if ($current == ''){ ?>
+<<<<<<< HEAD
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你的版本里未安装www.33hao.com模块！你只需简单一步就可以安装好好商城V3-b8升级包了哦！感谢你对好商城V3的支持！<span style="color: #FF0000;">如因安装造成您原有二次开发功能的错误或丢失，www.33hao.com不予承担任何责任及损失，请您慎重操作。
+=======
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你的版本里未安装www.yywxx.com模块！你只需简单一步就可以安装好shopx-b8升级包了哦！感谢你对shopx的支持！<span style="color: #FF0000;">如因安装造成您原有二次开发功能的错误或丢失，www.yywxx.com不予承担任何责任及损失，请您慎重操作。
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 				</span><br /><br />
 				建议在升级过程中暂时关闭网站。进行下面操作前请确认已经完成备份，程序将自动修改数据库，点击按钮开始执行。<br />
 				<br />
 				<span style="color: #FF0000;">重要说明：</span><br />
 			  <div>
 			  	1、&nbsp;&nbsp;其他文件直接按文件名存放替换就可以了<br />
+<<<<<<< HEAD
 			  	2、&nbsp;&nbsp;本程序由www.33hao.com开发！转载请保留版权<br />
 			  	3、&nbsp;&nbsp;好商城v3官方论坛：http://www.33hao.com<br />
+=======
+			  	2、&nbsp;&nbsp;本程序由www.yywxx.com开发！转载请保留版权<br />
+			  	3、&nbsp;&nbsp;shopx官方论坛：http://www.yywxx.com<br />
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 			  	<br /><br />
 			  </div>
@@ -153,7 +183,11 @@ function showjsmessage($message,$n=1) {
 				</div>
 				</div>
 <div class="footer">
+<<<<<<< HEAD
   <h5><a href="http://www.33hao.com" target="_blank">好商城V3提供</a></h6>
+=======
+  <h5><a href="http://www.yywxx.com" target="_blank">shopx提供</a></h6>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 </div>
 <script type="text/javascript">
 <?php if ($_GET['go'] == '3'){ ?>

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['microshop_not_install'] = '您没有安装微商城模块';
 
 $lang['microshop_member'] = '用户';

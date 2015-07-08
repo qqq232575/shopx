@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="ncc-bottom"> <a href="javascript:void(0)" id='submitOrder' class="ncc-btn ncc-btn-acidblue fr"><?php echo $lang['cart_index_submit_order'];?></a> </div>
 <script>
 function submitNext(){

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="eject_con">
 <form method="post" id="delmember" name="delmember" action="<?php echo CIRCLE_SITE_URL;?>/index.php?act=manage&op=delmember&c_id=<?php echo $_GET['c_id'];?>&cm_id=<?php echo $_GET['cm_id'];?>">
     <input type="hidden" name="form_submit" value="ok"/>

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['cut_working_area']	= '工作区域';
 $lang['cut_preview']		= '裁切预览';

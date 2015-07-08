@@ -5,9 +5,15 @@
  *
  *
  *
+<<<<<<< HEAD
  * by 33hao 好商城V3  www.33hao.com 开发
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * by shopx shopx  www.yywxx.com 开发
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class memberModel extends Model {
 
     public function __construct(){
@@ -185,14 +191,22 @@ class memberModel extends Model {
 		$member_info['member_name']		= $register_info['username'];
 		$member_info['member_passwd']	= $register_info['password'];
 		$member_info['member_email']		= $register_info['email'];
+<<<<<<< HEAD
 		//添加邀请人(推荐人)会员积分 by 33hao.com
+=======
+		//添加邀请人(推荐人)会员积分 by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 		$member_info['inviter_id']		= $register_info['inviter_id'];
 		$insert_id	= $this->addMember($member_info);
 		if($insert_id) {
 		    //添加会员积分
 			if (C('points_isuse')){
 				Model('points')->savePointsLog('regist',array('pl_memberid'=>$insert_id,'pl_membername'=>$register_info['username']),false);
+<<<<<<< HEAD
 				//添加邀请人(推荐人)会员积分 by 33hao.com
+=======
+				//添加邀请人(推荐人)会员积分 by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 				$inviter_name = Model('member')->table('member')->getfby_member_id($member_info['inviter_id'],'member_name');
 				Model('points')->savePointsLog('inviter',array('pl_memberid'=>$register_info['inviter_id'],'pl_membername'=>$inviter_name,'invited'=>$member_info['member_name']));
 			}
@@ -247,7 +261,11 @@ class memberModel extends Model {
 		    $member_info['member_qqinfo']		= $param['member_qqinfo'];
 		    $member_info['member_sinaopenid']	= $param['member_sinaopenid'];
 		    $member_info['member_sinainfo']	= $param['member_sinainfo'];
+<<<<<<< HEAD
 		    //添加邀请人(推荐人)会员积分 by 33hao.com
+=======
+		    //添加邀请人(推荐人)会员积分 by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 		    $member_info['inviter_id']	        = $param['inviter_id'];
 		    $insert_id	= $this->table('member')->insert($member_info);
 		    if (!$insert_id) {

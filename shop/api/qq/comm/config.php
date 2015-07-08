@@ -33,7 +33,11 @@ require_once(BASE_PATH.DS.'api'.DS.'qq'.DS.'comm'.DS."session.php");
 
 //包含配置信息
 //$data = rkcache("setting", true);
+<<<<<<< HEAD
 $data = require(BASE_DATA_PATH.DS.'cache'.DS.'setting.php');// by 33hao.com
+=======
+$data = require(BASE_DATA_PATH.DS.'cache'.DS.'setting.php');// by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 //qq互联是否开启
 if($data['qq_isuse'] != 1){
 	@header('location: index.php');

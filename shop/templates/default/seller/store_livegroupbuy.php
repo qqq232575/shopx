@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   <div class="tabmenu">
   	<?php include template('layout/submenu');?>
     <a class="ncsc-btn ncsc-btn-green" href="index.php?act=store_livegroup&op=groupbuy_add" title=""><i class="icon-plus-sign"></i>新增线下抢</a>

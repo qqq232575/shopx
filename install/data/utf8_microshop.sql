@@ -115,7 +115,12 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES ('microshop_goods_default_clas
 ('microshop_isuse', '1'),
 ('microshop_logo', ''),
 ('microshop_personal_limit', '50'),
+<<<<<<< HEAD
 ('microshop_seo_description', '好商城V3,微商城,随心看,个人秀,店铺街'),
 ('microshop_seo_keywords', '好商城V3,微商城,随心看,个人秀,店铺街,网上购物'),
+=======
+('microshop_seo_description', 'shopx,微商城,随心看,个人秀,店铺街'),
+('microshop_seo_keywords', 'shopx,微商城,随心看,个人秀,店铺街,网上购物'),
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 ('microshop_store_banner', ''),
 ('microshop_style', 'default');

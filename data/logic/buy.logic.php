@@ -5,9 +5,15 @@
  *
  *
  *
+<<<<<<< HEAD
  * by 33hao  www.33hao.com 开发
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * by shopx  www.yywxx.com 开发
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class buyLogic {
 
     /**
@@ -543,7 +549,11 @@ class buyLogic {
         $store_final_order_total = $this->_logic_buy_1->reCalcGoodsTotal($store_final_goods_total,$store_freight_total,'freight');
 
         //计算店铺分类佣金[改由任务计划]
+<<<<<<< HEAD
 	// 33hao 
+=======
+	// shopx 
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
          $store_gc_id_commis_rate_list = Model('store_bind_class')->getStoreGcidCommisRateList($goods_list);
 
         //将赠品追加到购买列表(如果库存0，则不送赠品)
@@ -559,7 +569,11 @@ class buyLogic {
         $this->_order_data['store_final_order_total'] = $store_final_order_total;
         $this->_order_data['store_freight_total'] = $store_freight_total;
         $this->_order_data['store_promotion_total'] = $store_promotion_total;
+<<<<<<< HEAD
 	// 33hao 
+=======
+	// shopx 
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
          $this->_order_data['store_gc_id_commis_rate_list'] = $store_gc_id_commis_rate_list;
         $this->_order_data['store_mansong_rule_list'] = $store_mansong_rule_list;
         $this->_order_data['store_cart_list'] = $store_cart_list;
@@ -643,7 +657,11 @@ class buyLogic {
             $order['shipping_fee'] = $store_freight_total[$store_id];
             $order['goods_amount'] = $order['order_amount'] - $order['shipping_fee'];
             $order['order_from'] = $order_from;
+<<<<<<< HEAD
 			//如果支持方式为空时，默认为货到付款 33hao
+=======
+			//如果支持方式为空时，默认为货到付款 shopx
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			if( $order['payment_code']=="")
 			{
 				$order['payment_code']="offline";
@@ -709,7 +727,11 @@ class buyLogic {
                         $order_goods[$i]['goods_type'] = 1;
                     }
                     $order_goods[$i]['promotions_id'] = $goods_info['promotions_id'] ? $goods_info['promotions_id'] : 0;
+<<<<<<< HEAD
 		   //33hao
+=======
+		   //shopx
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
                     $order_goods[$i]['commis_rate'] =floatval($store_gc_id_commis_rate_list[$store_id][$goods_info['gc_id']]);
 
                     $order_goods[$i]['gc_id'] = $goods_info['gc_id'];
@@ -743,7 +765,11 @@ class buyLogic {
                         $order_goods[$i]['buyer_id'] = $member_id;
                         $order_goods[$i]['goods_type'] = 4;
                         $order_goods[$i]['promotions_id'] = $bl_goods_info['bl_id'];
+<<<<<<< HEAD
                         // 33hao 
+=======
+                        // shopx 
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			$order_goods[$i]['commis_rate'] = floatval($store_gc_id_commis_rate_list[$store_id][$goods_info['gc_id']]);
                         $order_goods[$i]['gc_id'] = $bl_goods_info['gc_id'];
     

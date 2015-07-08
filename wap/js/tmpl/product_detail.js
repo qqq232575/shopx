@@ -235,8 +235,17 @@ $(function (){
                           });
                         return;
                     }
+<<<<<<< HEAD
 					//v3-b11 修复 购买大于1时 提示库存不足
                     if (parseInt(buynum) > data.goods_info.goods_storage) {
+=======
+
+                    buynum = Number(buynum);
+                    var havenum = Number(data.goods_info.goods_storage);
+
+                    if (buynum > havenum) {
+                    //if (buynum > data.goods_info.goods_storage) {
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
                           $.sDialog({
                               skin:"red",
                               content:'库存不足！',

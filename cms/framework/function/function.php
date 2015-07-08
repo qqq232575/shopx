@@ -5,7 +5,11 @@
  * 公共方法
  *
  */
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 function getRefUrl() {
     return urlencode('http://'.$_SERVER['HTTP_HOST'].request_uri());

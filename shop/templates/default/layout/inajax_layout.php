@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>">
 <?php ob_end_clean();
 ob_start();

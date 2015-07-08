@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['error']				= '在處理您的請求時出現了問題:<br />';
 $lang['homepage']			= '首頁';
 $lang['cur_location']		= '當前位置';

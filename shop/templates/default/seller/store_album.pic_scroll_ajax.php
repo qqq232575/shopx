@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             <?php foreach ((array)$output['pic_list'] as $v) {?>
             <li> <a href="<?php echo thumb($v, 1280);?>" value="<?php echo $v['apic_id'] ?>"> <span class="thumb size90"><i></i> <img title="<?php echo $v['apic_name']?>" src="<?php echo thumb($v, 60);?>" class="image0" onload="javascript:DrawImage(this,90,90);"/>
               <input type="hidden" value="" />

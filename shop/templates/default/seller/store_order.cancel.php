@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="eject_con">
   <div id="warning"></div>
   <form method="post" id="order_cancel_form" onsubmit="ajaxpost('order_cancel_form', '', '', 'onerror');return false;" action="index.php?act=store_order&op=change_state&state_type=order_cancel&order_id=<?php echo $output['order_id']; ?>">

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	<div id="container_<?php echo $output['stat_field'];?>" class="w100pre close_float" style="height:400px"></div>
 	
   <table class="table tb-type2 nobdb">

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <!-- 标题 -->
 <div class="cms-module-title">
     <h2 id="cms_module_title" nctype="object_module_edit"><?php echo "<?php echo \$module_content['cms_module_title'];?>";?></h2>

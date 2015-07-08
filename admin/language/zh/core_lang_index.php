@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 /**
  * core簡體語言包
@@ -11,7 +15,11 @@ $lang['solution'] = '解決方案';
 $lang['please_login_in'] = '請登錄';
 $lang['33hao_bbs'] = '官方論壇';
 $lang['found_answer'] = '，將您發現的問題告訴我們，並尋求幫助！';
+<<<<<<< HEAD
 $lang['company_name'] = '好商城V3';
+=======
+$lang['company_name'] = 'shopx';
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['has_been_canceled'] = '已取消';
 $lang['pending_payment'] = '待付款';

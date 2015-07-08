@@ -3,7 +3,11 @@
  *
  *
  *
+<<<<<<< HEAD
  * @package    library* www.33hao.com 专业团队 提供售后服务
+=======
+ * @package    library* www.yywxx.com 专业团队 提供售后服务
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 class sendMemberMsg {
     private $code = '';

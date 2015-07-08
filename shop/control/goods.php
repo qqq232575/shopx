@@ -4,10 +4,17 @@
  *
  *
  *
+<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 运营版*/
 
 
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ **by shopx www.yywxx.com 运营版*/
+
+
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class goodsControl extends BaseGoodsControl {
     public function __construct() {
@@ -28,7 +35,11 @@ class goodsControl extends BaseGoodsControl {
         if (empty($goods_info)) {
             showMessage(L('goods_index_no_goods'), '', 'html', 'error');
         }
+<<<<<<< HEAD
 		// by 33hao.com
+=======
+		// by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 		$rs = $model_goods->getGoodsList(array('goods_commonid'=>$goods_info['goods_commonid']));
 		$count = 0;
 		foreach($rs as $v){
@@ -37,7 +48,6 @@ class goodsControl extends BaseGoodsControl {
 		$goods_info['goods_salenum'] = $count;
 		//  添加 end
         $this->getStoreInfo($goods_info['store_id']);
-
         Tpl::output('spec_list', $goods_detail['spec_list']);
         Tpl::output('spec_image', $goods_detail['spec_image']);
         Tpl::output('goods_image', $goods_detail['goods_image']);

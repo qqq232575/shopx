@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   <div class="visitors pngFix">
     <h4><span class="active" nc_type="visitmodule" data-param='{"name":"visit_me"}'><?php echo $lang['sns_visit_me']; if ($output['relation'] == 3){echo $lang['sns_me']; }else {echo 'TA';}?></span><?php if($output['relation'] == 3){?><span class="line">|</span><span class="normal" nc_type="visitmodule" data-param='{"name":"visit_other"}'><?php if ($output['relation'] == 3){echo $lang['sns_me']; }else {echo 'TA';} echo $lang['sns_visit_other'];?></span><?php }?></h4>
     <ul id="visit_me" nc_type="visitlist">

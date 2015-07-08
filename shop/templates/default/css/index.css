@@ -394,6 +394,7 @@ width: 72px; height: 72px; float: left; padding: 3px; border: solid 1px #EBF5EC;
 .textlink { clear: both; margin: 0 auto; padding: 0 0 10px 0; }
 .textlink span { width: 88px; display: inline; float: left; padding: 2px; margin-right: 13px; }
 .textlink a { line-height: 22px; display: block; width: 97px; float: left; text-align:center }
+<<<<<<< HEAD
 /*控制左侧导航菜单*/
 .nav_Sidebar { width: 39px; height: 396px; position: fixed; bottom: 100px; left: 50%; margin-left: -660px; display: none; }
 .nav_Sidebar a { width: 39px; height: 35px; background-image: url(../images/home-nav-icon.png); display: block; }
@@ -405,3 +406,6 @@ width: 72px; height: 72px; float: left; padding: 3px; border: solid 1px #EBF5EC;
 .nav_Sidebar a.nav_Sidebar_6 { background-position: 0 -170px; }
 .nav_Sidebar a.nav_Sidebar_7 { background-position: 0 -204px; }
 .nav_Sidebar a.nav_Sidebar_8 { background-position: 0 -238px; }
+=======
+
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1

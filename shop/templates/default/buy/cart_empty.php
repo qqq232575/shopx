@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="ncc-null-shopping"><i class="ico"></i>
   <h4><?php echo $lang['cart_index_no_goods_in_cart'];?></h4>

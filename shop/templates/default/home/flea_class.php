@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/jquery.select.park.js" charset="utf-8"></Script>
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/easySlider1.7.js" charset="utf-8"></Script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/dialog.js" id="dialog_js" charset="utf-8"></script> 

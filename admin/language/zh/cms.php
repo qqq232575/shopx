@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['cms_isuse'] = 'CMS開關';
 $lang['cms_url'] = 'CMS地址';
 $lang['cms_url_explain'] = '填寫為CMS配置的二級域名，沒有配置請留空。';

@@ -1,3 +1,8 @@
 #
+<<<<<<< HEAD
 # robots.txt for ºÃÉÌ³ÇV3°æ 33hao.com
 #
+=======
+# robots.txt for shopx shopx.com
+#
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1

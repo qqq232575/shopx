@@ -5,7 +5,11 @@
  *
  *
  *
+<<<<<<< HEAD
  *by 33hao www.33hao.com 开发修正
+=======
+ *by shopx www.yywxx.com 开发修正
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
 class member_cardControl extends MircroShopControl{

@@ -3,7 +3,11 @@
  * 手机接口初始化文件
  *
  *
+<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
+=======
+ * by yywxx.com shopx 运营版
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
 define('APP_ID','mobile');
@@ -11,7 +15,11 @@ define('IGNORE_EXCEPTION', true);
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
+<<<<<<< HEAD
 if (!@include(BASE_CORE_PATH.'/33hao.php')) exit('33hao.php isn\'t exists!');
+=======
+if (!@include(BASE_CORE_PATH.'/shopx.php')) exit('shopx.php isn\'t exists!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 if (!@include(BASE_PATH.'/config/config.ini.php')){
     exit('config.ini.php isn\'t exists!');

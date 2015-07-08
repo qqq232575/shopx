@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="share-widget">
 <?php if (!empty($output['app_arr'])){?>
 <input nc_type="share_app_switch" name="share_app_switch" type="checkbox" class="input-checkbox"/>

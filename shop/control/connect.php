@@ -3,10 +3,17 @@
  * QQ互联登录
  *
  *
+<<<<<<< HEAD
  **by www.shopjl.com运营版*/
 
 
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ **by shopx www.yywxx.com 运营版*/
+
+
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class connectControl extends BaseHomeControl{
 	public function __construct(){
@@ -202,7 +209,11 @@ class connectControl extends BaseHomeControl{
         //----
         curl_setopt( $ch , CURLOPT_HTTPHEADER , $header );
         curl_setopt( $ch , CURLOPT_FOLLOWLOCATION , 1 );
+<<<<<<< HEAD
         //$contents = curl_exec($ch);w ww.sh o pjl.co m出 品
+=======
+        //$contents = curl_exec($ch);
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         ob_start();
         curl_exec( $ch );
         $contents = ob_get_contents();

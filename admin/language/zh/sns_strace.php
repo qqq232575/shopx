@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['admin_snsstrace_storename']	= '店舖名稱';
 $lang['store_sns_coupon_price']		= '優惠券面額';

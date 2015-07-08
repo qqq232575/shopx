@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
+=======
+<?php defined('IN_OS') or exit('Access Invalid!'); return array (
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'ap_id' => '9',
   'ap_name' => '首页底部通栏图片广告',
   'ap_intro' => '位于首页底部的通栏型图片广告',
@@ -18,7 +22,11 @@
       'adv_id' => '15',
       'ap_id' => '9',
       'adv_title' => '首页通栏',
+<<<<<<< HEAD
       'adv_content' => 'a:2:{s:7:"adv_pic";s:21:"04716538681718544.png";s:11:"adv_pic_url";s:13:"www.33hao.com";}',
+=======
+      'adv_content' => 'a:2:{s:7:"adv_pic";s:21:"04716538681718544.png";s:11:"adv_pic_url";s:13:"www.yywxx.com";}',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
       'adv_start_date' => '1388505600',
       'adv_end_date' => '1577721600',
       'slide_sort' => '0',

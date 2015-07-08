@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="addshare">
 <div class="goods-pic"><span class="thumb size120"><i></i><img src="<?php echo cthumb($output['sharegoods_info']['snsgoods_goodsimage'], 240,$output['sharegoods_info']['snsgoods_storeid']);?>"/></span></div>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
+=======
+<?php defined('IN_OS') or exit('Access Invalid!'); return array (
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'rec_id' => '7',
   'pic_type' => '0',
   'title' => '新浪微博',

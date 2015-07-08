@@ -3,11 +3,19 @@
  * mysql驱动
  *
  *
+<<<<<<< HEAD
  * @package    db* www.33hao.com好商城V3为你提供售后服务 以便你更好的了解
  */
 
 
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * @package    db* www.yywxx.comshopx为你提供售后服务 以便你更好的了解
+ */
+
+
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class Db{
 

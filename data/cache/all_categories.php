@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
+=======
+<?php defined('IN_OS') or exit('Access Invalid!'); return array (
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   1 => 
   array (
     'gc_id' => '1',
@@ -2119,7 +2123,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-1.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-1.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       12 => 
@@ -2902,7 +2910,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-2.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-2.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       156 => 
@@ -3801,7 +3813,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-3.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-3.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       206 => 
@@ -5742,7 +5758,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-256.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-256.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       264 => 
@@ -6987,7 +7007,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-308.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-308.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       314 => 
@@ -7932,7 +7956,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-470.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-470.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       478 => 
@@ -8917,7 +8945,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-530.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-530.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       541 => 
@@ -10000,7 +10032,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-593.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-593.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       604 => 
@@ -11061,7 +11097,11 @@
         'brands' => NULL,
       ),
     ),
+<<<<<<< HEAD
     'pic' => 'http://v3.xupushop.com/data/upload/shop/common/category-pic-662.jpg',
+=======
+    'pic' => 'http://192.168.1.168/data/upload/shop/common/category-pic-662.jpg',
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     'class3' => 
     array (
       671 => 

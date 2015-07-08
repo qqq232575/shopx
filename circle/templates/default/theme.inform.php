@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="eject_con inform-reason">
   <div id="apply_warning"></div>
   <form id="inform_form" action="<?php echo CIRCLE_SITE_URL;?>/index.php?act=theme_inform&c_id=<?php echo $output['c_id'];?>&t_id=<?php echo $output['t_id']; if(isset($_GET['r_id'])){echo '&r_id='.$_GET['r_id'];}?>" method="post" onsubmit="ajaxpost('inform_form', '<?php echo CIRCLE_SITE_URL;?>/index.php?act=theme_inform&c_id=<?php echo $output['c_id'];?>&t_id=<?php echo $output['t_id']; if(isset($_GET['r_id'])){echo '&r_id='.$_GET['r_id'];}?>', '', 'onerror');">

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['sharebind_list_tip1'] 		= '绑定主流社交网站账号，可以快速地将你觉得有趣的内容分享给相应网站上的朋友们。赶紧开始你的分享之旅吧！';
 $lang['sharebind_list_tip2'] 		= '提示：若您之前绑定的相关平台在此又提示“马上绑定”，可能是由于各平台限制自然解除，或您在其他平台解除绑定，请点击 “马上绑定”重新关联相应平台。';
 $lang['sharebind_list_bindtime'] 	= '绑定于';

@@ -2313,11 +2313,19 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('flea_app_open', '1'),
 ('flea_hot_search', '男装,手机,笔记本,古董,奢侈品'),
 ('flea_isuse', '1'),
+<<<<<<< HEAD
 ('flea_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.33hao.com/";}}'),
 ('flea_site_description', '好商城V3系统闲置市场'),
 ('flea_site_keywords', '好商城V3系统闲置市场'),
 ('flea_site_name', '好商城V3系统闲置市场'),
 ('flea_site_title', '好商城V3系统闲置市场'),
+=======
+('flea_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}}'),
+('flea_site_description', 'shopx系统闲置市场'),
+('flea_site_keywords', 'shopx系统闲置市场'),
+('flea_site_name', 'shopx系统闲置市场'),
+('flea_site_title', 'shopx系统闲置市场'),
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 ('goods_verify', '0'),
 ('groupbuy_allow', '1'),
 ('groupbuy_price', '10'),
@@ -2341,10 +2349,17 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('md5_key', 'fc4cb360c722fcd2e7733c49910d2647'),
 ('member_grade', 'a:4:{i:0;a:3:{s:5:"level";i:0;s:10:"level_name";s:2:"V0";s:9:"exppoints";i:0;}i:1;a:3:{s:5:"level";i:1;s:10:"level_name";s:2:"V1";s:9:"exppoints";i:1000;}i:2;a:3:{s:5:"level";i:2;s:10:"level_name";s:2:"V2";s:9:"exppoints";i:10000;}i:3;a:3:{s:5:"level";i:3;s:10:"level_name";s:2:"V3";s:9:"exppoints";i:20000;}}'),
 ('member_logo', 'user_center.png'),
+<<<<<<< HEAD
 ('mobile_apk', 'http://v3.33hao.com/v3.apk'),
 ('mobile_apk_version', '3.0.2'),
 ('mobile_app', 'mb_app.png'),
 ('mobile_ios', 'http://v3.33hao.com/v3.api'),
+=======
+('mobile_apk', 'http://v3.yywxx.com/v3.apk'),
+('mobile_apk_version', '3.0.2'),
+('mobile_app', 'mb_app.png'),
+('mobile_ios', 'http://v3.yywxx.com/v3.api'),
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 ('mobile_isuse', '1'),
 ('pointprod_isuse', '1'),
 ('pointshop_isuse', '1'),
@@ -2386,10 +2401,17 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('sina_wb_akey', ''),
 ('sina_wb_skey', ''),
 ('site_bank_account', '银行:中国银行,币种:人民币,账号:xxxxxxxxxxx,姓名:XXX,开户行:中国银行XX分行'),
+<<<<<<< HEAD
 ('site_email', 'abc@33hao.com'),
 ('site_logo', 'logo.png'),
 ('site_logowx', '04781087584534013.png'),
 ('site_name', '好商城v3'),
+=======
+('site_email', 'abc@yywxx.com'),
+('site_logo', 'logo.png'),
+('site_logowx', '04781087584534013.png'),
+('site_name', 'shopx'),
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 ('site_phone', '23456789,88997788'),
 ('site_status', '1'),
 ('site_tel400', '4008008000'),
@@ -2671,6 +2693,7 @@ INSERT INTO `#__refund_reason` (`reason_id`, `reason_info`, `sort`, `update_time
 (98, '认为是假货', 123, 1393480261),
 (99, '不能按时发货', 123, 1393480261);
 
+<<<<<<< HEAD
 INSERT INTO `#__seo` (`id`, `title`, `keywords`, `description`, `type`) VALUES (1, '{sitename} - 程序来源于好商城V3-www.33hao.com', '好商城V3,PHP商城系统,好商城V3商城系统,多用户商城系统,电商ERP,电商CRM,电子商务解决方案', '好商城V3专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'index'),
 (2, '{sitename} - 团购', '好商城V3,{sitename}', '好商城V3专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'group'),
 (3, '{sitename} - {name}', '好商城V3,{name},{sitename}', '好商城V3,{name},{sitename}', 'group_content'),
@@ -2684,6 +2707,21 @@ INSERT INTO `#__seo` (`id`, `title`, `keywords`, `description`, `type`) VALUES (
 (12, '{sitename} - {shopname}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'shop'),
 (13, '{name} - {sitename}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'product'),
 (14, '看{name}怎么淘到好的宝贝-{sitename}', '好商城V3,{sitename},{name}', '好商城V3,{sitename},{name}', 'sns');
+=======
+INSERT INTO `#__seo` (`id`, `title`, `keywords`, `description`, `type`) VALUES (1, '{sitename} - 程序来源于shopx-www.yywxx.com', 'shopx,PHP商城系统,shopx商城系统,多用户商城系统,电商ERP,电商CRM,电子商务解决方案', 'shopx专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'index'),
+(2, '{sitename} - 团购', 'shopx,{sitename}', 'shopx专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'group'),
+(3, '{sitename} - {name}', 'shopx,{name},{sitename}', 'shopx,{name},{sitename}', 'group_content'),
+(4, '{sitename} - 品牌', 'shopx,{sitename}', 'shopx,{sitename}', 'brand'),
+(5, '{sitename} - {name}', 'shopx,{sitename},{name}', 'shopx,{sitename},{name}', 'brand_list'),
+(7, '{sitename} - {name}', 'shopx,{sitename},{name}', 'shopx,{sitename},{name}', 'coupon_content'),
+(8, '{sitename} - 积分商城', 'shopx,{sitename}', 'shopx,{sitename}', 'point'),
+(9, '{sitename} - {name}', 'shopx,{sitename},{key}', 'shopx,{sitename},{description}', 'point_content'),
+(10, '{sitename} - {article_class}', 'shopx,{sitename}', 'shopx,{sitename}', 'article'),
+(11, '{sitename} - {name}', 'shopx,{sitename},{key}', 'shopx,{sitename},{description}', 'article_content'),
+(12, '{sitename} - {shopname}', 'shopx,{sitename},{key}', 'shopx,{sitename},{description}', 'shop'),
+(13, '{name} - {sitename}', 'shopx,{sitename},{key}', 'shopx,{sitename},{description}', 'product'),
+(14, '看{name}怎么淘到好的宝贝-{sitename}', 'shopx,{sitename},{name}', 'shopx,{sitename},{name}', 'sns');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 INSERT INTO `#__store_class` (`sc_id`, `sc_name`, `sc_bail`, `sc_sort`) VALUES
 (1, '珠宝/首饰', 0, 8),

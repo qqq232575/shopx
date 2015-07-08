@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
@@ -286,3 +287,10 @@ $(function() {
     </div>
   </div>
 </div>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<?php  require_once BASE_ROOT_PATH.'/plugin/bar_right/bar_right1.php';?>
+<?php  require_once BASE_ROOT_PATH.'/plugin/bar_top.php';?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1

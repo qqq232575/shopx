@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['flea_index_setting']     = '閒置頁面設置';
 $lang['flea_index_seo_setting'] = 'SEO設置';

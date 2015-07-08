@@ -30,7 +30,11 @@ function get_url_contents($url)
 {
 //    if (ini_get("allow_url_fopen") == "1")
 //        return file_get_contents($url);
+<<<<<<< HEAD
 // by 33hao.com
+=======
+// by yywxx.com
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 		if (ini_get("allow_url_fopen") == "1")
            return file_get_contents($url);
 

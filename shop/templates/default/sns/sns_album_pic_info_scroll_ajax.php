@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             <?php foreach ($output['pic_list'] as $v) {?>
             <li> <a href="<?php echo UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.$output['master_id'].DS.$v['ap_cover'];?>" value="<?php echo $v['ap_id'] ?>"> <span class="thumb"><i></i> <img nctype="thumb" title="<?php echo $v['ap_name']?>" src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.$output['master_id'].DS.str_ireplace('.', '_240.', $v['ap_cover']);?>" />
               <input type="hidden" value="" />

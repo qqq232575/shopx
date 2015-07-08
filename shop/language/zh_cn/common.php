@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['error']				= '在处理您的请求时出现了问题:<br />';
 $lang['homepage']			= '首页';
 $lang['nc_groupbuy']		= "抢购";

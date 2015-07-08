@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	
 $lang['flea_class']							   = '闲置分类';
 $lang['flea_class_help1']					   = '当用户添加闲置闲置信息时选择闲置分类，用户可根据分类查询闲置列表';

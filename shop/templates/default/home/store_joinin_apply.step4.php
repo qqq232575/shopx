@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="explain"><i></i><?php echo $output['joinin_message'];?></div>
 <?php if (is_array($output['joinin_detail']) && !empty($output['joinin_detail'])) { ?>

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php include template('layout/store_common_layout');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+<?php include template('layout/common_layout');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/shop.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL?>/css/shop_custom.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/store/style/<?php echo $output['store_theme'];?>/style.css" rel="stylesheet" type="text/css">

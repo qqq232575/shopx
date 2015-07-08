@@ -5,12 +5,21 @@
  *
  *
  *
+<<<<<<< HEAD
  * by www.shopjl.com 运营版
  */
 
 use Shopnc\Tpl;
 
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * by yywxx.com shopx 运营版
+ */
+
+//use Shopnc\Tpl;
+
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class loginControl extends mobileHomeControl {
 

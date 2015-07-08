@@ -5,12 +5,20 @@
  *
  *
  *
+<<<<<<< HEAD
  * by 33hao www.33hao.com 开发修正
+=======
+ * by shopx www.yywxx.com 开发修正
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
 
 
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class cms_specialControl extends SystemControl{
 
     const LINK_CMS_SPECIAL = 'index.php?act=cms_special&op=cms_special_list';

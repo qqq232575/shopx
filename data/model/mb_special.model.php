@@ -5,9 +5,15 @@
  *
  *
  *
+<<<<<<< HEAD
  * by 33hao 好商城V3  www.33hao.com 开发
  */
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ * by shopx shopx  www.yywxx.com 开发
+ */
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class mb_specialModel extends Model{
 
     //专题项目不可用状态
@@ -153,7 +159,11 @@ class mb_specialModel extends Model{
                 $item_data['rectangle2_image'] = getMbSpecialImageUrl($item_data['rectangle2_image']);
             break;
             case 'goods':
+<<<<<<< HEAD
 	                 // 33hao.com v3-10
+=======
+	                 // yywxx.com v3-10
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			  case 'goods1':
 			  case 'goods2':
                 $new_item = array();
@@ -232,7 +242,11 @@ class mb_specialModel extends Model{
     private function _initMbSpecialItemData($item_data, $item_type) {
         if(!empty($item_data)) {
             $item_data = unserialize($item_data);
+<<<<<<< HEAD
 	    // 33hao.com v3-10
+=======
+	    // yywxx.com v3-10
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             if($item_type == 'goods'||$item_type == 'goods1'||$item_type == 'goods2') {
                 $item_data = $this->_initMbSpecialItemGoodsData($item_data, $item_type);
             }
@@ -315,7 +329,11 @@ class mb_specialModel extends Model{
     public function addMbSpecialItem($param) {
         $param['item_usable'] = self::SPECIAL_ITEM_UNUSABLE;
         $param['item_sort'] = 255;
+<<<<<<< HEAD
 		//2015推荐 2016团购 33hao.com v3-10
+=======
+		//2015推荐 2016团购 yywxx.com v3-10
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			if($param['item_type']=='goods1'){
 				$param['item_id']=2015;
 			  }else if($param['item_type']=='goods2'){
@@ -416,7 +434,11 @@ class mb_specialModel extends Model{
         $module_list['home3'] = array('name' => 'home3' , 'desc' => '模型版块布局C');
         $module_list['home4'] = array('name' => 'home4' , 'desc' => '模型版块布局D');
         $module_list['goods'] = array('name' => 'goods' , 'desc' => '商品版块');
+<<<<<<< HEAD
 	// 33hao.com v3-10
+=======
+	// yywxx.com v3-10
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     if(!$_GET['special_id']) {
     	$module_list['goods1'] = array('name' => 'goods1' , 'desc' => '限时商品');
 		$module_list['goods2'] = array('name' => 'goods2' , 'desc' => '团购商品');

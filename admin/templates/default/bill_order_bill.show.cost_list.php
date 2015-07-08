@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   <form method="get" action="index.php" name="formSearch" id="formSearch">
     <input type="hidden" name="act" value="bill" />
     <input type="hidden" name="op" value="show_bill" />

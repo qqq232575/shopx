@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// by yywxx.com 调出图片
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	var interval = 1;//断开后计时
 	var new_interval = 1;//消息提醒计时
 	var connect = 0;//连接状态

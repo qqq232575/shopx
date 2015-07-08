@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="circle-share">
   <form method="post" action="<?php echo CIRCLE_SITE_URL;?>/index.php?act=theme_share&c_id=<?php echo $output['c_id'];?>&t_id=<?php echo $output['t_id'];?>" id="share_form" class="feededitor">

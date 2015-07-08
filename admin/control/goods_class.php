@@ -4,9 +4,15 @@
  *
  *
  *
+<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 运营版*/
 
 defined('InShopNC') or exit('Access Invalid!');
+=======
+ **by shopx www.yywxx.com 运营版*/
+
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class goods_classControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=goods_class&op=goods_class','lang'=>'nc_manage'),
@@ -186,7 +192,11 @@ class goods_classControl extends SystemControl{
 			$update_array['commis_rate']    = intval($_POST['commis_rate']);
 			$update_array['gc_sort']		= intval($_POST['gc_sort']);
             $update_array['gc_virtual']     = intval($_POST['gc_virtual']);
+<<<<<<< HEAD
             //好商城 v3-b10
+=======
+            //shopx v3-b10
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	    $update_array['gc_parent_id']	= intval($_POST['gc_parent_id']);
 			$result = $model_class->editGoodsClass($update_array, $where);
 			if (!$result){

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/flea.css"  rel="stylesheet" type="text/css" />
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/flea/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/flea/jquery.KinSlideshow.min.js" type="text/javascript"></script>

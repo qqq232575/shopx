@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="quick-login">
   <form id="login_form" action="<?php echo SHOP_SITE_URL;?>/index.php?act=login" method="post" class="bg" >
     <?php Security::getToken();?>

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
+=======
+defined('IN_OS') or exit('Access Invalid!');
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['admin_voucher_unavailable']    = '請確認代金券、積分、金幣均以開啟';
 $lang['admin_voucher_applystate_new']    = '待審核';
 $lang['admin_voucher_applystate_verify']    = '已審核';

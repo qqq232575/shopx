@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <?php if(!empty($output['comment_list']) && is_array($output['comment_list'])){ ?>
 <div class="article-comment-list-title">
   <h3><?php echo $lang['cms_comment_new'];?></h3>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+=======
+<?php defined('IN_OS') or exit('Access Invalid!');?>
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <?php $block_content = empty($block_content) ? $output['block_content'] : $block_content; ?>
 <?php $block_content = unserialize($block_content);?>
 <ul nctype="store_decoration_slide" style="height:<?php echo $block_content['height'];?>px; overflow:hidden;">

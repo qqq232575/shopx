@@ -28,11 +28,19 @@ $(function (){
   +'<div id="nav-tab" style="bottom:-40px;">'
             +'<div id="nav-tab-btn"><i class="fa fa-chevron-down"></i></div>'
             +'<div class="clearfix tab-line nav">'
+<<<<<<< HEAD
       +'<div class="tab-line-item" style="width:25%;" ><a href="'+WapSiteUrl+'"><i class="fa fa-home"></i><br>首页</a></div>'
       +'<div class="tab-line-item tab-categroy" style="width:25%;" ><a href="'+WapSiteUrl+'/tmpl/product_first_categroy.html"><i class="fa fa-th-list"></i><br>分类</a></div>'
       <!--+'<div class="tab-line-item" style="width:22%;line-height:40px;padding-top:5px;" ><i style="font-size:30px;" class="fa fa-chevron-circle-down"></i><br></div>'-->
       +'<div class="tab-line-item" style="width:25%;position: relative;" ><a href="'+WapSiteUrl+'/tmpl/cart_list.html"><i class="fa fa-shopping-cart"></i><br>购物车</a></div>'
       +'<div class="tab-line-item" style="width:25%;" ><a href="'+WapSiteUrl+'/tmpl/member/member.html?act=member"><i class="fa fa-user"></i><br>个人中心</a></div>'
+=======
+      +'<div class="tab-line-item" style="width:22%;" ><a href="'+WapSiteUrl+'"><i class="fa fa-home"></i><br>首页</a></div>'
+      +'<div class="tab-line-item" style="width:22%;" ><a href="'+WapSiteUrl+'/tmpl/product_first_categroy.html"><i class="fa fa-th-list"></i><br>分类</a></div>'
+      +'<div class="tab-line-item get_down" style="width:12%;line-height:40px;padding-top:5px;" ><i style="font-size:30px;" class="fa fa-chevron-circle-down"></i><br></div>'
+      +'<div class="tab-line-item" style="width:22%;position: relative;" ><a href="'+WapSiteUrl+'/tmpl/cart_list.html"><i class="fa fa-shopping-cart"></i><br>购物车</a></div>'
+      +'<div class="tab-line-item" style="width:22%;" ><a href="'+WapSiteUrl+'/tmpl/member/member.html?act=member"><i class="fa fa-user"></i><br>个人中心</a></div>'
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     +'</div>'
    +'</div>'
 +'</div>'
@@ -71,6 +79,7 @@ $(function (){
 			}
 		});
 	});
+<<<<<<< HEAD
 	var headTitle = document.title;
 	//当前页面
 	if(headTitle == "首页"){
@@ -85,3 +94,33 @@ $(function (){
 });
 
 //bottom nav 33 hao-v3 by 33h ao.com Qq 1244 986 40
+=======
+});
+
+//bottom nav 33 hao-v3 by 33h ao.com Qq 1244 986 40
+$(function() {
+	setTimeout(function(){
+		if($("#content .container").height()<$(window).height())
+		{
+			$("#content .container").css("min-height",$(window).height());
+		}
+	},300);
+	$("#bottom .nav .get_down").click(function(){
+		$("#bottom .nav").animate({"bottom":"-50px"});
+		$("#nav-tab").animate({"bottom":"0px"});
+	});
+	$("#nav-tab-btn").click(function(){
+		$("#bottom .nav").animate({"bottom":"0px"});
+		$("#nav-tab").animate({"bottom":"-40px"});
+		
+	});
+	setTimeout(function(){$("#bottom .nav .get_down").click();},500);
+	$("#scrollUp").click(function(t) {
+		$("html, body").scrollTop(300);
+		$("html, body").animate( {
+			scrollTop : 0
+		}, 300);
+		t.preventDefault()
+	});
+});
+>>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
