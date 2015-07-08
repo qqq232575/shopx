@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
 $(document).ready(function(){
 
@@ -92,7 +92,7 @@ $(document).ready(function(){
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
             business_licence_number_electronic: {
-                required: '请选择上传身份证扫描件'
+                required: '请选择上传手执身份证照'
             },
         }
     });
@@ -174,8 +174,9 @@ $(document).ready(function(){
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>身份证扫描件：</th>
+          <th><i>*</i>手执身份证照片：</th>
           <td><input name="business_licence_number_electronic" type="file" class="w200" />
+          	<img border="0" alt="手执身份证照范例" src="<?php echo SHOP_TEMPLATES_URL;?>/images/example.jpg" style="width:300px;height:210px">
             <span class="block">请确保图片清晰，身份证上文字可辨（清晰照片也可使用）。</span></td>
         </tr>
       </tbody>

@@ -4,10 +4,10 @@
  *
  * 
  *
- *  www.yywxx.com 专业团队 提供售后服务
+ * 好商城V3 www.33hao.com 专业团队 提供售后服务
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /**
  * 通过FTP同步图片到远程服务器

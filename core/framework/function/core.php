@@ -4,12 +4,12 @@
  *
  * 公共方法
  *
- * by shopx  运营版
+ * by www.shopjl.com 运营版
  */
 
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /**
  * 产生验证码
@@ -46,6 +46,24 @@ function checkSeccode($nchash,$value){
 	$return = $checkvalue == strtoupper($value) && $checkidhash == $nchash;
 	if (!$return) setNcCookie('seccode'.$nchash,'',-3600);
 	return $return;
+}
+
+/**
+ * 设置cookie QQ wap 登录 ww w.sho pjl.c om出 品
+ *
+ * @param string $name cookie 的名称
+ * @param string $value cookie 的值
+ * @param int $expire cookie 有效周期
+ * @param string $path cookie 的服务器路径 默认为 /
+ * @param string $domain cookie 的域名
+ * @param string $secure 是否通过安全的 HTTPS 连接来传输 cookie,默认为false
+ */
+function setNc2Cookie($name, $value, $expire='3600', $path='', $domain='', $secure=false){
+    if (empty($path)) $path = '/';
+    if (empty($domain)) $domain = SUBDOMAIN_SUFFIX ? SUBDOMAIN_SUFFIX : '';
+    $expire = intval($expire)?intval($expire):(intval(SESSION_EXPIRE)?intval(SESSION_EXPIRE):3600);
+    $result = setcookie($name, $value, time()+$expire, $path, $domain, $secure);
+    $_COOKIE[$name] = $value;
 }
 
 /**
@@ -565,7 +583,7 @@ function showEditor($id, $value='', $width='700px', $height='300px', $style='vis
  *
  * @param string $path 目录
  * @param int $size 目录大小
- * @return int 整型类型的返回结果
+ * @return int 整型类型的返回结果 w ww.shop jl.co m出 品
  */
 function getDirSize($path, $size=0){
 	$dir = @dir($path);
@@ -1384,7 +1402,7 @@ function write_file($filepath, $data, $mode = null)
 
     $data = var_export($data, true);
 
-    $data = "<?php defined('In_OS') or exit('Access Invalid!'); return ".$data.";";
+    $data = "<?php defined('InShopNC') or exit('Access Invalid!'); return ".$data.";";
     $mode = $mode == 'append' ? FILE_APPEND : null;
     if (false === file_put_contents($filepath,($data),$mode)){
         return false;

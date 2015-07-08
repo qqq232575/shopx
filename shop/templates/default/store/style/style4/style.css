@@ -1,7 +1,7 @@
 /* ============== */
 /* 店铺模板宠物风格 */
-/* shopx      */
-/* www.yywxx.com */
+/* @33hao      */
+/* www.33hao.com */
 /* Apr-14-2012    */
 /* ============== */
 
@@ -10,7 +10,7 @@ a { color: #660000; }
 a:hover { color: #CC3366; text-decoration: none;}
 
 
-/* (nc-s-c-s) full name -> shopx Store Container Style */
+/* (nc-s-c-s) full name -> ShopNC Store Container Style */
 .ncs-sidebar-container {}
 .ncs-sidebar-container .title { height: 36px; border: solid 1px; border-color: #FFF #FFF #E2DED0 #FFF; border-radius: 5px 5px 0 0;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7F3F0', endColorstr='#FFFFFF'); background-image: -webkit-gradient( linear, left top, left bottom, from(#F7F3F0), to(#FFFFFF)) ; background-image: -moz-linear-gradient(top, #F7F3F0, #FFFFFF);}
 .ncs-sidebar-container .title h4 { color:#333; line-height: 24px; margin: 4px 0 4px 16px; text-shadow: 0 1px 1px rgba(0,0,0,.2); }
@@ -42,14 +42,14 @@ a:hover { color: #CC3366; text-decoration: none;}
 
 
 /* 导航区域布局控制 */
-.ncsl-nav { width: 1000px; margin: 0 auto;}
+.ncsl-nav { width: 1200px; margin: 0 auto;}
 /* 导航上部图片控制 */
 .ncs-default-banner { background: url(images/header.jpg) no-repeat 0 0; width: 1000px; height: 240px; display: block;}
 .background { background-image: url(images/layout_bg.gif); background-repeat: repeat-x; background-position: center 240px;}
 
 /* 店铺导航 */
-#nav { background: url(images/nav_bg.png) no-repeat center top; width: 1000px; height: 89px; border: none 0; overflow: hidden;}
-#nav ul { white-space: nowrap; display: block; width: 982px; height: 49px; margin: 17px auto 24px auto; overflow: hidden;}
+#nav { background: url(images/nav_bg.png) no-repeat center top; width: 1200px; height: 89px; border: none 0; overflow: hidden;}
+#nav ul { white-space: nowrap; display: block; width: 1182px; height: 49px; margin: 17px auto 24px auto; overflow: hidden;}
 #nav li { float: left; }
 #nav li.normal a, #nav li.normal a span, #nav li.active a, #nav li.active a span { background: url(images/nav.gif) no-repeat;}
 #nav li a { height: 49px; float: left;}

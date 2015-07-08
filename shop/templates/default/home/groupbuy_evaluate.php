@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php if(!empty($output['goodsevallist']) && is_array($output['goodsevallist'])){?>
 <?php foreach($output['goodsevallist'] as $k=>$v){?>
 

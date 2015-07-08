@@ -1,20 +1,17 @@
 <?php
 /**
  * 闲置市场默认展示页面
- * by shopx
+ * by 33hao.com
  */
-defined('In_OS') or exit('Access Invalid!');
-class fleaControl extends BaseHomeControl{
+defined('InShopNC') or exit('Access Invalid!');
+class fleaControl extends BaseFleaControl{
 	/**
 	 * 闲置市场首页
 	 */
 	public function __construct(){
 		parent::__construct();
-		Language::read('home_flea_index');
-		if($GLOBALS['setting_config']['flea_isuse']!='1'){
-			showMessage(Language::get('flea_index_unable'),'index.php','','error');
-		}
 	}
+	
 	public function indexOp(){
 		/**
 		 * 读取语言包

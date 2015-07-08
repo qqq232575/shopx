@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="page">
   <div class="fixed-bar">
@@ -59,6 +59,18 @@
           <td class="vatop tips"><span class="vatop rowform">商家中心LOGO，最佳显示尺寸为150*40像素，请根据背景色选择使用图片色彩</span></td>
         </tr>
         <!-- 商家中心logo -->
+	<!-- WAP手机端LOGO -->
+         <tr>
+          <td colspan="2" class="required"><label for="site_mobile_logo">WAP手机端LOGO:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><span class="type-file-show"><img class="show_image" src="<?php echo ADMIN_TEMPLATES_URL;?>/images/preview.png">
+            <div class="type-file-preview" style="background-color:red"><img src="<?php echo UPLOAD_SITE_URL.'/'.(ATTACH_COMMON.DS.$output['list_setting']['site_mobile_logo']);?>"></div>
+            </span><span class="type-file-box"><input type='text' name='textfield' id='textfield8' class='type-file-text' /><input type='button' name='button' id='button1' value='' class='type-file-button' />
+            <input name="site_mobile_logo" type="file" class="type-file-file" id="site_mobile_logo" size="30" hidefocus="true" nc_type="change_site_mobile_logo">
+            </span></td>
+          <td class="vatop tips"><span class="vatop rowform">WAP手机端LOGO,通用头部显示，最佳显示尺寸为116*43像素</span></td>
+        </tr>
 	  <!-- 商城底部微信二维码 -->
         <tr>
           <td colspan="2" class="required"><label for="site_logowx"><?php echo $lang['site_bank_weixinerwei'];?>:</label></td>
@@ -201,6 +213,10 @@ $(function(){
 	});
 	$("#seller_center_logo").change(function(){
 		$("#textfield3").val($(this).val());
+	});
+	//v 3-b1 1
+	$("#site_mobile_logo").change(function(){
+		$("#textfield8").val($(this).val());
 	});
 	$("#site_logowx").change(function(){
 		$("#textfield5").val($(this).val());

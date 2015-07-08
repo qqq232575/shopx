@@ -4,9 +4,9 @@
  *
  * 公共方法
  *
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 function getMicroshopImageSize($image_url, $max_width = 238) {
     $local_file_path = str_replace(UPLOAD_SITE_URL, BASE_ROOT_PATH.DS.DIR_UPLOAD, $image_url);

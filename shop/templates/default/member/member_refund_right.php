@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
   <div class="ncm-flow-item">
     <div class="title">相关商品交易信息</div>

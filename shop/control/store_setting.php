@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class store_settingControl extends BaseSellerControl {
 	public function __construct() {
@@ -154,7 +154,23 @@ class store_settingControl extends BaseSellerControl {
             if (!empty($_POST['store_theme'])){
                 $param['store_theme'] = $_POST['store_theme'];
             }
+	    
 
+			//v3-b11 编辑店铺名称
+			$store_name=$_POST['store_name'];
+			if (!empty($_POST['store_name'])){
+				
+			    $store = $model_class->getStoreInfo(array(
+					'store_name'=>$store_name
+				));
+				//店铺名存在,则提示错误
+				if (!empty($store) && ($store_id != $store['store_id'])){
+					showDialog('此店铺名称已被其它人使用，请换其它名称。','reload','error');
+					return;
+				}
+                $param['store_name'] = $_POST['store_name'];
+            }
+	    //end 33h ao.co m
             $model_class->editStore($param, array('store_id' => $store_id));
             showDialog(Language::get('nc_common_save_succ'),'index.php?act=store_setting&op=store_setting','succ');
         }

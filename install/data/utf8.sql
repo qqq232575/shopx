@@ -10,7 +10,7 @@ CREATE TABLE `#__activity` (
   `activity_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   `activity_state` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '活动状态 0为关闭 1为开启',
   PRIMARY KEY (`activity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='活动表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='活动表';
 
 CREATE TABLE `#__activity_detail` (
   `activity_detail_id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',
@@ -23,7 +23,7 @@ CREATE TABLE `#__activity_detail` (
   `activity_detail_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`activity_detail_id`),
   KEY `activity_id` (`activity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='活动细节表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='活动细节表';
 
 CREATE TABLE `#__address` (
   `address_id` mediumint(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '地址ID',
@@ -38,7 +38,7 @@ CREATE TABLE `#__address` (
   `is_default` enum('0','1') NOT NULL DEFAULT '0' COMMENT '1默认收货地址',
   PRIMARY KEY (`address_id`),
   KEY `member_id` (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='买家地址信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='买家地址信息表';
 
 CREATE TABLE `#__admin` (
   `admin_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '管理员ID',
@@ -50,7 +50,7 @@ CREATE TABLE `#__admin` (
   `admin_gid` smallint(6) DEFAULT '0' COMMENT '权限组ID',
   PRIMARY KEY (`admin_id`),
   KEY `member_id` (`admin_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
 CREATE TABLE `#__admin_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -61,7 +61,7 @@ CREATE TABLE `#__admin_log` (
   `ip` char(15) NOT NULL COMMENT 'IP',
   `url` varchar(50) NOT NULL DEFAULT '' COMMENT 'act&op',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员操作日志';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员操作日志';
 
 CREATE TABLE `#__adv` (
   `adv_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '广告自增标识编号',
@@ -78,7 +78,7 @@ CREATE TABLE `#__adv` (
   `buy_style` varchar(10) NOT NULL COMMENT '购买方式',
   `goldpay` int(10) unsigned NOT NULL COMMENT '购买所支付的金币',
   PRIMARY KEY (`adv_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='广告表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='广告表';
 
 CREATE TABLE `#__adv_click` (
   `adv_id` mediumint(8) unsigned NOT NULL COMMENT '广告id',
@@ -88,7 +88,7 @@ CREATE TABLE `#__adv_click` (
   `click_num` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '点击率',
   `adv_name` varchar(100) NOT NULL COMMENT '广告名称',
   `ap_name` varchar(100) NOT NULL COMMENT '广告位名称'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='广告点击率表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='广告点击率表';
 
 CREATE TABLE `#__adv_position` (
   `ap_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '广告位置id',
@@ -104,7 +104,7 @@ CREATE TABLE `#__adv_position` (
   `click_num` int(10) unsigned NOT NULL COMMENT '广告位点击率',
   `default_content` varchar(100) NOT NULL COMMENT '广告位默认内容',
   PRIMARY KEY (`ap_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='广告位表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='广告位表';
 
 CREATE TABLE `#__album_class` (
   `aclass_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '相册id',
@@ -116,7 +116,7 @@ CREATE TABLE `#__album_class` (
   `upload_time` int(10) unsigned NOT NULL COMMENT '图片上传时间',
   `is_default` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否为默认相册,1代表默认',
   PRIMARY KEY (`aclass_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='相册表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='相册表';
 
 CREATE TABLE `#__album_pic` (
   `apic_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '相册图片表id',
@@ -129,7 +129,7 @@ CREATE TABLE `#__album_pic` (
   `store_id` int(10) unsigned NOT NULL COMMENT '所属店铺id',
   `upload_time` int(10) unsigned NOT NULL COMMENT '图片上传时间',
   PRIMARY KEY (`apic_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='相册图片表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='相册图片表';
 
 CREATE TABLE `#__area` (
   `area_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -139,7 +139,7 @@ CREATE TABLE `#__area` (
   `area_deep` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '地区深度，从1开始',
   PRIMARY KEY (`area_id`),
   KEY `area_parent_id` (`area_parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='地区表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='地区表';
 
 CREATE TABLE `#__arrival_notice` (
   `an_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '通知id',
@@ -148,7 +148,7 @@ CREATE TABLE `#__arrival_notice` (
   `member_id` int(10) unsigned NOT NULL COMMENT '会员id',
   `an_addtime` int(10) unsigned NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`an_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品到货通知表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品到货通知表';
 
 CREATE TABLE `#__article` (
   `article_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '索引id',
@@ -161,7 +161,7 @@ CREATE TABLE `#__article` (
   `article_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发布时间',
   PRIMARY KEY (`article_id`),
   KEY `ac_id` (`ac_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='文章表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='文章表';
 
 CREATE TABLE `#__article_class` (
   `ac_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -171,7 +171,7 @@ CREATE TABLE `#__article_class` (
   `ac_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`ac_id`),
   KEY `ac_parent_id` (`ac_parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='文章分类表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='文章分类表';
 
 CREATE TABLE `#__attribute` (
   `attr_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '属性id',
@@ -182,7 +182,7 @@ CREATE TABLE `#__attribute` (
   `attr_sort` tinyint(1) unsigned NOT NULL COMMENT '排序',
   PRIMARY KEY (`attr_id`),
   KEY `attr_id` (`attr_id`,`type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品属性表';
 
 CREATE TABLE `#__attribute_value` (
   `attr_value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '属性值id',
@@ -191,7 +191,7 @@ CREATE TABLE `#__attribute_value` (
   `type_id` int(10) unsigned NOT NULL COMMENT '类型id',
   `attr_value_sort` tinyint(1) unsigned NOT NULL COMMENT '属性值排序',
   PRIMARY KEY (`attr_value_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性值表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品属性值表';
 
 CREATE TABLE `#__brand` (
   `brand_id` mediumint(11) NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -205,7 +205,7 @@ CREATE TABLE `#__brand` (
   `brand_apply` tinyint(1) NOT NULL DEFAULT '1' COMMENT '品牌申请，0为申请中，1为通过，默认为1，申请功能是会员使用，系统后台默认为1',
   `class_id` int(10) unsigned DEFAULT '0' COMMENT '所属分类id',
   PRIMARY KEY (`brand_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='品牌表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='品牌表';
 
 CREATE TABLE `#__cart` (
   `cart_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '购物车id',
@@ -220,7 +220,7 @@ CREATE TABLE `#__cart` (
   `bl_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '组合套装ID',
   PRIMARY KEY (`cart_id`),
   KEY `member_id` (`buyer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='购物车数据表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='购物车数据表';
 
 CREATE TABLE `#__chat_log` (
   `m_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '记录ID',
@@ -232,7 +232,7 @@ CREATE TABLE `#__chat_log` (
   `t_msg` varchar(300) DEFAULT NULL COMMENT '消息内容',
   `add_time` int(10) unsigned DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`m_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='消息记录表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='消息记录表';
 
 CREATE TABLE `#__chat_msg` (
   `m_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '记录ID',
@@ -245,7 +245,7 @@ CREATE TABLE `#__chat_msg` (
   `r_state` tinyint(1) unsigned DEFAULT '2' COMMENT '状态:1为已读,2为未读,默认为2',
   `add_time` int(10) unsigned DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`m_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='消息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='消息表';
 
 CREATE TABLE `#__complain` (
   `complain_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '投诉id',
@@ -275,7 +275,7 @@ CREATE TABLE `#__complain` (
   `complain_state` tinyint(4) NOT NULL COMMENT '投诉状态(10-新投诉/20-投诉通过转给被投诉人/30-被投诉人已申诉/40-提交仲裁/99-已关闭)',
   `complain_active` tinyint(4) NOT NULL DEFAULT '1' COMMENT '投诉是否通过平台审批(1未通过/2通过)',
   PRIMARY KEY (`complain_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投诉表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='投诉表';
 
 CREATE TABLE `#__complain_subject` (
   `complain_subject_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '投诉主题id',
@@ -283,7 +283,7 @@ CREATE TABLE `#__complain_subject` (
   `complain_subject_desc` varchar(100) NOT NULL COMMENT '投诉主题描述',
   `complain_subject_state` tinyint(4) NOT NULL COMMENT '投诉主题状态(1-有效/2-失效)',
   PRIMARY KEY (`complain_subject_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='投诉主题表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='投诉主题表';
 
 CREATE TABLE `#__complain_talk` (
   `talk_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '投诉对话id',
@@ -296,7 +296,7 @@ CREATE TABLE `#__complain_talk` (
   `talk_admin` int(11) NOT NULL DEFAULT '0' COMMENT '对话管理员，屏蔽对话人的id',
   `talk_datetime` int(11) NOT NULL COMMENT '对话发表时间',
   PRIMARY KEY (`talk_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投诉对话表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='投诉对话表';
 
 CREATE TABLE `#__consult` (
   `consult_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '咨询编号',
@@ -315,7 +315,7 @@ CREATE TABLE `#__consult` (
   PRIMARY KEY (`consult_id`),
   KEY `goods_id` (`goods_id`),
   KEY `seller_id` (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='产品咨询表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='产品咨询表';
 
 CREATE TABLE `#__consult_type` (
   `ct_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '咨询类型id',
@@ -323,7 +323,7 @@ CREATE TABLE `#__consult_type` (
   `ct_introduce` text NOT NULL COMMENT '咨询类型详细介绍',
   `ct_sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '咨询类型排序',
   PRIMARY KEY (`ct_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='咨询类型表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='咨询类型表';
 
 CREATE TABLE `#__cron` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -331,7 +331,7 @@ CREATE TABLE `#__cron` (
   `exeid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '关联任务的ID[如商品ID,会员ID]',
   `exetime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '执行时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='任务队列表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='任务队列表';
 
 CREATE TABLE `#__daddress` (
   `address_id` mediumint(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '地址ID',
@@ -345,7 +345,7 @@ CREATE TABLE `#__daddress` (
   `company` varchar(50) NOT NULL COMMENT '公司',
   `is_default` enum('0','1') NOT NULL DEFAULT '0' COMMENT '是否默认1是',
   PRIMARY KEY (`address_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='卖家发货地址信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='卖家发货地址信息表';
 
 CREATE TABLE `#__document` (
   `doc_id` mediumint(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
@@ -355,7 +355,7 @@ CREATE TABLE `#__document` (
   `doc_time` int(10) unsigned NOT NULL COMMENT '添加时间/修改时间',
   PRIMARY KEY (`doc_id`),
   UNIQUE KEY `doc_code` (`doc_code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='系统文章表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='系统文章表';
 
 CREATE TABLE `#__evaluate_goods` (
   `geval_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '评价ID',
@@ -379,7 +379,7 @@ CREATE TABLE `#__evaluate_goods` (
   `geval_explain` varchar(255) DEFAULT NULL COMMENT '解释内容',
   `geval_image` varchar(255) DEFAULT NULL COMMENT '晒单图片',
   PRIMARY KEY (`geval_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='信誉评价表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='信誉评价表';
 
 CREATE TABLE `#__evaluate_store` (
   `seval_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '评价ID',
@@ -394,7 +394,7 @@ CREATE TABLE `#__evaluate_store` (
   `seval_servicecredit` tinyint(1) unsigned NOT NULL DEFAULT '5' COMMENT '服务态度评分',
   `seval_deliverycredit` tinyint(1) unsigned NOT NULL DEFAULT '5' COMMENT '发货速度评分',
   PRIMARY KEY (`seval_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺评分表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺评分表';
 
 CREATE TABLE `#__express` (
   `id` tinyint(1) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -405,14 +405,14 @@ CREATE TABLE `#__express` (
   `e_order` enum('1','2') NOT NULL DEFAULT '2' COMMENT '1常用2不常用',
   `e_url` varchar(100) NOT NULL COMMENT '公司网址',
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='快递公司';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='快递公司';
 
 CREATE TABLE `#__favorites` (
   `member_id` int(10) unsigned NOT NULL COMMENT '会员ID',
   `fav_id` int(10) unsigned NOT NULL COMMENT '收藏ID',
   `fav_type` varchar(20) NOT NULL COMMENT '收藏类型',
   `fav_time` int(10) unsigned NOT NULL COMMENT '收藏时间'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='买家收藏表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='买家收藏表';
 
 CREATE TABLE `#__flowstat` (
   `stattime` int(11) unsigned NOT NULL COMMENT '访问日期',
@@ -420,7 +420,7 @@ CREATE TABLE `#__flowstat` (
   `store_id` int(11) unsigned NOT NULL COMMENT '店铺ID',
   `type` varchar(10) NOT NULL COMMENT '类型',
   `goods_id` int(11) unsigned NOT NULL COMMENT '商品ID'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
 
 CREATE TABLE `#__flowstat_1` (
   `stattime` int(11) unsigned NOT NULL COMMENT '访问日期',
@@ -428,7 +428,7 @@ CREATE TABLE `#__flowstat_1` (
   `store_id` int(11) unsigned NOT NULL COMMENT '店铺ID',
   `type` varchar(10) NOT NULL COMMENT '类型',
   `goods_id` int(11) unsigned NOT NULL COMMENT '商品ID'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
 
 CREATE TABLE `#__flowstat_2` (
   `stattime` int(11) unsigned NOT NULL COMMENT '访问日期',
@@ -436,14 +436,14 @@ CREATE TABLE `#__flowstat_2` (
   `store_id` int(11) unsigned NOT NULL COMMENT '店铺ID',
   `type` varchar(10) NOT NULL COMMENT '类型',
   `goods_id` int(11) unsigned NOT NULL COMMENT '商品ID'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='访问量统计表';
 
 CREATE TABLE `#__gadmin` (
   `gid` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',
   `gname` varchar(50) DEFAULT NULL COMMENT '组名',
   `limits` text COMMENT '权限内容',
   PRIMARY KEY (`gid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限组';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='权限组';
 
 CREATE TABLE `#__goods` (
   `goods_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品id(SKU)',
@@ -484,7 +484,7 @@ CREATE TABLE `#__goods` (
   `evaluation_good_star` tinyint(3) unsigned NOT NULL DEFAULT '5' COMMENT '好评星级',
   `evaluation_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评价数',
   PRIMARY KEY (`goods_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品表' AUTO_INCREMENT=100000;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品表' AUTO_INCREMENT=100000;
 
 CREATE TABLE `#__goods_attr_index` (
   `goods_id` int(10) unsigned NOT NULL COMMENT '商品id',
@@ -494,7 +494,7 @@ CREATE TABLE `#__goods_attr_index` (
   `attr_id` int(10) unsigned NOT NULL COMMENT '属性id',
   `attr_value_id` int(10) unsigned NOT NULL COMMENT '属性值id',
   PRIMARY KEY (`goods_id`,`gc_id`,`attr_value_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品与属性对应表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品与属性对应表';
 
 CREATE TABLE `#__goods_browse` (
   `goods_id` int(11) NOT NULL COMMENT '商品ID',
@@ -504,7 +504,7 @@ CREATE TABLE `#__goods_browse` (
   `gc_id_1` int(11) NOT NULL COMMENT '商品一级分类',
   `gc_id_2` int(11) NOT NULL COMMENT '商品二级分类',
   `gc_id_3` int(11) NOT NULL COMMENT '商品三级分类'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品浏览历史表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品浏览历史表';
 
 CREATE TABLE `#__goods_class` (
   `gc_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -519,7 +519,7 @@ CREATE TABLE `#__goods_class` (
   `gc_description` varchar(255) NOT NULL DEFAULT '' COMMENT '描述',
   PRIMARY KEY (`gc_id`),
   KEY `store_id` (`gc_parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品分类表';
 
 CREATE TABLE `#__goods_class_staple` (
   `staple_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '常用分类id',
@@ -532,7 +532,7 @@ CREATE TABLE `#__goods_class_staple` (
   `counter` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '计数器',
   PRIMARY KEY (`staple_id`),
   KEY `store_id` (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺常用分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺常用分类表';
 
 CREATE TABLE `#__goods_class_tag` (
   `gc_tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'TAGid',
@@ -544,7 +544,7 @@ CREATE TABLE `#__goods_class_tag` (
   `gc_id` int(10) unsigned NOT NULL COMMENT '商品分类id',
   `type_id` int(10) unsigned NOT NULL COMMENT '类型id',
   PRIMARY KEY (`gc_tag_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类TAG表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品分类TAG表';
 
 CREATE TABLE `#__goods_common` (
   `goods_commonid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品公共表id',
@@ -590,7 +590,7 @@ CREATE TABLE `#__goods_common` (
   `plateid_top` int(10) unsigned DEFAULT NULL COMMENT '顶部关联板式',
   `plateid_bottom` int(10) unsigned DEFAULT NULL COMMENT '底部关联板式',
   PRIMARY KEY (`goods_commonid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品公共内容表' AUTO_INCREMENT=100000 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品公共内容表' AUTO_INCREMENT=100000 ;
 
 CREATE TABLE `#__goods_images` (
   `goods_image_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
@@ -601,7 +601,7 @@ CREATE TABLE `#__goods_images` (
   `goods_image_sort` tinyint(3) unsigned NOT NULL COMMENT '排序',
   `is_default` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '默认主题，1是，0否',
   PRIMARY KEY (`goods_image_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品图片';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品图片';
 
 CREATE TABLE `#__groupbuy` (
   `groupbuy_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '团购ID',
@@ -629,7 +629,7 @@ CREATE TABLE `#__groupbuy` (
   `groupbuy_image1` varchar(100) DEFAULT NULL COMMENT '团购图片1',
   `remark` varchar(255) NOT NULL COMMENT '备注',
   PRIMARY KEY (`groupbuy_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='团购商品表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='团购商品表';
 
 CREATE TABLE `#__groupbuy_class` (
   `class_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '类别编号',
@@ -638,7 +638,7 @@ CREATE TABLE `#__groupbuy_class` (
   `sort` tinyint(1) unsigned NOT NULL COMMENT '排序',
   `deep` tinyint(1) unsigned NOT NULL COMMENT '深度',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='团购类别表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购类别表';
 
 CREATE TABLE `#__groupbuy_price_range` (
   `range_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '价格区间编号',
@@ -646,7 +646,7 @@ CREATE TABLE `#__groupbuy_price_range` (
   `range_start` int(10) unsigned NOT NULL COMMENT '区间下限',
   `range_end` int(10) unsigned NOT NULL COMMENT '区间上限',
   PRIMARY KEY (`range_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='团购价格区间表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购价格区间表';
 
 CREATE TABLE `#__groupbuy_quota` (
   `quota_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '团购套餐编号',
@@ -657,7 +657,7 @@ CREATE TABLE `#__groupbuy_quota` (
   `start_time` int(10) unsigned NOT NULL COMMENT '套餐开始时间',
   `end_time` int(10) unsigned NOT NULL COMMENT '套餐结束时间',
   PRIMARY KEY (`quota_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='团购套餐表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='团购套餐表';
 
 CREATE TABLE `#__help` (
   `help_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '帮助ID',
@@ -669,7 +669,7 @@ CREATE TABLE `#__help` (
   `type_id` int(10) unsigned NOT NULL COMMENT '帮助类型',
   `page_show` tinyint(1) unsigned DEFAULT '1' COMMENT '页面类型:1为店铺,2为会员,默认为1',
   PRIMARY KEY (`help_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='帮助内容表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='帮助内容表';
 
 CREATE TABLE `#__help_type` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '类型ID',
@@ -679,7 +679,7 @@ CREATE TABLE `#__help_type` (
   `help_show` tinyint(1) unsigned DEFAULT '1' COMMENT '是否显示,0为否,1为是,默认为1',
   `page_show` tinyint(1) unsigned DEFAULT '1' COMMENT '页面类型:1为店铺,2为会员,默认为1',
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='帮助类型表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='帮助类型表';
 
 CREATE TABLE `#__inform` (
   `inform_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '举报id',
@@ -703,7 +703,7 @@ CREATE TABLE `#__inform` (
   `inform_goods_image` varchar(150) DEFAULT NULL COMMENT '商品图',
   `inform_store_name` varchar(100) DEFAULT NULL COMMENT '店铺名',
   PRIMARY KEY (`inform_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='举报表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='举报表';
 
 CREATE TABLE `#__inform_subject` (
   `inform_subject_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '举报主题id',
@@ -712,7 +712,7 @@ CREATE TABLE `#__inform_subject` (
   `inform_subject_type_name` varchar(50) NOT NULL COMMENT '举报类型名称 ',
   `inform_subject_state` tinyint(11) NOT NULL COMMENT '举报主题状态(1可用/2失效)',
   PRIMARY KEY (`inform_subject_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='举报主题表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='举报主题表';
 
 CREATE TABLE `#__inform_subject_type` (
   `inform_type_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '举报类型id',
@@ -720,7 +720,7 @@ CREATE TABLE `#__inform_subject_type` (
   `inform_type_desc` varchar(100) NOT NULL COMMENT '举报类型描述',
   `inform_type_state` tinyint(4) NOT NULL COMMENT '举报类型状态(1有效/2失效)',
   PRIMARY KEY (`inform_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='举报类型表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='举报类型表';
 
 CREATE TABLE `#__invoice` (
   `inv_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '索引id',
@@ -739,7 +739,7 @@ CREATE TABLE `#__invoice` (
   `inv_rec_province` varchar(30) DEFAULT '' COMMENT '收票人省份',
   `inv_goto_addr` varchar(50) DEFAULT '' COMMENT '送票地址',
   PRIMARY KEY (`inv_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='买家发票信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='买家发票信息表';
 
 CREATE TABLE `#__live_area` (
   `live_area_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '区域ID',
@@ -752,7 +752,7 @@ CREATE TABLE `#__live_area` (
   `hot_city` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0.否 1.是',
   `number` int(11) NOT NULL DEFAULT '0' COMMENT '数量',
   PRIMARY KEY (`live_area_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='线下区域表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='线下区域表';
 
 CREATE TABLE `#__live_class` (
   `live_class_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '类分ID',
@@ -760,7 +760,7 @@ CREATE TABLE `#__live_class` (
   `parent_class_id` int(11) NOT NULL COMMENT '父类class_id',
   `live_class_sort` int(2) DEFAULT NULL COMMENT '分类排序',
   PRIMARY KEY (`live_class_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='线下分类表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='线下分类表';
 
 CREATE TABLE `#__live_groupbuy` (
   `groupbuy_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '团购ID',
@@ -789,7 +789,7 @@ CREATE TABLE `#__live_groupbuy` (
   `s_class_id` int(5) DEFAULT NULL COMMENT '小分类ID',
   `is_audit` tinyint(1) DEFAULT '1' COMMENT '1.待审核 2.审核通过 3.审核未通过',
   PRIMARY KEY (`groupbuy_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='线下团购表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='线下团购表';
 
 CREATE TABLE `#__live_order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单ID',
@@ -814,7 +814,7 @@ CREATE TABLE `#__live_order` (
   `cancel_time` int(11) DEFAULT NULL COMMENT '取消时间',
   `cancel_reason` varchar(255) DEFAULT NULL COMMENT '取消原因',
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='线下订单表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='线下订单表';
 
 CREATE TABLE `#__live_order_pwd` (
   `order_item_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '团购券ID',
@@ -823,14 +823,14 @@ CREATE TABLE `#__live_order_pwd` (
   `order_pwd` varchar(255) NOT NULL COMMENT '密码券',
   `use_time` int(11) DEFAULT NULL COMMENT '使用时间',
   PRIMARY KEY (`order_item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='线下团购密码券表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='线下团购密码券表';
 
 CREATE TABLE `#__lock` (
   `pid` bigint(20) unsigned NOT NULL COMMENT 'IP+TYPE',
   `pvalue` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '次数',
   `expiretime` int(11) NOT NULL DEFAULT '0' COMMENT '锁定截止时间',
   KEY `ip` (`pid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='防灌水表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='防灌水表';
 
 CREATE TABLE `#__mail_cron` (
   `mail_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '消息任务计划id',
@@ -838,7 +838,7 @@ CREATE TABLE `#__mail_cron` (
   `subject` varchar(255) NOT NULL COMMENT '邮件标题',
   `contnet` text NOT NULL COMMENT '邮件内容',
   PRIMARY KEY (`mail_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='邮件任务计划表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='邮件任务计划表';
 
 CREATE TABLE `#__mail_msg_temlates` (
   `name` varchar(100) NOT NULL COMMENT '模板名称',
@@ -846,7 +846,7 @@ CREATE TABLE `#__mail_msg_temlates` (
   `code` varchar(30) NOT NULL COMMENT '模板调用代码',
   `content` text NOT NULL COMMENT '模板内容',
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='邮件模板表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='邮件模板表';
 
 CREATE TABLE `#__mall_consult` (
   `mc_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '平台客服咨询id',
@@ -861,7 +861,7 @@ CREATE TABLE `#__mall_consult` (
   `admin_id` int(10) unsigned NOT NULL COMMENT '管理员id',
   `admin_name` varchar(50) NOT NULL COMMENT '管理员名称',
   PRIMARY KEY (`mc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='平台客服咨询表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='平台客服咨询表';
 
 CREATE TABLE `#__mall_consult_type` (
   `mct_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '平台客服咨询类型id',
@@ -869,7 +869,7 @@ CREATE TABLE `#__mall_consult_type` (
   `mct_introduce` text NOT NULL COMMENT '平台客服咨询类型备注',
   `mct_sort` tinyint(255) unsigned NOT NULL COMMENT '咨询类型排序',
   PRIMARY KEY (`mct_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='平台客服咨询类型表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='平台客服咨询类型表';
 
 CREATE TABLE `#__member` (
   `member_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '会员id',
@@ -913,21 +913,21 @@ CREATE TABLE `#__member` (
   `member_quicklink` varchar(255) DEFAULT NULL COMMENT '会员常用操作',
   PRIMARY KEY (`member_id`),
   KEY `member_name` (`member_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='会员表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='会员表';
 
 CREATE TABLE `#__member_common` (
   `member_id` int(11) NOT NULL COMMENT '会员ID',
   `auth_code` char(6) DEFAULT NULL COMMENT '短信/邮件验证码',
   `send_acode_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '短信/邮件验证码发送时间',
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员扩展表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员扩展表';
 
 CREATE TABLE `#__member_msg_setting` (
   `mmt_code` varchar(50) NOT NULL COMMENT '用户消息模板编号',
   `member_id` int(10) unsigned NOT NULL COMMENT '会员id',
   `is_receive` tinyint(3) unsigned NOT NULL COMMENT '是否接收 1是，0否',
   PRIMARY KEY (`mmt_code`,`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户消息接收设置表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户消息接收设置表';
 
 CREATE TABLE `#__member_msg_tpl` (
   `mmt_code` varchar(50) NOT NULL COMMENT '用户消息模板编号',
@@ -940,7 +940,7 @@ CREATE TABLE `#__member_msg_tpl` (
   `mmt_mail_subject` varchar(255) NOT NULL COMMENT '邮件标题',
   `mmt_mail_content` text NOT NULL COMMENT '邮件内容',
   PRIMARY KEY (`mmt_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户消息模板';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户消息模板';
 
 CREATE TABLE `#__message` (
   `message_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '短消息索引id',
@@ -963,7 +963,7 @@ CREATE TABLE `#__message` (
   KEY `from_member_id` (`from_member_id`),
   KEY `to_member_id` (`to_member_id`(255)),
   KEY `message_ismore` (`message_ismore`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='短消息';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='短消息';
 
 CREATE TABLE `#__navigation` (
   `nav_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -975,12 +975,12 @@ CREATE TABLE `#__navigation` (
   `nav_sort` tinyint(3) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   `item_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '类别ID，对应着nav_type中的内容，默认为0',
   PRIMARY KEY (`nav_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='页面导航表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='页面导航表';
 
 CREATE TABLE `#__offpay_area` (
   `store_id` int(8) NOT NULL COMMENT '商家ID',
   `area_id` text COMMENT '县ID组合'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='货到付款支持地区表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='货到付款支持地区表';
 
 CREATE TABLE `#__order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单索引id',
@@ -1009,7 +1009,7 @@ CREATE TABLE `#__order` (
   `order_from` enum('1','2') NOT NULL DEFAULT '1' COMMENT '1WEB2mobile',
   `shipping_code` varchar(50) DEFAULT '' COMMENT '物流单号',
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单表';
 
 CREATE TABLE `#__order_bill` (
   `ob_no` int(11) NOT NULL AUTO_INCREMENT COMMENT '结算单编号(年月店铺ID)',
@@ -1030,7 +1030,7 @@ CREATE TABLE `#__order_bill` (
   `ob_store_id` int(11) NOT NULL COMMENT '店铺ID',
   `ob_store_name` varchar(50) DEFAULT NULL COMMENT '店铺名',
   PRIMARY KEY (`ob_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='结算表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='结算表';
 
 CREATE TABLE `#__order_common` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单索引id',
@@ -1052,7 +1052,7 @@ CREATE TABLE `#__order_common` (
   `invoice_info` varchar(500) DEFAULT '' COMMENT '发票信息',
   `promotion_info` varchar(500) DEFAULT '' COMMENT '促销信息备注',
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单信息扩展表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单信息扩展表';
 
 CREATE TABLE `#__order_goods` (
   `rec_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单商品表索引id',
@@ -1071,7 +1071,7 @@ CREATE TABLE `#__order_goods` (
   `gc_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '商品最底级分类ID',
   PRIMARY KEY (`rec_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单商品表';
 
 CREATE TABLE `#__order_log` (
   `log_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -1082,7 +1082,7 @@ CREATE TABLE `#__order_log` (
   `log_user` varchar(30) DEFAULT '' COMMENT '操作人',
   `log_orderstate` enum('0','10','20','30','40') DEFAULT NULL COMMENT '订单状态：0(已取消)10:未付款;20:已付款;30:已发货;40:已收货;',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单处理历史表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单处理历史表';
 
 CREATE TABLE `#__order_pay` (
   `pay_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1090,7 +1090,7 @@ CREATE TABLE `#__order_pay` (
   `buyer_id` int(10) unsigned NOT NULL COMMENT '买家ID',
   `api_pay_state` enum('0','1') DEFAULT '0' COMMENT '0默认未支付1已支付(只有第三方支付接口通知到时才会更改此状态)',
   PRIMARY KEY (`pay_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单支付表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单支付表';
 
 CREATE TABLE `#__order_statis` (
   `os_month` mediumint(9) unsigned NOT NULL DEFAULT '0' COMMENT '统计编号(年月)',
@@ -1107,7 +1107,7 @@ CREATE TABLE `#__order_statis` (
   `os_create_date` int(11) DEFAULT NULL COMMENT '创建记录日期',
   PRIMARY KEY (`os_month`),
   KEY `os_month` (`os_month`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='月销量统计表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='月销量统计表';
 
 CREATE TABLE `#__payment` (
   `payment_id` tinyint(1) unsigned NOT NULL COMMENT '支付索引id',
@@ -1116,7 +1116,7 @@ CREATE TABLE `#__payment` (
   `payment_config` text COMMENT '支付接口配置信息',
   `payment_state` enum('0','1') NOT NULL DEFAULT '0' COMMENT '接口状态0禁用1启用',
   PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='支付方式表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='支付方式表';
 
 CREATE TABLE `#__pd_cash` (
   `pdc_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增编号',
@@ -1132,7 +1132,7 @@ CREATE TABLE `#__pd_cash` (
   `pdc_payment_state` enum('0','1') NOT NULL DEFAULT '0' COMMENT '提现支付状态 0默认1支付完成',
   `pdc_payment_admin` varchar(30) DEFAULT NULL COMMENT '支付管理员',
   PRIMARY KEY (`pdc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='预存款提现记录表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='预存款提现记录表';
 
 CREATE TABLE `#__pd_log` (
   `lg_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增编号',
@@ -1145,7 +1145,7 @@ CREATE TABLE `#__pd_log` (
   `lg_add_time` int(11) NOT NULL COMMENT '添加时间',
   `lg_desc` varchar(150) DEFAULT NULL COMMENT '描述',
   PRIMARY KEY (`lg_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='预存款变更日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='预存款变更日志表';
 
 CREATE TABLE `#__pd_recharge` (
   `pdr_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增编号',
@@ -1161,7 +1161,7 @@ CREATE TABLE `#__pd_recharge` (
   `pdr_payment_time` int(11) NOT NULL DEFAULT '0' COMMENT '支付时间',
   `pdr_admin` varchar(30) DEFAULT '' COMMENT '管理员名',
   PRIMARY KEY (`pdr_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='预存款充值表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='预存款充值表';
 
 CREATE TABLE `#__points_cart` (
   `pcart_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1172,7 +1172,7 @@ CREATE TABLE `#__points_cart` (
   `pgoods_choosenum` int(11) NOT NULL COMMENT '选择积分礼品数量',
   `pgoods_image` varchar(100) DEFAULT NULL COMMENT '积分礼品图片',
   PRIMARY KEY (`pcart_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分礼品兑换购物车';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='积分礼品兑换购物车';
 
 CREATE TABLE `#__points_goods` (
   `pgoods_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '积分礼品索引id',
@@ -1200,7 +1200,7 @@ CREATE TABLE `#__points_goods` (
   `pgoods_endtime` int(11) DEFAULT NULL COMMENT '兑换结束时间',
   `pgoods_sort` int(11) NOT NULL DEFAULT '0' COMMENT '礼品排序',
   PRIMARY KEY (`pgoods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分礼品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='积分礼品表';
 
 CREATE TABLE `#__points_log` (
   `pl_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '积分日志编号',
@@ -1213,7 +1213,7 @@ CREATE TABLE `#__points_log` (
   `pl_desc` varchar(100) NOT NULL COMMENT '操作描述',
   `pl_stage` varchar(50) NOT NULL COMMENT '操作阶段',
   PRIMARY KEY (`pl_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员积分日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员积分日志表';
 
 CREATE TABLE `#__points_order` (
   `point_orderid` int(11) NOT NULL AUTO_INCREMENT COMMENT '兑换订单编号',
@@ -1241,7 +1241,7 @@ CREATE TABLE `#__points_order` (
   `point_ordermessage` varchar(300) DEFAULT NULL COMMENT '订单留言',
   `point_orderstate` int(11) NOT NULL DEFAULT '10' COMMENT '订单状态：10(默认):未付款;11已付款;20:确认付款;30:已发货;40:已收货;50已完成;2已取消',
   PRIMARY KEY (`point_orderid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='兑换订单表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='兑换订单表';
 
 CREATE TABLE `#__points_orderaddress` (
   `point_oaid` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
@@ -1254,7 +1254,7 @@ CREATE TABLE `#__points_orderaddress` (
   `point_telphone` varchar(20) NOT NULL COMMENT '电话号码',
   `point_mobphone` varchar(20) NOT NULL COMMENT '手机号码',
   PRIMARY KEY (`point_oaid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='兑换订单地址表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='兑换订单地址表';
 
 CREATE TABLE `#__points_ordergoods` (
   `point_recid` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单礼品表索引',
@@ -1265,7 +1265,7 @@ CREATE TABLE `#__points_ordergoods` (
   `point_goodsnum` int(11) NOT NULL COMMENT '礼品数量',
   `point_goodsimage` varchar(100) DEFAULT NULL COMMENT '礼品图片',
   PRIMARY KEY (`point_recid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='兑换订单商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='兑换订单商品表';
 
 CREATE TABLE `#__p_booth_goods` (
   `booth_goods_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '套餐商品id',
@@ -1274,7 +1274,7 @@ CREATE TABLE `#__p_booth_goods` (
   `gc_id` int(10) unsigned NOT NULL COMMENT '商品分类id',
   `booth_state` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '套餐状态 1开启 0关闭 默认1',
   PRIMARY KEY (`booth_goods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='展位商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='展位商品表';
 
 CREATE TABLE `#__p_booth_quota` (
   `booth_quota_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '套餐id',
@@ -1284,7 +1284,7 @@ CREATE TABLE `#__p_booth_quota` (
   `booth_quota_endtime` int(10) unsigned NOT NULL COMMENT '结束时间',
   `booth_state` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '套餐状态 1开启 0关闭 默认1',
   PRIMARY KEY (`booth_quota_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='展位套餐表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='展位套餐表';
 
 CREATE TABLE `#__p_bundling` (
   `bl_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '组合ID',
@@ -1296,7 +1296,7 @@ CREATE TABLE `#__p_bundling` (
   `bl_freight` decimal(10,2) NOT NULL COMMENT '运费',
   `bl_state` tinyint(1) NOT NULL DEFAULT '1' COMMENT '组合状态 0-关闭/1-开启',
   PRIMARY KEY (`bl_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='组合销售活动表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='组合销售活动表';
 
 CREATE TABLE `#__p_bundling_goods` (
   `bl_goods_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '组合商品id',
@@ -1307,7 +1307,7 @@ CREATE TABLE `#__p_bundling_goods` (
   `bl_goods_price` decimal(10,2) NOT NULL COMMENT '商品价格',
   `bl_appoint` tinyint(3) unsigned NOT NULL COMMENT '指定商品 1是，0否',
   PRIMARY KEY (`bl_goods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='组合销售活动商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='组合销售活动商品表';
 
 CREATE TABLE `#__p_bundling_quota` (
   `bl_quota_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '套餐ID',
@@ -1320,7 +1320,7 @@ CREATE TABLE `#__p_bundling_quota` (
   `bl_quota_endtime` varchar(10) NOT NULL COMMENT '套餐结束时间',
   `bl_state` tinyint(1) unsigned NOT NULL COMMENT '套餐状态：0关闭，1开启。默认为 1',
   PRIMARY KEY (`bl_quota_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='组合销售套餐表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='组合销售套餐表';
 
 CREATE TABLE `#__p_mansong` (
   `mansong_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '满送活动编号',
@@ -1335,7 +1335,7 @@ CREATE TABLE `#__p_mansong` (
   `state` tinyint(1) unsigned NOT NULL COMMENT '活动状态(1-未发布/2-正常/3-取消/4-失效/5-结束)',
   `remark` varchar(200) NOT NULL COMMENT '备注',
   PRIMARY KEY (`mansong_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='满就送活动表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='满就送活动表';
 
 CREATE TABLE `#__p_mansong_quota` (
   `quota_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '满就送套餐编号',
@@ -1348,7 +1348,7 @@ CREATE TABLE `#__p_mansong_quota` (
   `end_time` int(10) unsigned NOT NULL COMMENT '结束时间',
   `state` tinyint(1) unsigned NOT NULL COMMENT '配额状态(1-可用/2-取消/3-结束)',
   PRIMARY KEY (`quota_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='满就送套餐表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='满就送套餐表';
 
 CREATE TABLE `#__p_mansong_rule` (
   `rule_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规则编号',
@@ -1358,7 +1358,7 @@ CREATE TABLE `#__p_mansong_rule` (
   `mansong_goods_name` varchar(50) NOT NULL COMMENT '礼品名称',
   `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品编号',
   PRIMARY KEY (`rule_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='满就送活动规则表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='满就送活动规则表';
 
 CREATE TABLE `#__p_xianshi` (
   `xianshi_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '限时编号',
@@ -1375,7 +1375,7 @@ CREATE TABLE `#__p_xianshi` (
   `lower_limit` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '购买下限，1为不限制',
   `state` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态，0-取消 1-正常',
   PRIMARY KEY (`xianshi_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='限时折扣活动表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='限时折扣活动表';
 
 CREATE TABLE `#__p_xianshi_goods` (
   `xianshi_goods_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '限时折扣商品表',
@@ -1395,7 +1395,7 @@ CREATE TABLE `#__p_xianshi_goods` (
   `state` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态，0-取消 1-正常',
   `xianshi_recommend` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '推荐标志 0-未推荐 1-已推荐',
   PRIMARY KEY (`xianshi_goods_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='限时折扣商品表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='限时折扣商品表';
 
 CREATE TABLE `#__p_xianshi_quota` (
   `quota_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '限时折扣套餐编号',
@@ -1406,7 +1406,7 @@ CREATE TABLE `#__p_xianshi_quota` (
   `start_time` int(10) unsigned NOT NULL COMMENT '套餐开始时间',
   `end_time` int(10) unsigned NOT NULL COMMENT '套餐结束时间',
   PRIMARY KEY (`quota_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='限时折扣套餐表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='限时折扣套餐表';
 
 CREATE TABLE `#__rec_position` (
   `rec_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
@@ -1414,7 +1414,7 @@ CREATE TABLE `#__rec_position` (
   `title` varchar(200) NOT NULL DEFAULT '' COMMENT '标题',
   `content` text NOT NULL COMMENT '序列化推荐位内容',
   PRIMARY KEY (`rec_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='推荐位';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='推荐位';
 
 CREATE TABLE `#__refund_reason` (
   `reason_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '原因ID',
@@ -1422,7 +1422,7 @@ CREATE TABLE `#__refund_reason` (
   `sort` tinyint(1) unsigned DEFAULT '255' COMMENT '排序',
   `update_time` int(10) unsigned NOT NULL COMMENT '更新时间',
   PRIMARY KEY (`reason_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='退款退货原因表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='退款退货原因表';
 
 CREATE TABLE `#__refund_return` (
   `refund_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '记录ID',
@@ -1463,7 +1463,7 @@ CREATE TABLE `#__refund_return` (
   `receive_message` varchar(300) DEFAULT NULL COMMENT '收货备注',
   `commis_rate` smallint(6) DEFAULT '0' COMMENT '佣金比例',
   PRIMARY KEY (`refund_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='退款退货表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='退款退货表';
 
 CREATE TABLE `#__seller` (
   `seller_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '卖家编号',
@@ -1475,7 +1475,7 @@ CREATE TABLE `#__seller` (
   `seller_quicklink` varchar(255) DEFAULT NULL COMMENT '卖家快捷操作',
   `last_login_time` int(10) unsigned DEFAULT NULL COMMENT '最后登录时间',
   PRIMARY KEY (`seller_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='卖家用户表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='卖家用户表';
 
 CREATE TABLE `#__seller_group` (
   `group_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '卖家组编号',
@@ -1484,7 +1484,7 @@ CREATE TABLE `#__seller_group` (
   `smt_limits` text NOT NULL COMMENT '消息权限范围',
   `store_id` int(10) unsigned NOT NULL COMMENT '店铺编号',
   PRIMARY KEY (`group_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='卖家用户组表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='卖家用户组表';
 
 CREATE TABLE `#__seller_log` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志编号',
@@ -1497,7 +1497,7 @@ CREATE TABLE `#__seller_log` (
   `log_url` varchar(50) NOT NULL COMMENT '日志url',
   `log_state` tinyint(3) unsigned NOT NULL COMMENT '日志状态(0-失败 1-成功)',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='卖家日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='卖家日志表';
 
 CREATE TABLE `#__seo` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -1506,13 +1506,13 @@ CREATE TABLE `#__seo` (
   `description` text NOT NULL COMMENT '描述',
   `type` varchar(20) NOT NULL COMMENT '类型',
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='SEO信息存放表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='SEO信息存放表';
 
 CREATE TABLE `#__setting` (
   `name` varchar(50) NOT NULL COMMENT '名称',
   `value` text COMMENT '值',
   PRIMARY KEY (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统设置表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='系统设置表';
 
 CREATE TABLE `#__sns_albumclass` (
   `ac_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '相册id',
@@ -1524,7 +1524,7 @@ CREATE TABLE `#__sns_albumclass` (
   `upload_time` int(10) unsigned NOT NULL COMMENT '图片上传时间',
   `is_default` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否为买家秀相册  1为是,0为否',
   PRIMARY KEY (`ac_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='相册表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='相册表';
 
 CREATE TABLE `#__sns_albumpic` (
   `ap_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '相册图片表id',
@@ -1538,7 +1538,7 @@ CREATE TABLE `#__sns_albumpic` (
   `ap_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '图片类型，0为无、1为买家秀',
   `item_id` tinyint(4) NOT NULL DEFAULT '0' COMMENT '信息ID',
   PRIMARY KEY (`ap_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='相册图片表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='相册图片表';
 
 CREATE TABLE `#__sns_binding` (
   `snsbind_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1552,7 +1552,7 @@ CREATE TABLE `#__sns_binding` (
   `snsbind_expiresin` int(11) NOT NULL COMMENT 'accesstoken过期时间，以返回的时间的准，单位为秒，注意过期时提醒用户重新授权',
   `snsbind_refreshtoken` varchar(100) DEFAULT NULL COMMENT '刷新token',
   PRIMARY KEY (`snsbind_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分享应用用户绑定记录表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='分享应用用户绑定记录表';
 
 CREATE TABLE `#__sns_comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1566,7 +1566,7 @@ CREATE TABLE `#__sns_comment` (
   `comment_ip` varchar(50) NOT NULL COMMENT '来源IP',
   `comment_state` tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态 0正常 1屏蔽',
   PRIMARY KEY (`comment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='评论表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='评论表';
 
 CREATE TABLE `#__sns_friend` (
   `friend_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id值',
@@ -1579,7 +1579,7 @@ CREATE TABLE `#__sns_friend` (
   `friend_addtime` int(11) NOT NULL COMMENT '添加时间',
   `friend_followstate` tinyint(1) NOT NULL DEFAULT '1' COMMENT '关注状态 1为单方关注 2为双方关注',
   PRIMARY KEY (`friend_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='好友数据表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='好友数据表';
 
 CREATE TABLE `#__sns_goods` (
   `snsgoods_goodsid` int(11) NOT NULL COMMENT '商品ID',
@@ -1593,7 +1593,7 @@ CREATE TABLE `#__sns_goods` (
   `snsgoods_likemember` text COMMENT '喜欢过的会员ID，用逗号分隔',
   `snsgoods_sharenum` int(11) NOT NULL DEFAULT '0' COMMENT '分享数',
   UNIQUE KEY `snsgoods_goodsid` (`snsgoods_goodsid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='SNS商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='SNS商品表';
 
 CREATE TABLE `#__sns_membertag` (
   `mtag_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '会员标签id',
@@ -1603,20 +1603,20 @@ CREATE TABLE `#__sns_membertag` (
   `mtag_desc` varchar(50) NOT NULL COMMENT '标签描述',
   `mtag_img` varchar(50) DEFAULT NULL COMMENT '标签图片',
   PRIMARY KEY (`mtag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员标签表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员标签表';
 
 CREATE TABLE `#__sns_mtagmember` (
   `mtag_id` int(11) NOT NULL COMMENT '会员标签表id',
   `member_id` int(11) NOT NULL COMMENT '会员id',
   `recommend` tinyint(4) NOT NULL DEFAULT '0' COMMENT '推荐，默认为0',
   PRIMARY KEY (`mtag_id`,`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员标签会员对照表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员标签会员对照表';
 
 CREATE TABLE `#__sns_setting` (
   `member_id` int(11) NOT NULL COMMENT '会员id',
   `setting_skin` varchar(50) DEFAULT NULL COMMENT '皮肤',
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='个人中心设置表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='个人中心设置表';
 
 CREATE TABLE `#__sns_sharegoods` (
   `share_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1631,7 +1631,7 @@ CREATE TABLE `#__sns_sharegoods` (
   `share_isshare` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否分享 0为未分享 1为分享',
   `share_islike` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否喜欢 0为未喜欢 1为喜欢',
   PRIMARY KEY (`share_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='共享商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='共享商品表';
 
 CREATE TABLE `#__sns_sharestore` (
   `share_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1643,7 +1643,7 @@ CREATE TABLE `#__sns_sharestore` (
   `share_addtime` int(11) NOT NULL COMMENT '添加时间',
   `share_privacy` tinyint(1) NOT NULL DEFAULT '0' COMMENT '隐私可见度 0所有人可见 1好友可见 2仅自己可见',
   PRIMARY KEY (`share_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='共享店铺表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='共享店铺表';
 
 CREATE TABLE `#__sns_tracelog` (
   `trace_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1664,7 +1664,7 @@ CREATE TABLE `#__sns_tracelog` (
   `trace_orgcopycount` int(11) NOT NULL DEFAULT '0' COMMENT '原帖转帖次数',
   `trace_from` tinyint(4) DEFAULT '1' COMMENT '来源 1=shop 2=storetracelog 3=microshop 4=cms 5=circle',
   PRIMARY KEY (`trace_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='动态信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='动态信息表';
 
 CREATE TABLE `#__sns_visitor` (
   `v_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1676,7 +1676,7 @@ CREATE TABLE `#__sns_visitor` (
   `v_ownermavatar` varchar(100) DEFAULT NULL COMMENT '主人会员头像',
   `v_addtime` int(11) NOT NULL COMMENT '访问时间',
   PRIMARY KEY (`v_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='sns访客表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='sns访客表';
 
 CREATE TABLE `#__spec` (
   `sp_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规格id',
@@ -1685,7 +1685,7 @@ CREATE TABLE `#__spec` (
   `class_id` int(10) unsigned DEFAULT '0' COMMENT '所属分类id',
   `class_name` varchar(100) DEFAULT NULL COMMENT '所属分类名称',
   PRIMARY KEY (`sp_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品规格表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品规格表';
 
 CREATE TABLE `#__spec_value` (
   `sp_value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规格值id',
@@ -1697,7 +1697,7 @@ CREATE TABLE `#__spec_value` (
   `sp_value_sort` tinyint(1) unsigned NOT NULL COMMENT '排序',
   PRIMARY KEY (`sp_value_id`),
   KEY `store_id` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品规格值表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品规格值表';
 
 CREATE TABLE `#__stat_member` (
   `statm_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -1713,7 +1713,7 @@ CREATE TABLE `#__stat_member` (
   `statm_pointsreduce` int(11) NOT NULL DEFAULT '0' COMMENT '积分减少额',
   `statm_updatetime` int(11) NOT NULL COMMENT '记录更新时间',
   PRIMARY KEY (`statm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员相关数据统计';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员相关数据统计';
 
 CREATE TABLE `#__stat_order` (
   `order_id` int(11) NOT NULL COMMENT '订单id',
@@ -1738,7 +1738,7 @@ CREATE TABLE `#__stat_order` (
   UNIQUE KEY `order_id` (`order_id`),
   KEY `order_add_time` (`order_add_time`),
   KEY `order_isvalid` (`order_isvalid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='统计功能订单缓存表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='统计功能订单缓存表';
 
 CREATE TABLE `#__stat_ordergoods` (
   `rec_id` int(11) NOT NULL COMMENT '订单商品表索引id',
@@ -1783,7 +1783,7 @@ CREATE TABLE `#__stat_ordergoods` (
   UNIQUE KEY `rec_id` (`rec_id`),
   KEY `order_id` (`order_id`),
   KEY `order_add_time` (`order_add_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='统计功能订单商品缓存表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='统计功能订单商品缓存表';
 
 CREATE TABLE `#__store` (
   `store_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店铺索引id',
@@ -1841,7 +1841,7 @@ CREATE TABLE `#__store` (
   KEY `store_name` (`store_name`),
   KEY `sc_id` (`sc_id`),
   KEY `store_state` (`store_state`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='店铺数据表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='店铺数据表';
 
 CREATE TABLE `#__store_bind_class` (
   `bid` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1853,7 +1853,7 @@ CREATE TABLE `#__store_bind_class` (
   `state` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '状态0审核中1已审核',
   PRIMARY KEY (`bid`),
   KEY `store_id` (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺可发布商品类目表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺可发布商品类目表';
 
 CREATE TABLE `#__store_class` (
   `sc_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -1861,7 +1861,7 @@ CREATE TABLE `#__store_class` (
   `sc_bail` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '保证金数额',
   `sc_sort` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
   PRIMARY KEY (`sc_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='店铺分类表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='店铺分类表';
 
 CREATE TABLE `#__store_cost` (
   `cost_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '费用编号',
@@ -1872,7 +1872,7 @@ CREATE TABLE `#__store_cost` (
   `cost_state` tinyint(3) unsigned NOT NULL COMMENT '费用状态(0-未结算 1-已结算)',
   `cost_time` int(10) unsigned NOT NULL COMMENT '费用发生时间',
   PRIMARY KEY (`cost_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺费用表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺费用表';
 
 CREATE TABLE `#__store_decoration` (
   `decoration_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '装修编号',
@@ -1882,7 +1882,7 @@ CREATE TABLE `#__store_decoration` (
   `decoration_nav` varchar(5000) DEFAULT NULL COMMENT '装修导航',
   `decoration_banner` varchar(255) DEFAULT NULL COMMENT '装修头部banner',
   PRIMARY KEY (`decoration_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺装修表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺装修表';
 
 CREATE TABLE `#__store_decoration_album` (
   `image_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片编号',
@@ -1894,7 +1894,7 @@ CREATE TABLE `#__store_decoration_album` (
   `store_id` int(10) unsigned NOT NULL COMMENT '店铺编号',
   `upload_time` int(10) unsigned NOT NULL COMMENT '上传时间',
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺装修相册表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺装修相册表';
 
 CREATE TABLE `#__store_decoration_block` (
   `block_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '装修块编号',
@@ -1906,7 +1906,7 @@ CREATE TABLE `#__store_decoration_block` (
   `block_full_width` tinyint(3) unsigned DEFAULT NULL COMMENT '是否100%宽度(0-否 1-是)',
   `block_sort` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '块排序',
   PRIMARY KEY (`block_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺装修块表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺装修块表';
 
 CREATE TABLE `#__store_extend` (
   `store_id` mediumint(8) unsigned NOT NULL COMMENT '店铺ID',
@@ -1914,7 +1914,7 @@ CREATE TABLE `#__store_extend` (
   `pricerange` text COMMENT '店铺统计设置的商品价格区间',
   `orderpricerange` text COMMENT '店铺统计设置的订单价格区间',
   PRIMARY KEY (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺信息扩展表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺信息扩展表';
 
 CREATE TABLE `#__store_goods_class` (
   `stc_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -1926,7 +1926,7 @@ CREATE TABLE `#__store_goods_class` (
   PRIMARY KEY (`stc_id`),
   KEY `stc_parent_id` (`stc_parent_id`,`stc_sort`),
   KEY `store_id` (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺商品分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺商品分类表';
 
 CREATE TABLE `#__store_grade` (
   `sg_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -1941,7 +1941,7 @@ CREATE TABLE `#__store_grade` (
   `sg_function` varchar(255) DEFAULT NULL COMMENT '附加功能',
   `sg_sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '级别，数目越大级别越高',
   PRIMARY KEY (`sg_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='店铺等级表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='店铺等级表';
 
 CREATE TABLE `#__store_joinin` (
   `member_id` int(10) unsigned NOT NULL COMMENT '用户编号',
@@ -1998,7 +1998,7 @@ CREATE TABLE `#__store_joinin` (
   `paying_money_certificate_explain` varchar(200) DEFAULT NULL COMMENT '付款凭证说明',
   `paying_amount` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '付款金额',
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺入住表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺入住表';
 
 CREATE TABLE `#__store_msg` (
   `sm_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '店铺消息id',
@@ -2008,14 +2008,14 @@ CREATE TABLE `#__store_msg` (
   `sm_addtime` int(10) unsigned NOT NULL COMMENT '发送时间',
   `sm_readids` varchar(255) NOT NULL COMMENT '已读卖家id',
   PRIMARY KEY (`sm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺消息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺消息表';
 
 CREATE TABLE `#__store_msg_read` (
   `sm_id` int(11) NOT NULL COMMENT '店铺消息id',
   `seller_id` int(11) NOT NULL COMMENT '卖家id',
   `read_time` int(11) NOT NULL COMMENT '阅读时间',
   PRIMARY KEY (`sm_id`,`seller_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺消息阅读表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺消息阅读表';
 
 CREATE TABLE `#__store_msg_setting` (
   `smt_code` varchar(100) NOT NULL COMMENT '模板编码',
@@ -2026,7 +2026,7 @@ CREATE TABLE `#__store_msg_setting` (
   `sms_short_number` varchar(11) NOT NULL COMMENT '手机号码',
   `sms_mail_number` varchar(100) NOT NULL COMMENT '邮箱号码',
   PRIMARY KEY (`smt_code`,`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺消息接收设置';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺消息接收设置';
 
 CREATE TABLE `#__store_msg_tpl` (
   `smt_code` varchar(100) NOT NULL COMMENT '模板编码',
@@ -2042,7 +2042,7 @@ CREATE TABLE `#__store_msg_tpl` (
   `smt_mail_content` text NOT NULL COMMENT '邮件内容',
   `smt_mail_forced` tinyint(3) unsigned NOT NULL COMMENT '邮件强制接收，0否，1是',
   PRIMARY KEY (`smt_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商家消息模板';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商家消息模板';
 
 CREATE TABLE `#__store_navigation` (
   `sn_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '导航ID',
@@ -2055,7 +2055,7 @@ CREATE TABLE `#__store_navigation` (
   `sn_url` varchar(255) DEFAULT NULL COMMENT '店铺导航的外链URL',
   `sn_new_open` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '店铺导航外链是否在新窗口打开：0不开新窗口1开新窗口，默认是0',
   PRIMARY KEY (`sn_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='卖家店铺导航信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='卖家店铺导航信息表';
 
 CREATE TABLE `#__store_plate` (
   `plate_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '关联板式id',
@@ -2064,7 +2064,7 @@ CREATE TABLE `#__store_plate` (
   `plate_content` text NOT NULL COMMENT '关联板式内容',
   `store_id` int(10) unsigned NOT NULL COMMENT '所属店铺id',
   PRIMARY KEY (`plate_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='关联板式表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='关联板式表';
 
 CREATE TABLE `#__store_reopen` (
   `re_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -2082,7 +2082,7 @@ CREATE TABLE `#__store_reopen` (
   `re_pay_cert` varchar(50) DEFAULT NULL COMMENT '付款凭证',
   `re_pay_cert_explain` varchar(200) DEFAULT NULL COMMENT '付款凭证说明',
   PRIMARY KEY (`re_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='续签内容表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='续签内容表';
 
 CREATE TABLE `#__store_sns_comment` (
   `scomm_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店铺动态评论id',
@@ -2095,7 +2095,7 @@ CREATE TABLE `#__store_sns_comment` (
   `scomm_state` tinyint(1) NOT NULL DEFAULT '1' COMMENT '评论状态 1正常，0屏蔽',
   PRIMARY KEY (`scomm_id`),
   UNIQUE KEY `scomm_id` (`scomm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺动态评论表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺动态评论表';
 
 CREATE TABLE `#__store_sns_setting` (
   `sauto_storeid` int(11) NOT NULL COMMENT '店铺id',
@@ -2112,7 +2112,7 @@ CREATE TABLE `#__store_sns_setting` (
   `sauto_groupbuy` tinyint(4) NOT NULL DEFAULT '1' COMMENT '团购,0为关闭/1为开启',
   `sauto_groupbuytitle` varchar(150) NOT NULL COMMENT '团购内容',
   PRIMARY KEY (`sauto_storeid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺自动发布动态设置表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺自动发布动态设置表';
 
 CREATE TABLE `#__store_sns_tracelog` (
   `strace_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店铺动态id',
@@ -2129,7 +2129,7 @@ CREATE TABLE `#__store_sns_tracelog` (
   `strace_goodsdata` varchar(1000) DEFAULT NULL COMMENT '商品信息',
   `strace_state` tinyint(1) NOT NULL DEFAULT '1' COMMENT '动态状态 1正常，0屏蔽',
   PRIMARY KEY (`strace_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺动态表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺动态表';
 
 CREATE TABLE `#__store_watermark` (
   `wm_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '水印id',
@@ -2146,7 +2146,7 @@ CREATE TABLE `#__store_watermark` (
   `wm_is_open` tinyint(1) NOT NULL DEFAULT '0' COMMENT '水印是否开启 0关闭 1开启',
   `store_id` int(11) DEFAULT NULL COMMENT '店铺id',
   PRIMARY KEY (`wm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺水印图片表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺水印图片表';
 
 CREATE TABLE `#__transport` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '运费模板ID',
@@ -2155,7 +2155,7 @@ CREATE TABLE `#__transport` (
   `store_id` mediumint(8) unsigned NOT NULL COMMENT '店铺ID',
   `update_time` int(10) unsigned DEFAULT '0' COMMENT '最后更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='运费模板';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='运费模板';
 
 CREATE TABLE `#__transport_extend` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '运费模板扩展ID',
@@ -2170,7 +2170,7 @@ CREATE TABLE `#__transport_extend` (
   `transport_id` mediumint(8) unsigned NOT NULL COMMENT '运费模板ID',
   `transport_title` varchar(60) DEFAULT NULL COMMENT '运费模板',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='运费模板扩展表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='运费模板扩展表';
 
 CREATE TABLE `#__type` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '类型id',
@@ -2179,17 +2179,17 @@ CREATE TABLE `#__type` (
   `class_id` int(10) unsigned DEFAULT '0' COMMENT '所属分类id',
   `class_name` varchar(100) NOT NULL COMMENT '所属分类名称',
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品类型表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品类型表';
 
 CREATE TABLE `#__type_brand` (
   `type_id` int(10) unsigned NOT NULL COMMENT '类型id',
   `brand_id` int(10) unsigned NOT NULL COMMENT '品牌id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品类型与品牌对应表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品类型与品牌对应表';
 
 CREATE TABLE `#__type_spec` (
   `type_id` int(10) unsigned NOT NULL COMMENT '类型id',
   `sp_id` int(10) unsigned NOT NULL COMMENT '规格id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品类型与规格对应表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品类型与规格对应表';
 
 CREATE TABLE `#__upload` (
   `upload_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
@@ -2200,7 +2200,7 @@ CREATE TABLE `#__upload` (
   `upload_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
   `item_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '信息ID',
   PRIMARY KEY (`upload_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='上传文件表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='上传文件表';
 
 CREATE TABLE `#__voucher` (
   `voucher_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '代金券编号',
@@ -2220,7 +2220,7 @@ CREATE TABLE `#__voucher` (
   `voucher_owner_name` varchar(50) NOT NULL COMMENT '代金券所有者名称',
   `voucher_order_id` int(11) DEFAULT NULL COMMENT '使用该代金券的订单编号',
   PRIMARY KEY (`voucher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='代金券表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='代金券表';
 
 CREATE TABLE `#__voucher_price` (
   `voucher_price_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '代金券面值编号',
@@ -2228,7 +2228,7 @@ CREATE TABLE `#__voucher_price` (
   `voucher_price` int(11) NOT NULL COMMENT '代金券面值',
   `voucher_defaultpoints` int(11) NOT NULL DEFAULT '0' COMMENT '代金劵默认的兑换所需积分可以为0',
   PRIMARY KEY (`voucher_price_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='代金券面额表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='代金券面额表';
 
 CREATE TABLE `#__voucher_quota` (
   `quota_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '套餐编号',
@@ -2241,7 +2241,7 @@ CREATE TABLE `#__voucher_quota` (
   `quota_endtime` int(11) NOT NULL COMMENT '结束时间',
   `quota_state` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态(1-可用/2-取消/3-结束)',
   PRIMARY KEY (`quota_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='代金券套餐表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='代金券套餐表';
 
 CREATE TABLE `#__voucher_template` (
   `voucher_t_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '代金券模版编号',
@@ -2265,7 +2265,7 @@ CREATE TABLE `#__voucher_template` (
   `voucher_t_styleimg` varchar(200) DEFAULT NULL COMMENT '样式模版图片',
   `voucher_t_customimg` varchar(200) DEFAULT NULL COMMENT '自定义代金券模板图片',
   PRIMARY KEY (`voucher_t_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='代金券模版表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='代金券模版表';
 
 CREATE TABLE `#__web` (
   `web_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '模块ID',
@@ -2277,7 +2277,7 @@ CREATE TABLE `#__web` (
   `web_show` tinyint(1) unsigned DEFAULT '1' COMMENT '是否显示，0为否，1为是，默认为1',
   `web_html` text COMMENT '模块html代码',
   PRIMARY KEY (`web_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='页面模块表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='页面模块表';
 
 CREATE TABLE `#__web_code` (
   `code_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '内容ID',
@@ -2288,7 +2288,7 @@ CREATE TABLE `#__web_code` (
   `show_name` varchar(20) DEFAULT '' COMMENT '页面名称',
   PRIMARY KEY (`code_id`),
   KEY `web_id` (`web_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='模块内容表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='模块内容表';
 
 INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('captcha_status_goodsqa', '1'),
@@ -2313,11 +2313,11 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('flea_app_open', '1'),
 ('flea_hot_search', '男装,手机,笔记本,古董,奢侈品'),
 ('flea_isuse', '1'),
-('flea_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}}'),
-('flea_site_description', '系统闲置市场'),
-('flea_site_keywords', '系统闲置市场'),
-('flea_site_name', '系统闲置市场'),
-('flea_site_title', '系统闲置市场'),
+('flea_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.33hao.com/";}}'),
+('flea_site_description', '好商城V3系统闲置市场'),
+('flea_site_keywords', '好商城V3系统闲置市场'),
+('flea_site_name', '好商城V3系统闲置市场'),
+('flea_site_title', '好商城V3系统闲置市场'),
 ('goods_verify', '0'),
 ('groupbuy_allow', '1'),
 ('groupbuy_price', '10'),
@@ -2328,8 +2328,8 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('image_allow_ext', 'gif,jpg,jpeg,bmp,png,swf'),
 ('image_dir_type', '1'),
 ('image_max_filesize', '1024'),
-('live_link1', 'http://www.yywxx.com'),
-('live_link2', 'http://www.yywxx.com'),
+('live_link1', 'http://www.33hao.com'),
+('live_link2', 'http://www.33hao.com'),
 ('live_link3', ''),
 ('live_link4', ''),
 ('live_pic1', '04525999367706292.jpg'),
@@ -2341,10 +2341,10 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('md5_key', 'fc4cb360c722fcd2e7733c49910d2647'),
 ('member_grade', 'a:4:{i:0;a:3:{s:5:"level";i:0;s:10:"level_name";s:2:"V0";s:9:"exppoints";i:0;}i:1;a:3:{s:5:"level";i:1;s:10:"level_name";s:2:"V1";s:9:"exppoints";i:1000;}i:2;a:3:{s:5:"level";i:2;s:10:"level_name";s:2:"V2";s:9:"exppoints";i:10000;}i:3;a:3:{s:5:"level";i:3;s:10:"level_name";s:2:"V3";s:9:"exppoints";i:20000;}}'),
 ('member_logo', 'user_center.png'),
-('mobile_apk', 'http://v3.shopx/v3.apk'),
+('mobile_apk', 'http://v3.33hao.com/v3.apk'),
 ('mobile_apk_version', '3.0.2'),
 ('mobile_app', 'mb_app.png'),
-('mobile_ios', 'http://v3.shopx/v3.api'),
+('mobile_ios', 'http://v3.33hao.com/v3.api'),
 ('mobile_isuse', '1'),
 ('pointprod_isuse', '1'),
 ('pointshop_isuse', '1'),
@@ -2386,13 +2386,13 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('sina_wb_akey', ''),
 ('sina_wb_skey', ''),
 ('site_bank_account', '银行:中国银行,币种:人民币,账号:xxxxxxxxxxx,姓名:XXX,开户行:中国银行XX分行'),
-('site_email', 'abc@shopx'),
+('site_email', 'abc@33hao.com'),
 ('site_logo', 'logo.png'),
 ('site_logowx', '04781087584534013.png'),
-('site_name', ''),
-('site_phone', '23456789,23456789'),
+('site_name', '好商城v3'),
+('site_phone', '23456789,88997788'),
 ('site_status', '1'),
-('site_tel400', '4000000000'),
+('site_tel400', '4008008000'),
 ('statistics_code', ''),
 ('stat_orderpricerange', ''),
 ('stat_pricerange', ''),
@@ -2431,10 +2431,10 @@ INSERT INTO `#__article` (`article_id`, `ac_id`, `article_url`, `article_show`, 
 (19, 6, '', 1, 255, '会员修改个人资料', '会员修改个人资料', 1389864697),
 (20, 6, '', 1, 255, '商品发布', '商品发布', 1389864697),
 (21, 6, '', 1, 255, '修改收货地址', '修改收货地址', 1389864697),
-(22, 7, '', 1, 255, '关于我们', '<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shopx项目小组位于天津市红桥区，是专业从事生产管理信息化领域技术咨询和软件开发的高新技术企业。公司拥有多名技术人才和资深的行业解决方案专家。</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司拥有一支勇于开拓、具有战略眼光和敏锐市场判断力的市场营销队伍，一批求实敬业，追求卓越的行政管理人才，一个能征善战，技术优秀，经验丰富的开发团队。公司坚持按现代企业制度和市场规律办事，在扩大经营规模的同时，注重企业经济运行质量，在自主产品研发及承接软件项目方面获得了很强的竞争力。 我公司也积极参与国内传统企业的信息化改造，引进国际化产品开发的标准，规范软件开发流程，通过提升各层面的软件开发人才的技术素质，打造国产软件精品，目前已经开发出具有自主知识产权的网络商城软件，还在积极开发基于电子商务平台高效能、高效益的管理系统。为今后进一步开拓国内市场打下坚实的基础。公司致力于构造一个开放、发展的人才平台，积极营造追求卓越、积极奉献的工作氛围，把“以人为本”的理念落实到每一项具体工作中，为那些锋芒内敛，激情无限的业界精英提供充分的发展空间，优雅自信、从容自得的工作环境，事业雄心与生活情趣两相兼顾的生活方式。并通过每个员工不断提升自我，以自己的独特价值观对工作与生活作最准确的判断，使我们每一个员工彰显出他们出色的自我品位，独有的工作个性和卓越的创新风格，让他们时刻保持振奋、不断鼓舞内心深处的梦想，永远走在时代潮流前端。公司发展趋势 励精图治，展望未来。公司把发展产业策略与发掘人才策略紧密结合，广纳社会精英，挖掘创新潜能，以人为本，凝聚人气，努力营造和谐宽松的工作氛围，为优秀人才的脱颖而出提供机遇。公司将在深入发展软件产业的同时，通过不懈的努力，来塑造大型软件公司的辉煌形象。 </p>', 1389864697),
-(23, 7, '', 1, 255, '联系我们', '<p>欢迎您对我们的站点、工作、产品和服务提出自己宝贵的意见或建议。我们将给予您及时答复。同时也欢迎您到我们公司来洽商业务。</p>\r\n<p><br />\r\n<strong>公司名称</strong>： shopx项目小组 <br />\r\n<strong>通信地址</strong>： 天津市红桥区大丰路(水游城)冠錡大厦8层 <br />\r\n<strong>邮政编码</strong>： 300121 <br />\r\n<strong>电话</strong>： 400-880-1509 <br />\r\n<strong>商务洽谈</strong>： 86-022-58306929 <br />\r\n<strong>软件著作权登记号</strong>： 软著登字第0650314号 <br />\r\n<strong>ICP备案号</strong>： 津ICP备10001600号 </p>', 1389864697),
+(22, 7, '', 1, 255, '关于我们', '<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 天津市网城天创科技有限责任公司位于天津市红桥区，是专业从事生产管理信息化领域技术咨询和软件开发的高新技术企业。公司拥有多名技术人才和资深的行业解决方案专家。</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司拥有一支勇于开拓、具有战略眼光和敏锐市场判断力的市场营销队伍，一批求实敬业，追求卓越的行政管理人才，一个能征善战，技术优秀，经验丰富的开发团队。公司坚持按现代企业制度和市场规律办事，在扩大经营规模的同时，注重企业经济运行质量，在自主产品研发及承接软件项目方面获得了很强的竞争力。 我公司也积极参与国内传统企业的信息化改造，引进国际化产品开发的标准，规范软件开发流程，通过提升各层面的软件开发人才的技术素质，打造国产软件精品，目前已经开发出具有自主知识产权的网络商城软件，还在积极开发基于电子商务平台高效能、高效益的管理系统。为今后进一步开拓国内市场打下坚实的基础。公司致力于构造一个开放、发展的人才平台，积极营造追求卓越、积极奉献的工作氛围，把“以人为本”的理念落实到每一项具体工作中，为那些锋芒内敛，激情无限的业界精英提供充分的发展空间，优雅自信、从容自得的工作环境，事业雄心与生活情趣两相兼顾的生活方式。并通过每个员工不断提升自我，以自己的独特价值观对工作与生活作最准确的判断，使我们每一个员工彰显出他们出色的自我品位，独有的工作个性和卓越的创新风格，让他们时刻保持振奋、不断鼓舞内心深处的梦想，永远走在时代潮流前端。公司发展趋势 励精图治，展望未来。公司把发展产业策略与发掘人才策略紧密结合，广纳社会精英，挖掘创新潜能，以人为本，凝聚人气，努力营造和谐宽松的工作氛围，为优秀人才的脱颖而出提供机遇。公司将在深入发展软件产业的同时，通过不懈的努力，来塑造大型软件公司的辉煌形象。 </p>', 1389864697),
+(23, 7, '', 1, 255, '联系我们', '<p>欢迎您对我们的站点、工作、产品和服务提出自己宝贵的意见或建议。我们将给予您及时答复。同时也欢迎您到我们公司来洽商业务。</p>\r\n<p><br />\r\n<strong>公司名称</strong>： 天津市网城天创科技有限责任公司 <br />\r\n<strong>通信地址</strong>： 天津市红桥区大丰路(水游城)冠錡大厦8层 <br />\r\n<strong>邮政编码</strong>： 300121 <br />\r\n<strong>电话</strong>： 400-880-1509 <br />\r\n<strong>商务洽谈</strong>： 86-022-58306929 <br />\r\n<strong>软件著作权登记号</strong>： 软著登字第0650314号 <br />\r\n<strong>ICP备案号</strong>： 津ICP备10001600号 </p>', 1389864697),
 (24, 7, '', 1, 255, '招聘英才', '<dl> <h3>PHP程序员</h3>\r\n<dt>职位要求： <dd>熟悉PHP5开发语言；<br />\r\n熟悉MySQL5数据库，同时熟悉sqlserver，oracle者优先；<br />\r\n熟悉面向对象思想，MVC三层体系，至少使用过目前已知PHP框架其中一种；<br />\r\n熟悉SERVER2003/Linux操作系统，熟悉常用Linux操作命令；<br />\r\n熟悉Mysql数据库应用开发，了解Mysql的数据库配置管理、性能优化等基本操作技能；<br />\r\n熟悉jquery，smarty等常用开源软件；<br />\r\n具备良好的代码编程习惯及较强的文档编写能力；<br />\r\n具备良好的团队合作能力；<br />\r\n熟悉设计模式者优先；<br />\r\n熟悉java，c++,c#,python其中一种者优先； </dd> <dt>学历要求： <dd>大本 </dd> <dt>工作经验： <dd>一年以上 </dd> <dt>工作地点： <dd>天津 </dd></dl> <dl> <h3>网页设计（2名）</h3>\r\n<dt>岗位职责： <dd>网站UI设计、 切片以及HTML制作。 </dd> <dt>职位要求： <dd>有大型网站设计经验；有网站改版、频道建设经验者优先考虑； <br />\r\n熟练掌握photoshop,fireworks,dreamwaver等设计软件； <br />\r\n熟练运用Div+Css制作网页，符合CSS2.0-W3C标准，并掌握不同浏览器下，不同版本下CSS元素的区别；<br />\r\n熟悉网站制作流程，能运用并修改简单JavaScript类程序； <br />\r\n积极向上，有良好的人际沟通能力，良好的工作协调能力，踏实肯干的工作精神；具有良好的沟通表达能力，<br />\r\n需求判断力，团队协作能力； <br />\r\n请应聘者在简历中提供个人近期作品连接。 </dd> <dt>学历要求： <dd>专科 </dd> <dt>工作经验： <dd>一年以上 </dd> <dt>工作地点： <dd>天津 </dd></dl> <dl> <h3>方案策划（1名）</h3>\r\n<dt>职位要求： <dd>2年以上的文案编辑类相关工作经验，具备一定的文字功底，有极强的语言表达和逻辑思维能力， 能独立完成项目方案的编写，拟草各种协议。熟悉使用办公软件。 </dd> <dt>学历要求： <dd>大专以上 </dd> <dt>工作经验： <dd>一年以上 </dd> <dt>工作地点： <dd>天津 </dd></dl>', 1389864697),
-(25, 7, '', 1, 255, '合作及洽谈', '<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shopx希望与服务代理商、合作伙伴并肩合作，携手开拓日益广阔的网络购物软件市场。如果您拥有好的建议，拥有丰富渠道资源、拥有众多目标客户、拥有相应的市场资源，并希望与shopx进行深度业务合作， 欢迎成为shopx业务合作伙伴，请联系。</p>\r\n<p>&nbsp;</p>\r\n<p><strong>公司名称</strong>： shopx项目小组 <br />\r\n<strong>通信地址</strong>： 天津市红桥区大丰路(水游城)冠錡大厦8层 <br />\r\n<strong>邮政编码</strong>： 300121 <br />\r\n<strong>电话</strong>： 400-880-1509 <br />\r\n<strong>商务洽谈</strong>： 86-022-58306929 <br />\r\n</p>', 1389864697),
+(25, 7, '', 1, 255, '合作及洽谈', '<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ShopNC希望与服务代理商、合作伙伴并肩合作，携手开拓日益广阔的网络购物软件市场。如果您拥有好的建议，拥有丰富渠道资源、拥有众多目标客户、拥有相应的市场资源，并希望与ShopNC进行深度业务合作， 欢迎成为ShopNC业务合作伙伴，请联系。</p>\r\n<p>&nbsp;</p>\r\n<p><strong>公司名称</strong>： 天津市网城天创科技有限责任公司 <br />\r\n<strong>通信地址</strong>： 天津市红桥区大丰路(水游城)冠錡大厦8层 <br />\r\n<strong>邮政编码</strong>： 300121 <br />\r\n<strong>电话</strong>： 400-880-1509 <br />\r\n<strong>商务洽谈</strong>： 86-022-58306929 <br />\r\n</p>', 1389864697),
 (26, 5, '', 1, 255, '联系卖家', '联系卖家', 1389864697),
 (28, 4, '', 1, 255, '分期付款', '分期付款<br />', 1389864697),
 (29, 4, '', 1, 255, '邮局汇款', '邮局汇款<br />', 1389864697),
@@ -2443,7 +2443,7 @@ INSERT INTO `#__article` (`article_id`, `ac_id`, `article_url`, `article_show`, 
 (32, 5, '', 1, 255, '退换货流程', '退换货流程', 1389864697),
 (33, 5, '', 1, 255, '返修/退换货', '返修/退换货', 1389864697),
 (34, 5, '', 1, 255, '退款申请', '退款申请', 1389864697),
-(35, 1, 'http://www.yywxx.com/', 1, 1, '火爆销售中', '火爆销售中<br />', 1389864697),
+(35, 1, 'http://www.33hao.com/', 1, 1, '火爆销售中', '火爆销售中<br />', 1389864697),
 (36, 1, '', 1, 255, '管理功能说明', '管理功能说明', 1389864697),
 (37, 1, '', 1, 255, '如何扩充水印字体库', '如何扩充水印字体库', 1389864697),
 (38, 1, '', 1, 255, '提示信息', '提示信息', 1389864697),
@@ -2671,19 +2671,19 @@ INSERT INTO `#__refund_reason` (`reason_id`, `reason_info`, `sort`, `update_time
 (98, '认为是假货', 123, 1393480261),
 (99, '不能按时发货', 123, 1393480261);
 
-INSERT INTO `#__seo` (`id`, `title`, `keywords`, `description`, `type`) VALUES (1, '{sitename} - 程序来源于-www.yywxx.com', ',PHP商城系统,商城系统,多用户商城系统,电商ERP,电商CRM,电子商务解决方案', '专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'index'),
-(2, '{sitename} - 团购', ',{sitename}', '专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'group'),
-(3, '{sitename} - {name}', ',{name},{sitename}', ',{name},{sitename}', 'group_content'),
-(4, '{sitename} - 品牌', ',{sitename}', ',{sitename}', 'brand'),
-(5, '{sitename} - {name}', ',{sitename},{name}', ',{sitename},{name}', 'brand_list'),
-(7, '{sitename} - {name}', ',{sitename},{name}', ',{sitename},{name}', 'coupon_content'),
-(8, '{sitename} - 积分商城', ',{sitename}', ',{sitename}', 'point'),
-(9, '{sitename} - {name}', ',{sitename},{key}', ',{sitename},{description}', 'point_content'),
-(10, '{sitename} - {article_class}', ',{sitename}', ',{sitename}', 'article'),
-(11, '{sitename} - {name}', ',{sitename},{key}', ',{sitename},{description}', 'article_content'),
-(12, '{sitename} - {shopname}', ',{sitename},{key}', ',{sitename},{description}', 'shop'),
-(13, '{name} - {sitename}', ',{sitename},{key}', ',{sitename},{description}', 'product'),
-(14, '看{name}怎么淘到好的宝贝-{sitename}', ',{sitename},{name}', ',{sitename},{name}', 'sns');
+INSERT INTO `#__seo` (`id`, `title`, `keywords`, `description`, `type`) VALUES (1, '{sitename} - 程序来源于好商城V3-www.33hao.com', '好商城V3,PHP商城系统,好商城V3商城系统,多用户商城系统,电商ERP,电商CRM,电子商务解决方案', '好商城V3专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'index'),
+(2, '{sitename} - 团购', '好商城V3,{sitename}', '好商城V3专注于研发符合时代发展需要的电子商务商城系统，以专业化的服务水平为企业级用户提供B(2B)2C【B2B2C】电子商务平台解决方案，全力打造电商平台专项ERP(CRM)系统、ERP(RFID)系统等，引领中国电子商务行业企业级需求的发展方向。咨询电话：400-611-5098', 'group'),
+(3, '{sitename} - {name}', '好商城V3,{name},{sitename}', '好商城V3,{name},{sitename}', 'group_content'),
+(4, '{sitename} - 品牌', '好商城V3,{sitename}', '好商城V3,{sitename}', 'brand'),
+(5, '{sitename} - {name}', '好商城V3,{sitename},{name}', '好商城V3,{sitename},{name}', 'brand_list'),
+(7, '{sitename} - {name}', '好商城V3,{sitename},{name}', '好商城V3,{sitename},{name}', 'coupon_content'),
+(8, '{sitename} - 积分商城', '好商城V3,{sitename}', '好商城V3,{sitename}', 'point'),
+(9, '{sitename} - {name}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'point_content'),
+(10, '{sitename} - {article_class}', '好商城V3,{sitename}', '好商城V3,{sitename}', 'article'),
+(11, '{sitename} - {name}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'article_content'),
+(12, '{sitename} - {shopname}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'shop'),
+(13, '{name} - {sitename}', '好商城V3,{sitename},{key}', '好商城V3,{sitename},{description}', 'product'),
+(14, '看{name}怎么淘到好的宝贝-{sitename}', '好商城V3,{sitename},{name}', '好商城V3,{sitename},{name}', 'sns');
 
 INSERT INTO `#__store_class` (`sc_id`, `sc_name`, `sc_bail`, `sc_sort`) VALUES
 (1, '珠宝/首饰', 0, 8),
@@ -6513,7 +6513,7 @@ CREATE TABLE `#__delivery_order` (
   `dlyo_state` tinyint(3) unsigned NOT NULL default '10' COMMENT '订单状态 10(默认)未到站，20已到站，30已提取',
   `dlyo_pickup_code` varchar(4) default NULL COMMENT '提货码',
   PRIMARY KEY  (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单自提点表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单自提点表';
 
 CREATE TABLE `#__delivery_point` (
   `dlyp_id` int(10) unsigned NOT NULL auto_increment COMMENT '提货站id',
@@ -6536,7 +6536,7 @@ CREATE TABLE `#__delivery_point` (
   UNIQUE KEY `dlyp_name` (`dlyp_name`),
   UNIQUE KEY `dlyp_idcard` (`dlyp_idcard`),
   UNIQUE KEY `dlyp_mobile` (`dlyp_mobile`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='提货站表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='提货站表';
 
 CREATE TABLE `#__exppoints_log` (
   `exp_id` int(11) NOT NULL auto_increment COMMENT '经验值日志编号',
@@ -6547,7 +6547,7 @@ CREATE TABLE `#__exppoints_log` (
   `exp_desc` varchar(100) NOT NULL COMMENT '操作描述',
   `exp_stage` varchar(50) NOT NULL COMMENT '操作阶段',
   PRIMARY KEY  (`exp_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='经验值日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='经验值日志表';
 
 CREATE TABLE `#__goods_combo` (
   `combo_id` int(10) unsigned NOT NULL auto_increment COMMENT '推荐组合id ',
@@ -6555,7 +6555,7 @@ CREATE TABLE `#__goods_combo` (
   `goods_commonid` int(10) unsigned NOT NULL COMMENT '主商品公共id',
   `combo_goodsid` int(10) unsigned NOT NULL COMMENT '推荐组合商品id',
   PRIMARY KEY  (`combo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品推荐组合表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品推荐组合表';
 
 CREATE TABLE `#__goods_fcode` (
   `fc_id` int(10) unsigned NOT NULL auto_increment COMMENT 'F码id',
@@ -6563,7 +6563,7 @@ CREATE TABLE `#__goods_fcode` (
   `fc_code` varchar(20) NOT NULL COMMENT 'F码',
   `fc_state` tinyint(3) unsigned NOT NULL default '0' COMMENT '状态 0未使用，1已使用',
   PRIMARY KEY  (`fc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品F码';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品F码';
 
 CREATE TABLE `#__goods_gift` (
   `gift_id` int(10) unsigned NOT NULL auto_increment COMMENT '赠品id ',
@@ -6574,7 +6574,7 @@ CREATE TABLE `#__goods_gift` (
   `gift_goodsimage` varchar(100) NOT NULL COMMENT '主商品图片',
   `gift_amount` tinyint(3) unsigned NOT NULL COMMENT '赠品数量',
   PRIMARY KEY  (`gift_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品赠品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品赠品表';
 
 CREATE TABLE `#__mb_payment` (
   `payment_id` tinyint(1) unsigned NOT NULL COMMENT '支付索引id',
@@ -6583,13 +6583,13 @@ CREATE TABLE `#__mb_payment` (
   `payment_config` varchar(255) default NULL COMMENT '支付接口配置信息',
   `payment_state` enum('0','1') NOT NULL default '0' COMMENT '接口状态0禁用1启用',
   PRIMARY KEY  (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='手机支付方式表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='手机支付方式表';
 
 CREATE TABLE `#__mb_special` (
   `special_id` int(10) unsigned NOT NULL auto_increment COMMENT '专题编号',
   `special_desc` varchar(20) NOT NULL COMMENT '专题描述',
   PRIMARY KEY  (`special_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='手机专题表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='手机专题表';
 
 CREATE TABLE `#__mb_special_item` (
   `item_id` int(10) unsigned NOT NULL auto_increment COMMENT '专题项目编号',
@@ -6599,7 +6599,7 @@ CREATE TABLE `#__mb_special_item` (
   `item_usable` tinyint(3) unsigned NOT NULL default '0' COMMENT '项目是否可用 0-不可用 1-可用',
   `item_sort` tinyint(3) unsigned NOT NULL default '0' COMMENT '项目排序',
   PRIMARY KEY  (`item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='手机专题项目表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='手机专题项目表';
 
 CREATE TABLE `#__rcb_log` (
   `id` int(11) NOT NULL auto_increment COMMENT '自增编号',
@@ -6611,7 +6611,7 @@ CREATE TABLE `#__rcb_log` (
   `freeze_amount` decimal(10,2) NOT NULL default '0.00' COMMENT '冻结充值卡余额变更 0表示未变更',
   `description` varchar(150) default NULL COMMENT '描述',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='充值卡余额变更日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='充值卡余额变更日志表';
 
 CREATE TABLE `#__rechargecard` (
   `id` int(11) NOT NULL auto_increment COMMENT '自增ID',
@@ -6625,7 +6625,7 @@ CREATE TABLE `#__rechargecard` (
   `member_id` int(11) NOT NULL default '0' COMMENT '使用者会员ID',
   `member_name` varchar(50) default NULL COMMENT '使用者会员名称',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='平台充值卡';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='平台充值卡';
 
 CREATE TABLE `#__store_waybill` (
   `store_waybill_id` int(10) unsigned NOT NULL auto_increment COMMENT '店铺运单模板编号',
@@ -6638,7 +6638,7 @@ CREATE TABLE `#__store_waybill` (
   `store_waybill_left` int(11) NOT NULL default '0' COMMENT '店铺运单左偏移',
   `store_waybill_top` int(11) NOT NULL default '0' COMMENT '店铺运单上偏移',
   PRIMARY KEY  (`store_waybill_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺运单模板表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='店铺运单模板表';
 
 CREATE TABLE `#__vr_groupbuy_area` (
   `area_id` int(11) NOT NULL auto_increment COMMENT '区域id',
@@ -6651,7 +6651,7 @@ CREATE TABLE `#__vr_groupbuy_area` (
   `hot_city` tinyint(3) unsigned NOT NULL default '0' COMMENT '0.否 1.是',
   `number` int(11) NOT NULL default '0' COMMENT '数量',
   PRIMARY KEY  (`area_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟团购区域表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟团购区域表';
 
 CREATE TABLE `#__vr_groupbuy_class` (
   `class_id` int(11) NOT NULL auto_increment COMMENT '分类id',
@@ -6659,7 +6659,7 @@ CREATE TABLE `#__vr_groupbuy_class` (
   `parent_class_id` int(11) NOT NULL COMMENT '父类class_id',
   `class_sort` tinyint(3) unsigned default NULL COMMENT '分类排序',
   PRIMARY KEY  (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟团购分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟团购分类表';
 
 CREATE TABLE `#__vr_order` (
   `order_id` int(11) NOT NULL auto_increment COMMENT '虚拟订单索引id',
@@ -6701,7 +6701,7 @@ CREATE TABLE `#__vr_order` (
   `evaluation_time` int(11) NOT NULL default '0' COMMENT '评价时间',
   `use_state` tinyint(4) default '0' COMMENT '使用状态0默认，未使用1已使用，有一个被使用即为1',
   PRIMARY KEY  (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟订单表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟订单表';
 
 CREATE TABLE `#__vr_order_bill` (
   `ob_no` int(11) NOT NULL COMMENT '结算单编号(年月店铺ID)',
@@ -6718,7 +6718,7 @@ CREATE TABLE `#__vr_order_bill` (
   `ob_store_id` int(11) NOT NULL COMMENT '店铺ID',
   `ob_store_name` varchar(50) default NULL COMMENT '店铺名',
   PRIMARY KEY  (`ob_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟订单结算表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟订单结算表';
 
 CREATE TABLE `#__vr_order_code` (
   `rec_id` int(11) NOT NULL auto_increment COMMENT '兑换码表索引id',
@@ -6735,7 +6735,7 @@ CREATE TABLE `#__vr_order_code` (
   `vr_invalid_refund` tinyint(4) NOT NULL default '1' COMMENT '允许过期退款1是0否',
   PRIMARY KEY  (`rec_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='兑换码表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='兑换码表';
 
 CREATE TABLE `#__vr_order_statis` (
   `os_month` mediumint(9) unsigned NOT NULL default '0' COMMENT '统计编号(年月)',
@@ -6747,7 +6747,7 @@ CREATE TABLE `#__vr_order_statis` (
   `os_result_totals` decimal(10,2) NOT NULL default '0.00' COMMENT '本期应结',
   `os_create_date` int(11) default NULL COMMENT '创建记录日期',
   PRIMARY KEY  (`os_month`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟订单月销量统计表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟订单月销量统计表';
 
 CREATE TABLE `#__vr_refund` (
   `refund_id` int(10) unsigned NOT NULL auto_increment COMMENT '记录ID',
@@ -6771,7 +6771,7 @@ CREATE TABLE `#__vr_refund` (
   `admin_message` varchar(300) default NULL COMMENT '管理员备注',
   `commis_rate` smallint(6) default '0' COMMENT '佣金比例',
   PRIMARY KEY  (`refund_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='虚拟兑码退款表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='虚拟兑码退款表';
 
 CREATE TABLE `#__waybill` (
   `waybill_id` int(10) unsigned NOT NULL auto_increment COMMENT '编号',
@@ -6787,7 +6787,7 @@ CREATE TABLE `#__waybill` (
   `express_name` varchar(50) NOT NULL COMMENT '快递公司名称',
   `store_id` int(11) unsigned NOT NULL default '0' COMMENT '店铺编号(0-代表系统模板)',
   PRIMARY KEY  (`waybill_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='快递单打印模板表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='快递单打印模板表';
 
 ALTER TABLE `#__address` ADD `dlyp_id` int(11) DEFAULT '0' NULL COMMENT '自提点ID' AFTER `is_default`;
 
@@ -6979,13 +6979,13 @@ CREATE TABLE  `#__mb_feedback` (
   `member_id` int(10) unsigned NOT NULL COMMENT '用户编号',
   `member_name` varchar(50) NOT NULL COMMENT '用户名',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='意见反馈';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='意见反馈';
 
 CREATE TABLE IF NOT EXISTS `#__mb_category` (
   `gc_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '商城系统的分类ID',
   `gc_thumb` varchar(150) DEFAULT NULL COMMENT '缩略图',
   PRIMARY KEY (`gc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='一级分类缩略图[手机端]';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='一级分类缩略图[手机端]';
 
 CREATE TABLE  `#__mb_user_token` (
   `token_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '令牌编号',
@@ -6995,7 +6995,7 @@ CREATE TABLE  `#__mb_user_token` (
   `login_time` int(10) unsigned NOT NULL COMMENT '登录时间',
   `client_type` varchar(10) NOT NULL COMMENT '客户端类型 android wap',
   PRIMARY KEY (`token_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='移动端登录令牌表';
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='移动端登录令牌表';
 
 CREATE TABLE  `#__mb_payment` (
   `payment_id` tinyint(1) unsigned NOT NULL COMMENT '支付索引id',
@@ -7004,7 +7004,7 @@ CREATE TABLE  `#__mb_payment` (
   `payment_config` varchar(255) COMMENT '支付接口配置信息',
   `payment_state` enum('0','1') NOT NULL DEFAULT '0' COMMENT '接口状态0禁用1启用',
   PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='手机支付方式表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='手机支付方式表';
 
 INSERT INTO  `#__mb_payment` (`payment_id`, `payment_code`, `payment_name`, `payment_config`, `payment_state`) VALUES ('1', 'alipay', '支付宝', '', '0');
 INSERT INTO  `#__mb_payment` (`payment_id`, `payment_code`, `payment_name`, `payment_config`, `payment_state`) VALUES ('2', 'wxpay', '微信支付', '', '0');
@@ -7013,7 +7013,7 @@ CREATE TABLE  `#__mb_special` (
   `special_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '专题编号',
   `special_desc` varchar(20) NOT NULL COMMENT '专题描述',
   PRIMARY KEY (`special_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='手机专题表';
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='手机专题表';
 
 CREATE TABLE  `#__mb_special_item` (
   `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '专题项目编号',
@@ -7023,7 +7023,7 @@ CREATE TABLE  `#__mb_special_item` (
   `item_usable` tinyint(3) unsigned NOT NULL DEFAULT 0 COMMENT '项目是否可用 0-不可用 1-可用',
   `item_sort` tinyint(3) unsigned NOT NULL DEFAULT 0 COMMENT '项目排序',
   PRIMARY KEY (`item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='手机专题项目表';
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='手机专题项目表';
 
 CREATE TABLE IF NOT EXISTS `#__link` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引id',
@@ -7148,4 +7148,4 @@ CREATE TABLE IF NOT EXISTS `#__web_special` (
   `special_background_color` varchar(10) NOT NULL DEFAULT '#FFFFFF' COMMENT '专题背景色',
   `special_repeat` varchar(10) NOT NULL DEFAULT 'no-repeat' COMMENT '背景重复方式',
   PRIMARY KEY (`special_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商城专题表' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商城专题表' AUTO_INCREMENT=4 ;

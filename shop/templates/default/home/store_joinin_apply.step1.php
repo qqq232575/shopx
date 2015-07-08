@@ -1,6 +1,6 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
-<!-- 公司信息 -->
+<!-- 公司信息 v3-10 简化 -->
 
 <div id="apply_company_info" class="apply-company-info">
   <div class="alert">
@@ -29,16 +29,18 @@
           <td><input name="company_address_detail" type="text" class="w200">
             <span></span></td>
         </tr>
-        <tr>
+	<!--V3-B10简化 -->
+        <!--tr>
           <th><i>*</i>公司电话：</th>
           <td><input name="company_phone" type="text" class="w100">
             <span></span></td>
-        </tr>
-        <tr>
+        </tr-->
+	<!--V3-B10简化 -->
+        <!--tr>
           <th><i>*</i>员工总数：</th>
           <td><input name="company_employee_count" type="text" class="w50"/>
             &nbsp;人 <span></span></td>
-        </tr>
+        </tr-->
         <tr>
           <th><i>*</i>注册资金：</th>
           <td><input name="company_registered_capital" type="text" class="w50">
@@ -50,7 +52,7 @@
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>联系人电话：</th>
+          <th><i>*</i>联系人手机：</th>
           <td><input name="contacts_phone" type="text" class="w100" />
             <span></span></td>
         </tr>
@@ -91,14 +93,14 @@
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>法定经营范围：</th>
+          <th>经营范围：</th>
           <td><textarea name="business_sphere" rows="3" class="w200"></textarea>
             <span></span></td>
         </tr>
         <tr>
           <th><i>*</i>营业执照电子版：</th>
           <td><input name="business_licence_number_electronic" type="file" class="w200" />
-            <span class="block">请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
+            <span class="block">图片大小请控制在1M之内，请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
         </tr>
       </tbody>
       <tfoot>
@@ -115,12 +117,12 @@
       </thead>
       <tbody>
         <tr>
-          <th><i>*</i>组织机构代码：</th>
+          <th>组织机构代码：</th>
           <td><input name="organization_code" type="text" class="w200"/>
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>组织机构代码证电子版：</th>
+          <th>组织机构代码证电子版：</th>
           <td><input name="organization_code_electronic" type="file" />
             <span class="block">请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
         </tr>
@@ -131,7 +133,7 @@
         </tr>
       </tfoot>
     </table>
-    <table border="0" cellpadding="0" cellspacing="0" class="all">
+    <!--好商城V3-B10简化注册 table border="0" cellpadding="0" cellspacing="0" class="all">
       <thead>
         <tr>
           <th colspan="20">一般纳税人证明<em>注：所属企业具有一般纳税人证明时，此项为必填。</em></th>
@@ -149,7 +151,7 @@
           <td colspan="20">&nbsp;</td>
         </tr>
       </tfoot>
-    </table>
+    </table end-->
   </form>
   <div class="bottom"><a id="btn_apply_company_next" href="javascript:;" class="btn">下一步，提交财务资质信息</a></div>
 </div>
@@ -188,14 +190,15 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 50 
             },
-            company_phone: {
+			//好商城 v3-10 简化
+            /* company_phone: {
                 required: true,
                 maxlength: 20 
-            },
-            company_employee_count: {
+            }, 
+           /*  company_employee_count: {
                 required: true,
                 digits: true 
-            },
+            }, */
             company_registered_capital: {
                 required: true,
                 digits: true 
@@ -226,20 +229,21 @@ $(document).ready(function(){
             business_licence_end: {
                 required: true
             },
-            business_sphere: {
+	    //v3-b10 简化
+            /* business_sphere: {
                 required: true,
                 maxlength: 500
             },
             business_licence_number_electronic: {
                 required: true
             },
-            organization_code: {
+         organization_code: {
                 required: true,
                 maxlength: 20
-            },
-            organization_code_electronic: {
+            }, 
+	    organization_code_electronic: {
                 required: true
-            }
+            } */
         },
         messages : {
             company_name: {
@@ -254,14 +258,15 @@ $(document).ready(function(){
                 required: '请输入公司详细地址',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-            company_phone: {
+	     //好商城 v3-10 简化
+            /*company_phone: {
                 required: '请输入公司电话',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
-            company_employee_count: {
+            }, 
+             company_employee_count: {
                 required: '请输入员工总数',
                 digits: '必须为数字'
-            },
+            }, */
             company_registered_capital: {
                 required: '请输入注册资金',
                 digits: '必须为数字'
@@ -292,20 +297,21 @@ $(document).ready(function(){
             business_licence_end: {
                 required: '请选择结束日期'
             },
-            business_sphere: {
+	     //v3-b10 简化 
+           /* business_sphere: {
                 required: '请填写营业执照法定经营范围',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
+           },
             business_licence_number_electronic: {
                 required: '请选择上传营业执照电子版文件'
             },
             organization_code: {
                 required: '请填写组织机构代码',
                 maxlength: jQuery.validator.format("最多{0}个字")
-            },
+            }, 
             organization_code_electronic: {
                 required: '请选择上传组织机构代码证电子版文件'
-            }
+            } */
         }
     });
 

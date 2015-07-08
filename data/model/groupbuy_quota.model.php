@@ -1,9 +1,13 @@
 <?php
 /**
  * 抢购套餐模型 
- * by shopx team   
+ *
+ * 
+ *
+ *
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class groupbuy_quotaModel extends Model{
 
     public function __construct(){

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php if(!empty($output['option_list'])){?>
 
 <div class="theme-detail-poll-content">

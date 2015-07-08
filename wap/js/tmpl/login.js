@@ -1,5 +1,5 @@
 $(function(){
-    var memberHtml = '<a class="btn mr5" href="'+WapSiteUrl+'/tmpl/member/member.html?act=member">个人中心</a><a class="btn mr5" href="'+WapSiteUrl+'//tmpl/member/register.html">注册</a>';
+    var memberHtml = '<a class="btn mr5" href="'+WapSiteUrl+'/tmpl/member/member.html?act=member">个人中心</a><a class="btn mr5" href="'+WapSiteUrl+'/tmpl/member/register.html">注册</a><a class="btn mr5" href="'+SiteUrl+'/shop/api.php?act=toqq&mobile=mobile">QQ登陆</a>';
     var act = GetQueryString("act");
     if(act && act == "member"){
         memberHtml = '<a class="btn mr5" id="logoutbtn" href="javascript:void(0);">注销账号</a>';
@@ -18,7 +18,7 @@ $(function(){
                 +'<a href="javascript:void(0);">下载Android客户端</a>'
             +'</p>'
             /*+'<p class="copyright">'
-                +'版权所有 2014-2015 © www.yywxx.com'
+                +'版权所有 2014-2015 © www.shopjl.com'
             +'</p>'*/
         +'</div>'
     +'</div>';
@@ -71,7 +71,7 @@ $(function(){
             }
         }  
     });
-	$('#loginbtn').click(function(){//会员登陆
+	$('#loginbtn').click(function(){//会员登陆 w ww.s ho pjl.co m出 品
 		var username = $('#username').val();
 		var pwd = $('#userpwd').val();
 		var client = 'wap';

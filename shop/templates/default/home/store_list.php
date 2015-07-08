@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script>
 var PURL = '<?php echo $output['purl'];?>';
 
@@ -191,8 +191,8 @@ function query(name, value){
             <dl>
               <dt class="goods-pic"><span class="thumb size160"> <i></i> <a href="index.php?act=goods&goods_id=<?php echo $v['goods_id'];?>" target="_blank"> <img  onload="javascript:DrawImage(this,160,160);" alt="<?php echo $v['goods_name'];?>" src="<?php echo thumb($v,'small');?>"></a></span></dt>
               <dd class="goods-name"><a href="<?php echo urlShop('goods','',array('goods_id'=>$v['goods_id']));?>" title="<?php echo $v['goods_name'];?>" target="_blank"><?php echo $v['goods_name'];?></a></dd>
-              <dd class="goods-price"><em><?php echo $v['goods_store_price'];?></em></dd>
-              <dd class="goods-sales"><?php echo $lang['store_class_index_deal'];?><?php echo $v['salenum'];?><?php echo $lang['store_class_index_jian'];?></dd>
+              <dd class="goods-price"><em><?php echo $v['goods_price'];?></em></dd>
+              <dd class="goods-sales"><?php echo $lang['store_class_index_deal'];?><?php echo $v['goods_salenum'];?><?php echo $lang['store_class_index_jian'];?></dd>
             </dl>
           </li>
          <?php }?>

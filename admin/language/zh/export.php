@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 /**
  * 導出語言包，只有在執行導出行為時，才會調用
  */

@@ -1,10 +1,10 @@
 <?php
 /**
  * 推荐展位管理
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_promotion_boothControl extends BaseSellerControl {
     public function __construct() {
         parent::__construct();

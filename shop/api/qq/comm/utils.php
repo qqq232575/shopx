@@ -30,7 +30,7 @@ function get_url_contents($url)
 {
 //    if (ini_get("allow_url_fopen") == "1")
 //        return file_get_contents($url);
-// by shopx
+// by 33hao.com
 		if (ini_get("allow_url_fopen") == "1")
            return file_get_contents($url);
 

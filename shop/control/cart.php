@@ -1,15 +1,16 @@
 <?php
 /**
  * 购物车操作
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class cartControl extends BaseBuyControl {
 
 	public function __construct() {
 		parent::__construct();
 		Language::read('home_cart_index');
+		Tpl::output('hidden_nctoolbar', 1);
 
 		$op = isset($_GET['op']) ? $_GET['op'] : $_POST['op'];
 

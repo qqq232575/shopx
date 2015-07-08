@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!'); return array (
+<?php defined('InShopNC') or exit('Access Invalid!'); return array (
   'rec_id' => '3',
   'pic_type' => '1',
   'title' => '底部推荐3',

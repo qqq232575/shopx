@@ -2,10 +2,10 @@
 /**
  * 商品列表
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class searchControl extends BaseHomeControl {
 
@@ -119,9 +119,13 @@ class searchControl extends BaseHomeControl {
             $search_keyword = trim($_GET['keyword']);
             foreach ($goods_list as $key => $value) {
                 // 商品多图
+		//v3-b11 商品列表主图限制不越过5个
+		$n=0;
                 foreach ($goodsimage_more as $v) {
                     if ($value['goods_commonid'] == $v['goods_commonid'] && $value['store_id'] == $v['store_id'] && $value['color_id'] == $v['color_id']) {
-                        $goods_list[$key]['image'][] = $v;
+						$n++;
+						$goods_list[$key]['image'][] = $v;
+						if($n>=5)break;
                     }
                 }
                 // 店铺的开店会员编号

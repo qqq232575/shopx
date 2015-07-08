@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
   <div class="w100pre close_float" style="text-align:right;">
   	<input type="hidden" id="export_type" name="export_type" data-param='{"url":"<?php echo $output['actionurl'];?>&orderby=<?php echo $output['orderby'];?>&exporttype=excel"}' value="excel"/>
   	<a class="btns" href="javascript:void(0);" id="export_btn"><span>导出Excel</span></a>

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo CMS_SITE_URL.DS;?>templates/cms_special.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
 .dialog_content {

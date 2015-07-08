@@ -5,7 +5,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class indexControl extends BaseCircleControl{
 	public function __construct(){

@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_promotion_xianshiControl extends BaseSellerControl {
 
     const LINK_XIANSHI_LIST = 'index.php?act=store_promotion_xianshi&op=xianshi_list';

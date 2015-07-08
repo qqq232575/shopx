@@ -6,7 +6,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class loginControl extends BaseCircleControl {
 

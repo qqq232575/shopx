@@ -5,10 +5,10 @@
  * 
  *
  *
- * by shopx team 
+ * by 33hao www.33hao.com 开发修正
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class mb_homeModel extends Model{
     public function __construct() {

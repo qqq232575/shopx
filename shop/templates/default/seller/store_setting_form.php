@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="tabmenu">
   <?php include template('layout/submenu');?>
@@ -13,12 +13,20 @@
         </dd>
     </dl>
     <dl>
+      <dt>店铺名称：</dt>
+      <dd>
+       <input type="text" value="<?php echo $output['store_info']['store_name'];?>" name="store_name" class="text w400">
+        </dd>
+    </dl>
+    <dl>
       <dt><?php echo $lang['store_setting_store_zy'].$lang['nc_colon']; ?></dt>
       <dd>
           <textarea name="store_zy" rows="2" class="textarea w400"  maxlength="50" ><?php echo $output['store_info']['store_zy'];?></textarea>
         <p class="hint"><?php echo $lang['store_create_store_zy_hint'];?></p>
       </dd>
     </dl>
+
+    
     <dl>
       <dt><?php echo $lang['store_setting_change_label'].$lang['nc_colon'];?></dt>
       <dd>

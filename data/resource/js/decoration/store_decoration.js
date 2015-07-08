@@ -11,9 +11,9 @@ $(document).ready(function() {
     decoration.editor = null;
     //幻灯图片数限制
     decoration.slide_image_limit = 5;
-    //导航菜单默认样式
-    decoration.default_nav_style = '.ncs-nav { background-color: #D93600; border: 1px solid #B22D00; height: 38px; overflow: hidden; width: 998px; }';
-    decoration.default_nav_style += '.ncs-nav ul { white-space: nowrap; display: block; width: 999px; height: 38px; margin-left: -1px; overflow: hidden;}';
+    //导航菜单默认样式 v3-b11
+    decoration.default_nav_style = '.ncs-nav { background-color: #D93600; height: 38px; overflow: hidden; margin: 0 auto; width: 100%; }';
+    decoration.default_nav_style += '.ncs-nav ul { white-space: nowrap; display: block; width: 1199px; height: 38px; margin-left: -1px;  margin: 0 auto;overflow: hidden;}';
     decoration.default_nav_style += '.ncs-nav li a span { font-size: 14px; font-weight: 600; line-height: 20px; text-overflow: ellipsis; white-space: nowrap; max-width:160px; color: #FFF; float: left; height: 20px; padding: 9px 15px; margin-left: 4px; overflow:hidden; cursor:pointer;}';
     //图片热点图片对象
     decoration.$hot_area_image = null;

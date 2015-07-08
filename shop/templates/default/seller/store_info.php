@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="tabmenu"><?php include template('layout/submenu');?></div>
 <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
     <thead>

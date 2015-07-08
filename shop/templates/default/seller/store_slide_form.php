@@ -1,5 +1,5 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="tabmenu">
   <?php include template('layout/submenu');?>

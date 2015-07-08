@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /**
  * core简体语言包
@@ -8,7 +8,7 @@ $lang['please_check_your_url_arg'] = '请检查您URL地址栏输入的参数信
 
 $lang['error_info'] = '系统信息';
 $lang['error_notice_operate'] = '系统运行异常，由此给您带来的访问不便我们深感歉意，请联系客服寻求帮助';
-$lang['company_name'] = 'shopx项目小组';
+$lang['company_name'] = '天津市网城天创科技有限责任公司';
 
 $lang['has_been_canceled'] = '<span style="color:#999">订单已取消</span>';
 $lang['pending_payment'] = '<span style="color:#36C">待买家付款</span>';

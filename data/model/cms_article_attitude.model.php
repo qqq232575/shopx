@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class cms_article_attitudeModel extends Model{
 
     public function __construct(){

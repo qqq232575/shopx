@@ -423,7 +423,7 @@ select option { line-height: 20px; height: 20px; padding: 4px;}
 /* 无内容 */
 .ncs-norecord { color: #999; text-align: center; height:70px; line-height: 70px; padding: 15px 0 ; background-color: #FFF; border: none !important;}
 
-/* (nc-s-c-s) full name -> shopx Store Container Style */
+/* (nc-s-c-s) full name -> ShopNC Store Container Style */
 .ncs-sidebar-container { margin-bottom: 10px;}
 .ncs-sidebar-container .title { background-color: #F7F7F7 ; height: 20px; padding: 5px 10px; border: solid #DDD; border-width: 1px 1px 0 1px;}
 .ncs-sidebar-container .title h4 { font: 600 14px/20px "Microsoft Yahei"; color: #666;}

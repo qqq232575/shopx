@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <form method="post" id="change_password_form" action="<?php echo DELIVERY_SITE_URL?>/index.php?act=d_center&op=change_password">
   <input type="hidden" name="form_submit" value="ok" />

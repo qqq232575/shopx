@@ -1,12 +1,12 @@
-// by shopx 调出图片
 	var interval = 1;//断开后计时
 	var new_interval = 1;//消息提醒计时
 	var connect = 0;//连接状态
 	var new_msg = 0;//新消息数
 	var obj = {};
+	var msg_dialog = '';
 	var socket = {};
 	var chat_log = {};
-	var connect_list = {};
+	var connect_list = {};$('div[nctype="a-barLoginBox"]').trigger("click");
 	var connect_n = 0;
 	var web_info = new Array();//页面信息
 	var friend_list = new Array();//我的好友
@@ -14,10 +14,13 @@
 	var user_list = new Array();//所有会员信息
 	var msg_list = new Array();//收到消息
 	var goods_list = new Array();//所有商品信息
+	var left_list = new Array();//左侧的会员
+	var right_list = new Array();//右侧的会员
 	var dialog_show = 0;//对话框是否打开
 	var user_show = 0;//当前选择的会员
 	var msg_max = 20;//消息数
 	var time_max = 10;//定时(分钟)刷新防止登录超时退出,为0时关闭
+
     $(function(){
 		if(layout == 'layout/seller_layout.php') {
 		    return ;
@@ -70,7 +73,7 @@
 		    var n = send_state();
 			if (n > 0) setTimeout("getconnect()",2000);
 			$("#chat_show_user").click(function() {
-			    $('div[nctype="barLoginBox"]').toggle();
+			    $('div[nctype="a-barLoginBox"]').trigger("click");
 			});
 		}
 		$('#dialog_clear,#dialog_right_clear').live('click', function() {

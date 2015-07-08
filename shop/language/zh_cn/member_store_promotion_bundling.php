@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['bundling_gold']				= '元';
 $lang['bundling_start_time']		= '开始时间';

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
 	<?php if($output['type'] == 'adv' && $output['ap_id']>0){ ?>
 		parent.update_adv_pic("<?php echo $output['var_name'];?>","<?php echo $output['ap_id'];?>");

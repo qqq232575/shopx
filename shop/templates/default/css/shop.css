@@ -1,8 +1,8 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* ================================ */
 /* 商城店铺页面公用样式定义 				*/
 /* Author:			heilong		*/
-/* Copyright:		www.yywxx.com	*/
+/* Copyright:		www.33hao.com	*/
 /* Create Date:		Apr-14-2012		*/
 /* Retrofit Date:	Mar-18-2014		*/
 /* ================================ */
@@ -14,11 +14,9 @@
 .head-app { margin-right: 10px;}
 .head-search-bar, .head-search-bar .keyword { width: 440px;}
 
-
-
-h1 { font-size: 14px; font-weight: 600;}
+/*h1 { font-size: 14px; font-weight: 600;}
 h3 { font-size: 14px; font-weight: 600;}
-h4 { font-size: 12px; font-weight: 600;}
+h4 { font-size: 12px; font-weight: 600;}*/
 
 
 
@@ -47,12 +45,11 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 .error { color:#F00;}
 
 
-
 /* ============================== */
 /* 头部店铺介绍与搜索 -> header.php */
 /* ============================== */
 
-.ncs-header { background-color: #d93600; width: 100%; height: 34px; padding: 0; border-top: solid 1px #A51600; position: relative; z-index: 2;}
+.ncs-header {width: 100%;padding: 0; position: relative; z-index: 2;}
 .ncs-header-container { width: 1200px; margin: 0 auto; position: relative; z-index: 1;}
 .ncs-store-info { font-size: 0; *word-spacing:-1px/*IE6、7*/; background: url(../images/shop/ncs_store_top.png) no-repeat top center; text-align: right; height: 30px; padding: 10px 10px 4px 10px; position: absolute; z-index: 1; top: 0; right: 0;}
 .ncs-store-info .basic,
@@ -86,10 +83,10 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 .ncsl-nav { width: 1200px; margin: 0 auto; } 
 /* 导航上部图片控制 */
 .ncsl-nav .banner a.img { width: 1200px; display: block; }
-.ncs-default-banner { background: url(../store/style/default/images/header.jpg) no-repeat 0 0; display: block; width: 1200px; height: 240px;}
+.ncs-default-banner { display: block; width: 1200px; height: 240px;}
 /* 店铺导航 */
-.ncs-nav { background-color: #D93600; width: 1198px; height: 38px; border: solid 1px #B22D00; overflow: hidden;}
-.ncs-nav ul { white-space: nowrap; display: block; width: 1199px; height: 38px; margin-left: -1px; overflow: hidden;}
+.ncs-nav { background-color: #D93600; width: 100%;overflow: hidden;}
+.ncs-nav ul { white-space: nowrap; display: block; width: 1200px; height: 38px; margin:0 auto; overflow: hidden;}
 .ncs-nav li { float: left; }
 .ncs-nav li a { height: 38px; float: left;}
 .ncs-nav li a span { font-size: 14px; font-weight: 600; line-height: 20px; text-overflow: ellipsis; white-space: nowrap; max-width:160px; color: #FFF; float: left; height: 20px; padding: 9px 15px; margin-left: 4px; overflow:hidden; cursor:pointer;}
@@ -98,7 +95,7 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 .ncs-nav li.normal a:hover { background-position: left -160px;}
 .ncs-nav li.normal a:hover span { background-position: right -200px;}
 .ncs-nav li.active a, #nav li.active a:hover { background-position: 0px -240px; }
-.ncs-nav li.active a span, #nav li.active a:hover span { background-position: right -280px; text-shadow: 0 1px 1px rgba(0,0,0,.2)}
+.ncs-nav li.active a span, #nav li.active a:hover span { text-shadow: 0 1px 1px rgba(0,0,0,.2)}
 
 
 
@@ -177,6 +174,21 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 .ncs-info .goto a em { color: #999;}
 .ncs-info .goto a:hover em { text-decoration: none !important;}
 .ncs-info .no-border { border: 0!important; padding-bottom: 0!important;}
+
+.ncs-info-btn-map { width: 103px; height: 36px; border-top: solid 1px #E7E7E7; border-right: solid 1px #E7E7E7; float:left; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#F1F1F1'); background-image: -webkit-gradient( linear, left top, left bottom, from(#FCFCFC), to(#F1F1F1)) ; background-image: -moz-linear-gradient(top, #FCFCFC, #F1F1F1)}
+.ncs-info-btn-qrcode{ width: 103px; height: 36px; border-top: solid 1px #E7E7E7; border-left: solid 1px #FFF;  float:left; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#F1F1F1'); background-image: -webkit-gradient( linear, left top, left bottom, from(#FCFCFC), to(#F1F1F1)) ; background-image: -moz-linear-gradient(top, #FCFCFC, #F1F1F1)}
+
+.shop-other { width: 208px; height: 36px;  margin-top:10px}
+.shop-other p,.shop-other .ncs-info-map { display: none; border: solid #E7E7E7; border-width: 0px 1px 1px 1px; background: #FFF url(../images/loading.gif) no-repeat 50% 50%; position: absolute; top: 35px; text-align:center;zoom:1}
+.ncs-info-btn-map a, .ncs-info-btn-qrcode a { line-height: 16px; color: #555; background: url(../images/shop/public.png) no-repeat; padding-left: 20px; width:73px; height: 16px; float:left; padding: 9px 1px 10px 29px; border-top: solid 1px #FFF;  position:relative; z-index: 999}
+.ncs-info-btn-map a { background-position: 10px -150px}
+.ncs-info-btn-qrcode a { background-position: -90px -150px}
+.ncs-info-btn-map a:hover {text-decoration:none; color:#000; background-color: #FFF; padding-right:0; border-right: solid 1px #E7E7E7; box-shadow:3px 0px 0px 0px #EEE}
+.ncs-info-btn-map:hover .ncs-info-map {display:block; left:-1px; z-index:1; height: 310px; background-color:#FFF}
+.ncs-info-btn-map:hover .ncs-info-map .box {margin: 1px}
+.ncs-info-btn-qrcode a:hover {text-decoration:none; color:#000; background-color: #FFF; background-position:-91px -150px; padding-left:28px; border-left: solid 1px #E7E7E7; box-shadow:-3px 0px 0px 0px #EEE}
+.ncs-info-btn-qrcode:hover .ncs-info-qrcode {display:block; right:-1px; z-index:1; height: 208px}
+.ncs-info-btn-qrcode:hover .ncs-info-qrcode em { background: #F7F7F7; line-height: 16px; width: 180px; height:32px; display:inline-block; margin: 5px auto; overflow: hidden; padding: 4px}
 
 /* ====================== */
 /* 左侧边栏样式 -> left.php */
@@ -362,10 +374,9 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 /* ========================================= */
 /* 店铺动态页面 -> store_snshome.php           */
 /* ========================================= */
-.cms-sns { font-size: 0; background-color: #EEE; *word-spacing:-1px/*IE6、7*/; width: 960px; padding: 20px; margin: 10px auto; overflow: hidden;}
-.cms-sns-left,
-.cms-sns-right {vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/*IE6、7*/;  *zoom:1/*IE6、7*/;}
-.cms-sns-left { background-color: #FFF;  width: 710px; border: solid 1px #DDD; border-radius: 5px;}
+.cms-sns { font-size: 0; background-color: #EEE; *word-spacing:-1px/*IE6、7*/; width: 1160px; padding: 20px; margin: 10px auto; overflow: hidden;}
+.cms-sns-left, .cms-sns-right {vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/*IE6、7*/;  *zoom:1/*IE6、7*/;}
+.cms-sns-left { background-color: #FFF;  width: 915px; border: solid 1px #DDD; border-radius: 5px;}
 .cms-sns-tabmene ul { font-size: 0; *word-spacing:-1px/*IE6、7*/; border-bottom: solid 1px #DDD;}
 .cms-sns-tabmene ul li { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/*IE6、7*/;  *zoom:1/*IE6、7*/;}
 .cms-sns-tabmene ul li a { line-height: 20px; display: block; height: 20px; padding: 10px 20px; position: relative; z-index: 1;}

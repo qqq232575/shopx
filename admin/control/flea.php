@@ -1,12 +1,12 @@
 <?php
 /**
- shopx 提供
+好商城V3 33hao.com 提供
 
-网址：www.yywxx.com
+网址：www.33hao.com
 
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class fleaControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

@@ -1,9 +1,10 @@
 <?php
 /**
  * 商品管理
- * by shopx team   
+ *
+ *好商城V3  BY 33ha o.c om
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class goodsModel extends Model{
     public function __construct(){
@@ -87,8 +88,11 @@ class goodsModel extends Model{
         $condition['goods_state']   = self::STATE1;
         $condition['goods_verify']  = self::VERIFY1;
         $condition = $this->_getRecursiveClass($condition);
-        $field = "CONCAT(goods_commonid,',',color_id) as nc_distinct ," . $field;
-        $count = $this->getGoodsOnlineCount($condition,"distinct CONCAT(goods_commonid,',',color_id)");
+	//去掉多规格颜色显示 好商城V3-B11
+        //$field = "CONCAT(goods_commonid,',',color_id) as nc_distinct ," . $field;
+        //$count = $this->getGoodsOnlineCount($condition,"distinct CONCAT(goods_commonid,',',color_id)");
+	$field = "CONCAT(goods_commonid) as nc_distinct ," . $field;
+	$count = $this->getGoodsOnlineCount($condition,"distinct CONCAT(goods_commonid)");
         $goods_list = array();
         if ($count != 0) {
             $goods_list = $this->getGoodsOnlineList($condition, $field, $page, $order, 0, 'nc_distinct', false, $count);

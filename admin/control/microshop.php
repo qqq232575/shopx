@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class microshopControl extends SystemControl{
 
     const MICROSHOP_CLASS_LIST = 'index.php?act=microshop&op=goodsclass_list';

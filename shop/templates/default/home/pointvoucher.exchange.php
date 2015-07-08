@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="ncp-voucher-exchange">
   <?php if ($output['result'] === true){?>

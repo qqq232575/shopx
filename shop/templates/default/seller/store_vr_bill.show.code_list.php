@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
   <form method="get" id="formSearch">
     <table class="search-form">
       <input type="hidden" id='act' name='act' value='store_vr_bill' />

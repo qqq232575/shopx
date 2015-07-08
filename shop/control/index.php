@@ -3,10 +3,10 @@
  * 默认展示页面
  *
  *
- **by  www.yywxx.com  运营版*/
+ **by 好商城V3 www.33hao.com 好商城V3 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class indexControl extends BaseHomeControl{
 	public function indexOp(){
 		Language::read('home_index_index');
@@ -45,20 +45,6 @@ class indexControl extends BaseHomeControl{
 		$model_web_config = Model('web_config');
 		$web_html = $model_web_config->getWebHtml('index');
 		Tpl::output('web_html',$web_html);
-
-		$condition['web_page'] = 'index';
-		$condition['web_show'] = '1';
-		$arr=Model()->table('web')->field('web_name,web_html')->where($condition)->select();
-		foreach($arr as $key => $value){
-		    $arr_floor[$key]['web_name']=$value['web_name'];
-
-		    preg_match_all("|<span>(.*?)<\/span>|", $value['web_html'],$floor_level);
-		    preg_match_all("|<h2 title=\"(.*?)\">.*?<\/h2>|", $value['web_html'],$floor_name);
-
-		    $arr_floor[$key]['floor_level']=$floor_level[1][0];
-		    $arr_floor[$key]['floor_name']=$floor_name[1][0];		    
-		}
-		Tpl::output('arr_floor',$arr_floor);
 
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');

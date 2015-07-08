@@ -1,9 +1,10 @@
 <?php 
 /**
  * 支付接口
+ * 好商城V3-B10 33hao.com
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 require_once("lib/alipay_submit.class.php");
 class alipay {
@@ -65,7 +66,8 @@ class alipay {
 		$this->notify_url		= MOBILE_SITE_URL.'/api/payment/alipay/notify_url.php';
 		$this->call_back_url	= MOBILE_SITE_URL.'/api/payment/alipay/call_back_url.php';
 		$this->seller_email		= $param['alipay_account'];
-		$this->out_trade_no		= $param['order_sn'].'|'.$param['order_type'];
+		//v3-b11
+		$this->out_trade_no		= $param['order_sn'].'-'.$param['order_type'];
 		$this->subject			= $param['order_sn'];
 		$this->total_fee		= $param['order_amount'];
 		$this->alipay_config 	= array(

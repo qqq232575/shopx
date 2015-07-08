@@ -3,11 +3,11 @@
  * 任务计划执行入口
  *
  * 
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
 
 
-define('In_OS',true);
+define('InShopNC',true);
 
 // $_SERVER['argv'][1] = 'xs';
 // $_SERVER['argv'][2] = 'create';
@@ -18,7 +18,7 @@ $_SERVER['argv'][2] = 'create_bill';
 if (empty($_SERVER['argv'][1]) || empty($_SERVER['argv'][2])) exit('parameter error');
 
 require(dirname(__FILE__).'/../../global.php');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/33hao.php')) exit('33hao.php isn\'t exists!');
 
 Base::init();
 

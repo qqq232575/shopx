@@ -5,10 +5,10 @@
  * 
  *
  *
- * by shopx
+ * by 33hao.com
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class linkModel{
 	/**

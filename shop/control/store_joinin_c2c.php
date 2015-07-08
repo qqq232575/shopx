@@ -1,13 +1,13 @@
 <?php
 /**
- * 商家入住
+ * 个人商家入住 好商城V3-B11提供
  *
  * 
  *
  *
- *  by shopx
+ *  by 33hao.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class store_joinin_c2cControl extends BaseHomeControl {
 
@@ -26,9 +26,19 @@ class store_joinin_c2cControl extends BaseHomeControl {
             @header('location: index.php?act=seller_login');
 		}
 
-        if($_GET['op'] != 'check_seller_name_exist') {
+        if($_GET['op'] != 'check_seller_name_exist' && $_GET['op'] != 'checkname') {
             $this->check_joinin_state();
         }
+        $phone_array = explode(',',C('site_phone'));
+        Tpl::output('phone_array',$phone_array);
+        $model_help = Model('help');
+        $condition = array();
+        $condition['type_id'] = '99';//默认显示入驻流程;
+        $list = $model_help->getShowStoreHelpList($condition);
+        Tpl::output('list',$list);//左侧帮助类型及帮助
+        Tpl::output('show_sign','joinin');
+        Tpl::output('html_title',C('site_name').' - '.'商家入驻');
+        Tpl::output('article_list','');//底部不显示文章分类
 	}
 
     private function check_joinin_state() {
@@ -38,14 +48,15 @@ class store_joinin_c2cControl extends BaseHomeControl {
             $this->joinin_detail = $joinin_detail;
             switch (intval($joinin_detail['joinin_state'])) {
                 case STORE_JOIN_STATE_NEW:
-                    $this->show_join_message('入驻申请已经提交，请等待管理员审核');
+                    $this->step4();
+                    $this->show_join_message('入驻申请已经提交，请等待管理员审核', FALSE, '3');
                     break;
                 case STORE_JOIN_STATE_PAY:
-                    $this->show_join_message('已经提交，请等待管理员核对后为您开通店铺', FALSE, 'step4');
+                    $this->show_join_message('已经提交，请等待管理员核对后为您开通店铺', FALSE, '4');
                     break;
                 case STORE_JOIN_STATE_VERIFY_SUCCESS:
                     if(!in_array($_GET['op'], array('pay', 'pay_save'))) {
-                        $this->show_join_message('审核成功，请完成付款，付款后点击下一步提交付款凭证', SHOP_SITE_URL.DS.'index.php?act=store_joinin_c2c&op=pay');
+                        $this->payOp();
                     }
                     break;
                 case STORE_JOIN_STATE_VERIFY_FAIL:
@@ -112,6 +123,7 @@ class store_joinin_c2cControl extends BaseHomeControl {
         Tpl::output('step', 'step2');
         Tpl::output('sub_step', 'step2');
         Tpl::showpage('store_joinin_c2c_apply');
+	exit;
     }
     private function step2_save_valid($param) {
         $obj_validate = new Validate();
@@ -221,17 +233,51 @@ class store_joinin_c2cControl extends BaseHomeControl {
                 $store_class_names[] = $value;
             }
         }
+        //取最小级分类最新分佣比例
+        $sc_ids = array();
+        foreach ($store_class_ids as $v) {
+            $v = explode(',',trim($v,','));
+            if (!empty($v) && is_array($v)) {
+                $sc_ids[] = end($v);
+            }
+        }
+        if (!empty($sc_ids)) {
+            $store_class_commis_rates = array();
+            $goods_class_list = Model('goods_class')->getGoodsClassListByIds($sc_ids);
+            if (!empty($goods_class_list) && is_array($goods_class_list)) {
+                $sc_ids = array();
+                foreach ($goods_class_list as $v) {
+                    $store_class_commis_rates[] = $v['commis_rate'];
+                }
+            }
+        }
         $param = array();
         $param['seller_name'] = $_POST['seller_name'];
         $param['store_name'] = $_POST['store_name'];
         $param['store_class_ids'] = serialize($store_class_ids);
         $param['store_class_names'] = serialize($store_class_names);
-        $param['sg_name'] = $_POST['sg_name'];
-        $param['sg_id'] = $_POST['sg_id'];
-        $param['sc_name'] = $_POST['sc_name'];
-        $param['sc_id'] = $_POST['sc_id'];
+        $param['joinin_year'] = intval($_POST['joinin_year']);
         $param['joinin_state'] = STORE_JOIN_STATE_NEW;
+        $param['store_class_commis_rates'] = implode(',', $store_class_commis_rates);
 
+        //取店铺等级信息
+        $grade_list = rkcache('store_grade',true);
+        if (!empty($grade_list[$_POST['sg_id']])) {
+            $param['sg_id'] = $_POST['sg_id'];
+            $param['sg_name'] = $grade_list[$_POST['sg_id']]['sg_name'];
+            $param['sg_info'] = serialize(array('sg_price' => $grade_list[$_POST['sg_id']]['sg_price']));
+        }
+
+        //取最新店铺分类信息
+        $store_class_info = Model('store_class')->getStoreClassInfo(array('sc_id'=>intval($_POST['sc_id'])));
+        if ($store_class_info) {
+            $param['sc_id'] = $store_class_info['sc_id'];
+            $param['sc_name'] = $store_class_info['sc_name'];
+            $param['sc_bail'] = $store_class_info['sc_bail'];
+        }
+
+        //店铺应付款
+        $param['paying_amount'] = floatval($grade_list[$_POST['sg_id']]['sg_price'])*$param['joinin_year']+floatval($param['sc_bail']);
         $this->step4_save_valid($param);
 
         $model_store_joinin = Model('store_joinin');
@@ -255,10 +301,20 @@ class store_joinin_c2cControl extends BaseHomeControl {
     }
 
     public function payOp() {
+        if (!empty($this->joinin_detail['sg_info'])) {
+            $store_grade_info = Model('store_grade')->getOneGrade($this->joinin_detail['sg_id']);
+            $this->joinin_detail['sg_price'] = $store_grade_info['sg_price'];
+        } else {
+            $this->joinin_detail['sg_info'] = @unserialize($this->joinin_detail['sg_info']);
+            if (is_array($this->joinin_detail['sg_info'])) {
+                $this->joinin_detail['sg_price'] = $this->joinin_detail['sg_info']['sg_price'];
+            }
+        }
         Tpl::output('joinin_detail', $this->joinin_detail);
-        Tpl::output('step', 'step3');
+        Tpl::output('step', '4');
         Tpl::output('sub_step', 'pay');
         Tpl::showpage('store_joinin_c2c_apply');
+	exit;
     }
 
     public function pay_saveOp() {
@@ -277,7 +333,15 @@ class store_joinin_c2cControl extends BaseHomeControl {
         @header('location: index.php?act=store_joinin_c2c');
     }
 
-
+    private function step4() {
+        $model_store_joinin = Model('store_joinin');
+        $joinin_detail = $model_store_joinin->getOne(array('member_id'=>$_SESSION['member_id']));
+        $joinin_detail['store_class_ids'] = unserialize($joinin_detail['store_class_ids']);
+        $joinin_detail['store_class_names'] = unserialize($joinin_detail['store_class_names']);
+        $joinin_detail['store_class_commis_rates'] = explode(',', $joinin_detail['store_class_commis_rates']);
+        $joinin_detail['sg_info'] = unserialize($joinin_detail['sg_info']);
+        Tpl::output('joinin_detail',$joinin_detail);
+    }
 
     private function show_join_message($message, $btn_next = FALSE, $step = 'step2') {
         Tpl::output('joinin_message', $message);
@@ -285,6 +349,7 @@ class store_joinin_c2cControl extends BaseHomeControl {
         Tpl::output('step', $step);
         Tpl::output('sub_step', 'step4');
         Tpl::showpage('store_joinin_c2c_apply');
+ 	exit;
     }
 
     private function upload_image($file) {
@@ -310,30 +375,16 @@ class store_joinin_c2cControl extends BaseHomeControl {
 	 * @return 
 	 */
 	public function checknameOp() {
-		if(!$this->checknameinner()) {
-			echo 'false';
-		} else {
-			echo 'true';
-		}
-	}
-	/**
-	 * 检查店铺名称是否存在
-	 *
-	 * @param 
-	 * @return 
-	 */
-	public function checknameinner() {
 		/**
 		 * 实例化卖家模型
 		 */
 		$model_store	= Model('store');
-
-		$store_name	= trim($_GET['store_name']);
-		$store_info	= $model_store->getStoreInfo(array('store_name'=>$store_name));
-		if($store_info['store_name'] != ''&&$store_info['member_id'] != $_SESSION['member_id']) {			
-			return false;
-		} else {			
-			return true;
+		$store_name = $_GET['store_name'];
+		$store_info = $model_store->getStoreInfo(array('store_name'=>$store_name));
+		if(!empty($store_info['store_name']) && $store_info['member_id'] != $_SESSION['member_id']) {
+			echo 'false';
+		} else {
+			echo 'true';
 		}
 	}
 }

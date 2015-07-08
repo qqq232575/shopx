@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="title">
   <h4>
     <?php if ($output['relation'] == 3){echo $lang['sns_me']; }else {?>TA<?php } echo $lang['sns_of_other']; if($_GET['type'] == 'like'){echo $lang['sns_like']; }else{echo $lang['nc_snsshare']; }?>

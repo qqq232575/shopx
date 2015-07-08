@@ -2,9 +2,9 @@
 /**
  * 商品F码模型
  *
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class goods_fcodeModel extends Model {
     public function __construct(){
         parent::__construct('goods_fcode');

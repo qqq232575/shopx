@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="page">
   <div class="fixed-bar">
@@ -67,6 +67,40 @@
             </ul></td>
           <td class="vatop tips"></td>
         </tr>
+        <!--V3-B11 显示所在地-->
+         <tr>
+          <td colspan="2" class="required"><label class="member_areainfo">所在地区:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"  colspan="2">
+        <span id="region" class="w400">
+            <input type="hidden" value="<?php echo $output['member_array']['member_provinceid'];?>" name="province_id" id="province_id">
+            <input type="hidden" value="<?php echo $output['member_array']['member_cityid'];?>" name="city_id" id="city_id">
+            <input type="hidden" value="<?php echo $output['member_array']['member_areaid'];?>" name="area_id" id="area_id" class="area_ids" />
+            <input type="hidden" value="<?php echo $output['member_array']['member_areainfo'];?>" name="area_info" id="area_info" class="area_names" />
+            <?php if(!empty($output['member_array']['member_areaid'])){?>
+            <span><?php echo $output['member_array']['member_areainfo'];?></span>
+            <input type="button" value="<?php echo $lang['nc_edit'];?>" style="background-color: #F5F5F5; width: 60px; height: 32px; border: solid 1px #E7E7E7; cursor: pointer" class="edit_region" />
+            <select style="display:none;">
+            </select>
+            <?php }else{?>
+            <select>
+            </select>
+            <?php }?>
+            </span>
+        </td>
+         
+        </tr>
+        
+        
+          <tr>
+          <td colspan="2" class="required"><label class="member_mobile">手机号码:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input type="text" value="<?php echo $output['member_array']['member_mobile'];?>" id="member_mobile" name="member_mobile" class="txt"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        
         <tr>
           <td colspan="2" class="required"><label class="member_qq">QQ:</label></td>
         </tr>
@@ -141,6 +175,44 @@
             <input id="memberstate_2" name="memberstate" <?php if($output['member_array']['member_state'] == '0'){ ?>checked="checked"<?php } ?> value="0" type="radio"></td>
           <td class="vatop tips"></td>
         </tr>
+        
+        
+        
+        <!--V3-B11 手机号码-->
+          <tr>
+          <td colspan="2" class="required"><label>手机号码验证:</label></td>
+        </tr>
+         <tr class="noborder">
+          <td class="vatop rowform onoff">
+          	<label for="membermobilebind_1" class="cb-enable <?php if($output['member_array']['member_mobile_bind'] == '1'){ ?>selected<?php } ?>" ><span>已验证</span></label>
+            <label for="membermobilebind_2" class="cb-disable <?php if($output['member_array']['member_mobile_bind'] == '0'){ ?>selected<?php } ?>" ><span>未验证</span></label>
+            <input id="membermobilebind_1" name="membermobilebind" <?php if($output['member_array']['member_mobile_bind'] == '1'){ ?>checked="checked"<?php } ?>  value="1" type="radio">
+            <input id="membermobilebind_2" name="membermobilebind" <?php if($output['member_array']['member_mobile_bind'] == '0'){ ?>checked="checked"<?php } ?> value="0" type="radio"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        
+        
+        
+        
+        
+         <!--zmr>v30-->
+          <tr>
+          <td colspan="2" class="required"><label>邮箱验证:</label></td>
+        </tr>
+         <tr class="noborder">
+          <td class="vatop rowform onoff">
+          	<label for="memberemailbind_1" class="cb-enable <?php if($output['member_array']['member_email_bind'] == '1'){ ?>selected<?php } ?>" ><span>已验证</span></label>
+            <label for="memberemailbind_2" class="cb-disable <?php if($output['member_array']['member_email_bind'] == '0'){ ?>selected<?php } ?>" ><span>未验证</span></label>
+            <input id="memberemailbind_1" name="memberemailbind" <?php if($output['member_array']['member_email_bind'] == '1'){ ?>checked="checked"<?php } ?>  value="1" type="radio">
+            <input id="memberemailbind_2" name="memberemailbind" <?php if($output['member_array']['member_email_bind'] == '0'){ ?>checked="checked"<?php } ?> value="0" type="radio"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        
+        
+        
+        
+        
+        
         <tr>
           <td colspan="2" class="required"><label><?php echo $lang['member_index_points']?>:</label></td>
         </tr>
@@ -183,6 +255,7 @@
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/ajaxfileupload/ajaxfileupload.js"></script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.Jcrop/jquery.Jcrop.js"></script>
 <link href="<?php echo RESOURCE_SITE_URL;?>/js/jquery.Jcrop/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" id="cssfile2" />
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/common_select.js" charset="utf-8"></script> 
 <script type="text/javascript">
 //裁剪图片后返回接收函数
 function call_back(picname){
@@ -190,6 +263,8 @@ function call_back(picname){
 	$('#view_img').attr('src','<?php echo UPLOAD_SITE_URL.'/'.ATTACH_AVATAR;?>/'+picname+'?'+Math.random());
 }
 $(function(){
+	//v3-b11
+	regionInit("region");
 	$('input[class="type-file-file"]').change(uploadChange);
 	function uploadChange(){
 		var filepatd=$(this).val();

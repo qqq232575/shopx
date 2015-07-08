@@ -70,9 +70,11 @@ function get_openid()
 
     //set openid to session
     $_SESSION["openid"] = $user->openid;
+    $_SESSION['m']=$_GET['m'];//判断是否手机登陆
 }
 
-//QQ登录成功后的回调地址,主要保存access token
+//QQ登录成功后的回调地址,主要保存access token ww w.sho pjl.co m出 品
+
 qq_callback();
 
 //获取用户标示id

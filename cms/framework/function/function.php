@@ -5,7 +5,7 @@
  * 公共方法
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 function getRefUrl() {
     return urlencode('http://'.$_SERVER['HTTP_HOST'].request_uri());

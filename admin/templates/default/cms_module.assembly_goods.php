@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!-- 商品　-->
 <div class="cms-module-assembly-goods">
     <div class="title-bar">

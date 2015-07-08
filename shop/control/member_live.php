@@ -2,10 +2,10 @@
 /**
  * 买家 我的订单
  *
- * by www.yywxx.com shopx 开发调试*/
+ * by www.33hao.com 33hao 开发调试*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class member_liveControl extends BaseMemberControl {
 

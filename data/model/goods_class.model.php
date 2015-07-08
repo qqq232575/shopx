@@ -5,10 +5,10 @@
  *
  *
  *
- * by shopx team 网店技术交流中心  
+ * by 33hao 网店技术交流中心  www.33hao.com 开发
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class goods_classModel extends Model
 {

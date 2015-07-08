@@ -2623,15 +2623,15 @@ INSERT INTO `#__goods_images` (`goods_image_id`, `goods_commonid`, `store_id`, `
 INSERT INTO `#__groupbuy` (`groupbuy_id`, `groupbuy_name`, `start_time`, `end_time`, `goods_id`, `goods_commonid`, `goods_name`, `store_id`, `store_name`, `goods_price`, `groupbuy_price`, `groupbuy_rebate`, `virtual_quantity`, `upper_limit`, `buyer_count`, `buy_quantity`, `groupbuy_intro`, `state`, `recommended`, `views`, `class_id`, `groupbuy_image`, `groupbuy_image1`, `remark`) VALUES(2, '228元任选一箱，国际大赛权威推荐“金奖”葡萄酒！', 1388995740, 1577721600, 231, 100085, '至尊金奖 法国原瓶进口AOC红酒 任选一箱 红沙城堡红葡萄酒 原装进口', 1, '官方店铺', '899.00', '228.00', '2.54', 0, 5, 0, 0, '<img src="../data/upload/shop/store/goods/1/1_04423392645620711_1280.jpg" alt="image" />', 20, 1, 21, 0, '1_04423393922882448.jpg', '1_04423395187054760.jpg', '全国唯一支持开瓶试饮7天无理由退换货'),
 (3, '东阿阿胶桃花姬阿胶糕300g，芝麻香，核桃脆，上品阿胶，养颜', 1388997900, 1577721600, 232, 100086, '中华老字号 东阿阿胶桃花姬阿胶糕300g', 1, '官方店铺', '150.00', '95.00', '6.33', 0, 3, 0, 0, '<img src="../data/upload/shop/store/goods/1/1_04423412221350722_1280.jpg" alt="image" />', 20, 1, 10, 0, '1_04423413554692434.jpg', '1_04423415305032356.jpg', '闪电发货 48小时送达');
 
-INSERT INTO `#__groupbuy_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopx', '官方店铺', 1388995313, 1577721600);
+INSERT INTO `#__groupbuy_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopnc', '官方店铺', 1388995313, 1577721600);
 
-INSERT INTO `#__p_xianshi` (`xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `quota_id`, `start_time`, `end_time`, `member_id`, `store_id`, `member_name`, `store_name`, `lower_limit`, `state`) VALUES(7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 5, 1389167520, 1577721600, 1, 1, 'shopx', '官方店铺', 2, 1);
+INSERT INTO `#__p_xianshi` (`xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `quota_id`, `start_time`, `end_time`, `member_id`, `store_id`, `member_name`, `store_name`, `lower_limit`, `state`) VALUES(7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 5, 1389167520, 1577721600, 1, 1, 'shopnc', '官方店铺', 2, 1);
 
 INSERT INTO `#__p_xianshi_goods` (`xianshi_goods_id`, `xianshi_id`, `xianshi_name`, `xianshi_title`, `xianshi_explain`, `goods_id`, `store_id`, `goods_name`, `goods_price`, `xianshi_price`, `goods_image`, `start_time`, `end_time`, `lower_limit`, `state`, `xianshi_recommend`) VALUES(24, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 49, 1, '春装 披肩式 超短款 针织 衫开衫 女装 青鸟 黑色', '129.00', '100.00', '1_04418240955916042.jpg', 1389167520, 1577721600, 2, 1, 0),
 (25, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 52, 1, '新款 女款 拼接 不规则摆 长袖针织衫开衫 杏雨 白色', '99.00', '58.00', '1_04418253240878850.jpg', 1389167520, 1577721600, 2, 1, 0),
 (26, 7, '2014年款 清仓促销', '月末折扣', '挥泪大甩卖', 38, 1, '正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色', '189.00', '158.00', '1_04418207207476705.jpg', 1389167520, 1577721600, 2, 1, 0);
 
-INSERT INTO `#__p_xianshi_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopx', '官方店铺', 1389167180, 1577721600);
+INSERT INTO `#__p_xianshi_quota` (`quota_id`, `member_id`, `store_id`, `member_name`, `store_name`, `start_time`, `end_time`) VALUES(5, 1, 1, 'shopnc', '官方店铺', 1389167180, 1577721600);
 
 INSERT INTO `#__cron` (`id`, `type`, `exeid`, `exetime`) VALUES 
 (1, 6, 100086, 1414684800),
@@ -2826,10 +2826,10 @@ INSERT INTO `#__live_groupbuy` (`groupbuy_id`, `groupbuy_name`, `groupbuy_remark
 (1, '仅售345元！可享俏江南原价500元储值卡1张！全国72家门店通兑！', '仅售345元！可享俏江南原价500元储值卡1张！全国72家门店通兑！', 1399878000, 1431360000, 1436630400, 1, '俏江南', '500.00', '345.00', 10000, 5, 0, '<p>俏江南创立于2000年,首家餐厅在北京CBD国贸中心开业,品牌定位于服务城市核心商务区。2002年在上海开设了第一家非京区域的连锁餐厅,从此步入了跨区域连锁的时代。</p>\r\n<p>专精于将中华经典美食与时尚现代设计的结合,体现在不断追求菜品的创新与融合,餐厅设计上标新立意,由国际级设计师量身定做,将中国古典的江南小桥流水进行西式设计,以中西合璧的餐厅环境,带来时尚、健康、高雅的就餐体验。</p>', '1_04532212795183385.jpg', '1_04532212870644310.jpg', 1399877398, 1, 1, 1, 3, 320, 2, 10, 2);
 
 INSERT INTO `#__link` (`link_id`, `link_title`, `link_url`, `link_pic`, `link_sort`) VALUES
-(1, 'shopx', 'http://www.yywxx.com', 'shopxlogo.png', 0),
-(2, '演示站点', 'http://v3.shopx', 'shopxlogo.png', 1),
-(4, '支持论坛', 'http://shopx项目小组', '', 1),
-(5, '淘宝店', 'http://shopxcom.taobao.com', '', 0);
+(1, '好商城', 'http://www.33hao.com', '33haologo.png', 0),
+(2, '演示站点', 'http://v3.33hao.com', '33haologo.png', 1),
+(4, '支持论坛', 'http://bbs.33hao.com', '', 1),
+(5, '淘宝店', 'http://33haocom.taobao.com', '', 0);
 
 INSERT INTO `#__flea_area` (`flea_area_id`, `flea_area_name`, `flea_area_deep`, `flea_area_parent_id`, `flea_area_sort`,`flea_area_hot`) VALUES
 (1, '直辖市', 1, 0, 0, 0),
@@ -6231,18 +6231,18 @@ INSERT INTO `#__adv_position` (`ap_id`, `ap_name`, `ap_intro`, `ap_class`, `ap_d
 (1046, '闲置首页中部短栏广告4', '闲置首页中部短栏广告4', 0, 2, 1, 240, 100, 30, 1, 0, '4ab14bb8de01d777f45a1c0c29507c15.jpg');
 
 INSERT INTO `#__adv` (`adv_id`, `ap_id`, `adv_title`, `adv_content`, `adv_start_date`, `adv_end_date`, `slide_sort`, `member_id`, `member_name`, `click_num`, `is_allow`, `buy_style`, `goldpay`) VALUES
-(15, 9, '首页通栏', 'a:2:{s:7:"adv_pic";s:21:"04716538681718544.png";s:11:"adv_pic_url";s:13:"www.yywxx.com";}', 1388505600, 1577721600, 0, 0, '', 0, 1, '', 0),
-(915, 1037, '闲置首页幻灯片1', 'a:2:{s:13:"adv_slide_pic";s:36:"008a76ccc9449d92b529c2d7dd1ddbb4.png";s:13:"adv_slide_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 1, 0, '', 0, 1, '', 0),
-(916, 1037, '闲置首页幻灯片2', 'a:2:{s:13:"adv_slide_pic";s:36:"fe79d67a363cc0e37ccd65896fea52bd.png";s:13:"adv_slide_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 2, 0, '', 1, 1, '', 0),
-(917, 1037, '闲置首页幻灯片3', 'a:2:{s:13:"adv_slide_pic";s:36:"07085e616fbbd0b2750edb70221ca536.jpg";s:13:"adv_slide_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 3, 0, '', 1, 1, '', 0),
-(918, 1037, '闲置首页幻灯片4', 'a:2:{s:13:"adv_slide_pic";s:36:"42d613f281b21845783e22b2d12ca607.png";s:13:"adv_slide_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 4, 0, '', 0, 1, '', 0),
-(919, 1037, '闲置首页幻灯片5', 'a:2:{s:13:"adv_slide_pic";s:36:"70fa9bcbdd0affe3b4c6832613299f52.png";s:13:"adv_slide_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 5, 0, '', 0, 1, '', 0),
-(920, 1038, '闲置横栏广告1', 'a:2:{s:7:"adv_pic";s:36:"62583bd76a71da66a1259da1d8050b39.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 0, 0, '', 1, 1, '', 0),
-(921, 1038, '闲置横栏广告2', 'a:2:{s:7:"adv_pic";s:36:"d6751364a7e32bcebbfee859e60f62c4.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1325347200, 1622476800, 0, 0, '', 2, 1, '', 0),
-(931, 1043, '闲置首页中部短栏广告1', 'a:2:{s:7:"adv_pic";s:36:"90189662e6a7a5e8b2f5992485462cdd.png";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1328025600, 1622476800, 0, 0, '', 1, 1, '', 0),
-(932, 1044, '闲置首页中部短栏广告2', 'a:2:{s:7:"adv_pic";s:36:"2cfee9543caaafeccb1b5d69d814a0fe.png";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0),
-(933, 1045, '闲置首页中部短栏广告3', 'a:2:{s:7:"adv_pic";s:36:"9297917ba3be7b0790d69bb700b93436.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0),
-(934, 1046, '闲置首页中部短栏广告4', 'a:2:{s:7:"adv_pic";s:36:"a18f85f81e845a1055726388334df19f.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0);
+(15, 9, '首页通栏', 'a:2:{s:7:"adv_pic";s:21:"04716538681718544.png";s:11:"adv_pic_url";s:13:"www.33hao.com";}', 1388505600, 1577721600, 0, 0, '', 0, 1, '', 0),
+(915, 1037, '闲置首页幻灯片1', 'a:2:{s:13:"adv_slide_pic";s:36:"008a76ccc9449d92b529c2d7dd1ddbb4.png";s:13:"adv_slide_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 1, 0, '', 0, 1, '', 0),
+(916, 1037, '闲置首页幻灯片2', 'a:2:{s:13:"adv_slide_pic";s:36:"fe79d67a363cc0e37ccd65896fea52bd.png";s:13:"adv_slide_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 2, 0, '', 1, 1, '', 0),
+(917, 1037, '闲置首页幻灯片3', 'a:2:{s:13:"adv_slide_pic";s:36:"07085e616fbbd0b2750edb70221ca536.jpg";s:13:"adv_slide_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 3, 0, '', 1, 1, '', 0),
+(918, 1037, '闲置首页幻灯片4', 'a:2:{s:13:"adv_slide_pic";s:36:"42d613f281b21845783e22b2d12ca607.png";s:13:"adv_slide_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 4, 0, '', 0, 1, '', 0),
+(919, 1037, '闲置首页幻灯片5', 'a:2:{s:13:"adv_slide_pic";s:36:"70fa9bcbdd0affe3b4c6832613299f52.png";s:13:"adv_slide_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 5, 0, '', 0, 1, '', 0),
+(920, 1038, '闲置横栏广告1', 'a:2:{s:7:"adv_pic";s:36:"62583bd76a71da66a1259da1d8050b39.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 0, 0, '', 1, 1, '', 0),
+(921, 1038, '闲置横栏广告2', 'a:2:{s:7:"adv_pic";s:36:"d6751364a7e32bcebbfee859e60f62c4.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1325347200, 1622476800, 0, 0, '', 2, 1, '', 0),
+(931, 1043, '闲置首页中部短栏广告1', 'a:2:{s:7:"adv_pic";s:36:"90189662e6a7a5e8b2f5992485462cdd.png";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1328025600, 1622476800, 0, 0, '', 1, 1, '', 0),
+(932, 1044, '闲置首页中部短栏广告2', 'a:2:{s:7:"adv_pic";s:36:"2cfee9543caaafeccb1b5d69d814a0fe.png";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0),
+(933, 1045, '闲置首页中部短栏广告3', 'a:2:{s:7:"adv_pic";s:36:"9297917ba3be7b0790d69bb700b93436.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0),
+(934, 1046, '闲置首页中部短栏广告4', 'a:2:{s:7:"adv_pic";s:36:"a18f85f81e845a1055726388334df19f.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}', 1328025600, 1622476800, 0, 0, '', 0, 1, '', 0);
 
 INSERT INTO `#__rec_position` (`rec_id`, `pic_type`, `title`, `content`) VALUES
 (1, '1', '底部推荐1', 'a:4:{s:4:"body";a:1:{i:0;a:2:{s:5:"title";s:42:"shop/rec_position/aafda0df33d2a95e6010.png";s:3:"url";s:0:"";}}s:5:"width";s:0:"";s:6:"height";s:0:"";s:6:"target";i:1;}'),

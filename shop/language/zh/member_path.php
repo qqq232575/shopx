@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['member_path_index'] = '賬戶概覽';
 $lang['member_path_profile'] = '個人資料';

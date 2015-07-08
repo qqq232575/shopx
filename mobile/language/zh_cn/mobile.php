@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['order_state_cancel'] = '已取消';
 $lang['order_state_new'] = '待付款';

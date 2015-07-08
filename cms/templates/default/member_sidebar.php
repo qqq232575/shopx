@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <dl class="member-info">
   <dt class="avatar">
     <?php if($output['publisher_info']['type'] === 2) { ?>

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <link
 	href="<?php echo RESOURCE_SITE_URL;?>/js/jcarousel/skins/tango/skin.css"
 	rel="stylesheet" type="text/css">

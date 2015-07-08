@@ -5,13 +5,14 @@
  * by 3 3 h a o.c o m
  *
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class taobao_importControl extends BaseSellerControl {
 	private function checkStore(){
         if(!checkPlatformStore()){
             // 是否到达商品数上限
             $goods_num = Model('goods')->getGoodsCommonCount(array('store_id' => $_SESSION['store_id']));
             if (intval($this->store_grade['sg_goods_limit']) != 0) {
+	    	//v3-b11
                 if ($goods_num >= $this->store_grade['sg_goods_limit']) {
                     showMessage(L('store_goods_index_goods_limit') . $this->store_grade['sg_goods_limit'] . L('store_goods_index_goods_limit1'), 'index.php?act=store_goods&op=goods_list', 'html', 'error');
                 }
@@ -181,14 +182,20 @@ class taobao_importControl extends BaseSellerControl {
 					}else{
 						$str .=$record['goods_image']."\r\n";
 					}
-					file_put_contents('image.txt',$str,FILE_APPEND);
+					//file_put_contents('image.txt',$str,FILE_APPEND);
 					$pic_array	= $this->get_goods_image($record['goods_image']);
 					
 					if(empty($record['goods_name']))continue;
 					$param	= array();
 					$param['goods_name']			= $record['goods_name'];
 					$param['gc_id']					= intval($_POST['gc_id']);
-					//$param['gc_name']				= $gc_row['gc_tag_name'];
+					$param['gc_id_1']					= intval($_POST['cls_1']);
+					$param['gc_id_2']					= intval($_POST['cls_2']);
+					$param['gc_id_3']					= intval($_POST['cls_3']);
+					$param['gc_name']				= $_POST['cate_name'];
+					$param['spec_name']				= 'N;';
+					$param['spec_value']		    = 'N;';
+					$param['store_name']	        =$store_info['store_name'];
 					$param['store_id']				= $_SESSION['store_id'];
 					$param['type_id']				= '0';
 					$param['goods_image']			= $pic_array['goods_image'][0];
@@ -222,11 +229,21 @@ class taobao_importControl extends BaseSellerControl {
 					$param['goods_verify']			= '1';
 					$param['areaid_1']				= intval($_POST['province_id']);
 					$param['areaid_2']			= intval($_POST['city_id']);
-				    $param['goods_stcids']       = $_POST['sgcate_id'];    
+				    $param['goods_stcids']       = ',' . implode(',', array_unique($_POST['sgcate_id'])) . ',';  
 					$param['goods_storage']	= $record['spec_goods_storage'];
 					$param['goods_serial']	= $record['goods_serial'];
+					$param['gc_id_1']					= intval($_POST['cls_1']);
+					$param['gc_id_2']					= intval($_POST['cls_2']);
+					$param['gc_id_3']					= intval($_POST['cls_3']);
+					$param['goods_promotion_price']	    = $param['goods_price'];
+					$param['goods_spec']				= 'N;';
+					$param['store_name']	            =$store_info['store_name'];
 					
 			        $goods_id1=$model_store_goods->addGoods($param);
+					//v3-b11 导入后直接生成二维码
+					$PhpQRCode->set('date',WAP_SITE_URL . '/tmpl/product_detail.html?goods_id='.$goods_id1);
+                    $PhpQRCode->set('pngTempName', $goods_id1 . '.png');
+                    $PhpQRCode->init();
 				  
 			        //规格导入
 					// 更新常用分类信息
@@ -338,17 +355,6 @@ class taobao_importControl extends BaseSellerControl {
 		'goods_image'		=> '新图片',
 		'goods_serial'		=> '商家编码'
 		);
-		/*return array(
-		'goods_name'		=> Language::get('store_goods_import_goodsname'),
-		'cid'				=> Language::get('store_goods_import_goodscid'),
-		'goods_store_price'	=> Language::get('store_goods_import_goodsprice'),
-		'spec_goods_storage'=> Language::get('store_goods_import_goodsnum'),
-		//'goods_show'		=> '放入仓库',
-		'goods_commend'		=> Language::get('store_goods_import_goodstuijian'),
-		'goods_body'		=> Language::get('store_goods_import_goodsdesc'),
-		'goods_image'		=> Language::get('store_goods_import_goodspic'),
-		'sale_attr'			=> Language::get('store_goods_import_goodsproperties')
-		);*/
 	}
 
 	/**
@@ -380,6 +386,11 @@ class taobao_importControl extends BaseSellerControl {
 	 */
 	private function parse_taobao_csv($csv_string)
 	{
+		
+		
+		//防止乱码
+		$scount = strpos($csv_string, "宝贝名称");
+		$csv_string=substr($csv_string,$scount);
 		/* 定义CSV文件中几个标识性的字符的ascii码值 */
 		define('ORD_SPACE', 32); // 空格
 		define('ORD_QUOTE', 34); // 双引号

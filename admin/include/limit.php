@@ -2,9 +2,9 @@
 /**
  * 载入权限
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 $_limit =  array(
 	array('name'=>$lang['nc_config'], 'child'=>array(
 		array('name'=>$lang['nc_web_set'], 'op'=>null, 'act'=>'setting'),

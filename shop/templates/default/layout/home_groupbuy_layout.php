@@ -1,10 +1,10 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php include template('layout/common_layout');?>
 <?php include template('layout/cur_local');?>
 
 <div class="ncg-topbar">
   <div id="headRelative" class="ncg-topbar-wrapper">
-    <div class="title" style="width:210px;">
+    <div class="title">
       <h2> <?php echo $lang['text_groupbuy'];?> </h2>
       <?php if ($_GET['op'] == 'index' || strpos($_GET['op'], 'vr_groupbuy_') === 0) { ?>
       <div class="city"> 地区【<a href="javascript:void(0)" id="button_show">

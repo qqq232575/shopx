@@ -140,7 +140,7 @@
         <h3><?php echo $lang['dashboard_welcome_sys_info'];?></h3>
         <div id="system-info">
           <ul>
-            <li> <?php echo $lang['dashboard_welcome_version'];?><span><?php echo $output['statistics']['shop_version'];?></span></li>
+            <li>好商城V3-b11 <?php echo $lang['dashboard_welcome_version'];?><span>20150703</span></li>
             <li><?php echo $lang['dashboard_welcome_install_date'];?><span><?php echo $output['statistics']['setup_date'];?></span></li>
             <li><?php echo $lang['dashboard_welcome_server_os'];?><span><?php echo $output['statistics']['os'];?></span></li>
             <li>WEB <?php echo $lang['dashboard_welcome_server'];?><span><?php echo $output['statistics']['web_server'];?></span></li>
@@ -151,8 +151,8 @@
       </dt>
       <dd>
         <ul>
-          <li class="w50pre none"><a href="http://www.yywxx.com" target="_blank">官方网站<sub></sub></a></li>
-          <li class="w50pre none"><a href="http://www.yywxx.com" target="_blank">官方论坛<sub></sub></a></li>
+          <li class="w50pre none"><a href="http://www.33hao.com" target="_blank">官方网站<sub></sub></a></li>
+          <li class="w50pre none"><a href="http://bbs.33hao.com" target="_blank">官方论坛<sub></sub></a></li>
         </ul>
       </dd>
     </dl>

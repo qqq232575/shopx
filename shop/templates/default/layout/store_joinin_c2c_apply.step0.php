@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
 $(document).ready(function(){
     $('#btn_apply_agreement_c2c_next').on('click', function() {

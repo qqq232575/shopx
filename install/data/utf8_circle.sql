@@ -26,7 +26,7 @@ CREATE TABLE `#__circle` (
   `mapply_ml` tinyint(4) NOT NULL DEFAULT '0' COMMENT '成员级别',
   `new_mapplycount` int(5) unsigned NOT NULL DEFAULT '0' COMMENT '管理申请数量',
   PRIMARY KEY (`circle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子表';
 
 CREATE TABLE `#__circle_affix` (
   `affix_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '附件id',
@@ -40,7 +40,7 @@ CREATE TABLE `#__circle_affix` (
   `reply_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '评论id',
   `circle_id` int(11) unsigned NOT NULL COMMENT '圈子id',
   PRIMARY KEY (`affix_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='附件表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='附件表';
 
 CREATE TABLE `#__circle_class` (
   `class_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '圈子分类id',
@@ -50,7 +50,7 @@ CREATE TABLE `#__circle_class` (
   `class_status` tinyint(3) unsigned NOT NULL COMMENT '圈子分类状态 0不显示，1显示',
   `is_recommend` tinyint(3) unsigned NOT NULL COMMENT '是否推荐 0未推荐，1已推荐',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子分类表';
 
 CREATE TABLE `#__circle_explog` (
   `el_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '经验日志id',
@@ -63,7 +63,7 @@ CREATE TABLE `#__circle_explog` (
   `el_itemid` varchar(100) NOT NULL COMMENT '信息id',
   `el_desc` varchar(255) NOT NULL COMMENT '描述',
   PRIMARY KEY (`el_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='经验日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='经验日志表';
 
 CREATE TABLE `#__circle_expmember` (
   `member_id` int(11) NOT NULL COMMENT '成员id',
@@ -71,14 +71,14 @@ CREATE TABLE `#__circle_expmember` (
   `em_exp` int(10) NOT NULL COMMENT '获得经验',
   `em_time` varchar(10) NOT NULL COMMENT '获得时间',
   PRIMARY KEY (`member_id`,`circle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='成员每天获得经验表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='成员每天获得经验表';
 
 CREATE TABLE `#__circle_exptheme` (
   `theme_id` int(11) unsigned NOT NULL COMMENT '主题id',
   `et_exp` int(10) NOT NULL COMMENT '获得经验',
   `et_time` varchar(10) NOT NULL COMMENT '获得时间',
   PRIMARY KEY (`theme_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='主题每天获得经验表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='主题每天获得经验表';
 
 CREATE TABLE `#__circle_fs` (
   `circle_id` int(11) unsigned NOT NULL COMMENT '圈子id',
@@ -87,7 +87,7 @@ CREATE TABLE `#__circle_fs` (
   `friendship_sort` tinyint(4) unsigned NOT NULL COMMENT '友情圈子排序',
   `friendship_status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '友情圈子名称 1显示 0隐藏',
   PRIMARY KEY (`circle_id`,`friendship_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='友情圈子表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='友情圈子表';
 
 CREATE TABLE `#__circle_inform` (
   `inform_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '举报id',
@@ -108,13 +108,13 @@ CREATE TABLE `#__circle_inform` (
   `inform_opresult` varchar(255) NOT NULL DEFAULT '' COMMENT '处理结果',
   PRIMARY KEY (`inform_id`),
   KEY `circle_id` (`circle_id`,`theme_id`,`reply_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子举报表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子举报表';
 
 CREATE TABLE `#__circle_like` (
   `theme_id` int(11) unsigned NOT NULL COMMENT '主题id',
   `member_id` int(11) unsigned NOT NULL COMMENT '会员id',
   `circle_id` int(11) unsigned NOT NULL COMMENT '圈子id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='主题赞表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='主题赞表';
 
 CREATE TABLE `#__circle_mapply` (
   `mapply_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '申请id',
@@ -123,7 +123,7 @@ CREATE TABLE `#__circle_mapply` (
   `mapply_reason` varchar(255) NOT NULL COMMENT '申请理由',
   `mapply_time` varchar(10) NOT NULL COMMENT '申请时间',
   PRIMARY KEY (`mapply_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='申请管理表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='申请管理表';
 
 CREATE TABLE `#__circle_member` (
   `member_id` int(11) unsigned NOT NULL COMMENT '会员id',
@@ -147,7 +147,7 @@ CREATE TABLE `#__circle_member` (
   `cm_lastspeaktime` varchar(10) DEFAULT '' COMMENT '最后发言时间',
   `is_recommend` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否推荐 1是 0否',
   PRIMARY KEY (`member_id`,`circle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子会员表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子会员表';
 
 CREATE TABLE `#__circle_ml` (
   `circle_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '圈子id',
@@ -169,14 +169,14 @@ CREATE TABLE `#__circle_ml` (
   `ml_15` varchar(10) NOT NULL COMMENT '15级头衔名称',
   `ml_16` varchar(10) NOT NULL COMMENT '16级头衔名称',
   PRIMARY KEY (`circle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员头衔表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员头衔表';
 
 CREATE TABLE `#__circle_mldefault` (
   `mld_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '头衔等级',
   `mld_name` varchar(10) NOT NULL COMMENT '头衔名称',
   `mld_exp` int(10) NOT NULL COMMENT '所需经验值',
   PRIMARY KEY (`mld_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='成员头衔默认设置表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='成员头衔默认设置表';
 
 CREATE TABLE `#__circle_mlref` (
   `mlref_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '参考头衔id',
@@ -200,7 +200,7 @@ CREATE TABLE `#__circle_mlref` (
   `mlref_15` varchar(10) NOT NULL COMMENT '15级头衔名称',
   `mlref_16` varchar(10) NOT NULL COMMENT '16级头衔名称',
   PRIMARY KEY (`mlref_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='会员参考头衔表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='会员参考头衔表';
 
 CREATE TABLE `#__circle_recycle` (
   `recycle_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '回收站id',
@@ -215,7 +215,7 @@ CREATE TABLE `#__circle_recycle` (
   `recycle_type` tinyint(3) unsigned NOT NULL COMMENT '类型 1话题，2回复',
   `recycle_time` varchar(10) NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`recycle_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子回收站表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子回收站表';
 
 CREATE TABLE `#__circle_thclass` (
   `thclass_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主题分类id',
@@ -225,7 +225,7 @@ CREATE TABLE `#__circle_thclass` (
   `thclass_sort` tinyint(3) unsigned NOT NULL COMMENT '分类排序',
   `circle_id` int(11) unsigned NOT NULL COMMENT '所属圈子id',
   PRIMARY KEY (`thclass_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子主题分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子主题分类表';
 
 CREATE TABLE `#__circle_theme` (
   `theme_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主题id',
@@ -259,7 +259,7 @@ CREATE TABLE `#__circle_theme` (
   `theme_readperm` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '阅读权限',
   `theme_special` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '特殊话题 0普通 1投票',
   PRIMARY KEY (`theme_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='圈子主题表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='圈子主题表';
 
 CREATE TABLE `#__circle_thg` (
   `themegoods_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主题商品id',
@@ -274,7 +274,7 @@ CREATE TABLE `#__circle_thg` (
   `thg_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '商品类型 0为本商城、1为淘宝 默认为0',
   `thg_url` varchar(1000) DEFAULT NULL COMMENT '商品链接',
   PRIMARY KEY (`themegoods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='主题商品表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='主题商品表';
 
 CREATE TABLE `#__circle_thpoll` (
   `theme_id` int(11) unsigned NOT NULL COMMENT '话题id',
@@ -284,7 +284,7 @@ CREATE TABLE `#__circle_thpoll` (
   `poll_days` tinyint(3) unsigned NOT NULL COMMENT '投票天数',
   `poll_voters` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '投票参与人数',
   PRIMARY KEY (`theme_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投票表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='投票表';
 
 CREATE TABLE `#__circle_thpolloption` (
   `pollop_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '投票选项id',
@@ -294,7 +294,7 @@ CREATE TABLE `#__circle_thpolloption` (
   `pollop_sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
   `pollop_votername` mediumtext COMMENT '投票者名称',
   PRIMARY KEY (`pollop_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投票选项表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='投票选项表';
 
 CREATE TABLE `#__circle_thpollvoter` (
   `theme_id` int(11) unsigned NOT NULL COMMENT '话题id',
@@ -303,7 +303,7 @@ CREATE TABLE `#__circle_thpollvoter` (
   `pollvo_options` mediumtext NOT NULL COMMENT '投票选项',
   `pollvo_time` varchar(10) NOT NULL COMMENT '投票选项',
   KEY `theme_id` (`theme_id`,`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='成员投票信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='成员投票信息表';
 
 CREATE TABLE `#__circle_threply` (
   `theme_id` int(11) unsigned NOT NULL COMMENT '主题id',
@@ -333,7 +333,7 @@ INSERT INTO `#__setting` (`name`, `value`) VALUES
 ('circle_istalk', '1'),
 ('circle_isuse', '1'),
 ('circle_joinsum', '12'),
-('circle_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"1.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:2;a:2:{s:3:"pic";s:5:"2.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:3;a:2:{s:3:"pic";s:5:"3.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:4;a:2:{s:3:"pic";s:5:"4.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}}'),
+('circle_loginpic', 'a:4:{i:1;a:2:{s:3:"pic";s:5:"1.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:2;a:2:{s:3:"pic";s:5:"2.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:3;a:2:{s:3:"pic";s:5:"3.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:4;a:2:{s:3:"pic";s:5:"4.jpg";s:3:"url";s:22:"http://www.33hao.com/";}}'),
 ('circle_logo', 'logo.png'),
 ('circle_managesum', '4'),
 ('circle_name', '圈子'),

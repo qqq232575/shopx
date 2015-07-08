@@ -5,11 +5,11 @@
  *
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class searchModel{
 
@@ -64,7 +64,7 @@ class searchModel{
 //             if (C('debug')) {
 //                 showMessage($e->getMessage(),'','html','error');
 //             } else {
-                shopx\Log::record('search\index'.$e->getMessage()."\r\n".$sql,shopx\Log::RUN);
+                Shopnc\Log::record('search\index'.$e->getMessage()."\r\n".$sql,Shopnc\Log::RUN);
                 return false;
 //             }
         }
@@ -363,7 +363,7 @@ class searchModel{
             $tag_list = rkcache('class_tag', true);
             if (!empty($tag_list) && is_array($tag_list)) {
                 foreach($tag_list as $key => $val) {
-                    $tag_value = str_replace(',', '==shopx==', $val['gc_tag_value']);
+                    $tag_value = str_replace(',', '==ShopNC==', $val['gc_tag_value']);
                     if (strpos($tag_value, $keyword)) {
                         $data[] = $val['gc_id'];
                     }

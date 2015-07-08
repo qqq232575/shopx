@@ -1,10 +1,10 @@
 <?php
 /**
  * 代金券
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_voucherControl extends BaseSellerControl{
 	//定义代金券类常量
 	const SECONDS_OF_30DAY = 2592000;

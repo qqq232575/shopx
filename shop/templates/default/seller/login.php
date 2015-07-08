@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -146,6 +146,7 @@ $(document).ready(function() {
       <span class="ico"><i class="icon-qrcode"></i></span>
       <input type="submit" class="login-submit" value="商家登录">
     </div>
+    <div class="mt10 fr"><a href="<?php echo BASE_SITE_URL;?>" title="返回首页">返回首页</a></div>
   </form>
 </div>
 </body>

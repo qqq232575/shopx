@@ -2,9 +2,9 @@
 /**
  * 菜单
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 /**
  * top 数组是顶部菜单 ，left数组是左侧菜单
  * left数组中'args'=>'welcome,dashboard,dashboard',三个分别为op,act,nav，权限依据act来判断

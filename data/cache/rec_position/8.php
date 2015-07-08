@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!'); return array (
+<?php defined('InShopNC') or exit('Access Invalid!'); return array (
   'rec_id' => '8',
   'pic_type' => '0',
   'title' => '腾讯微博',

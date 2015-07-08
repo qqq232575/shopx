@@ -1,8 +1,10 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="tabmenu">
   <?php include template('layout/submenu');?>
-  <a href="<?php echo urlShop('store_goods_add');?>" class="ncsc-btn ncsc-btn-green" title="<?php echo $lang['store_goods_index_add_goods'];?>"> <?php echo $lang['store_goods_index_add_goods'];?></a> </div>
+ <!--好商城V3-B11-->
+  <a title="批量生成商品二维码" class="ncsc-btn ncsc-btn-green" href="index.php?act=store_goods_online&amp;op=maker_qrcode" target="_blank" style="right:100px" onclick="return confirm('您确定要执行批量生成二维码吗？');">批量生成商品二维码</a>
+  <a href="<?php echo urlShop('store_goods_add');?>" class="ncsc-btn ncsc-btn-green" title="<?php echo $lang['store_goods_index_add_goods'];?>"> <?php echo $lang['store_goods_index_add_goods'];?></a></div>
 <form method="get" action="index.php">
   <table class="search-form">
     <input type="hidden" name="act" value="store_goods_online" />

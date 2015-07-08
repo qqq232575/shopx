@@ -42,7 +42,7 @@ CREATE TABLE `#__cms_article` (
   `article_share_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '文章分享数',
   `article_verify_reason` varchar(255) DEFAULT NULL COMMENT '审核失败原因',
   PRIMARY KEY (`article_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS文章表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS文章表';
 
 CREATE TABLE `#__cms_article_attitude` (
   `attitude_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '心情编号',
@@ -50,14 +50,14 @@ CREATE TABLE `#__cms_article_attitude` (
   `attitude_member_id` int(10) unsigned NOT NULL COMMENT '用户编号',
   `attitude_time` int(10) unsigned NOT NULL COMMENT '发布心情时间',
   PRIMARY KEY (`attitude_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS文章心情表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS文章心情表';
 
 CREATE TABLE `#__cms_article_class` (
   `class_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类编号 ',
   `class_name` varchar(50) NOT NULL COMMENT '分类名称',
   `class_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='cms文章分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='cms文章分类表';
 
 CREATE TABLE `#__cms_comment` (
   `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '评论编号',
@@ -69,7 +69,7 @@ CREATE TABLE `#__cms_comment` (
   `comment_quote` varchar(255) DEFAULT NULL COMMENT '评论引用',
   `comment_up` int(10) unsigned NOT NULL COMMENT '顶数量',
   PRIMARY KEY (`comment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS评论表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS评论表';
 
 CREATE TABLE `#__cms_comment_up` (
   `up_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '顶编号',
@@ -77,7 +77,7 @@ CREATE TABLE `#__cms_comment_up` (
   `up_member_id` int(10) unsigned NOT NULL COMMENT '用户编号',
   `up_time` int(10) unsigned NOT NULL COMMENT '评论时间',
   PRIMARY KEY (`up_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS评论顶表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS评论顶表';
 
 CREATE TABLE `#__cms_index_module` (
   `module_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '模块编号',
@@ -90,7 +90,7 @@ CREATE TABLE `#__cms_index_module` (
   `module_style` varchar(50) NOT NULL DEFAULT 'style1' COMMENT '模块主题',
   `module_view` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '后台列表显示样式 1-展开 2-折叠',
   PRIMARY KEY (`module_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS首页模块表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS首页模块表';
 
 CREATE TABLE `#__cms_module` (
   `module_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '模板模块编号',
@@ -99,7 +99,7 @@ CREATE TABLE `#__cms_module` (
   `module_type` varchar(50) NOT NULL DEFAULT '' COMMENT '模板模块类型，index-固定内容、article1-文章模块1、article2-文章模块2、micro-微商城、adv-通栏广告',
   `module_class` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '模板模块种类1-系统自带 2-用户自定义',
   PRIMARY KEY (`module_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS模板模块表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='CMS模板模块表';
 
 CREATE TABLE `#__cms_module_assembly` (
   `assembly_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '组件编号',
@@ -107,7 +107,7 @@ CREATE TABLE `#__cms_module_assembly` (
   `assembly_name` varchar(50) NOT NULL COMMENT '组件名称',
   `assembly_explain` varchar(255) NOT NULL COMMENT '组件说明',
   PRIMARY KEY (`assembly_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='cms模块组件表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='cms模块组件表';
 
 CREATE TABLE `#__cms_module_frame` (
   `frame_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '框架编号',
@@ -116,7 +116,7 @@ CREATE TABLE `#__cms_module_frame` (
   `frame_explain` varchar(255) NOT NULL COMMENT '框架说明',
   `frame_structure` varchar(255) NOT NULL COMMENT '框架结构',
   PRIMARY KEY (`frame_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='cms模块框架表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='cms模块框架表';
 
 CREATE TABLE `#__cms_navigation` (
   `navigation_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '导航编号',
@@ -125,7 +125,7 @@ CREATE TABLE `#__cms_navigation` (
   `navigation_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   `navigation_open_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '导航打开方式1-本页打开，2-新页打开',
   PRIMARY KEY (`navigation_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='CMS导航表';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='CMS导航表';
 
 CREATE TABLE `#__cms_picture` (
   `picture_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '画报编号',
@@ -155,14 +155,14 @@ CREATE TABLE `#__cms_picture` (
   `picture_share_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '画报分享数',
   `picture_verify_reason` varchar(255) DEFAULT NULL COMMENT '审核失败原因',
   PRIMARY KEY (`picture_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS画报表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS画报表';
 
 CREATE TABLE `#__cms_picture_class` (
   `class_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类编号 ',
   `class_name` varchar(50) NOT NULL COMMENT '分类名称',
   `class_sort` tinyint(1) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='cms画报分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='cms画报分类表';
 
 CREATE TABLE `#__cms_picture_image` (
   `image_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片编号',
@@ -175,7 +175,7 @@ CREATE TABLE `#__cms_picture_image` (
   `image_picture_id` int(10) unsigned NOT NULL COMMENT '画报编号',
   `image_path` varchar(50) DEFAULT NULL COMMENT '图片路径',
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS画报图片表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS画报图片表';
 
 CREATE TABLE `#__cms_special` (
   `special_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '专题编号',
@@ -192,7 +192,7 @@ CREATE TABLE `#__cms_special` (
   `special_repeat` varchar(10) NOT NULL DEFAULT 'no-repeat' COMMENT '背景重复方式',
   `special_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '专题类型(1-cms专题 2-商城专题)',
   PRIMARY KEY (`special_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS专题表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS专题表';
 
 CREATE TABLE `#__cms_tag` (
   `tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签编号',
@@ -200,7 +200,7 @@ CREATE TABLE `#__cms_tag` (
   `tag_sort` tinyint(1) unsigned NOT NULL COMMENT '标签排序',
   `tag_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '标签使用计数',
   PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS标签表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS标签表';
 
 CREATE TABLE `#__cms_tag_relation` (
   `relation_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '关系编号',
@@ -208,7 +208,7 @@ CREATE TABLE `#__cms_tag_relation` (
   `relation_tag_id` int(10) unsigned NOT NULL COMMENT '标签编号',
   `relation_object_id` int(10) unsigned NOT NULL COMMENT '对象编号',
   PRIMARY KEY (`relation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS标签关系表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='CMS标签关系表';
 
 INSERT INTO `#__setting` (`name`, `value`) VALUES 
 ('cms_attitude_flag', '1'),

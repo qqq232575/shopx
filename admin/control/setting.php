@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class settingControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=setting&op=base','lang'=>'web_set'),
@@ -34,7 +34,21 @@ class settingControl extends SystemControl{
 					showMessage($upload->error,'','','error');
 				}
 			}
-			//二维码微信图片 by shopx
+			
+			//V3-B11 上传wap手机客户端LOGO
+			if (!empty($_FILES['site_mobile_logo']['name'])){
+				$upload = new UploadFile();
+				$upload->set('default_dir',ATTACH_COMMON);
+				$upload->file_name='home_logo.png';
+				$result = $upload->upfile('site_mobile_logo');
+				if ($result){
+					$_POST['site_mobile_logo'] = $upload->file_name;
+				}else {
+					showMessage($upload->error,'','','error');
+				}
+			}
+			
+			//二维码微信图片 by 33 HA O.com
 			if (!empty($_FILES['site_logowx']['name'])){
 				$upload = new UploadFile();
 				$upload->set('default_dir',ATTACH_COMMON);
@@ -76,6 +90,10 @@ class settingControl extends SystemControl{
 			if (!empty($_POST['site_logo'])){
 				$update_array['site_logo'] = $_POST['site_logo'];
 			}
+			//  V3-B11
+			if (!empty($_POST['site_mobile_logo'])){
+				$update_array['site_mobile_logo'] = $_POST['site_mobile_logo'];
+			}
 			if (!empty($_POST['site_logowx'])){
 				$update_array['site_logowx'] = $_POST['site_logowx'];
 			}
@@ -86,7 +104,7 @@ class settingControl extends SystemControl{
 				$update_array['seller_center_logo'] = $_POST['seller_center_logo'];
 			}
 			$update_array['icp_number'] = $_POST['icp_number'];
-			//设置表 400电话 by shopx
+			//设置表 400电话 by 33hao.com
 			$update_array['site_tel400'] = $_POST['site_tel400'];
 			$update_array['site_status'] = $_POST['site_status'];
 			$update_array['closed_reason'] = $_POST['closed_reason'];

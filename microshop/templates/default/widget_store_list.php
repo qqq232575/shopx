@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php if(!empty($output['list']) && is_array($output['list'])) {?>
 <script type="text/javascript">
 $(document).ready(function(){

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="tabmenu">
   <?php include template('layout/submenu');?>
   <a href="<?php echo urlShop('store_plate', 'plate_add');?>" class="ncsc-btn ncsc-btn-green" title="添加关联版式">添加关联版式</a>

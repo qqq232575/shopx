@@ -1,13 +1,13 @@
 <?php
 /**
- shopx 提供
+好商城V3 33hao.com 提供
 
-网址：www.yywxx.com
+网址：www.33hao.com
 
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class flea_regionControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();
@@ -268,7 +268,7 @@ class flea_regionControl extends SystemControl{
 									if (strtoupper(CHARSET) == 'GBK'){
 										$tmp_sql = iconv('UTF-8',strtoupper(CHARSET),$tmp_sql);
 									}
-			        		$tmp_sql = str_replace("`shopx_flea_area`","`".DBPRE."flea_area`",$tmp_sql);
+			        		$tmp_sql = str_replace("`33hao_flea_area`","`".DBPRE."flea_area`",$tmp_sql);
 			        		Db::query($tmp_sql);
 			        		unset($tmp_sql);
 			        	}

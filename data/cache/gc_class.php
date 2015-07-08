@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!'); return array (
+<?php defined('InShopNC') or exit('Access Invalid!'); return array (
   'data' => 
   array (
     1 => 

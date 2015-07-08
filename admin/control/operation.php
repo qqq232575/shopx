@@ -4,9 +4,9 @@
  *
  *
  *
- **by  shopx项目小组*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class operationControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=operation&op=setting','lang'=>'nc_operation_set'),
@@ -31,6 +31,7 @@ class operationControl extends SystemControl{
 				showMessage($error);
 			}else {
 				$update_array = array();
+				$update_array['flea_isuse'] = $_POST['flea_isuse'];
                 $update_array['promotion_allow'] = $_POST['promotion_allow'];
                 $update_array['groupbuy_allow'] = $_POST['groupbuy_allow'];
                 $update_array['points_isuse'] = $_POST['points_isuse'];

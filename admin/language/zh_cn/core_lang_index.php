@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /**
  * core简体语言包
@@ -9,9 +9,9 @@ $lang['please_check_your_url_arg'] = '请检查您URL地址栏输入的参数信
 $lang['error_info'] = '错误信息';
 $lang['solution'] = '解决方案';
 $lang['please_login_in'] = '请登录';
-$lang['shopx_bbs'] = '官方论坛';
+$lang['shopnc_bbs'] = '官方论坛';
 $lang['found_answer'] = '，将您发现的问题告诉我们，并寻求帮助！';
-$lang['company_name'] = 'shopx项目小组';
+$lang['company_name'] = '天津市网城天创科技有限责任公司';
 
 $lang['please_check_your_system_chmod'] = '系统配置信息缓存文件不能写入，请检查文件以及文件夹权限是否正确!';
 $lang['please_check_your_system_chmod_area'] = '地区缓存文件不能写入，请检查文件以及文件夹权限是否正确!';

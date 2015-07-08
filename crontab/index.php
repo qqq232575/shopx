@@ -3,20 +3,20 @@
  * 队列
  *
  *
- * 计划任务触发 by shopx
+ * 计划任务触发 by 33hao.com
  */
 
 
 $_SERVER['argv'][1] = $_GET['act'];
 @$_SERVER['argv'][2] = $_GET['op'];
 
-// if (empty($_SERVER['argv'][1])) exit('Access Invalid!');
+if (empty($_SERVER['argv'][1])) exit('Access Invalid!');
 
 define('APP_ID','crontab');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 define('TRANS_MASTER',true);
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/33hao.php')) exit('33hao.php isn\'t exists!');
 
 if (PHP_SAPI == 'cli') {
     $_GET['act'] = $_SERVER['argv'][1];

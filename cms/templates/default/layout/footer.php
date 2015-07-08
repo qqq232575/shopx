@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="clear">&nbsp;</div>
 <!-- 代码开始 -->
@@ -32,7 +32,7 @@
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
     <legend><?php echo $lang['nc_debug_trace_title'];?></legend>
-    <div> <?php print_r(Tpl::showTrace());?> </div>
+    <div> <?php print_r(\Shopnc\Tpl::showTrace());?> </div>
   </fieldset>
 </div>
 <?php }?>

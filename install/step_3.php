@@ -86,7 +86,7 @@ $(function(){
         <div>
           <label>数据库名</label>
           <span>
-          <input type="text" name="db_name" maxlength="50" value="<?php echo $_POST['db_name'] ? $_POST['db_name'] : 'shopx';?>">
+          <input type="text" name="db_name" maxlength="50" value="<?php echo $_POST['db_name'] ? $_POST['db_name'] : '33hao';?>">
           </span> <em></em></div>
         <div>
           <label>数据库用户名</label>
@@ -101,8 +101,8 @@ $(function(){
         <div>
           <label>数据库表前缀</label>
           <span>
-          <input type="text" name="db_prefix" maxlength="30" value="<?php echo $_POST['db_prefix'] ? $_POST['db_prefix'] : 'shopx_';?>">
-          </span> <em>同一数据库运行多个程序时，请修改前缀</em></div>
+          <input type="text" name="db_prefix" maxlength="30" value="<?php echo $_POST['db_prefix'] ? $_POST['db_prefix'] : '33hao_';?>">
+          </span> <em>同一数据库运行多个好商城V3程序时，请修改前缀</em></div>
         <div>
           <label>数据库端口</label>
           <span>

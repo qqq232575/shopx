@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php 
 //加载店铺装修静态页
 if(isset($output['decoration_file'])) { 

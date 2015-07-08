@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['cms_site_name'] = '门户首页';
 $lang['cms_article'] = '资讯';

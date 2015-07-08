@@ -3,7 +3,7 @@
  * 验证码
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class seccodeControl{
 	public function __construct(){

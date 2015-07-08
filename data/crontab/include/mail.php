@@ -5,9 +5,9 @@
  * 建议10分钟触发一次
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class mailControl {
     private $_num = 50; // 每次发送消息数量

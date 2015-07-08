@@ -5,7 +5,7 @@
  *
  *********************************/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class themeControl extends BaseCircleThemeControl{
 	protected $c_id = 0;		// 圈子id

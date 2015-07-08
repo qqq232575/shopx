@@ -1,7 +1,9 @@
 <?php
 /**
  * 队列处理
- * @package    shopx team
+ *
+ *
+ * @package    library* www.33hao.com 专业团队 提供售后服务
  */
 
 class QueueClient {

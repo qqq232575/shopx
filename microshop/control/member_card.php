@@ -5,7 +5,7 @@
  *
  *
  *
- *by shopx team 
+ *by 33hao www.33hao.com 开发修正
  */
 
 class member_cardControl extends MircroShopControl{

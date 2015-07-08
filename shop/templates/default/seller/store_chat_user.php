@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div id="chatUserList" class="ncsc-chat-user-list">
   <?php if (is_array($output['list']) && !empty($output['list'])) { ?>

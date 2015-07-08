@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php $block_content = empty($block_content) ? $output['block_content'] : $block_content; ?>
 <?php $block_content = unserialize($block_content);?>
 <div>

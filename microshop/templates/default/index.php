@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript" src="<?php echo MICROSHOP_RESOURCE_SITE_URL;?>/js/jcarousel/jquery.jcarousel.min.js" charset="utf-8"></script>
 <link href="<?php echo MICROSHOP_RESOURCE_SITE_URL;?>/js/jcarousel/skins/personal/skin.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">

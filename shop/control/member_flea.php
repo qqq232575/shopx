@@ -1,10 +1,10 @@
 <?php
 /**
  * 我的闲置
- * by shopx
+ * by 33hao.com
  */
-defined('In_OS') or exit('Access Invalid!');
-class member_fleaControl extends BaseMemberControl{
+defined('InShopNC') or exit('Access Invalid!');
+class member_fleaControl extends BaseFleaMemberControl{
 	public function __construct() {
 		parent::__construct();
 		/**

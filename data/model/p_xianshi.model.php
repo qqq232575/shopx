@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class p_xianshiModel extends Model{
 
     const XIANSHI_STATE_NORMAL = 1;

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="cms-index-module-article2 module-style-<?php echo $value['module_style'];?>">
   <div class="cms-index-module-article-title"> 

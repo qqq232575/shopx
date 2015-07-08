@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="addshare">
 <div class="goods-pic"><span class="thumb size120"><i></i><img src="<?php echo cthumb($output['sharegoods_info']['snsgoods_goodsimage'], 240,$output['sharegoods_info']['snsgoods_storeid']);?>"/></span></div>

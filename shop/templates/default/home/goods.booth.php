@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="title">
 <h3>推广商品</h3></div>
 <div class="content" nc_type="current_display_mode">

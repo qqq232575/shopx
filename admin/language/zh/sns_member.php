@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['sns_member_tag_name_not_null']	= '會員標籤名稱不能為空';
 $lang['sns_member_tag_sort_is_number']	= '會員標籤排序只能為數字';

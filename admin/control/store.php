@@ -2,9 +2,9 @@
 /**
  * 店铺管理界面
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class storeControl extends SystemControl{
 	const EXPORT_SIZE = 1000;
@@ -227,6 +227,18 @@ class storeControl extends SystemControl{
             }
             $result = Model('store_joinin')->editStoreJoinin(array('member_id' => $member_id), $param);
             if ($result) {
+		//好商城V3-B11 更新店铺信息
+	    	$store_update = array();
+		$store_update['store_company_name']=$param['company_name'];
+		$store_update['area_info']=$param['company_address'];
+		$store_update['store_address']=$param['company_address_detail'];
+		$model_store = Model('store');
+		$store_info = $model_store->getStoreInfo(array('member_id'=>$member_id));
+		if(!empty($store_info)) {						
+                $r=$model_store->editStore($store_update, array('member_id'=>$member_id));
+
+		$this->log('编辑店铺信息' . '[ID:' . $r. ']', 1);
+		}
                 showMessage(L('nc_common_op_succ'), 'index.php?act=store&op=store');
             } else {
                 showMessage(L('nc_common_op_fail'));

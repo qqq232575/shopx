@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style type="text/css">
 .module-state-show { background-color: #FFF; }
 .module-state-hide { background-color: #CCC; }

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!'); return array (
+<?php defined('InShopNC') or exit('Access Invalid!'); return array (
   'ap_id' => '11',
   'ap_name' => '首页中上部banner',
   'ap_intro' => '物流自取广告',
@@ -11,7 +11,4 @@
   'adv_num' => '1',
   'click_num' => '0',
   'default_content' => 'banner.gif',
-  'adv_list' => 
-  array (
-  ),
 );

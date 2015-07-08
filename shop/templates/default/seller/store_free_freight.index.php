@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="tabmenu">
   <?php include template('layout/submenu');?>
@@ -13,6 +13,13 @@
 <i class="icon-renminbi"></i>
 </em>
         <p class="hint">默认为 0，表示不设置免运费额度，大于0表示购买金额超出该值后将免运费</p>
+      </dd>
+      <!--好 商城 V3-B 11 BY 33H AO.CO M-->
+	  <dt>预计配送到达时间<?php echo $lang['nc_colon'];?></dt>
+      <dd>
+        <input class="text w60" name="store_free_time" maxlength="10" type="text"  id="store_free_time" value="<?php echo $output['store_free_time'];?>" /><em class="add-on">
+天</em>
+        <p class="hint">默认为2天，填写0，表示默认不显示，建议填写数值为3天或7天</p>
       </dd>
     </dl>
     <div class="bottom">
@@ -32,12 +39,21 @@ $(function(){
 			store_free_price: {
 			required : true,
 			number : true
-			}
+			},
+			store_free_time: {
+			required : true,
+			digits : true
+			},
+			
         },
         messages : {
         	store_free_price: {
 				required : '请填写金额',
 				number : '请正确填写'
+			},
+			store_free_time: {
+				required : '请填写天数',
+				digits : '请正确填写，只能整数'
 			}
         }
     });    

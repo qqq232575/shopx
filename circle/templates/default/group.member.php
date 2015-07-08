@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="group warp-all">
 <?php require_once circle_template('group.top');?>
 <div class="base-layout mt20">

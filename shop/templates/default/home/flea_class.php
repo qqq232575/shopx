@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/jquery.select.park.js" charset="utf-8"></Script>
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/easySlider1.7.js" charset="utf-8"></Script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/dialog.js" id="dialog_js" charset="utf-8"></script> 

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style type="text/css">
 .container { width:1010px; margin:0 auto; }
 .button { border-radius: 2px; background: -moz-linear-gradient(center top, #f93, #c60) repeat scroll 0 0 rgba(0, 0, 0, 0); border: 1px solid #c93; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); color: #fff !important; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; line-height: normal; margin: 0 2px; min-width: 80px; outline: medium none; padding: 5px 13px 6px; text-align: center; text-decoration: none; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); transition: all 0.2s linear 0s; vertical-align: middle; width: auto !important; }
@@ -85,12 +85,12 @@ $member_id = base64_encode(intval($_SESSION['member_id'])*1);
         <div class="invite-form">
           <div class="invite-text"> 邀请链接： <span class="invite-help">复制下面的链接，通过QQ，旺旺，微博，论坛发帖等方式发给好友，对方通过该链接注册即可~</span> </div>
           <div>
-            <input type="text" readonly value="<?php echo ROOT_PATH;?>/#V3<?php echo $member_id;?>" class="std-input i-invite-link">
+            <input type="text" readonly value="<?php echo BASE_SITE_URL;?>/#V3<?php echo $member_id;?>" class="std-input i-invite-link">
             <a class="button copy-btn" data-url="<?php echo SHOP_TEMPLATES_URL;?>/images/invite/ZeroClipboard.swf" id="copy-button" href="javascrit:;" hidefocus="true">复制</a> </div>
         </div>
         <div class="invite-share-site clearfix"> 
           <!-- Baidu Button BEGIN -->
-          <p id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data="{'url':'<?php echo ROOT_PATH;?>/#V3<?php echo intval($_SESSION['member_id'])*1;?>'}"> <span class="bds_more">快捷邀请：</span> <a class="bds_qzone">QQ空间</a> <a class="bds_tsina">新浪微博</a> <a class="bds_tqq">腾讯微博</a> <a class="bds_taobao">我的淘宝</a> <a class="bds_renren">人人网</a> <a class="bds_douban">豆瓣</a> </p>
+          <p id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data="{'url':'<?php echo BASE_SITE_URL;?>/#V3<?php echo intval($_SESSION['member_id'])*1;?>'}"> <span class="bds_more">快捷邀请：</span> <a class="bds_qzone">QQ空间</a> <a class="bds_tsina">新浪微博</a> <a class="bds_tqq">腾讯微博</a> <a class="bds_taobao">我的淘宝</a> <a class="bds_renren">人人网</a> <a class="bds_douban">豆瓣</a> </p>
           <!-- Baidu Button END --> 
         </div>
         <div class="invite-rebate"><a href="<?php echo urlShop('member_points','index');?>" target="_blank" hidefocus="true"><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/invite/income.png"></a></div>
@@ -105,7 +105,7 @@ $member_id = base64_encode(intval($_SESSION['member_id'])*1);
       <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=645315" ></script> 
       <script type="text/javascript" id="bdshell_js"></script> 
       <script type="text/javascript">
-    var bds_config = {'bdText':'购买这么多年，才发现，原来在【<?php echo $output['setting_config']['site_name']; ?>】购买东西这么便宜的，赶紧试试吧，一般人我不告诉他！','bdPic':'<?php echo ROOT_PATH;?>/data/upload/shop/adv/snsspic.png','bdDesc':'分享个我的购物省钱小窍门，我在【<?php echo $output['setting_config']['site_name']; ?>】购买的都是正品，超便宜，省钱So easy！','review':'off'};
+    var bds_config = {'bdText':'购买这么多年，才发现，原来在【<?php echo $output['setting_config']['site_name']; ?>】购买东西这么便宜的，赶紧试试吧，一般人我不告诉他！','bdPic':'<?php echo BASE_SITE_URL;?>/data/upload/shop/adv/snsspic.png','bdDesc':'分享个我的购物省钱小窍门，我在【<?php echo $output['setting_config']['site_name']; ?>】购买的都是正品，超便宜，省钱So easy！','review':'off'};
     document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
 </script> 
       <!-- Baidu Button END --> </div>

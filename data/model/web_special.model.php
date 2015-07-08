@@ -3,9 +3,9 @@
  * 商城专题模型
  *
  * @copyright  QQ355716601
- * @link       http://shopxcom.taobao.com
+ * @link       http://33haocom.taobao.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class web_specialModel extends Model{
 
     public function __construct(){

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <!-- 店铺信息 -->
 
@@ -27,20 +27,21 @@
             <p class="emphasis">店铺名称注册后不可修改，请认真填写。</p></td>
         </tr>
         <tr>
-          <th><i>*</i>店铺等级：</th>
-          <td><select name="sg_id" id="sg_id">
-              <option value="">请选择</option>
-              <?php if(!empty($output['grade_list']) && is_array($output['grade_list'])){ ?>
-              <?php foreach($output['grade_list'] as $k => $v){ ?>
-              <?php $goods_limit = empty($v['sg_goods_limit'])?'不限':$v['sg_goods_limit'];?>
-              <?php $explain = '商品数：'.$goods_limit.' 模板数：'.$v['sg_template_number'].' 收费标准：'.$v['sg_price'].' 元/年 附加功能：'.$v['function_str'];?>
-              <option value="<?php echo $v['sg_id'];?>"><?php echo $v['sg_name'];?> (<?php echo $explain;?>)</option>
-              <?php } ?>
-              <?php } ?>
-            </select>
-            <span></span>
-        </td>
-        </tr>
+            <th><i>*</i>店铺等级：</th>
+            <td><select name="sg_id" id="sg_id">
+                <option value="0">请选择</option>
+                <?php if(!empty($output['grade_list']) && is_array($output['grade_list'])){ ?>
+                <?php foreach($output['grade_list'] as $k => $v){ ?>
+                <?php $goods_limit = empty($v['sg_goods_limit'])?'不限':$v['sg_goods_limit'];?>
+                <?php $explain = '商品数：'.$goods_limit.' 模板数：'.$v['sg_template_number'].' 收费标准：'.$v['sg_price'].' 附加功能：'.$v['function_str'];?>
+                <option value="<?php echo $v['sg_id'];?>" data-explain="<?php echo $explain;?>"><?php echo $v['sg_name'];?></option>
+                <?php } ?>
+                <?php } ?>
+              </select>
+              <input id="sg_name" name="sg_name" type="hidden" />
+              <span></span>
+              <div id="grade_explain" class="grade_explain"></div></td>
+          </tr>
         <tr>
           <th><i>*</i>开店时长：</th>
           <td><select name="joinin_year" id="joinin_year">
@@ -77,7 +78,9 @@
               <input id="btn_cancel_category" type="button" value="取消" />
             </div>
             <input id="store_class" name="store_class" type="hidden" />
-            <span></span></td>
+            <span></span>
+	    <p class="emphasis" id="gc_classtip"></p>
+	    </td>
         </tr>
         <tr>
           <td colspan="2"><table border="0" cellpadding="0" cellspacing="0" id="table_category" class="type">
@@ -201,6 +204,7 @@ $(document).ready(function(){
                 class_count++;
             } else {
                 validation = false;
+		$('#gc_classtip').html('请选择最后一级分类');
             }
             i++;
         });
@@ -236,7 +240,22 @@ $(document).ready(function(){
         $('#gcategory').hide();
         $('#btn_select_category').show();
     });
-
+	//v 3-b1 1
+    $('#sg_id').on('change', function() {
+        if($(this).val() > 0) {
+            $('#grade_explain').text($(this).find('option:selected').attr('data-explain'));
+            $('#sg_name').val($(this).find('option:selected').text());
+        } else {
+            $('#sg_name').val('');
+        }
+    });
+    $('#sc_id').on('change', function() {
+        if($(this).val() > 0) {
+            $('#sc_name').val($(this).find('option:selected').text());
+        } else {
+            $('#sc_name').val('');
+        }
+    });
     $('#btn_apply_store_next').on('click', function() {
         $('#form_store_info').submit();
     });

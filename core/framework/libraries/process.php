@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /**
  * 连续操作验证
@@ -153,9 +153,9 @@ class process{
 /**
  * lock表 操作
  *
- * @package    shopx team
+ * @package    library* www.33hao.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class lock {
 	private $model;

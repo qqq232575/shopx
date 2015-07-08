@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <ul class="circle-more-membertheme">
   <?php if(!empty($output['more_membertheme']) && is_array($output['more_membertheme'])) {?>

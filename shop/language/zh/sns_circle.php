@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 // control
 $lang['sns_my_theme']	= '我發佈的話題';
 $lang['sns_TA_theme']	= 'TA發佈的話題';

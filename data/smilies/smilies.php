@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 $smilies_array = array ();
 $smilies_array['searcharray'] = array(1=>'/'.preg_quote(htmlspecialchars(":smile:"),'/').'/',
 									  2=>'/'.preg_quote(htmlspecialchars(":sad:"),'/').'/',

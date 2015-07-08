@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.ajaxContent.pack.js"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/i18n/zh-CN.js"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/common_select.js"></script>
@@ -253,12 +253,12 @@
             <div class="selection">
               <input name="b_name" id="b_name" value="<?php echo $output['goods']['brand_name'];?>" type="text" class="text w180" readonly="readonly" />
               <input type="hidden" name="b_id" id="b_id" value="<?php echo $output['goods']['brand_id'];?>" />
-              <em class="add-on"><i class="icon-collapse"></i></em></div>
+              <em class="add-on" nctype="add-on"><i class="icon-collapse"></i></em></div>
             <div class="ncsc-brand-select-container">
               <div class="brand-index" data-tid="<?php echo $output['goods_class']['type_id'];?>" data-url="<?php echo urlShop('store_goods_add', 'ajax_get_brand');?>">
                 <div class="letter" nctype="letter">
                   <ul>
-                    <li><a href="javascript:void(0);" data-letter="all">全部品牌</a></li>
+                    <li><a href="javascript:void(0);" data-letter="all">全部</a></li>
                     <li><a href="javascript:void(0);" data-letter="A">A</a></li>
                     <li><a href="javascript:void(0);" data-letter="B">B</a></li>
                     <li><a href="javascript:void(0);" data-letter="C">C</a></li>
@@ -286,6 +286,7 @@
                     <li><a href="javascript:void(0);" data-letter="Y">Y</a></li>
                     <li><a href="javascript:void(0);" data-letter="Z">Z</a></li>
                     <li><a href="javascript:void(0);" data-letter="0-9">其他</a></li>
+                    <li><a href="javascript:void(0);" data-empty="0">清空</a></li>
                   </ul>
                 </div>
                 <div class="search" nctype="search">
@@ -686,7 +687,7 @@
               <input type="text" class="w80 text" name="starttime" disabled="disabled" style="background:#E7E7E7 none;" id="starttime" value="<?php echo date('Y-m-d');?>" />
               <select disabled="disabled" style="background:#E7E7E7 none;" name="starttime_H" id="starttime_H">
                 <?php foreach ($output['hour_array'] as $val){?>
-                <option value="<?php echo $val;?>" <?php $sign_H = 0;if($val>=date('H') && $sign_H != 1){?>selected="selected"<?php $sign_H = 1;}?>><?php echo $val;?></option>
+                <option value="<?php echo $val;?>" <?php $sign_h = 0;if($val>=date('h') && $sign_h != 1){?>selected="selected"<?php $sign_H = 1;}?>><?php echo $val;?></option>
                 <?php }?>
               </select>
               <?php echo $lang['store_goods_step2_hour'];?>

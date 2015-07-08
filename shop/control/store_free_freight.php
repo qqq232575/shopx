@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_free_freightControl extends BaseSellerControl {
 
     public function __construct(){
@@ -18,11 +18,13 @@ class store_free_freightControl extends BaseSellerControl {
         $model_store = Model('store');
         if (chksubmit()) {
             $store_free_price = floatval(abs($_POST['store_free_price']));
-            $model_store->editStore(array('store_free_price'=>$store_free_price),array('store_id'=>$_SESSION['store_id']));
+			$store_free_time = $_POST['store_free_time'];
+            $model_store->editStore(array('store_free_price'=>$store_free_price,'store_free_time'=>$store_free_time),array('store_id'=>$_SESSION['store_id']));
             showDialog(L('nc_common_save_succ'),'reload','succ');
         }
         Tpl::output('store_free_price',$this->store_info['store_free_price']);
-        self::profile_menu('free_freight','free_freight');
+		Tpl::output('store_free_time',$this->store_info['store_free_time']);
+        self::profile_menu('daddress','free_freight');
         Tpl::showpage('store_free_freight.index');
 	}
 

@@ -3,7 +3,7 @@
  * 队列
  *
  * 
- * by shopx team www.yywxx.com 二次开发修正版本
+ * by 33hao www.33hao.com 二次开发修正版本
  */
 
 
@@ -11,7 +11,7 @@ define('APP_ID','queue');
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__)));
 
 if (!@include(dirname(dirname(__FILE__)).'/global.php')) exit('global.php isn\'t exists!');
-if (!@include(BASE_CORE_PATH.'/init.php')) exit('init.php isn\'t exists!');
+if (!@include(BASE_CORE_PATH.'/33hao.php')) exit('33hao.php isn\'t exists!');
 
 if (empty($_SERVER['argv'][1]) || empty($_SERVER['argv'][2])) exit('parameter error');
 

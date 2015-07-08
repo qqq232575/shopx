@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <dl style="padding:10px 30px;line-height:30px">
 <dd>JavaScript:</dd>
   <dd >

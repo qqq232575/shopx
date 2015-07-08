@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php if(!empty($output['goods_list']) && is_array($output['goods_list'])){ ?>
 
 <ul class="dialog-goodslist-s2">

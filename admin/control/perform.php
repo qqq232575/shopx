@@ -4,7 +4,7 @@
  *
  *  by 33 hao .com v3
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class performControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

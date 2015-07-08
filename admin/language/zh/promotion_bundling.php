@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 // index
 $lang['promotion_unavailable'] = '商品促銷功能尚未開啟';

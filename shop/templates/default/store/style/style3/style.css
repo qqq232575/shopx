@@ -1,16 +1,16 @@
 /* ============== */
 /* 店铺模板玩具风格 */
-/* shopx      */
-/* www.yywxx.com */
+/* @33hao      */
+/* www.33hao.com */
 /* Apr-14-2012    */
 /* ============== */
 
 
-body { background: #F7FBFF url(images/body_bg.png) repeat-x center 206px;}
+body { background: #F7FBFF url(images/body_bg.png) repeat-x center 121px;}
 a { color: #2E2E2E; }
 a:hover { text-decoration: none; color: #0085CF;}
 /* 导航区域布局控制 */
-.ncsl-nav { position: relative; z-index: 1; width: 1000px; height: 320px; margin: 55px auto 0 auto;}
+.ncsl-nav { position: relative; z-index: 1; width: 1200px; height: 320px; margin: 55px auto 0 auto;}
 /* 导航上部图片控制 */
 .ncsl-nav .banner img { position: absolute; z-index: 1; left:0; top: 0;}
 .ncs-default-banner { background-image: url(images/header.gif); background-repeat: no-repeat; height: 260px; width: 1000px; display: block; position:absolute; z-index: 3; left:0; top: 0;}
@@ -22,7 +22,7 @@ a:hover { text-decoration: none; color: #0085CF;}
 #nav li.normal a span, #nav li.active a span {font-family:"microsoft yahei"; font-size: 18px; font-weight: 600; line-height: 36px; color: #8AC7F9; text-overflow: ellipsis; white-space: nowrap; max-width:160px; height: 36px; float: left; overflow: hidden; }
 #nav li.normal a:hover span {color: #F979B5;}
 #nav li.active a span, #nav li.active a:hover span { color: #F979B5; }
-/* (nc-s-c-s) full name -> shopx Store Container Style */
+/* (nc-s-c-s) full name -> ShopNC Store Container Style */
 .ncs-sidebar-container { box-shadow: 0 -2px 2px rgba(0,0,0,0.1); border-radius: 5px;}
 .ncs-sidebar-container .title { background: url(images/sidebar_title.png) no-repeat scroll 0% 0%; height: 48px; }
 .ncs-sidebar-container .title h4 { font-size: 12px; color:#936; line-height: 22px; margin: 8px 0 18px 14px; display: inline-block; text-shadow: 1px 1px 0 rgba(255,255,255,1);}

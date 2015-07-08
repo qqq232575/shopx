@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
     function show_list(t_id){
         var obj = $(".sidebar dl[show_id='"+t_id+"']");

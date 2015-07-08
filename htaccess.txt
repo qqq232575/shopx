@@ -1,7 +1,7 @@
 # 将 RewriteEngine 模式打开
 RewriteEngine On
 
-# 如果商城程序存放于/shopx下，需将下行更改为 RewriteBase /shopx
+# 如果商城程序存放于/33hao下，需将下行更改为 RewriteBase /33hao
 RewriteBase /
 
 # apache ,iis 伪静态规则

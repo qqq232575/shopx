@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
       <?php if($item_edit_flag) { ?>
 <table class="table tb-type2" id="prompt">
     <tbody>

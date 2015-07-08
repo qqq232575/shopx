@@ -2,9 +2,9 @@
 /**
  * 用户消息模板模型
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class member_msg_settingModel extends Model{
     public function __construct() {
         parent::__construct('member_msg_setting');

@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit ('Access Invalid!');
+defined('InShopNC') or exit ('Access Invalid!');
 class store_goods_onlineControl extends BaseSellerControl {
     public function __construct() {
         parent::__construct ();
@@ -250,7 +250,7 @@ class store_goods_onlineControl extends BaseSellerControl {
 
         // 三方店铺验证是否绑定了该分类
         if (!checkPlatformStore()) {
-            //商品分类 by shopx team. com 提供批量显示所有分类插件
+            //商品分类 by 33hao. com 提供批量显示所有分类插件
             $model_bind_class = Model('store_bind_class');
             $goods_class = Model('goods_class')->getGoodsClassForCacheModel();
             $where['store_id'] = $_SESSION['store_id'];
@@ -1232,5 +1232,41 @@ class store_goods_onlineControl extends BaseSellerControl {
         Tpl::output ( 'member_menu', $menu_array );
         Tpl::output ( 'menu_key', $menu_key );
     }
+	//好商城V3-B11 批量生成二维码
+	public function maker_qrcodeOp()
+	{
+		$store_id=$_SESSION['store_id'];
+        require_once(BASE_RESOURCE_PATH.DS.'phpqrcode'.DS.'index.php');
+        $PhpQRCode = new PhpQRCode();
+        $PhpQRCode->set('pngTempDir',BASE_UPLOAD_PATH.DS.ATTACH_STORE.DS.$_SESSION['store_id'].DS);
+		$model_goods = Model('goods');
+		$where=array();
+	    $where['store_id'] = $store_id;
+		$lst=$model_goods->getGoodsList($where,'goods_id');
+		if(empty($lst))
+		{
+			echo '未找到商品信息';
+			retrun;
+		}
+		foreach($lst as $k=>$v)
+		{
+			$goods_id=$v['goods_id'];
+			$qrcode_url=WAP_SITE_URL . '/tmpl/product_detail.html?goods_id='.$goods_id;
+			$PhpQRCode->set('date',$qrcode_url);
+			$PhpQRCode->set('pngTempName', $goods_id . '.png');
+			$PhpQRCode->init();
+			echo '生成成功'.$qrcode_url;
+			echo '<br/>';
+		}
+		
+		//生成店铺二维码
+		$qrcode_url=WAP_SITE_URL . '/tmpl/go_store.html?store_id='.$store_id;
+		$PhpQRCode->set('date',$qrcode_url);
+		$PhpQRCode->set('pngTempName', $store_id . '_store.png');
+		$PhpQRCode->init();
+		echo '生成店铺二维码成功'.$qrcode_url;
+		echo '<br/>';
+		echo '<br/><b>全部生成完成</b>';
+	}
 
 }

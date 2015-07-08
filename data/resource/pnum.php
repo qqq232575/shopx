@@ -1,10 +1,10 @@
 <?php
 /**
- shopx 提供
+好商城V3 33hao.com 提供
 
-网址：www.yywxx.com
+网址：www.33hao.com
 
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  */
 $pnum = $_GET['pnum'];

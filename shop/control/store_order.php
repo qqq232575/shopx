@@ -4,10 +4,10 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_orderControl extends BaseSellerControl {
     public function __construct() {
         parent::__construct();
@@ -58,7 +58,7 @@ class store_orderControl extends BaseSellerControl {
         	//显示调整运费
         	$order_info['if_modify_price'] = $model_order->getOrderOperateState('modify_price',$order_info);
 			
-			//显示调整费用
+		//显示修改价格
         	$order_info['if_spay_price'] = $model_order->getOrderOperateState('spay_price',$order_info);
 
         	//显示发货
@@ -148,7 +148,7 @@ class store_orderControl extends BaseSellerControl {
         //显示系统自动取消订单日期
         if ($order_info['order_state'] == ORDER_STATE_NEW) {
             //$order_info['order_cancel_day'] = $order_info['add_time'] + ORDER_AUTO_CANCEL_DAY * 24 * 3600;
-			// by shopx
+			// by 33hao.com
 			$order_info['order_cancel_day'] = $order_info['add_time'] + ORDER_AUTO_CANCEL_DAY + 3 * 24 * 3600;
         }
 
@@ -163,7 +163,7 @@ class store_orderControl extends BaseSellerControl {
         //显示系统自动收获时间
         if ($order_info['order_state'] == ORDER_STATE_SEND) {
             //$order_info['order_confirm_day'] = $order_info['delay_time'] + ORDER_AUTO_RECEIVE_DAY * 24 * 3600;
-			//by shopx
+			//by 33hao.com
 			$order_info['order_confirm_day'] = $order_info['delay_time'] + ORDER_AUTO_RECEIVE_DAY + 15 * 24 * 3600;
         }
 
@@ -214,42 +214,14 @@ class store_orderControl extends BaseSellerControl {
 		$condition['order_id'] = $order_id;
 		$condition['store_id'] = $_SESSION['store_id'];
 		$order_info	= $model_order->getOrderInfo($condition);
-		//str by shopx 调整资费
-		Tpl::output('order_info',$order_info);
-		try {
-		
-		    $model_order->beginTransaction();
 
-    		if ($state_type == 'order_cancel') {
-			
-				$result = $this->_order_cancel($order_info,$_POST); //new
-			
-			
-    		    $this->_change_state_order_cancel($order_info);
-    		    $message = Language::get('store_order_cancel_success');
-    		} elseif ($state_type == 'modify_price') {
-				$result = $this->_order_ship_price($order_info,$_POST);//new
-			
-    		    $this->_change_state_modify_price($order_info);
-    		    $message = Language::get('store_order_edit_ship_success');
-    		}elseif($state_type == 'edit_amount_price'){
-				$this->_change_state_amount_price($order_info);
-    		    $message = Language::get('store_order_edit_amount_success');
-			}
-
-    		$model_order->commit();
-    		showDialog($message,'reload','succ',empty($_GET['inajax']) ?'':'CUR_DIALOG.close();');
-
-		} catch (Exception $e) {
-		    $model_order->rollback();
-		    showDialog($e->getMessage(),'','error',empty($_GET['inajax']) ?'':'CUR_DIALOG.close();');
-		}
-		//end by shopx 调整资费 以下为原代码
-		/*if ($_GET['state_type'] == 'order_cancel') {
+		if ($_GET['state_type'] == 'order_cancel') {
 		    $result = $this->_order_cancel($order_info,$_POST);
 		} elseif ($_GET['state_type'] == 'modify_price') {
 		    $result = $this->_order_ship_price($order_info,$_POST);
-		}*/
+		} elseif ($_GET['state_type'] == 'spay_price') {
+			$result = $this->_order_spay_price($order_info,$_POST);
+    		}
         if (!$result['state']) {
             showDialog($result['msg'],'','error',empty($_GET['inajax']) ?'':'CUR_DIALOG.close();');
         } else {
@@ -257,35 +229,6 @@ class store_orderControl extends BaseSellerControl {
         }
 	}
 
-		/**
-	 * 修改费用
-	 * @param unknown $order_info
-	 */
-	private function _change_state_amount_price($order_info) {
-	    $order_id = $order_info['order_id'];
-	    $model_order = Model('order');
-	    if(chksubmit()) {
-	        $data = array();
-	        $data['order_amount'] = abs(floatval($_POST['order_amount']));
-	        $update = $model_order->editOrder($data,array('order_id'=>$order_id));
-	        if (!$update) {
-	            throw new Exception(L('store_order_edit_amount_fail'));
-	        }
-	        //记录订单日志
-	        $data = array();
-	        $data['order_id'] = $order_id;
-	        $data['log_role'] = 'seller';
-			$data['log_user'] = $_SESSION['member_name'];
-	        $data['log_msg'] = '调整了费用';
-	        $model_order->addOrderLog($data);
-	    } else {
-	        Tpl::output('order_id',$order_id);
-	        Tpl::showpage('store_order.edit_amount_price','null_layout');
-	        exit();
-	    }
-	}
-	
-	
 	/**
 	 * 取消订单
 	 * @param unknown $order_info
@@ -330,6 +273,27 @@ class store_orderControl extends BaseSellerControl {
         }
 
 	}
+	/**
+	 * 修改商品价格
+	 * @param unknown $order_info
+	 */
+	private function _order_spay_price($order_info, $post) {
+        $model_order = Model('order');
+	    $logic_order = Logic('order');
+	    if(!chksubmit()) {
+	        Tpl::output('order_info',$order_info);
+	        Tpl::output('order_id',$order_info['order_id']);
+            Tpl::showpage('store_order.edit_spay_price','null_layout');
+            exit();
+        } else {
+            $if_allow = $model_order->getOrderOperateState('spay_price',$order_info);
+            if (!$if_allow) {
+                return callback(false,'无权操作');
+            }
+            return $logic_order->changeOrderSpayPrice($order_info,'seller',$_SESSION['member_name'],$post['goods_amount']); 
+	    }
+	}
+
 
 	/**
 	 * 用户中心右边，小导航

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="comment-widget">
   <div class="comment-edit">
     <form id="commentform_<?php echo $output['stid'];?>" method="post" action="index.php?act=store_snshome&op=addcomment">

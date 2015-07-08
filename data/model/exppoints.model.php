@@ -2,14 +2,14 @@
 /**
  * 经验值及经验值日志管理
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class exppointsModel extends Model{
 	/**
 	 * 操作经验值
-	 * @author shopx Develop Team
+	 * @author ShopNC Develop Team
 	 * @param  string $stage 操作阶段 login(登录),comments(评论),order(下单)
 	 * @param  array $insertarr 该数组可能包含信息 array('exp_memberid'=>'会员编号','exp_membername'=>'会员名称','exp_points'=>'经验值','exp_desc'=>'描述','orderprice'=>'订单金额','order_sn'=>'订单编号','order_id'=>'订单序号');
 	 * @param  bool $if_repeat 是否可以重复记录的信息,true可以重复记录，false不可以重复记录，默认为true

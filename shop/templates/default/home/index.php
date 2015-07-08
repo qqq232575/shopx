@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/index.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<?php echo SHOP_RESOURCE_SITE_URL;?>/js/home_index.js" charset="utf-8"></script>
 <!--[if IE 6]>
@@ -7,15 +7,16 @@
 <script type="text/javascript">
 var uid = window.location.href.split("#V3");
 var  fragment = uid[1];
-if (fragment.indexOf("V3") == 0) {document.cookie='uid=0';}
+if(fragment){
+	if (fragment.indexOf("V3") == 0) {document.cookie='uid=0';}
 else {document.cookie='uid='+uid[1];}
+	}
+
 </script>
 <style type="text/css">
 .category { display: block !important; }
 </style>
 <div class="clear"></div>
-
-<?php //     require_once template('plugin/fixed_search_bar'); ?>
 
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
@@ -144,9 +145,13 @@ else {document.cookie='uid='+uid[1];}
 <!--首页底部保障结束-->
 <!--StandardLayout Begin-->
 <div class="nav_Sidebar">
-<?php foreach($output['arr_floor'] as $key => $value){ ?>
-<a class="nav_Sidebar_<?php echo $key; ?>" href="javascript:;" ><?php echo $value['floor_level']; ?></a>
-<?php } ?>
-
+<a class="nav_Sidebar_1" href="javascript:;" ></a>
+<a class="nav_Sidebar_2" href="javascript:;" ></a>
+<a class="nav_Sidebar_3" href="javascript:;" ></a>
+<a class="nav_Sidebar_4" href="javascript:;" ></a>
+<a class="nav_Sidebar_5" href="javascript:;" ></a>
+<a class="nav_Sidebar_6" href="javascript:;" ></a> 
+<a class="nav_Sidebar_7" href="javascript:;" ></a>
+<a class="nav_Sidebar_8" href="javascript:;" ></a>
 </div>
 <!--StandardLayout End-->

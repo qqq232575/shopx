@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style>
 .ncc-table-style tbody tr.item_disabled td {
 	background: none repeat scroll 0 0 #F9F9F9;

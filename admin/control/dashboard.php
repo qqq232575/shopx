@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class dashboardControl extends SystemControl{
 	public function __construct(){
@@ -37,9 +37,9 @@ class dashboardControl extends SystemControl{
 		$statistics['shop_version'] = $version;
 		$statistics['setup_date'] = substr($setup_date,0,10);
 
-        // shopx c extension
+        // 33hao c extension
         try {
-            $r = new ReflectionExtension('shopx');
+            $r = new ReflectionExtension('shopnc');
             $statistics['php_version'] .= ' / ' . $r->getVersion();
         } catch (ReflectionException $ex) {
         }

@@ -5,12 +5,12 @@
  *
  *
  *
- * by shopx  运营版
+ * by www.shopjl.com 运营版
  */
 
+use Shopnc\Tpl;
 
-
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class loginControl extends mobileHomeControl {
 
@@ -18,25 +18,37 @@ class loginControl extends mobileHomeControl {
 		parent::__construct();
 	}
 
+    private function isQQLogin(){
+        return !empty($_GET[type]);
+    }
 	/**
 	 * 登录
 	 */
 	public function indexOp(){
-        if(empty($_POST['username']) || empty($_POST['password']) || !in_array($_POST['client'], $this->client_type_array)) {
-            output_error('登录失败');
+        if(!$this->isQQLogin()){
+            if(empty($_POST['username']) || empty($_POST['password']) || !in_array($_POST['client'], $this->client_type_array)) {
+                output_error('登录失败');
+            }
         }
-
 		$model_member = Model('member');
-
         $array = array();
-        $array['member_name']	= $_POST['username'];
-        $array['member_passwd']	= md5($_POST['password']);
+        if($this->isQQLogin()){
+            $array['member_qqopenid']	= $_SESSION['openid'];
+        }else{
+            $array['member_name']	= $_POST['username'];
+            $array['member_passwd']	= md5($_POST['password']);
+        }
         $member_info = $model_member->getMemberInfo($array);
-
         if(!empty($member_info)) {
             $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
-            if($token) {
-                output_data(array('username' => $member_info['member_name'], 'key' => $token));
+            if($token){
+                    if($this->isQQLogin()){
+                        setNc2Cookie('username',$member_info['member_name']);
+                        setNc2Cookie('key',$token);
+                        header("location:".WAP_SITE_URL.'/tmpl/member/member.html?act=member');
+                    }else{
+                        output_data(array('username' => $member_info['member_name'], 'key' => $token));
+                    }
             } else {
                 output_error('登录失败');
             }
@@ -56,7 +68,7 @@ class loginControl extends mobileHomeControl {
         //$condition = array();
         //$condition['member_id'] = $member_id;
         //$condition['client_type'] = $_POST['client'];
-        //$model_mb_user_token->delMbUserToken($condition);
+        //$model_mb_user_token->delMbUserToken($condition); ww w.sho pjl.co m出 品
 
         //生成新的token
         $mb_user_token_info = array();
@@ -65,7 +77,7 @@ class loginControl extends mobileHomeControl {
         $mb_user_token_info['member_name'] = $member_name;
         $mb_user_token_info['token'] = $token;
         $mb_user_token_info['login_time'] = TIMESTAMP;
-        $mb_user_token_info['client_type'] = $_POST['client'];
+        $mb_user_token_info['client_type'] = $_POST['client'] == null ? 'Android' : $_POST['client'] ;
 
         $result = $model_mb_user_token->addMbUserToken($mb_user_token_info);
 

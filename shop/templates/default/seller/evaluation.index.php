@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="tabmenu">
     <ul id="listpj" class="tab">
         <li class="active"><a href="<?php echo urlShop('store_evaluate', 'list');?>"><?php echo $lang['member_evaluation_frombuyer'];?></a></li>

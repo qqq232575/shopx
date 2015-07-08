@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="sns-main-all">
   <div class="tabmenu"><?php if($output['relation'] == '3'){?>
     <div class="release-banner">

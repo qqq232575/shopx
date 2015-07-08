@@ -1,13 +1,13 @@
 <?php
 /**
  *
- *  instller
+ * 好商城V3 instller
  *
  *
  */
  error_reporting (0);
  
-define('In_OS',true);
+define('InShopNC',true);
 
 // 设置最大执行时间
 set_time_limit(0);
@@ -42,13 +42,13 @@ if (file_exists('lock') && $_GET['step'] != 5){
 
 //define variable
 
-$html_title = 'shopx  最新版 安装程序';
+$html_title = '33hao.com 好商城V3 最新版 安装程序';
 
 $html_header = <<<EOF
 <div class="header">
   <div class="layout">
     <div class="title">
-      <h5>shopx  最新版 安装程序</h5>
+      <h5>33hao.com 好商城V3 最新版 安装程序</h5>
       <h2>系统安装向导</h2>
     </div>
     <div class="version">版本: 2015.2</div>
@@ -59,7 +59,7 @@ EOF;
 
 $html_footer = <<<EOF
 <div class="footer">
-  <h6><a href="http://www.yywxx.com" target="_blank">程序来源于 shopx项目小组</a></h6>
+  <h6><a href="http://www.33hao.com" target="_blank">程序来源于 bbs.33hao.com</a></h6>
 </div>
 EOF;
 

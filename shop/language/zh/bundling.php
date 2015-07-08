@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['bundling_cost_price']		= '原&emsp;價';
 $lang['bundling_price']				= '促銷價';

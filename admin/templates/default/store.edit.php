@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style type="text/css">
 .d_inline {
       display:inline;
@@ -88,7 +88,7 @@
           <td class="vatop rowform"><input type="text" value="<?php echo $output['store_array']['store_end_time'];?>" id="end_time" name="end_time" class="txt date"></td>
           <td class="vatop tips"><?php echo $lang['formart'];?></td>
         </tr>
-<!--店铺保障开-by shopx-->
+<!--店铺保障开-by 33hao.com-->
 <td class="vatop tips"></td>
         </tr>
         <tr>
@@ -176,7 +176,7 @@
 				</div>
 			</td>
 		</tr>
-<!--店铺保障- by shopx -->	
+<!--店铺保障- by 33hao.com -->	
         <tr>
           <td colspan="2" class="required"><label>
             <label for="state"><?php echo $lang['state'];?>:</label>

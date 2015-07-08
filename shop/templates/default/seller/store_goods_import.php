@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.ajaxContent.pack.js"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/i18n/zh-CN.js"></script>
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/common_select.js"></script>
@@ -10,6 +10,27 @@
 <script src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.poshytip.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/fileupload/jquery.fileupload.js" charset="utf-8"></script>
+
+
+
+<script type="text/javascript">
+function pre_submit()
+{
+	var sels=$("#gcategory").find("select");
+	var i=0;
+	var txt="";
+	 sels.each(function(){
+		 i++;
+		 $(this).attr("name","cls_"+i);
+		 var tmp=$(this).find("option:selected").text();
+		 if(i!=3)tmp+="&gt;";
+		 txt+=tmp;
+		
+	 });
+	 $("#cate_name").val(txt);
+	 return true;
+}
+</script>
 <!-- S setp -->
 <ul class="add-goods-step">
   <li style="width:32%;" class="<?php $output['step']=="1" ? print "current" : print "";?>"><i class="icon icon-list-alt"></i>
@@ -27,7 +48,7 @@
     <li><?php echo $lang['store_goods_import_csv_desc'];?></li>
   </ul>
 </div>
-<form method="post" action="index.php?act=taobao_import&op=index" enctype="multipart/form-data" id="goods_form">
+<form method="post" action="index.php?act=taobao_import&op=index" enctype="multipart/form-data" id="goods_form" onsubmit="return pre_submit();">
   <div class="ncsc-form-goods"  <?php if($output['step'] != '1'){?> style="display:none"<?php }?>>
     <dl>
       <dt><i class="required">*</i>CSV文件：</dt>
@@ -53,7 +74,7 @@
         </span> <span nctype="gc2"></span> <span nctype="gc3"></span>
         <p>请选择商品分类（必须选到最后一级）</p>
         <input type="hidden" id="gc_id" name="gc_id" value="" class="mls_id" />
-        <input type="hidden" name="cate_name" value="" class="mls_names"/>
+        <input type="hidden" id="cate_name" name="cate_name" value="" class="mls_names"/>
         </dd>
     </dl>
     

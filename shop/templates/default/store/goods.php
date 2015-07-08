@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/home_goods.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .ncs-goods-picture .levelB, .ncs-goods-picture .levelC { cursor: url(<?php echo SHOP_TEMPLATES_URL;?>/images/shop/zoom.cur), pointer;}
@@ -113,6 +113,12 @@
         </dl>
         <?php }?>
         <!-- E 物流运费 --->
+        
+        <!--送达时间 begin  -->
+        <?php if ($output['store_info']['store_free_time'] >= '1') {?>
+		 <dl><dt>服　　务：</dt><dd>由 <a href="<?php echo urlShop('show_store', 'index', array('store_id' => $output['store_info']['store_id']), $output['store_info']['store_domain']);?>" ><font color="#D93600"><b><?php echo $output['store_info']['store_name']; ?></b></font></a> 发货并提供售后服务。18:00 前完成下单，预计(<font color="#D93600"><b><?php $showtime=date("Y-m-d H:i:s"); echo date('m月d日',strtotime($showtime . '+'. $output['store_info']['store_free_time'].' day')); ?></b></font>) 送达</dd></dl>
+         <?php }?>
+		<!--送达时间 end  -->
 
         <!-- S 赠品 -->
         <?php if ($output['goods']['have_gift'] == 'gift') {?>
@@ -234,19 +240,30 @@
           <div>销售时间：<?php echo date('Y-m-d H:i:s', $output['goods']['appoint_satedate']);?></div>
           <a href="javascript:void(0);" nctype="appoint_submit" class="addcart" title="立即预约">立即预约</a>
           <?php }?>
+         
+         
+         <!-- v3-b11 限制购买-->
+         <?php if ($output['IsHaveBuy']=="0") {?>
           <!-- 立即购买-->
           <a href="javascript:void(0);" nctype="buynow_submit" class="buynow <?php if ($output['goods']['goods_state'] == 0 || $output['goods']['goods_storage'] <= 0 || ($output['goods']['is_virtual'] == 1 && $output['goods']['virtual_indate'] < TIMESTAMP)) {?>no-buynow<?php }?>" title="<?php echo $output['goods']['buynow_text'];?>"><?php echo $output['goods']['buynow_text'];?></a>
           <?php if ($output['goods']['cart'] == true) {?>
           <!-- 加入购物车-->
           <a href="javascript:void(0);" nctype="addcart_submit" class="addcart <?php if ($output['goods']['goods_state'] == 0 || $output['goods']['goods_storage'] <= 0) {?>no-addcart<?php }?>" title="<?php echo $lang['goods_index_add_to_cart'];?>"><i class="icon-shopping-cart"></i><?php echo $lang['goods_index_add_to_cart'];?></a>
           <?php } ?>
+         <?php } ?>
+         <?php if ($output['IsHaveBuy']=="1") {?>
+         <a href="javascript:void(0);" class="buynow no-buynow title="您已参加本次抢购">您已参加本次抢购</a>
+         
+         <?php } ?>
+          
+          <!-- v3-b11 end-->
 
           <!-- S 加入购物车弹出提示框 -->
           <div class="ncs-cart-popup">
             <dl>
-              <dt><?php echo $lang['goods_index_cart_success'];?><a title="<?php echo $lang['goods_index_close'];?>" onClick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
+              <dt><?php echo $lang['goods_index_cart_success'];?><a title="<?php echo $lang['goods_index_close'];?>" onclick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
               <dd><?php echo $lang['goods_index_cart_have'];?> <strong id="bold_num"></strong> <?php echo $lang['goods_index_number_of_goods'];?> <?php echo $lang['goods_index_total_price'];?><?php echo $lang['nc_colon'];?><em id="bold_mly" class="saleP"></em></dd>
-              <dd class="btns"><a href="javascript:void(0);" class="ncs-btn-mini ncs-btn-green" onClick="location.href='<?php echo SHOP_SITE_URL.DS?>index.php?act=cart'"><?php echo $lang['goods_index_view_cart'];?></a> <a href="javascript:void(0);" class="ncs-btn-mini" value="" onClick="$('.ncs-cart-popup').css({'display':'none'});"><?php echo $lang['goods_index_continue_shopping'];?></a></dd>
+              <dd class="btns"><a href="javascript:void(0);" class="ncs-btn-mini ncs-btn-green" onclick="location.href='<?php echo SHOP_SITE_URL.DS?>index.php?act=cart'"><?php echo $lang['goods_index_view_cart'];?></a> <a href="javascript:void(0);" class="ncs-btn-mini" value="" onclick="$('.ncs-cart-popup').css({'display':'none'});"><?php echo $lang['goods_index_continue_shopping'];?></a></dd>
             </dl>
           </div>
           <!-- E 加入购物车弹出提示框 -->

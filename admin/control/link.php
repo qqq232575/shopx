@@ -2,7 +2,7 @@
 /**
  * 合作伙伴管理
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class linkControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

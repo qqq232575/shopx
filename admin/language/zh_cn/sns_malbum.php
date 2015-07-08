@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['snsalbum_album_setting']	= '相册设置';
 $lang['snsalbum_allow_upload_max_count']	= '允许上传最大图片数量';

@@ -1,7 +1,11 @@
 <?php
 /**
  * The AJAX call member information
- * by shopx team   
+ *
+ *
+ *
+ *
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
 
 class member_cardControl extends BaseHomeControl{

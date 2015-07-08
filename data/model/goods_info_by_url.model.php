@@ -3,9 +3,9 @@
  * 根据url获取商品信息
  *
  * 
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class goods_info_by_urlModel{
 
     /**

@@ -2,9 +2,9 @@
 /**
  * 货到付款地区设置
  *
- * by www.yywxx.com shopx 开发调试*/
+ * by www.33hao.com 33hao 开发调试*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class offpay_areaControl extends SystemControl {
 	public function __construct(){

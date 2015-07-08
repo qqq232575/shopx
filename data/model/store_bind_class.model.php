@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_bind_classModel extends Model{
 
     public function __construct(){
@@ -100,10 +100,13 @@ class store_bind_classModel extends Model{
             if (!in_array($goods['gc_id'],(array)$store_gc_id_list[$goods['store_id']])) {
                 if (in_array($goods['store_id'], $own_shop_ids)) {
                     //平台店铺佣金为0
-                    $store_gc_id_commis_rate[$goods['store_id']][$goods['gc_id']] = 0;
+                    //$store_gc_id_commis_rate[$goods['store_id']][$goods['gc_id']] = 0;
                 } else {
-                    $store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
+                    //$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
                 }
+				//33hao
+				$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
+			
             }
         }
 
@@ -114,15 +117,26 @@ class store_bind_classModel extends Model{
             $condition['store_id'] = $store_id;
             $condition['class_1|class_2|class_3'] = array('in',$gc_id_list);
             $bind_list = $this->getStoreBindClassList($condition);
+			//33hao
+			if(!$bind_list)
+			{
+				$condition = array();
+				$condition['store_id'] = $store_id;
+				$condition['class_1'] = 0;
+				$condition['class_2'] = 0;
+				$condition['class_3'] = 0;
+                $bind_list = $this->getStoreBindClassList($condition);
+			}
             if (!empty($bind_list) && is_array($bind_list)) {
                 foreach ($bind_list as $bind_info) {
                     if ($bind_info['store_id'] != $store_id) continue;
                     //如果class_1,2,3有一个字段值匹配，就有效
                     $bind_class = array($bind_info['class_3'],$bind_info['class_2'],$bind_info['class_1']);
                     foreach ($gc_id_list as $gc_id) {
-                        if (in_array($gc_id,$bind_class)) {
+			//33hao
+                        //if (in_array($gc_id,$bind_class)) {
                             $store_gc_id_commis_rate[$store_id][$gc_id] = $bind_info['commis_rate'];
-                        }
+                        //}
                     }
                 }
             }

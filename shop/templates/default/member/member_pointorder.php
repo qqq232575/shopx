@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="wrap">
   <div class="tabmenu">
@@ -28,7 +28,7 @@
       <?php foreach((array)$val['prodlist'] as $k=>$v) {?>
       <tr>
         <td class="bdl"></td>
-        <td class="w50"><div class="pic-thumb"><a href="<?php echo urlShop('pointprod', 'pinfo', array('id' => $v['point_goodsid']));?>" target="_blank"><img src="<?php echo $v['point_goodsimage_small']; ?>" onMouseOver="toolTip('<img src=<?php echo $v['point_goodsimage']; ?>>')" onMouseOut="toolTip()" /></a></div></td>
+        <td class="w50"><div class="pic-thumb"><a href="<?php echo urlShop('pointprod', 'pinfo', array('id' => $v['point_goodsid']));?>" target="_blank"><img src="<?php echo $v['point_goodsimage_small']; ?>" onmouseover="toolTip('<img src=<?php echo $v['point_goodsimage']; ?>>')" onmouseout="toolTip()" /></a></div></td>
         <td class="tl"><dl class="goods-name">
             <dt><a href="<?php echo urlShop('pointprod', 'pinfo', array('id' => $v['point_goodsid']));?>" target="_blank"><?php echo $v['point_goodsname']; ?></a></dt>
           </dl></td>
@@ -40,10 +40,10 @@
           <p><a href="index.php?act=member_pointorder&op=order_info&order_id=<?php echo $val['point_orderid']; ?>" target="_blank"><?php echo $lang['member_pointorder_viewinfo'];?></a></p></td>
         <td class="bdl bdr w100" rowspan="<?php echo count($val['prodlist']);?>"><p></p>
           <?php if ($val['point_orderallowreceiving']) { ?>
-          <p><a href="javascript:void(0)" class="ncm-btn" onclick="ajax_confirm('<?php echo $lang['member_pointorder_confirmreceivingtip']; ?>','index.php?act=member_pointorder&op=receiving_order&order_id=<?php echo $val['point_orderid']; ?>');"><?php echo $lang['member_pointorder_confirmreceiving']; ?></a></p>
+          <p><a href="javascript:void(0)" class="ncm-btn" onclick="ajax_get_confirm('<?php echo $lang['member_pointorder_confirmreceivingtip']; ?>','index.php?act=member_pointorder&op=receiving_order&order_id=<?php echo $val['point_orderid']; ?>');"><?php echo $lang['member_pointorder_confirmreceiving']; ?></a></p>
           <?php } ?>
           <?php if ($val['point_orderallowcancel']) { ?>
-          <p><a href="javascript:void(0)" class="ncm-btn ncm-btn-orange" onclick="ajax_confirm('<?php echo $lang['member_pointorder_cancel_confirmtip']; ?>','index.php?act=member_pointorder&op=cancel_order&order_id=<?php echo $val['point_orderid']; ?>');"><?php echo $lang['member_pointorder_cancel_title']; ?></a></p>
+          <p><a href="javascript:void(0)" class="ncm-btn ncm-btn-orange" onclick="ajax_get_confirm('<?php echo $lang['member_pointorder_cancel_confirmtip']; ?>','index.php?act=member_pointorder&op=cancel_order&order_id=<?php echo $val['point_orderid']; ?>');"><?php echo $lang['member_pointorder_cancel_title']; ?></a></p>
           <?php } ?></td>
         <?php } ?>
       </tr>

@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 /**
  * 欢迎页面
  */
@@ -58,14 +58,14 @@ $lang['dashboard_aboutus_designer']		= '设计师';
 $lang['dashboard_aboutus_designer_name']	= '本仙一死';
 $lang['dashboard_aboutus_near_us']		= '关于我们';
 $lang['dashboard_aboutus_bbs']			= '官方论坛';
-$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流shopx的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让shopx变得更好更加适合您';
+$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流好商城的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让ShopNC变得更好更加适合您';
 $lang['dashboard_aboutus_website']		= '官方网站';
-$lang['dashboard_aboutus_website_tip']	= '您可以在此获知shopx的最新动态，获得个性化的服务或获取我们的联系方式';
+$lang['dashboard_aboutus_website_tip']	= '您可以在此获知好商城的最新动态，获得个性化的服务或获取我们的联系方式';
 $lang['dashboard_aboutus_thanks']		= '感谢有您';
-$lang['dashboard_aboutus_thanks_content']	= '你若不离不弃www.yywxx.com便生死相依';
-$lang['dashboard_aboutus_thanks_developer_name'] = 'www.yywxx.com团队';
+$lang['dashboard_aboutus_thanks_content']	= '你若不离不弃www.33hao.com便生死相依';
+$lang['dashboard_aboutus_thanks_developer_name'] = 'www.33hao.com团队';
 $lang['dashboard_aboutus_notice']		= '相关声明';
-$lang['dashboard_aboutus_notice1']		= 'shopx 网店技术交流论坛';
+$lang['dashboard_aboutus_notice1']		= '好商城 网店技术交流论坛';
 $lang['dashboard_aboutus_notice2']		= '拥有';
 $lang['dashboard_aboutus_notice3']		= '的所有版权';
 $lang['dashboard_aboutus_notice4']		= '本项目引用了以下开源项目';

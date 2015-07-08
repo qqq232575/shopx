@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php 
 if(empty($output['goods_list'])) {
     $block_content = empty($block_content) ? $output['block_content'] : $block_content; 

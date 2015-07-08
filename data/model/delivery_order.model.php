@@ -5,9 +5,9 @@
  *
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 // 提货订单状态
 define('DELIVERY_ORDER_DEFAULT', 10);   // 未到站
 define('DELIVERY_ORDER_ARRIVE', 20);   // 已到站

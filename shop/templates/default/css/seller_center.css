@@ -526,7 +526,7 @@ label.error i { margin-right: 4px;}
 .ncsc-default-table td .pic-thumb { line-height: 0; background-color: #FFF; text-align: center; vertical-align: middle; display: table-cell; *display: block; width: 32px; height: 32px; border: solid 1px #F5F5F5; overflow: hidden;}
 .ncsc-default-table td .pic-thumb img { max-width: 32px; max-height: 32px; margin-top:expression(32-this.height/2); *margin-top:expression(16-this.height/2)/*IE6,7*/;}
 .ncsc-default-table td .goods-name { border: none;}
-.ncsc-default-table td .goods-name dt { font-size: 12px; line-height: 16px; color: #333; text-overflow: ellipsis; display: block; text-align: left; white-space: nowrap; max-width: 320px!important; height: 16px; padding-bottom: 4px; overflow: hidden;}
+.ncsc-default-table td .goods-name dt { font-size: 12px; color: #333; text-overflow: ellipsis; display: block; text-align: left; max-width: 320px!important; max-height: 32px; padding-bottom: 4px; overflow: hidden;}
 .ncsc-default-table td .goods-name dt span { line-height: 16px; color: #FFF; background-color: #999; display: inline-block; *display: inline/*IE7*/; height: 16px; padding: 1px 4px; margin-right: 2px; *zoom: 1; box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25); cursor: default;}
 .ncsc-default-table td .goods-name dt span.type-virtual { background-color: #3598DC;}
 .ncsc-default-table td .goods-name dt span.type-fcode { background-color: #9C59B8;}

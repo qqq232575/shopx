@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="ncm-evaluation-store">
     <div class="title">店铺信息</div>
     <div class="store-name"> <?php echo $output['store_info']['store_name']; ?> </div>

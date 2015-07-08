@@ -37,7 +37,7 @@ CREATE TABLE `#__micro_goods` (
   `microshop_commend` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '首页推荐 0-否 1-推荐',
   `microshop_sort` tinyint(3) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`commend_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城推荐商品表随心看';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城推荐商品表随心看';
 
 CREATE TABLE `#__micro_goods_class` (
   `class_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类编号 ',
@@ -49,14 +49,14 @@ CREATE TABLE `#__micro_goods_class` (
   `class_commend` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '推荐标志0-不推荐 1-推荐到首页',
   `class_default` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '默认标志，0-非默认 1-默认',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城商品随心看分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城商品随心看分类表';
 
 CREATE TABLE `#__micro_goods_relation` (
   `relation_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '关系编号',
   `class_id` int(10) unsigned NOT NULL COMMENT '微商城商品分类编号',
   `shop_class_id` int(10) unsigned NOT NULL COMMENT '商城商品分类编号',
   PRIMARY KEY (`relation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城商品分类和商城商品分类对应关系';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城商品分类和商城商品分类对应关系';
 
 CREATE TABLE `#__micro_like` (
   `like_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '喜欢编号',
@@ -65,7 +65,7 @@ CREATE TABLE `#__micro_like` (
   `like_member_id` int(10) unsigned NOT NULL COMMENT '喜欢人编号',
   `like_time` int(10) unsigned NOT NULL COMMENT '喜欢时间',
   PRIMARY KEY (`like_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城喜欢表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城喜欢表';
 
 CREATE TABLE `#__micro_member_info` (
   `member_id` int(11) unsigned NOT NULL COMMENT '用户编号',
@@ -73,7 +73,7 @@ CREATE TABLE `#__micro_member_info` (
   `personal_count` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '已发布个人秀数量',
   `goods_count` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '已发布随心看数量',
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城用户信息表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城用户信息表';
 
 CREATE TABLE `#__micro_personal` (
   `personal_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '推荐编号',
@@ -89,7 +89,7 @@ CREATE TABLE `#__micro_personal` (
   `microshop_commend` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '首页推荐 0-否 1-推荐',
   `microshop_sort` tinyint(3) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`personal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城个人秀表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城个人秀表';
 
 CREATE TABLE `#__micro_personal_class` (
   `class_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类编号 ',
@@ -97,7 +97,7 @@ CREATE TABLE `#__micro_personal_class` (
   `class_sort` tinyint(4) unsigned NOT NULL COMMENT '排序',
   `class_image` varchar(100) NOT NULL DEFAULT '' COMMENT '分类图片',
   PRIMARY KEY (`class_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城个人秀分类表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城个人秀分类表';
 
 CREATE TABLE `#__micro_store` (
   `microshop_store_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '店铺街店铺编号',
@@ -108,14 +108,14 @@ CREATE TABLE `#__micro_store` (
   `comment_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评论数',
   `click_count` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`microshop_store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微商城店铺街表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='微商城店铺街表';
 
 INSERT INTO `#__setting` (`name`, `value`) VALUES ('microshop_goods_default_class', '0'),
 ('microshop_header_pic', ''),
 ('microshop_isuse', '1'),
 ('microshop_logo', ''),
 ('microshop_personal_limit', '50'),
-('microshop_seo_description', ',微商城,随心看,个人秀,店铺街'),
-('microshop_seo_keywords', ',微商城,随心看,个人秀,店铺街,网上购物'),
+('microshop_seo_description', '好商城V3,微商城,随心看,个人秀,店铺街'),
+('microshop_seo_keywords', '好商城V3,微商城,随心看,个人秀,店铺街,网上购物'),
 ('microshop_store_banner', ''),
 ('microshop_style', 'default');

@@ -1,7 +1,11 @@
 <?php
 /**
+ * 入口文件
+ *
  * 统一入口，进行初始化信息
- *by www.yywxx.com 运营版 
+ *
+ *
+ *by 好商城V3 www.33hao.com 运营版 
  */
 
 error_reporting(E_ALL & ~E_NOTICE);
@@ -11,7 +15,7 @@ define('BASE_ROOT_PATH',str_replace('\\','/',dirname(__FILE__)));
  */
 if (!is_file(BASE_ROOT_PATH."/install/lock") && is_file(BASE_ROOT_PATH."/install/index.php")){
     if (ProjectName != 'shop'){
-        @header("location: ./install/index.php");
+        @header("location: ../install/index.php");
     }else{
         @header("location: install/index.php");
     }
@@ -20,7 +24,7 @@ if (!is_file(BASE_ROOT_PATH."/install/lock") && is_file(BASE_ROOT_PATH."/install
 define('BASE_CORE_PATH',BASE_ROOT_PATH.'/core');
 define('BASE_DATA_PATH',BASE_ROOT_PATH.'/data');
 define('DS','/');
-define('In_OS',true);
+define('InShopNC',true);
 define('StartTime',microtime(true));
 define('TIMESTAMP',time());
 define('DIR_SHOP','shop');

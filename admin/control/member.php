@@ -4,9 +4,9 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class memberControl extends SystemControl{
 	const EXPORT_SIZE = 1000;
@@ -61,6 +61,10 @@ class memberControl extends SystemControl{
     				break;
     			case 'member_email':
     				$condition['member_email'] = array('like', '%' . trim($_GET['search_field_value']) . '%');
+    				break;
+				//好商 城v3- b11
+				case 'member_mobile':
+    				$condition['member_mobile'] = array('like', '%' . trim($_GET['search_field_value']) . '%');
     				break;
     			case 'member_truename':
     				$condition['member_truename'] = array('like', '%' . trim($_GET['search_field_value']) . '%');
@@ -144,6 +148,15 @@ class memberControl extends SystemControl{
 				$update_array['is_buy'] 			= $_POST['isbuy'];
 				$update_array['is_allowtalk'] 		= $_POST['allowtalk'];
 				$update_array['member_state'] 		= $_POST['memberstate'];
+				//v3-b11 新增
+				$update_array['member_cityid']		= $_POST['city_id'];
+			        $update_array['member_provinceid']	= $_POST['province_id'];
+			        $update_array['member_areainfo']	= $_POST['area_info'];
+				$update_array['member_mobile'] 		= $_POST['member_mobile'];
+				$update_array['member_email_bind'] 	= intval($_POST['memberemailbind']);
+				$update_array['member_mobile_bind'] 	= intval($_POST['membermobilebind']);
+
+			
 				if (!empty($_POST['member_avatar'])){
 					$update_array['member_avatar'] = $_POST['member_avatar'];
 				}

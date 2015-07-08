@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo SHOP_TEMPLATES_URL?>/css/shop_custom.css" rel="stylesheet" type="text/css">
 <div class="ncsc-path"><i class="icon-desktop"></i>商家管理中心<i class="icon-angle-right"></i>店铺<i class="icon-angle-right"></i>店铺装修<i class="icon-angle-right"></i>页面设计</div>
 <div class="ncsc-decoration-layout">
@@ -14,10 +14,10 @@
       <li><a id="btn_preview" href="<?php echo urlShop('store_decoration', 'decoration_preview', array('decoration_id' => $_GET['decoration_id']));?>" target="_blank"><i class="preview"></i>设计预览</a></li>
       <li><a id="btn_close" href="javascript:void(0);"><i class="close"></i>完成退出</a></li>
     </ul>
-    <div class="faq">下方区域为1180像素宽度即时编辑区域；“添加布局块”后选择模块类型进行详细设置；“设计预览”可查看生成后效果；内容将实时保存，设置完成后直接选择“完成退出”。</div>
+    <div class="faq">下方区域为1200像素宽度即时编辑区域；“添加布局块”后选择模块类型进行详细设置；“设计预览”可查看生成后效果；内容将实时保存，设置完成后直接选择“完成退出”。</div>
   </div>
   <div id="store_decoration_content" style="<?php echo $output['decoration_background_style'];?>">
-    <div id="decoration_banner" class="ncsl-nav"> </div>
+    <div id="decoration_banner" class="ncsl-nav-banner"> </div>
     <div id="decoration_nav" class="ncsl-nav">
       <div class="ncs-nav">
         <ul>

@@ -1,10 +1,10 @@
 <?php
 /**
  * 闲置图片上传操作
- * by shopx
+ * by 33hao.com
  */
-defined('In_OS') or exit('Access Invalid!');
-class flea_albumControl extends BaseMemberControl {
+defined('InShopNC') or exit('Access Invalid!');
+class flea_albumControl extends BaseFleaMemberControl {
 	/**
 	 *	验证是否开启闲置功能
 	 */

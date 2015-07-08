@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style type="text/css">
 /*绑定工具提示*/
 .bindtooltip { background-color: #FFF; overflow: hidden;}

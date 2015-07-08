@@ -1,10 +1,10 @@
 <?php
 /**
  * redis 操作
- *  www.yywxx.com 专业团队 提供售后服务
+ * 好商城V3 www.33hao.com 专业团队 提供售后服务
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class CacheRedis extends Cache {
 	private $config;

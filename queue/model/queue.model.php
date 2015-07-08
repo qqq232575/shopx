@@ -6,9 +6,9 @@
  * QueueClient::push('addPoint',$queue_content);
  * public function addPoint($queue_content){...}
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class queueModel extends Model{
 

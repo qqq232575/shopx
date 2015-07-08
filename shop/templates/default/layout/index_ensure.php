@@ -4,7 +4,7 @@
 			<ul class="mod_agree_con">	
 
 			<li class="mod_agree_item mod_agree_item1">
-<?php echo rec(1);?><strong>一线货源</strong><span>福建，河北，温州</span>
+<?php echo rec(1);?><strong>真品货源</strong><span>正品，优质，放心</span>
 				</li>
 						
 						<li class="mod_agree_item mod_agree_item2">

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript" src="<?php echo CMS_RESOURCE_SITE_URL;?>/js/waypoints.js"></script>
 <script type="text/javascript">
  $(document).ready(function(){

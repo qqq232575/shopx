@@ -5,9 +5,9 @@
  * 
  *
  *
- * by shopx team   
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class p_xianshi_goodsModel extends Model{
 
     const XIANSHI_GOODS_STATE_CANCEL = 0;
@@ -16,7 +16,20 @@ class p_xianshi_goodsModel extends Model{
     public function __construct(){
         parent::__construct('p_xianshi_goods');
     }
-
+	 /**
+     * 限时表获取详细商品信息 33hao.com v3-10
+     *
+     * @param array $condition
+     * @param string $field
+     * @param number $page
+     * @param string $order
+     * @return array
+     */
+  	public function getGoodsListInfoFromXianShi($condition,$page=null,$order='',$field='*',$limit=''){
+        $on = 'p_xianshi_goods.goods_id = goods.goods_id';
+        $result = $this->table('p_xianshi_goods,goods')->field($field)->join('left')->on($on)->where($condition)->page($page)->order($order)->limit($limit)->select();
+        return $result;
+	}
 	/**
 	 * 读取限时折扣商品列表
 	 * @param array $condition 查询条件
@@ -27,6 +40,7 @@ class p_xianshi_goodsModel extends Model{
      * @return array 限时折扣商品列表
 	 *
 	 */
+	 
 	public function getXianshiGoodsList($condition, $page=null, $order='', $field='*', $limit = 0) {
         return $xianshi_goods_list = $this->field($field)->where($condition)->page($page)->order($order)->limit($limit)->select();
 	}
@@ -50,6 +64,21 @@ class p_xianshi_goodsModel extends Model{
         }
         return $xianshi_goods_list;
 	}
+	// 33hao.com v3-10 str
+	public function getXianshiGoodsExtendIds($condition, $page=null, $order='', $field='goods_id', $limit = 0) {
+        $xianshi_goods_id_list = $this->getXianshiGoodsList($condition, $page, $order, $field, $limit);
+      
+		if(!empty($xianshi_goods_id_list)){
+			for($i=0;$i<count($xianshi_goods_id_list); $i++){
+				
+				$xianshi_goods_id_list[$i]=$xianshi_goods_id_list[$i]['goods_id'];
+				 
+			}
+		}
+		
+        return $xianshi_goods_id_list;
+	}
+	// 33hao.com v3-10 end
 
     /**
 	 * 根据条件读取限制折扣商品信息

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!doctype html>
 <html>
 <head>
@@ -7,7 +7,6 @@
 <title><?php if ($output['goods_title']){ echo $output['goods_title'].' - '.$GLOBALS['setting_config']['flea_site_title'];}else{echo $GLOBALS['setting_config']['flea_site_title'];}?></title>
 <meta name="keywords" content="<?php if ($output['seo_keywords']){ echo $output['seo_keywords'].',';}echo $GLOBALS['setting_config']['flea_site_keywords']; ?>" />
 <meta name="description" content="<?php if ($output['seo_description']){ echo $output['seo_description'].',';}echo $GLOBALS['setting_config']['flea_site_description']; ?>" />
-<meta name="copyright" content="shopx Inc. All Rights Reserved">
 <?php echo html_entity_decode($GLOBALS['setting_config']['qq_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['sina_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['share_qqzone_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['share_sinaweibo_appcode'],ENT_QUOTES); ?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/flea.css" rel="stylesheet" type="text/css">
 <!--[if IE]>
@@ -88,7 +87,7 @@ ul,li { list-style:none; padding:0; margin:0;}
 </div>
 <div id="navBar" class="mb10">
   <ul>
-    <li class="fn-left link" <?php echo $output['index_sign'] == 'index' && $output['index_sign'] != '0'?'class="current"':'class="link"'; ?> ><a href="<?php echo SHOP_SITE_URL;?>"><span><?php echo $lang['nc_index'];?></span><span class="line"></span></a></li>  
+    <li class="fn-left" <?php echo $output['index_sign'] == 'index' && $output['index_sign'] != '0'?'class="current"':'class="link"'; ?> ><a href="<?php echo SHOP_SITE_URL;?>"><span><?php echo $lang['nc_index'];?></span><span class="line"></span></a></li>  
     <?php if (intval($GLOBALS['setting_config']['groupbuy_allow']) === 1){ ?>
     <li class="fn-left" <?php echo $output['index_sign'] == 'groupbuy' && $output['index_sign'] != '0'?'class="current"':'class="link"'; ?> ><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=show_groupbuy"><span><?php echo $lang['nc_groupbuy'];?></span><span class="line"></span></a></li>
     <?php }?>  
@@ -96,6 +95,7 @@ ul,li { list-style:none; padding:0; margin:0;}
       <?php if ($GLOBALS['setting_config']['points_isuse'] == 1 && $GLOBALS['setting_config']['pointprod_isuse'] == 1){ ?>
           <li class="fn-left" <?php echo $output['index_sign'] == 'pointprod' && $output['index_sign'] != '0'?'class="current"':'class="link"'; ?> ><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=pointprod"><span><?php echo $lang['nc_pointprod'];?></span><span class="line"></span></a></li>
   <?php } ?>
+   <li class="fn-left link"><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=flea"><span>闲置</span><span class="line"></span></a></li>
     <?php if(!empty($output['nav_list']) && is_array($output['nav_list'])){?>
     <?php foreach($output['nav_list'] as $nav){?>
     <?php if($nav['nav_location'] == '1'){?>

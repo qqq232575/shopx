@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <dl>
   <dt>用&nbsp;&nbsp;户&nbsp;&nbsp;名：</dt>

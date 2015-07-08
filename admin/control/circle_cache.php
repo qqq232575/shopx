@@ -2,9 +2,9 @@
 /*******
  * 圈子话题管理 
  *
- * by www.yywxx.com 
+ * by www.33hao.com 好商城V3
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class circle_cacheControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

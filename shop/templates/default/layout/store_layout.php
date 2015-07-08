@@ -1,36 +1,12 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
-<?php include template('layout/common_layout');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
+<?php include template('layout/store_common_layout');?>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/shop.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL?>/css/shop_custom.css" rel="stylesheet" type="text/css">
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/store/style/<?php echo $output['store_theme'];?>/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/member.js" charset="utf-8"></script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/shop.js" charset="utf-8"></script>
 <div id="header" class="ncs-header">
-  <div class="ncs-header-container">
-    <div class="ncs-store-info">
-      <div class="basic">
-        <div class="displayed"><a href="<?php echo urlShop('show_store', 'index', array('store_id'=>$output['store_info']['store_id']));?>" title="<?php echo $output['setting_config']['site_name']; ?>"><?php echo $output['store_info']['store_name']; ?></a>
-<?php if (!$output['store_info']['is_own_shop']) { ?>
-          <span class="all-rate">
-            <div class="rating"><span style="width: <?php echo $output['store_info']['store_credit_percent'];?>%"></span></div>
-            <em><?php echo $output['store_info']['store_credit_average'];?></em>分
-          </span>
-<?php } ?>
-        </div>
-        <div class="sub">
-          <div class="store-logo"><img src="<?php echo getStoreLogo($output['store_info']['store_label'],'store_logo');?>" alt="<?php echo $output['store_info']['store_name'];?>" title="<?php echo $output['store_info']['store_name'];?>" /></div>
-          <?php include template('store/info');?>
-        </div>
-      </div>
-      <div class="service">
-        <div class="displayed"><i></i>在线客服
-          <div class="sub">
-            <?php include template('store/callcenter');?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </div>
     <div id="store_decoration_content" class="background" style="<?php echo $output['decoration_background_style'];?>">
 <?php if(!empty($output['decoration_nav'])) {?>
@@ -40,7 +16,7 @@
      <?php if(isset($output['decoration_banner'])) { ?>
      <!-- 启用店铺装修 -->
      <?php if($output['decoration_banner']['display'] == 'true') { ?>
-     <div id="decoration_banner" class="ncsl-nav">
+     <div id="decoration_banner" class="ncsl-nav-banner">
          <img src="<?php echo $output['decoration_banner']['image_url'];?>" alt="">
      </div>
      <?php } ?>

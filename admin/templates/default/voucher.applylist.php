@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
 function submit_verify(id){
     if(confirm('<?php echo $lang['admin_voucher_verify_confirm'];?>')) {

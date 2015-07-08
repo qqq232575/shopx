@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!-- S setp -->
 <?php if ($output['edit_goods_sign']) {?>
 <div class="tabmenu">

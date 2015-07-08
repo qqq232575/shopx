@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="ncm-oredr-show">
   <div class="ncm-order-info">
@@ -104,10 +104,10 @@
           <td class="bdl" rowspan="<?php echo count($output['prod_list']);?>"><?php echo $output['order_info']['point_orderstatetext']; ?></td>
           <td class="bdl" rowspan="<?php echo count($output['prod_list']);?>">
           <?php if ($output['order_info']['point_orderallowcancel']) { ?>
-          <p><a href="javascript:void(0)" class="ncm-btn ncm-btn-orange" onclick="ajax_confirm('<?php echo $lang['member_pointorder_cancel_confirmtip']; ?>','index.php?act=member_pointorder&op=cancel_order&order_id=<?php echo $output['order_info']['point_orderid']; ?>');"><?php echo $lang['member_pointorder_cancel_title']; ?></a></p>
+          <p><a href="javascript:void(0)" class="ncm-btn ncm-btn-orange" onclick="ajax_get_confirm('<?php echo $lang['member_pointorder_cancel_confirmtip']; ?>','index.php?act=member_pointorder&op=cancel_order&order_id=<?php echo $output['order_info']['point_orderid']; ?>');"><?php echo $lang['member_pointorder_cancel_title']; ?></a></p>
           <?php } ?>
             <?php if ($output['order_info']['point_orderallowreceiving']) { ?>
-          <p><a href="javascript:void(0)" class="ncm-btn" onclick="ajax_confirm('<?php echo $lang['member_pointorder_confirmreceivingtip']; ?>','index.php?act=member_pointorder&op=receiving_order&order_id=<?php echo $output['order_info']['point_orderid']; ?>');" class="" ><?php echo $lang['member_pointorder_confirmreceiving']; ?></a></p>
+          <p><a href="javascript:void(0)" class="ncm-btn" onclick="ajax_get_confirm('<?php echo $lang['member_pointorder_confirmreceivingtip']; ?>','index.php?act=member_pointorder&op=receiving_order&order_id=<?php echo $output['order_info']['point_orderid']; ?>');"><?php echo $lang['member_pointorder_confirmreceiving']; ?></a></p>
           <?php } ?>
           </td>
           <?php } ?>

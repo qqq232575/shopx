@@ -2,9 +2,9 @@
 /**
  * 货到付款地区设置
  *
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class offpay_areaModel extends Model {
     public function __construct() {

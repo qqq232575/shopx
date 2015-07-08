@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <?php require CMS_BASE_TPL_PATH.'/layout/top.php';?>
 <?php require CMS_BASE_TPL_PATH.'/layout/nav.php';?>
 <div class="pt20">

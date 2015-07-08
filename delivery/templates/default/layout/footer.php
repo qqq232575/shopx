@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div id="footer">
   <p><a href="<?php echo SHOP_SITE_URL;?>"><?php echo $lang['nc_index'];?></a>
@@ -14,7 +14,7 @@
     <?php }?>
     <?php }?>
     <?php }?>
-  </p><?php echo $output['setting_config']['shopx_version'];?>
+  </p><?php echo $output['setting_config']['shopnc_version'];?>
   <?php echo $output['setting_config']['icp_number']; ?><br />
   <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
 <?php if (C('debug') == 1){?>
@@ -22,7 +22,7 @@
   <fieldset id="querybox">
     <legend><?php echo $lang['nc_debug_trace_title'];?></legend>
     <div>
-      <?php print_r(Tpl::showTrace());?>
+      <?php print_r(\Shopnc\Tpl::showTrace());?>
     </div>
   </fieldset>
 </div>

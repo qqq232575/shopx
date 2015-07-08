@@ -1,20 +1,16 @@
 <?php
 /**
  * 前台闲置物品搜索页面
- * by shopx
+ * by 33hao.com
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
-class flea_classControl extends BaseHomeControl {
+class flea_classControl extends BaseFleaControl {
 	/**
 	 *	验证是否开启闲置功能
 	 */
 	public function __construct(){
 		parent::__construct();
-		Language::read('home_flea_index');
-		if($GLOBALS['setting_config']['flea_isuse']!='1'){
-			showMessage(Language::get('flea_index_unable'),'index.php','','error');
-		}
 	}
 	/**
 	 * 闲置物品搜索列表

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style>
 #glist tr.item{ cursor:pointer }
 #glist tr.selected{ border:#329ED1 1px solid; }

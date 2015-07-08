@@ -5,9 +5,9 @@
  * 语言调用类，为静态使用
  *
  *
- * @package    shopx team
+ * @package    library* www.33hao.com 专业团队 提供售后服务
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 final class Language{
 	private static $language_content = array();
 	

@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <style type="text/css">
 .waybill-img-thumb { background-color: #FFF; vertical-align: top; display: inline-block; *display: inline; width: 70px; height: 45px; padding: 1px; border: solid 1px #E6E6E6; *zoom: 1;}
 .waybill-img-thumb a { line-height: 0; text-align: center; vertical-align: middle; display: table-cell; *display: block; width: 70px; height: 45px; overflow: hidden;}

@@ -1,10 +1,10 @@
 <?php
 /**
  * 实物订单结算
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class store_billControl extends BaseSellerControl {
     /**
      * 每次导出多少条记录

@@ -2,10 +2,10 @@
 /**
  * 前台control父类,店铺control父类,会员control父类
  *
- **by shopx team */
+ **by 好商城V3 www.33hao.com 运营版*/
 
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class Control{
     /**
@@ -43,9 +43,23 @@ class Control{
         Tpl::output('show_goods_class',$goods_class);//商品分类
 
         //获取导航
-        Tpl::output('nav_list', rkcache('nav',true));
+        Tpl::output('nav_list', self::filter_nav(rkcache('nav',true)));
     }
-
+    
+    /**
+     * 过滤导航菜单，将未开启的导航菜单关闭 v3-b10
+     * @param array $nav_list
+     * @return array
+     */
+    private function filter_nav($nav_list){
+    	foreach ($nav_list as $key=>$nav){
+    		if($nav['nav_is_close']=='1'){
+    			unset($nav_list[$key]);
+    		}
+    	}
+    	return $nav_list;
+    }
+    
     /**
      * 显示购物车数量
      */
@@ -242,7 +256,6 @@ class Control{
 class BaseHomeControl extends Control {
 
     public function __construct(){
- 
         //输出头部的公用信息
         $this->showLayout();
         //输出会员信息
@@ -260,6 +273,39 @@ class BaseHomeControl extends Control {
         if(!C('site_status')) halt(C('closed_reason'));
     }
 
+}
+
+/********************************** 闲置市场前台control父类 v3-b10**********************************************/
+class BaseFleaControl extends BaseHomeControl{
+	public function __construct(){
+		parent::__construct();
+		/**
+		 * 判断闲置开关（关闭时，跳转首页）
+		 */
+		if(intval(C('flea_isuse')) !== 1) {
+			header('location: '.SHOP_SITE_URL);die;
+		}
+		
+		Language::read('home_flea_index');
+		
+		//检测闲置市场是否开启，未开启显示提示
+		/* if($GLOBALS['setting_config']['flea_isuse']!='1'){
+		 showMessage(Language::get('flea_index_unable'),'index.php','','error');
+		} */
+	}
+}
+
+/********************************** 闲置市场个人中心control父类 **********************************************/
+class BaseFleaMemberControl extends BaseMemberControl{
+	public function __construct(){
+		parent::__construct();
+		/**
+		 * 判断闲置开关（关闭时，跳转首页）
+		*/
+		if(intval(C('flea_isuse')) !== 1) {
+			header('location: '.SHOP_SITE_URL);die;
+		}
+	}
 }
 
 /********************************** 购买流程父类 **********************************************/
@@ -429,7 +475,21 @@ class BaseMemberControl extends Control {
                         'microshop'         => array('name' => '我的微商城', 'url'=>urlMicroshop('home', 'index', array('member_id' => $_SESSION['member_id'])))
                 ))
         );
-        return $menu_list;
+    	return self::filter_menu($menu_list);
+    }
+    
+    /**
+     * 过滤菜单，将关闭的菜单过滤
+     * @param array $menu_list
+     * @return array
+     */
+    private function filter_menu($menu_list){
+    	$setting = Model('setting')->getListSetting();
+    	if($setting['cms_isuse']=='0') unset($menu_list['app']['child']['cms']);
+    	if($setting['circle_isuse']=='0') unset($menu_list['app']['child']['circle']);
+    	if($setting['flea_isuse']=='0') unset($menu_list['trade']['child']['member_flea']);
+    	if($setting['microshop_isuse']=='0') unset($menu_list['app']['child']['microshop']);
+    	return $menu_list;
     }
 }
 

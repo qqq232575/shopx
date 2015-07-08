@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!--推荐个人秀部分-->
 <div class="title">
     <h3><?php echo $lang['microshop_text_member_commend'];?><em><?php echo $lang['nc_microshop_personal'];?></em></h3>

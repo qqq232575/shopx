@@ -4,12 +4,14 @@
  *
  *
  *
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class messageControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=message&op=email','lang'=>'email_set'),
+		//V3-B11
+		array('url'=>'act=message&op=mobile','lang'=>'mobile_set'),
 	    array('url'=>'act=message&op=seller_tpl', 'lang'=>'seller_tpl'),
 	    array('url'=>'act=message&op=member_tpl', 'lang'=>'member_tpl'),
 	    array('url'=>'act=message&op=email_tpl','lang'=>'email_tpl')
@@ -47,6 +49,37 @@ class messageControl extends SystemControl{
 		Tpl::output('top_link',$this->sublink($this->links,'email'));
 		Tpl::showpage('message.email');
 	}
+	
+	/**
+	 * 短信平台设置 V3-B11 BY 3 3HA O .COM
+	 */
+	public function mobileOp(){
+		$model_setting = Model('setting');
+		if (chksubmit()){
+			$update_array = array();
+			$update_array['mobile_host_type'] 	= $_POST['mobile_host_type'];
+			$update_array['mobile_host'] 	= $_POST['mobile_host'];
+			$update_array['mobile_username'] 	= $_POST['mobile_username'];
+			$update_array['mobile_pwd'] 	= $_POST['mobile_pwd'];
+			$update_array['mobile_key'] 		= $_POST['mobile_key'];
+			$update_array['mobile_signature'] 		= $_POST['mobile_signature'];
+			$update_array['mobile_memo'] 	= $_POST['mobile_memo'];
+			$result = $model_setting->updateSetting($update_array);
+			if ($result === true){
+				$this->log(L('nc_edit,mobile_set'),1);
+				showMessage(L('nc_common_save_succ'));
+			}else {
+				$this->log(L('nc_edit,mobile_set'),0);
+				showMessage(L('nc_common_save_fail'));
+			}
+		}
+		$list_setting = $model_setting->getListSetting();
+		Tpl::output('list_setting',$list_setting);
+
+		Tpl::output('top_link',$this->sublink($this->links,'mobile'));
+		Tpl::showpage('message.mobile');
+	}
+
 
 	/**
 	 * 邮件模板列表

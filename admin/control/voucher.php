@@ -1,9 +1,9 @@
 <?php
 /**
  * 代金券管理
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class voucherControl extends SystemControl{
     const SECONDS_OF_30DAY = 2592000;
     private $applystate_arr;

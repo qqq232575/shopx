@@ -1,5 +1,5 @@
 <?php
-// defined('In_OS') or exit('Access Invalid!');
+// defined('InShopNC') or exit('Access Invalid!');
 
 $config = array();
 $config['shop_site_url'] 		= '===url===/shop';
@@ -37,7 +37,7 @@ $config['cache']['type'] 			= 'file';
 //$config['redis']['master']['pconnect'] 	= 0;
 //$config['redis']['slave']      	    = array();
 //$config['fullindexer']['open']      = false;
-//$config['fullindexer']['appname']   = 'shopx';
+//$config['fullindexer']['appname']   = '33hao';
 $config['debug'] 			= false;
 $config['default_store_id'] = '1';
 $config['url_model'] = false;

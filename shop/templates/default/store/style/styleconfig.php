@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 $style_data = array(
 	'default' => array('truename'=>'我的默认小店'), 
 	'style1' => array('truename'=>'AppleStore'),

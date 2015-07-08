@@ -3,7 +3,7 @@
  *
  *
  *
- * @package    shopx team
+ * @package    library* www.33hao.com 专业团队 提供售后服务
  */
 class sendStoreMsg {
     private $code = '';
@@ -78,15 +78,15 @@ class sendStoreMsg {
      * @param unknown $message
      */
     private function sendMail($number, $subject, $message) {
-        // 即时发动代码
-        // $email = new Email();
-        // $email->send_sys_email($this->store_number['store_msg_mail'],$subject,$message);
+        // 即时发动代码  v3-b11
+        $email = new Email();
+        $email->send_sys_email($number,$subject,$message);
 
         // 计划任务代码
-        $insert = array();
+        /*$insert = array();
         $insert['mail'] = $number;
         $insert['subject'] = $subject;
         $insert['contnet'] = $message;
-        Model('mail_cron')->addMailCron($insert);
+        Model('mail_cron')->addMailCron($insert);*/
     }
 }

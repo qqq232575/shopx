@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div class="quick-login">
   <form id="login_form" action="<?php echo SHOP_SITE_URL;?>/index.php?act=login" method="post" class="bg" >
     <?php Security::getToken();?>

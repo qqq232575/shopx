@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
@@ -22,8 +23,8 @@ SWFUpload.onload = function () {
 			".what" : "OKAY"
 		},
 		file_size_limit : "100 MB",//文件大小限制
-		//file_types : "*.jpg;*.gif;*.png;*.jpeg;",
-		file_types : "*.*",
+		file_types : "*.tbi",
+		//file_types : "*.*",
 		file_types_description : "All Files",//文件类型
 		file_upload_limit : 500,
 		file_queue_limit : 0,

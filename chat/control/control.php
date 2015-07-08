@@ -4,7 +4,7 @@
  *
  */
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 /********************************** 前台control父类 **********************************************/
 

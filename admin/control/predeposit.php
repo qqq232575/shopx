@@ -1,9 +1,9 @@
 <?php
 /**
  * 预存款管理
- **by www.yywxx.com 运营版*/
+ **by 好商城V3 www.33hao.com 运营版*/
 
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class predepositControl extends SystemControl{
 	const EXPORT_SIZE = 1000;
 	public function __construct(){

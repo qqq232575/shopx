@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
 <div class="public-top-layout w">

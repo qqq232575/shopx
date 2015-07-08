@@ -1,5 +1,5 @@
 <?php
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 $lang['admin_log_man']			= '操作人';
 $lang['admin_log_do']			= '行为';

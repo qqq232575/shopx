@@ -157,6 +157,7 @@
 .opera-pd-item{margin-right: 10px;height: 40px;line-height:40px;text-align: center;color: #fff;cursor: pointer; padding:0 10px;}
 .buy-now{background:#D9434E;}
 .add-to-cart{background: #6cb248;}
+.no-buy-now{background:#aaa;cursor: not-allowed;}
 
 /*order*/
 /*.invoice_list_wp{padding: 10px;}

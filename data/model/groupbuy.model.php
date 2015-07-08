@@ -1,9 +1,13 @@
 <?php
 /**
  * 抢购活动模型
- * by shopx team   
+ *
+ *
+ *
+ *
+ * by 33hao 好商城V3  www.33hao.com 开发
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 class groupbuyModel extends Model{
 
     const GROUPBUY_STATE_REVIEW = 10;
@@ -24,7 +28,27 @@ class groupbuyModel extends Model{
     public function __construct() {
         parent::__construct('groupbuy');
     }
-
+	// 33h ao.c om v3-10 str
+	public function getGroupbuyGoodsListAndGoodsList($condition,$page=null,$order='',$field='*',$limit=''){
+        $on = 'groupbuy.goods_id=goods.goods_id';
+        $result = $this->table('groupbuy,goods')->field($field)->join('left')->on($on)->where($condition)->page($page)->order($order)->limit($limit)->select();
+        return $result;
+		
+	}
+	public function getGroupbuyGoodsExtendIds($condition, $page=null, $order='', $field='goods_id', $limit = 0) {
+        $groupbuy_goods_id_list = $this->getGroupbuyList($condition, $page, $order, $field, $limit);
+      
+		if(!empty($groupbuy_goods_id_list)){
+			for($i=0;$i<count($groupbuy_goods_id_list); $i++){
+				
+				$groupbuy_goods_id_list[$i]=$groupbuy_goods_id_list[$i]['goods_id'];
+				 
+			}
+		}
+		
+        return $groupbuy_goods_id_list;
+	}
+	// 33 ao.c om v3-10 end
 	/**
      * 读取抢购列表
 	 * @param array $condition 查询条件

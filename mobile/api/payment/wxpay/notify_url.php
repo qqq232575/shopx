@@ -3,7 +3,7 @@
  * 微信支付通知地址
  *
  * 
- * by shopx  运营版
+ * by 33hao.com 好商城V3 运营版
  */
 $_GET['act']	= 'payment';
 $_GET['op']		= 'notify';

@@ -235,7 +235,8 @@ $(function (){
                           });
                         return;
                     }
-                    if (buynum > data.goods_info.goods_storage) {
+					//v3-b11 修复 购买大于1时 提示库存不足
+                    if (parseInt(buynum) > data.goods_info.goods_storage) {
                           $.sDialog({
                               skin:"red",
                               content:'库存不足！',
@@ -296,7 +297,8 @@ $(function (){
                           });
                         return;
                     }
-                    if (buynum > data.goods_info.goods_storage) {
+					//v3-b11 修复
+                    if (parseInt(buynum) > data.goods_info.goods_storage) {
                           $.sDialog({
                               skin:"red",
                               content:'库存不足！',

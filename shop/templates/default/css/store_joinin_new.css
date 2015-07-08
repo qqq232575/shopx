@@ -178,7 +178,7 @@ label.error { *display: inline;}
 
 
 .joinin-concrete .explain { font: 16px/32px "microsoft yahei"; color: #777; text-align: center; margin: 120px 0 100px 0}
-.joinin-concrete .explain i { background: url(../images/joinin_pic.png) no-repeat -350px 0; vertical-align: middle; display: inline-block; width: 32px; height: 28px; margin-right: 8px;}
+.joinin-concrete .explain i { background: url(../images/joinin_pic.png) no-repeat -350px 0; vertical-align: middle; display: inline-block; width: 32px; height: 32px; margin-right: 8px;}
 
 /*底部及按钮*/
 .joinin-concrete .bottom { text-align: center; height: 30px; padding: 20px 0 10px 0; border-top: solid 1px #EEE;}

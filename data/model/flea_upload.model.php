@@ -3,7 +3,7 @@
  * 上传文件模型
  *by 3 3hao .com 
  */
-defined('In_OS') or exit('Access Invalid!');
+defined('InShopNC') or exit('Access Invalid!');
 
 class flea_uploadModel{
 	/**

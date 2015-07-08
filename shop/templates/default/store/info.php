@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <!--店铺基本信息 S-->
 
 <div class="ncs-info">
@@ -37,7 +37,7 @@
       </dd>
     </dl>
     <?php } ?>
-    	  	  <!--只有实名认证实体店认证后才显示保障体系 by shopx -->	  
+    	  	  <!--只有实名认证实体店认证后才显示保障体系 by 33hao.com -->	  
  <?php if($output['store_info']['store_baozh']){?>
  
     <dl class="messenger">	  
@@ -89,7 +89,7 @@
 	 </dl> 
 <?php }?>	  
 	  
-	  <!--保障体系 by shopx-->
+	  <!--保障体系 by 33hao.com-->
     <dl class="no-border">
         <dt>公司名称：</dt>
         <dd><?php echo $output['store_info']['store_company_name'];?></dd>

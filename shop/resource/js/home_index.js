@@ -274,12 +274,9 @@ $(function(){
 	$(".right-side-focus").jfocus();
 	$(".groupbuy").jfocus({time:8000});
 	$("#saleDiscount").jfocus({time:8000});
-
-
-	/*监听滚动条和左侧菜单点击事件 */
+	/*监听滚动条和左侧菜单点击事件 start b y 33 hao.com*/
             var _arr = [];
             window.onscroll = function(){
-
                 if(800 < $(document).scrollTop()){
                     $('.nav_Sidebar').fadeIn('slow');
                 }else{
@@ -293,7 +290,7 @@ $(function(){
                     }
                 }); 
                 if(_arr.length){
-                    $('.nav_Sidebar a').eq(_arr[_arr.length-1]).css({'background-color':'#d90000','color':'#fff'}).addClass('current').siblings().css({'background-color':'#fff','color':'#d90000'}).removeClass('current');
+                    $('.nav_Sidebar a').eq(_arr[_arr.length-1]).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon-hover.png)'}).addClass('current').siblings().css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon.png)'}).removeClass('current');
                     _arr = [];
                 }
             }
@@ -304,13 +301,13 @@ $(function(){
                     if($(this).hasClass('current')){
                         return;
                     }else{
-                        $(this).css({'background-color':'#d90000','color':'#fff'});
+                        $(this).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon-hover2.png)'});
                     }
                 }).mouseout(function(){
                     if($(this).hasClass('current')){
                         return;
                     }else{
-                        $(this).css({'background-color':'#fff','color':'#d90000'});
+                        $(this).css({'backgroundImage':'url('+SHOP_SITE_URL+'/templates/default/images/home-nav-icon.png)'});
                     }
                 });
             });

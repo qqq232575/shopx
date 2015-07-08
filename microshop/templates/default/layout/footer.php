@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
@@ -15,7 +15,7 @@
     <?php }?>
     <?php }?>
     <?php }?>
-  </p><?php echo $GLOBALS['setting_config']['shopx_version'];?>
+  </p><?php echo $GLOBALS['setting_config']['shopnc_version'];?>
   <?php echo $GLOBALS['setting_config']['icp_number']; ?><br />
   <?php echo html_entity_decode($GLOBALS['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
 <?php if (C('debug') == 1){?>

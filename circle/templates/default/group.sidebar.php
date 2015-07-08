@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 
 <div class="sidebar">
   <?php if(in_array($output['identity'], array(1,2,3))){?>

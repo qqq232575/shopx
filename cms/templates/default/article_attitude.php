@@ -1,4 +1,4 @@
-<?php defined('In_OS') or exit('Access Invalid!');?>
+<?php defined('InShopNC') or exit('Access Invalid!');?>
 <script type="text/javascript">
     <?php if($_SESSION['is_login'] != '1'){?>
     $(document).ready(function(){
