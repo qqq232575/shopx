@@ -2,15 +2,9 @@
 /**
  * 店铺续签
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx 运营版
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class store_reopenModel extends Model {
     public function __construct() {

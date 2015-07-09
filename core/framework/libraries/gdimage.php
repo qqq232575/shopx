@@ -6,15 +6,9 @@
  *
  *
  *
-<<<<<<< HEAD
  * @package    library* www.33hao.com 专业团队 提供售后服务
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * @package    library* www.yywxx.com 专业团队 提供售后服务
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class GdImage{
 	/**
 	 * 输入图片的文件名(必须包含路径名)

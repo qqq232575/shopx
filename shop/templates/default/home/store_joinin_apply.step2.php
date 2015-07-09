@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <!-- 公司资质 -->
 
@@ -33,11 +29,7 @@
           <td><input name="bank_name" type="text" class="w200" />
             <span></span></td>
         </tr>
-<<<<<<< HEAD
         <!--33hao 简化 tr>
-=======
-        <!--shopx 简化 tr>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
           <th><i>*</i>支行联行号：</th>
           <td><input name="bank_code" type="text" class="w200" />
             <span></span></td>
@@ -47,11 +39,7 @@
           <td><input id="bank_address" name="bank_address" type="hidden" />
             <span></span></td>
         </tr>
-<<<<<<< HEAD
 	<!-- 好商城 v3-10 简化-->
-=======
-	<!-- shopx v3-10 简化-->
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         <!--<tr>
           <th><i>*</i>开户银行许可证电子版：</th>
           <td><input name="bank_licence_electronic" type="file" />
@@ -92,11 +80,7 @@
             <td><input id="settlement_bank_name" name="settlement_bank_name" type="text" class="w200"/>
               <span></span></td>
           </tr>
-<<<<<<< HEAD
 	  <!-- 好商城 v3-10 简化-->
-=======
-	  <!-- shopx v3-10 简化-->
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
           <!--tr>
             <th><i>*</i>支行联行号：</th>
             <td><input id="settlement_bank_code" name="settlement_bank_code" type="text" class="w200"/>
@@ -127,11 +111,7 @@
           <td><input name="tax_registration_certificate" type="text" class="w200"/>
             <span></span></td>
         </tr>
-<<<<<<< HEAD
 	<!--好商城 v3-10 简化-->
-=======
-	<!--shopx v3-10 简化-->
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         <!--tr>
           <th><i>*</i>纳税人识别号：</th>
           <td><input name="taxpayer_id" type="text" class="w200"/>
@@ -165,11 +145,7 @@ $(document).ready(function(){
             $("#settlement_bank_account_name").val("");
             $("#settlement_bank_account_number").val("");
             $("#settlement_bank_name").val("");
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             //$("#settlement_bank_code").val("");
             $("#settlement_bank_address").val("");
         } else {
@@ -195,11 +171,7 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 50 
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
            /*  bank_code: {
                 required: true,
                 maxlength: 20 
@@ -207,11 +179,7 @@ $(document).ready(function(){
             bank_address: {
                 required: true
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
            /*  bank_licence_electronic: {
                 required: true
             }, */
@@ -227,11 +195,7 @@ $(document).ready(function(){
                 required: function() { return use_settlement_account; },
                 maxlength: 50 
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
           /*   settlement_bank_code: {
                 required: function() { return use_settlement_account; },
                 maxlength: 20 
@@ -243,11 +207,7 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 20
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
           /*   taxpayer_id: {
                 required: true,
                 maxlength: 20
@@ -270,11 +230,7 @@ $(document).ready(function(){
                 required: '请填写开户银行支行名称',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
            /*  bank_code: {
                 required: '请填写支行联行号',
                 maxlength: jQuery.validator.format("最多{0}个字")
@@ -282,11 +238,7 @@ $(document).ready(function(){
             bank_address: {
                 required: '请选择开户银行所在地'
             },
-<<<<<<< HEAD
 	    //好商城 v3-10 简化
-=======
-	    //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
          /*   ank_licence_electronic: {
                 required: '请选择上传开户银行许可证电子版文件'
             }, */
@@ -302,11 +254,7 @@ $(document).ready(function(){
                 required: '请填写开户银行支行名称',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         /*     settlement_bank_code: {
                 required: '请填写支行联行号',
                 maxlength: jQuery.validator.format("最多{0}个字")
@@ -318,11 +266,7 @@ $(document).ready(function(){
                 required: '请填写税务登记证号',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
           /*   taxpayer_id: {
                 required: '请填写纳税人识别号',
                 maxlength: jQuery.validator.format("最多{0}个字")

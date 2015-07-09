@@ -2,7 +2,6 @@
 /**
  * 商品
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3
  *
  *
@@ -11,16 +10,6 @@
 //use Shopnc\Tpl;
 
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx
- *
- *
- */
-//by yywxx.com
-//use Shopnc\Tpl;
-
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class goodsControl extends mobileHomeControl{
 
 	public function __construct() {
@@ -177,11 +166,7 @@ class goodsControl extends mobileHomeControl{
         $goods_detail['store_info']['store_id'] = $store_info['store_id'];
         $goods_detail['store_info']['store_name'] = $store_info['store_name'];
         $goods_detail['store_info']['member_id'] = $store_info['member_id'];
-<<<<<<< HEAD
 	//显示QQ及旺旺 好商城V3
-=======
-	//显示QQ及旺旺 shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	$goods_detail['store_info']['store_qq'] = $store_info['store_qq'];
 	$goods_detail['store_info']['store_ww'] = $store_info['store_ww'];
 	$goods_detail['store_info']['store_phone'] = $store_info['store_phone'];

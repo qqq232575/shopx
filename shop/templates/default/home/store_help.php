@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="breadcrumb"><span class="icon-home"></span><span><a href="<?php echo SHOP_SITE_URL;?>">首页</a></span> <span class="arrow">></span> <span>商家帮助指南</span> </div>
 <div class="main">
   <div class="sidebar">

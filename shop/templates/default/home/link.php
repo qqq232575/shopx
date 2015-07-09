@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 body { background:#f6f6f6; }
 .full_module { background:#fff; border:1px solid #ccc; margin-top:20px; min-height:300px; margin-bottom:20px; }

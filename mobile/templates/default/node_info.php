@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <script type="text/javascript" src="<?php echo NODE_SITE_URL;?>/socket.io/socket.io.js" charset="utf-8"></script>
 <script type="text/javascript">
 var connect_url = "<?php echo NODE_SITE_URL;?>";

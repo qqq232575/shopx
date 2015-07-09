@@ -4,15 +4,9 @@
  *
  * 公共方法
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx 运营版
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 function getMicroshopImageSize($image_url, $max_width = 238) {
     $local_file_path = str_replace(UPLOAD_SITE_URL, BASE_ROOT_PATH.DS.DIR_UPLOAD, $image_url);

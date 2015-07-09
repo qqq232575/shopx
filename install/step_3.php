@@ -101,13 +101,8 @@ $(function(){
         <div>
           <label>数据库表前缀</label>
           <span>
-<<<<<<< HEAD
           <input type="text" name="db_prefix" maxlength="30" value="<?php echo $_POST['db_prefix'] ? $_POST['db_prefix'] : '33hao_';?>">
           </span> <em>同一数据库运行多个好商城V3程序时，请修改前缀</em></div>
-=======
-          <input type="text" name="db_prefix" maxlength="30" value="<?php echo $_POST['db_prefix'] ? $_POST['db_prefix'] : 'shopx_';?>">
-          </span> <em>同一数据库运行多个shopx程序时，请修改前缀</em></div>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         <div>
           <label>数据库端口</label>
           <span>

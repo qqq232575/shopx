@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 .jcarousel-container { width: 640px; margin: 10px 0;}
 .jcarousel-container li { width: 160px; height: 160px;}

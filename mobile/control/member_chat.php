@@ -5,16 +5,9 @@
  *
  *
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx 运营版
- */
-defined('IN_OS') or exit('Access Invalid!');
-//use Shopnc\Tpl;
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class member_chatControl extends mobileMemberControl {
 
 	public function __construct(){

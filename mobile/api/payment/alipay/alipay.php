@@ -4,11 +4,7 @@
  * 好商城V3-B10 33hao.com
  *
  */
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 require_once("lib/alipay_submit.class.php");
 class alipay {

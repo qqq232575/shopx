@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 $uachar = "/(nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|mobile)/i";
@@ -34,7 +30,6 @@ if(($ua == '' || preg_match($uachar, $ua))&& !strpos(strtolower($_SERVER['REQUES
     }
 }
 ?>
-
 <!doctype html>
 <html lang="zh">
 <head>
@@ -183,7 +178,6 @@ $(function(){
 <!-- PublicHeadLayout Begin -->
 <!-- 顶部广告展开效果-->
 <!-- 顶部广告展开效果-->
-
 <div class="header-wrap">
   <header class="public-head-layout wrapper">
     <h1 class="site-logo"><a href="<?php echo BASE_SITE_URL;?>"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.$output['setting_config']['site_logo']; ?>" class="pngFix"></a></h1>

@@ -2,15 +2,9 @@
 /**
  * 下单业务模型
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城欢迎您使用 
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx欢迎您使用 
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class buyModel {
 
     /**
@@ -194,20 +188,12 @@ class buyModel {
             if (!intval($goods['gc_id'])) continue;
             if (!in_array($goods['gc_id'],(array)$store_gc_id_list[$goods['store_id']])) {
                 if (in_array($goods['store_id'],array(DEFAULT_PLATFORM_STORE_ID))) {
-<<<<<<< HEAD
                     //平台店铺佣金为0 33hao
-=======
-                    //平台店铺佣金为0 shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
                     //$store_gc_id_commis_rate[$goods['store_id']][$goods['gc_id']] = 0;
                 } else {
                     //$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
                 }
-<<<<<<< HEAD
 				//33hao
-=======
-				//shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 				$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
 				
             }

@@ -140,11 +140,7 @@
         <h3><?php echo $lang['dashboard_welcome_sys_info'];?></h3>
         <div id="system-info">
           <ul>
-<<<<<<< HEAD
             <li>好商城V3-b11 <?php echo $lang['dashboard_welcome_version'];?><span>20150703</span></li>
-=======
-            <li>shopx <?php echo $lang['dashboard_welcome_version'];?><span>20150315</span></li>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             <li><?php echo $lang['dashboard_welcome_install_date'];?><span><?php echo $output['statistics']['setup_date'];?></span></li>
             <li><?php echo $lang['dashboard_welcome_server_os'];?><span><?php echo $output['statistics']['os'];?></span></li>
             <li>WEB <?php echo $lang['dashboard_welcome_server'];?><span><?php echo $output['statistics']['web_server'];?></span></li>

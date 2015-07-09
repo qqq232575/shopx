@@ -5,20 +5,11 @@
  *
  *
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
-=======
- * by yywxx.com shopx 运营版
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
-//use Shopnc\Tpl;
 
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class paymentControl extends mobileHomeControl{
 
@@ -29,17 +20,6 @@ class paymentControl extends mobileHomeControl{
 
         $this->payment_code = $_GET['payment_code'];
 	}
-
-    public function returnopenidOp(){
-        $payment_api = $this->_get_payment_api();
-        if($this->payment_code != 'wxpay'){
-            output_error('支付参数异常');
-            die;
-        }
-
-        $payment_api->getopenid();
-
-    }
 
     /**
      * 支付回调
@@ -91,24 +71,12 @@ class paymentControl extends mobileHomeControl{
             //验证成功
             $result = $this->_update_order($callback_info['out_trade_no'], $callback_info['trade_no']);
             if($result['state']) {
-                if($this->payment_code == 'wxpay'){
-                    echo $callback_info['returnXml'];
-                    die;
-                }else{
-                    echo 'success';die;
-                }
-
+                echo 'success';die;
             }
 		}
 
         //验证失败
-
-        if($this->payment_code == 'wxpay'){
-            echo '<xml><return_code><!--[CDATA[FAIL]]--></return_code></xml>';
-            die;
-        }else{
-            echo "fail";die;
-        }
+        echo "fail";die;
     }
 
     /**

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="choose-image">
   <ul class="tabs-nav">
     <li <?php if($_GET['curpage'] == ''){?>class="tabs-selected"<?php }?>><a href="javascript:void(0)"><?php echo $lang['circle_network_image'];?></a></li>

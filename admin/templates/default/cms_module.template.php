@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="cms-page-module-frame module-style-<?php echo "<?php echo \$value['module_style']?>";?>">
 <div class="cms-module-frame">
     <?php if($output['module_display_title']) { ?>

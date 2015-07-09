@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <Script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/flea/slider.js" charset="utf-8"></Script>
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/flea_info.css" rel="stylesheet" type="text/css">

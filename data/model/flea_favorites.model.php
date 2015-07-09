@@ -3,11 +3,7 @@
  * 买家收藏
  *by 3 3hao .com 
  */
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class flea_favoritesModel{
 	/**
 	 * 收藏列表

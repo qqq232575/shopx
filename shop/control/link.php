@@ -3,17 +3,10 @@
  * 友情连接展示页面
  *
  *
-<<<<<<< HEAD
  * 好商城V3 33hao.com
  *
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * shopx yywxx.com
- *
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class linkControl extends BaseHomeControl{
 	public function indexOp(){
 		Language::read('home_index_index');

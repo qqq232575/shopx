@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['store_goods_index_goods_limit']			= '您已经达到了添加商品的上限';
 $lang['store_goods_index_goods_limit1']			= '个，如果您想继续增加商品，请到“店铺设置”升级店铺等级';

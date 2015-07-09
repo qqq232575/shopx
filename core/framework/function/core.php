@@ -4,20 +4,12 @@
  *
  * 公共方法
  *
-<<<<<<< HEAD
  * by www.shopjl.com 运营版
-=======
- * by yywxx.com shopx 运营版
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
 
 
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 /**
  * 产生验证码
@@ -1410,11 +1402,7 @@ function write_file($filepath, $data, $mode = null)
 
     $data = var_export($data, true);
 
-<<<<<<< HEAD
     $data = "<?php defined('InShopNC') or exit('Access Invalid!'); return ".$data.";";
-=======
-    $data = "<?php defined('IN_OS') or exit('Access Invalid!'); return ".$data.";";
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     $mode = $mode == 'append' ? FILE_APPEND : null;
     if (false === file_put_contents($filepath,($data),$mode)){
         return false;

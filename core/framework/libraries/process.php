@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 /**
  * 连续操作验证
@@ -157,15 +153,9 @@ class process{
 /**
  * lock表 操作
  *
-<<<<<<< HEAD
  * @package    library* www.33hao.com 专业团队 提供售后服务
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * @package    library* www.yywxx.com 专业团队 提供售后服务
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class lock {
 	private $model;

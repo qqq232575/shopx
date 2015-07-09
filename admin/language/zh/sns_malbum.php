@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $lang['snsalbum_album_setting']	= '相冊設置';
 $lang['snsalbum_allow_upload_max_count']	= '允許上傳最大圖片數量';

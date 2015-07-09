@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     <div class="content">
       <?php if(!empty($output['list']) && is_array($output['list'])){ ?>
       <?php foreach($output['list'] as $key => $val){ ?>

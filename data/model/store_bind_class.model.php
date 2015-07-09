@@ -5,15 +5,9 @@
  * 
  *
  *
-<<<<<<< HEAD
  * by 33hao 好商城V3  www.33hao.com 开发
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by shopx shopx  www.yywxx.com 开发
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class store_bind_classModel extends Model{
 
     public function __construct(){
@@ -110,11 +104,7 @@ class store_bind_classModel extends Model{
                 } else {
                     //$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
                 }
-<<<<<<< HEAD
 				//33hao
-=======
-				//shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 				$store_gc_id_list[$goods['store_id']][] = $goods['gc_id'];
 			
             }
@@ -127,11 +117,7 @@ class store_bind_classModel extends Model{
             $condition['store_id'] = $store_id;
             $condition['class_1|class_2|class_3'] = array('in',$gc_id_list);
             $bind_list = $this->getStoreBindClassList($condition);
-<<<<<<< HEAD
 			//33hao
-=======
-			//shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			if(!$bind_list)
 			{
 				$condition = array();
@@ -147,11 +133,7 @@ class store_bind_classModel extends Model{
                     //如果class_1,2,3有一个字段值匹配，就有效
                     $bind_class = array($bind_info['class_3'],$bind_info['class_2'],$bind_info['class_1']);
                     foreach ($gc_id_list as $gc_id) {
-<<<<<<< HEAD
 			//33hao
-=======
-			//shopx
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
                         //if (in_array($gc_id,$bind_class)) {
                             $store_gc_id_commis_rate[$store_id][$gc_id] = $bind_info['commis_rate'];
                         //}

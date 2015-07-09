@@ -3,17 +3,10 @@
  * 默认展示页面
  *
  *
-<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 好商城V3 运营版*/
 
 
 defined('InShopNC') or exit('Access Invalid!');
-=======
- **by shopx www.yywxx.com shopx 运营版*/
-
-
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class indexControl extends BaseHomeControl{
 	public function indexOp(){
 		Language::read('home_index_index');

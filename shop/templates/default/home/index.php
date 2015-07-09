@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <link href="<?php echo SHOP_TEMPLATES_URL;?>/css/index.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<?php echo SHOP_RESOURCE_SITE_URL;?>/js/home_index.js" charset="utf-8"></script>
 <!--[if IE 6]>
@@ -21,11 +17,7 @@ else {document.cookie='uid='+uid[1];}
 .category { display: block !important; }
 </style>
 <div class="clear"></div>
-<<<<<<< HEAD
 
-=======
-<?php  require_once BASE_ROOT_PATH.'/plugin/bar_fixed_search.php';?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <!-- HomeFocusLayout Begin-->
 <div class="home-focus-layout"> <?php echo $output['web_html']['index_pic'];?>
   <div class="right-sidebar">
@@ -152,7 +144,6 @@ else {document.cookie='uid='+uid[1];}
 <?php require_once template('layout/index_ensure');?>
 <!--首页底部保障结束-->
 <!--StandardLayout Begin-->
-<<<<<<< HEAD
 <div class="nav_Sidebar">
 <a class="nav_Sidebar_1" href="javascript:;" ></a>
 <a class="nav_Sidebar_2" href="javascript:;" ></a>
@@ -163,9 +154,4 @@ else {document.cookie='uid='+uid[1];}
 <a class="nav_Sidebar_7" href="javascript:;" ></a>
 <a class="nav_Sidebar_8" href="javascript:;" ></a>
 </div>
-=======
-
-<?php  require_once BASE_ROOT_PATH.'/plugin/floor_map.php';?>
-
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <!--StandardLayout End-->

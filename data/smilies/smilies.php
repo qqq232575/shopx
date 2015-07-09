@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $smilies_array = array ();
 $smilies_array['searcharray'] = array(1=>'/'.preg_quote(htmlspecialchars(":smile:"),'/').'/',
 									  2=>'/'.preg_quote(htmlspecialchars(":sad:"),'/').'/',

@@ -2,18 +2,9 @@
 /**
  * 商品管理
  *
-<<<<<<< HEAD
  *好商城V3  BY 33ha o.c om
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- *
- *
- *
- * by shopx shopx  www.yywxx.com 开发
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class goodsModel extends Model{
     public function __construct(){
@@ -1232,20 +1223,6 @@ class goodsModel extends Model{
             $goods_image_mobile[] = thumb($goods_info, 360);
         }
 
-//                 // 商品多图
-//                 $image_more = $this->getGoodsImageByKey($goods_info['goods_commonid'] . '|' . $goods_info['color_id']);
-//                 $goods_image = array();
-//                 $goods_image_mobile = array();
-//                 if (!empty($image_more)) {
-//                     foreach ($image_more as $val) {
-//                         $goods_image[] = "'".cthumb($val['goods_image'], 60, $goods_info['store_id'])."','".cthumb($val['goods_image'], 360, $goods_info['store_id'])."','".cthumb($val['goods_image'], 360, $goods_info['store_id'])."','".cthumb($val['goods_image'], 1280, $goods_info['store_id'])."'";
-//                         $goods_image_mobile[] = cthumb($val['goods_image'], 360, $goods_info['store_id']);
-//                     }
-//                 } else {
-//                     $goods_image[] = "'".thumb($goods_info, 60)."','".thumb($goods_info, 360)."','".thumb($goods_info, 360)."','".thumb($goods_info, 1280)."'";
-//                     $goods_image_mobile[] = thumb($goods_info, 360);
-//                 }
-        
         //抢购
         if (!empty($goods_info['groupbuy_info'])) {
             $goods_info['promotion_type'] = 'groupbuy';

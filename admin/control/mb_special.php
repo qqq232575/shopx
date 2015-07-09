@@ -5,20 +5,12 @@
  *
  *
  *
-<<<<<<< HEAD
  * by 33hao www.33hao.com 开发修正
-=======
- * by shopx www.yywxx.com 开发修正
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
 
 
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class mb_specialControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();
@@ -148,11 +140,7 @@ class mb_specialControl extends SystemControl{
                 echo json_encode(array('error' => '广告条板块只能添加一个'));die;
             }
         }
-<<<<<<< HEAD
 	//推荐只能添加一个 33hao.com v3-10
-=======
-	//推荐只能添加一个 yywxx.com v3-10
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         if($param['item_type'] == 'goods1') {
             $result = $model_mb_special->isMbSpecialItemExist($param);
             if($result) {
@@ -199,11 +187,7 @@ class mb_specialControl extends SystemControl{
      */
     public function special_item_editOp() {
         $model_mb_special = Model('mb_special');
-<<<<<<< HEAD
 	// 33hao.com v3-10
-=======
-	// yywxx.com v3-10
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	$theitemid=$_GET['item_id'];
         $item_info = $model_mb_special->getMbSpecialItemInfoByID($theitemid);
         Tpl::output('item_info', $item_info);
@@ -265,11 +249,7 @@ class mb_specialControl extends SystemControl{
     }
 
     /**
-<<<<<<< HEAD
      * 商品列表  33hao.com v3-10
-=======
-     * 商品列表  yywxx.com v3-10
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
      */
 	 
     public function goods_listOp() {	

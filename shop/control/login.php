@@ -4,17 +4,10 @@
  *
  *
  *
-<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 运营版*/
 
 
 defined('InShopNC') or exit('Access Invalid!');
-=======
- **by shopx www.yywxx.com 运营版*/
-
-
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class loginControl extends BaseHomeControl {
 
@@ -173,11 +166,7 @@ class loginControl extends BaseHomeControl {
         $register_info['password'] = $_POST['password'];
         $register_info['password_confirm'] = $_POST['password_confirm'];
         $register_info['email'] = $_POST['email'];
-<<<<<<< HEAD
 		//添加奖励积分ID BY 33HAO.COM V3
-=======
-		//添加奖励积分ID BY yywxx.com V3
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 		//$register_info['inviter_id'] = intval($_COOKIE['uid'])/1;
 		$register_info['inviter_id'] = intval(base64_decode($_COOKIE['uid']))/1;
         $member_info = $model_member->register($register_info);

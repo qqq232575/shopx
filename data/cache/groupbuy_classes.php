@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
   'name' => 
   array (
@@ -39,7 +38,4 @@
       8 => '9',
     ),
   ),
-=======
-<?php defined('IN_OS') or exit('Access Invalid!'); return array (
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 );

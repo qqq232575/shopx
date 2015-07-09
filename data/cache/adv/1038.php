@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
-=======
-<?php defined('IN_OS') or exit('Access Invalid!'); return array (
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'ap_id' => '1038',
   'ap_name' => '闲置首页中部横栏广告',
   'ap_intro' => '闲置首页中部横栏广告',
@@ -22,11 +18,7 @@
       'adv_id' => '921',
       'ap_id' => '1038',
       'adv_title' => '闲置横栏广告2',
-<<<<<<< HEAD
       'adv_content' => 'a:2:{s:7:"adv_pic";s:36:"d6751364a7e32bcebbfee859e60f62c4.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}',
-=======
-      'adv_content' => 'a:2:{s:7:"adv_pic";s:36:"d6751364a7e32bcebbfee859e60f62c4.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}',
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
       'adv_start_date' => '1325347200',
       'adv_end_date' => '1622476800',
       'slide_sort' => '0',
@@ -42,11 +34,7 @@
       'adv_id' => '920',
       'ap_id' => '1038',
       'adv_title' => '闲置横栏广告1',
-<<<<<<< HEAD
       'adv_content' => 'a:2:{s:7:"adv_pic";s:36:"62583bd76a71da66a1259da1d8050b39.jpg";s:11:"adv_pic_url";s:14:"www.33hao.com";}',
-=======
-      'adv_content' => 'a:2:{s:7:"adv_pic";s:36:"62583bd76a71da66a1259da1d8050b39.jpg";s:11:"adv_pic_url";s:14:"www.yywxx.com";}',
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
       'adv_start_date' => '1325347200',
       'adv_end_date' => '1622476800',
       'slide_sort' => '0',

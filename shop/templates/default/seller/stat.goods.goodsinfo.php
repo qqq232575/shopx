@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <?php if($output['stat_msg']){ ?>
 	<div class="alert alert-info mt10" style="clear:both;"><?php echo $output['stat_msg'];?></div>
 <?php } else {?>

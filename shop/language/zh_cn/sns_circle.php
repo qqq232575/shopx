@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 // control
 $lang['sns_my_theme']	= '我发布的话题';
 $lang['sns_TA_theme']	= 'TA发布的话题';

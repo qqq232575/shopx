@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 h3.dialog_head { margin: 0 !important;}
 .dialog_content { padding: 0 15px 15px !important; overflow: hidden;}

@@ -2,15 +2,9 @@
 /**
  * 实物订单行为
  *
-<<<<<<< HEAD
  * 好商城 V3 33hao.com
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * shopx V3 yywxx.com
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class orderLogic {
 
     /**
@@ -327,11 +321,7 @@ class orderLogic {
 
             $data = array();
             $data['api_pay_state'] = 1;
-<<<<<<< HEAD
 	    // 33hao 
-=======
-	    // shopx 
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	      $update = $model_order->editOrderPay($data,array('pay_sn'=>$order_list[0]['pay_sn']));
             //$update = $model_order->editOrderPay($data,array('pay_sn'=>$order_info['pay_sn']));
             if (!$update) {

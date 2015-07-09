@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="groupbuy-gallery" nctype="store_sns_album"> <a class="sample_demo" id="select_s" href="index.php?act=store_album&op=pic_list&item=store_sns_normal" style="display:none;"><?php echo $lang['nc_submit'];?></a>
   <div class="nav"><span class="l"><?php echo $lang['store_goods_album_users'];?> >

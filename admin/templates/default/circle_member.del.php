@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <form method="post" id="delmember" name="delmember" action="index.php?act=circle_member&op=member_del&param=<?php echo $_GET['param'];?>">
     <input type="hidden" name="form_submit" value="ok"/>
     <dl><dd style="padding:10px 30px;"><p><?php echo $lang['circle_member_del_confirm'];?></p></dd></dl>

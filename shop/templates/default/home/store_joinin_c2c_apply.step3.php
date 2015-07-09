@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <!-- 店铺信息 -->
 
@@ -105,9 +104,6 @@
   <div class="bottom"><a id="btn_apply_store_next" href="javascript:;" class="btn">提交申请</a>
   </div>
 </div>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/common_select.js" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).ready(function(){

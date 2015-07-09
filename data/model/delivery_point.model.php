@@ -2,15 +2,9 @@
 /**
  * 物流自提服务站模型
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx 运营版
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class delivery_pointModel extends Model {
     const STATE1 = 1;   // 开启
     const STATE0 = 0;   // 关闭

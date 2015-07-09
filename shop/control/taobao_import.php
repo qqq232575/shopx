@@ -5,11 +5,7 @@
  * by 3 3 h a o.c o m
  *
  */
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class taobao_importControl extends BaseSellerControl {
 	private function checkStore(){
         if(!checkPlatformStore()){

@@ -1,15 +1,9 @@
 <?php
 /**
  * 闲置市场默认展示页面
-<<<<<<< HEAD
  * by 33hao.com
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class fleaControl extends BaseFleaControl{
 	/**
 	 * 闲置市场首页

@@ -4,15 +4,9 @@
  *
  *
  *
-<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 运营版*/
 
 defined('InShopNC') or exit('Access Invalid!');
-=======
- **by shopx www.yywxx.com 运营版*/
-
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class settingControl extends SystemControl{
 	private $links = array(
 		array('url'=>'act=setting&op=base','lang'=>'web_set'),
@@ -40,7 +34,6 @@ class settingControl extends SystemControl{
 					showMessage($upload->error,'','','error');
 				}
 			}
-<<<<<<< HEAD
 			
 			//V3-B11 上传wap手机客户端LOGO
 			if (!empty($_FILES['site_mobile_logo']['name'])){
@@ -56,9 +49,6 @@ class settingControl extends SystemControl{
 			}
 			
 			//二维码微信图片 by 33 HA O.com
-=======
-			//二维码微信图片 by yywxx.com
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			if (!empty($_FILES['site_logowx']['name'])){
 				$upload = new UploadFile();
 				$upload->set('default_dir',ATTACH_COMMON);
@@ -114,11 +104,7 @@ class settingControl extends SystemControl{
 				$update_array['seller_center_logo'] = $_POST['seller_center_logo'];
 			}
 			$update_array['icp_number'] = $_POST['icp_number'];
-<<<<<<< HEAD
 			//设置表 400电话 by 33hao.com
-=======
-			//设置表 400电话 by yywxx.com
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			$update_array['site_tel400'] = $_POST['site_tel400'];
 			$update_array['site_status'] = $_POST['site_status'];
 			$update_array['closed_reason'] = $_POST['closed_reason'];

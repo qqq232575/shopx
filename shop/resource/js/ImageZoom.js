@@ -257,7 +257,7 @@
 					hasCapture && gallery[0].releaseCapture();
 					doc.unbind('mousemove', moveHandler);
 				});
-				gallery.one('mousemove', function(){
+				gallery.one('click', function(){
 					self.draging = false;
 				});
 				self.releaseDrag = function(){

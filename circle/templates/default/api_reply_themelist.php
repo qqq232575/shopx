@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <ul class="circle-reply-themelist">
     <?php if(!empty($output['reply_themelist']) && is_array($output['reply_themelist'])) {?>
     <?php foreach($output['reply_themelist'] as $key=>$value) {?>

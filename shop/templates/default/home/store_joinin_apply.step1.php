@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <!-- 公司信息 v3-10 简化 -->
 
@@ -137,11 +133,7 @@
         </tr>
       </tfoot>
     </table>
-<<<<<<< HEAD
     <!--好商城V3-B10简化注册 table border="0" cellpadding="0" cellspacing="0" class="all">
-=======
-    <!--shopx-B10简化注册 table border="0" cellpadding="0" cellspacing="0" class="all">
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
       <thead>
         <tr>
           <th colspan="20">一般纳税人证明<em>注：所属企业具有一般纳税人证明时，此项为必填。</em></th>
@@ -198,11 +190,7 @@ $(document).ready(function(){
                 required: true,
                 maxlength: 50 
             },
-<<<<<<< HEAD
 			//好商城 v3-10 简化
-=======
-			//shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             /* company_phone: {
                 required: true,
                 maxlength: 20 
@@ -270,11 +258,7 @@ $(document).ready(function(){
                 required: '请输入公司详细地址',
                 maxlength: jQuery.validator.format("最多{0}个字")
             },
-<<<<<<< HEAD
 	     //好商城 v3-10 简化
-=======
-	     //shopx v3-10 简化
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             /*company_phone: {
                 required: '请输入公司电话',
                 maxlength: jQuery.validator.format("最多{0}个字")

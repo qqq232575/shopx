@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 .mb-item-edit-content { background: #EFFAFE url(<?php echo ADMIN_TEMPLATES_URL;?>/images/cms_edit_bg_line.png) repeat-y scroll 0 0;}
 </style>

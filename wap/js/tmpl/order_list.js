@@ -12,7 +12,7 @@ $(function(){
 	function initPage(page,curpage){
 		$.ajax({
 			type:'post',
-            url:ApiUrl+"/index.php?act=member_order&op=order_list&page="+page+"&curpage="+curpage+"&getpayment=true",
+			url:ApiUrl+"/index.php?act=member_order&op=order_list&page="+page+"&curpage="+curpage,
 			data:{key:key},
 			dataType:'json',
 			success:function(result){
@@ -73,7 +73,7 @@ $(function(){
             success:function(result){
                 $.each((result && result.datas && result.datas.payment_list) || [], function(k, v) {
                     // console.log(v);
-                    if (v != '') {
+                    if (v == 'alipay') {
                         readytopay = true;
                         return false;
                     }

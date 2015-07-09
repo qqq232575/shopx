@@ -1,15 +1,9 @@
 <?php
 /**
  * 压缩框架
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * by yywxx.com shopx 运营版
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 /**
  * 压缩框架文件
  *
@@ -61,11 +55,7 @@ function build(){
 	$compile .= "\nLanguage::appendLanguage(\$lang);";
 
 	$compile .= "\nBase::run();";
-<<<<<<< HEAD
 	file_put_contents(RUNCOREPATH,compress_code("<?php defined('InShopNC') or exit('Access Invalid!');".$compile));
-=======
-	file_put_contents(RUNCOREPATH,compress_code("<?php defined('IN_OS') or exit('Access Invalid!');".$compile));
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 }
 
 /**
@@ -78,11 +68,7 @@ function compile($filename) {
     $content = file_get_contents($filename);
     //过滤不需要编译的内容
     $content = preg_replace('/\/\/\[NC_SKIPBUILD\](.*?)\/\/\[\/NC_SKIPBUILD\]/s', '', $content);
-<<<<<<< HEAD
     $content = str_ireplace("defined('InShopNC') or exit('Access Invalid!')", '', $content);
-=======
-    $content = str_ireplace("defined('IN_OS') or exit('Access Invalid!')", '', $content);
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
     $content = substr(trim($content), 5);
     if ('?>' == substr($content, -2))
         $content = substr($content, 0, -2);

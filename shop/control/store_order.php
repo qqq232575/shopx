@@ -4,17 +4,10 @@
  *
  *
  *
-<<<<<<< HEAD
  **by 好商城V3 www.33hao.com 运营版*/
 
 
 defined('InShopNC') or exit('Access Invalid!');
-=======
- **by shopx www.yywxx.com 运营版*/
-
-
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class store_orderControl extends BaseSellerControl {
     public function __construct() {
         parent::__construct();
@@ -155,11 +148,7 @@ class store_orderControl extends BaseSellerControl {
         //显示系统自动取消订单日期
         if ($order_info['order_state'] == ORDER_STATE_NEW) {
             //$order_info['order_cancel_day'] = $order_info['add_time'] + ORDER_AUTO_CANCEL_DAY * 24 * 3600;
-<<<<<<< HEAD
 			// by 33hao.com
-=======
-			// by yywxx.com
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			$order_info['order_cancel_day'] = $order_info['add_time'] + ORDER_AUTO_CANCEL_DAY + 3 * 24 * 3600;
         }
 
@@ -174,11 +163,7 @@ class store_orderControl extends BaseSellerControl {
         //显示系统自动收获时间
         if ($order_info['order_state'] == ORDER_STATE_SEND) {
             //$order_info['order_confirm_day'] = $order_info['delay_time'] + ORDER_AUTO_RECEIVE_DAY * 24 * 3600;
-<<<<<<< HEAD
 			//by 33hao.com
-=======
-			//by yywxx.com
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 			$order_info['order_confirm_day'] = $order_info['delay_time'] + ORDER_AUTO_RECEIVE_DAY + 15 * 24 * 3600;
         }
 

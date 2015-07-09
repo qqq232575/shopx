@@ -44,23 +44,15 @@ $(document).ready(function(){
 							src += "<a class='btn-add-nofloat marginleft' href='index.php?act=goods_class&op=goods_class_add&gc_parent_id="+data[i].gc_id+"'><span>新增下级</span></a>";
 						}
 						src += "</td>";
-<<<<<<< HEAD
 						//是否显示 v3-b11 临时隐藏
 						/*src += "<td class='power-onoff'>";
-=======
-						//是否显示
-						src += "<td class='power-onoff'>";
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 						if(data[i].gc_show == 0){
 							src += "<a href='JavaScript:void(0);' class='tooltip disabled' fieldvalue='0' fieldid='"+data[i].gc_id+"' ajax_branch='goods_class_show' fieldname='gc_show' nc_type='inline_edit'><img src='"+ADMIN_TEMPLATES_URL+"/images/transparent.gif'></a>";
 						}else{
 							src += "<a href='JavaScript:void(0);' class='tooltip enabled' fieldvalue='1' fieldid='"+data[i].gc_id+"' ajax_branch='goods_class_show' fieldname='gc_show' nc_type='inline_edit'><img src='"+ADMIN_TEMPLATES_URL+"/images/transparent.gif'></a>";
 						}
 						src += "</td>";
-<<<<<<< HEAD
 						*/
-=======
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 						//类型
 						src += "<td>"+data[i].type_name+"</td>";
 						//分佣

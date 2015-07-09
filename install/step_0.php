@@ -11,11 +11,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <?php echo $html_header;?>
 <div class="main">
   <div class="text-box" id="text-box">
@@ -36,11 +32,7 @@
       <p></p>
       <h3>II. 协议规定的约束和限制</h3>
       <ol>
-<<<<<<< HEAD
         <li>未获网城天创公司商业授权之前，不得将本软件用于商业用途（包括但不限于企业网站、经营性网站、以营利为目或实现盈利的网站）。购买商业授权请登录http://www.33hao.com参考相关说明，也可以致电+86-022-58306929了解详情。</li>
-=======
-        <li>未获网城天创公司商业授权之前，不得将本软件用于商业用途（包括但不限于企业网站、经营性网站、以营利为目或实现盈利的网站）。购买商业授权请登录http://www.yywxx.com参考相关说明，也可以致电+86-022-58306929了解详情。</li>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
         <li>不得对本软件或与之关联的商业授权进行出租、出售、抵押或发放子许可证。</li>
         <li>无论用途如何、是否经过修改或美化、修改程度如何，只要使用ShopNC【B2B2C】电商系统的整体或任何部分，未经授权许可，页面页脚处的ShopNC【B2B2C】电商系统的版权信息都必须保留，而不能清除或修改。</li>
         <li>禁止在ShopNC【B2B2C】电商系统的整体或任何部分基础上以发展任何派生版本、修改版本或第三方版本用于重新分发。</li>
@@ -65,11 +57,7 @@
   <div class="btn-box"><a href="index.php?step=1" class="btn btn-primary">同意协议进入安装</a><a href="javascript:window.close()" class="btn">不同意</a></div>
 </div>
 <div class="footer">
-<<<<<<< HEAD
  <h6><a href="http://www.33hao.com" target="_blank">程序来源于 bbs.33hao.com</a></h6>
-=======
- <h6><a href="http://www.yywxx.com" target="_blank">程序来源于 bbs.yywxx.com</a></h6>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 </div>
 <script type="text/javascript">
 $(document).ready(function(){

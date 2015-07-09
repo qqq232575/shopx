@@ -4,11 +4,7 @@
  *
  *  by 33 hao .com v3
  */
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class performControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

@@ -5,20 +5,11 @@
  *
  *
  *
-<<<<<<< HEAD
  * by 33hao.com 好商城V3 运营版
-=======
- * by yywxx.com shopx 运营版
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  */
 
-//use Shopnc\Tpl;
 
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class member_orderControl extends mobileMemberControl {
 
@@ -74,23 +65,7 @@ class member_orderControl extends mobileMemberControl {
 
         $page_count = $model_order->gettotalpage();
 
-        $array_data = array('order_group_list' => $new_order_group_list);
-        if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
-            $model_mb_payment = Model('mb_payment');
-
-            $payment_list = $model_mb_payment->getMbPaymentOpenList();
-            $payment_array = array();
-            if(!empty($payment_list)) {
-                foreach ($payment_list as $value) {
-                    $payment_array[] = array('payment_code' => $value['payment_code'],'payment_name' =>$value['payment_name']);
-                }
-            }
-            $array_data['payment_list'] = $payment_array;
-        }
-
-
-        //output_data(array('order_group_list' => $array_data), mobile_page($page_count));
-        output_data($array_data, mobile_page($page_count));
+        output_data(array('order_group_list' => $new_order_group_list), mobile_page($page_count));
     }
 
     /**

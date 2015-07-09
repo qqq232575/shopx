@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['shareset_list_tip'] 		= '開啟並設置以下介面配置信息後，SNS分享店舖和商品信息功能中將可以使用站外分享信息功能';
 $lang['shareset_list_appname'] 		= '應用名稱';
 $lang['shareset_list_appurl'] 		= '網址';

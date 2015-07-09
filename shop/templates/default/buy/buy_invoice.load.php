@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <ul>
   <?php foreach($output['inv_list'] as $k=>$val){ ?>
   <li class="inv_item <?php echo $k == 0 ? 'ncc-selected-item' : null; ?>">

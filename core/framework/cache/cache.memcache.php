@@ -1,15 +1,9 @@
 <?php
 /**
  * memcache 操作
-<<<<<<< HEAD
  * 好商城V3 www.33hao.com 专业团队 提供售后服务务
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
- * shopx www.yywxx.com 专业团队 提供售后服务务
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 class CacheMemcache extends Cache {
 	/**

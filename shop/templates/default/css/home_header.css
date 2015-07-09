@@ -165,12 +165,8 @@
 .nch-breadcrumb i { font-size: 14px; color: #AAA; margin-right: 4px;}
 .nch-breadcrumb span.arrow { font-family: "宋体"; line-height: 20px; color: #AAA; margin: 0 6px;}
 .nch-breadcrumb a { color: #777; display: block; }
-<<<<<<< HEAD
 .nch-breadcrumb a:hover { color: #D93600;}
 
 /*顶部banner广告*/
 #top-banner { position:relative; display:none}
 #top-banner .close { position:absolute; right:8px; top:5px;background: url(../images/close.gif) no-repeat; width:35px; height:12px; display:block}
-=======
-.nch-breadcrumb a:hover { color: #D93600;}
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1

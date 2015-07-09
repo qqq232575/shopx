@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 defined('InShopNC') or exit('Access Invalid!');
-=======
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 /**
  * 欢迎页面
  */
@@ -62,11 +58,7 @@ $lang['dashboard_aboutus_designer']		= '设计师';
 $lang['dashboard_aboutus_designer_name']	= '本仙一死';
 $lang['dashboard_aboutus_near_us']		= '关于我们';
 $lang['dashboard_aboutus_bbs']			= '官方论坛';
-<<<<<<< HEAD
 $lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流好商城的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让ShopNC变得更好更加适合您';
-=======
-$lang['dashboard_aboutus_bbs_tip']		= '您可以在此交流shopx的使用心得，获得帮助，扩展等，您也可以在此给我们献言献策，让ShopNC变得更好更加适合您';
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 $lang['dashboard_aboutus_website']		= '官方网站';
 $lang['dashboard_aboutus_website_tip']	= '您可以在此获知好商城的最新动态，获得个性化的服务或获取我们的联系方式';
 $lang['dashboard_aboutus_thanks']		= '感谢有您';

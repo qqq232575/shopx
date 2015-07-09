@@ -19,11 +19,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <?php echo $html_header;?>
 <div class="main">
   <div class="step-box" id="step1">

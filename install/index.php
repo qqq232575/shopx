@@ -1,21 +1,13 @@
 <?php
 /**
  *
-<<<<<<< HEAD
  * 好商城V3 instller
-=======
- * shopx instller
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
  *
  *
  */
  error_reporting (0);
  
-<<<<<<< HEAD
 define('InShopNC',true);
-=======
-define('IN_OS',true);
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 // 设置最大执行时间
 set_time_limit(0);
@@ -50,21 +42,13 @@ if (file_exists('lock') && $_GET['step'] != 5){
 
 //define variable
 
-<<<<<<< HEAD
 $html_title = '33hao.com 好商城V3 最新版 安装程序';
-=======
-$html_title = 'yywxx.com shopx 最新版 安装程序';
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 $html_header = <<<EOF
 <div class="header">
   <div class="layout">
     <div class="title">
-<<<<<<< HEAD
       <h5>33hao.com 好商城V3 最新版 安装程序</h5>
-=======
-      <h5>yywxx.com shopx 最新版 安装程序</h5>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
       <h2>系统安装向导</h2>
     </div>
     <div class="version">版本: 2015.2</div>
@@ -75,11 +59,7 @@ EOF;
 
 $html_footer = <<<EOF
 <div class="footer">
-<<<<<<< HEAD
   <h6><a href="http://www.33hao.com" target="_blank">程序来源于 bbs.33hao.com</a></h6>
-=======
-  <h6><a href="http://www.yywxx.com" target="_blank">程序来源于 bbs.yywxx.com</a></h6>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 </div>
 EOF;
 

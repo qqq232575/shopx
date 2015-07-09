@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <style type="text/css">
 .goods-guess-like { border: solid 1px #EEE; margin: 0 auto 20px auto;}
 .goods-guess-like .title {  font: bold 14px/20px "microsoft yahei"; color: #666; padding: 8px 19px; border-bottom: solid 1px #EEE;}

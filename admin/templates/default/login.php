@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
-
-<div class="bg-dot"></div>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="login-layout">
   <div class="top">
     <h5><?php echo $lang['login_index_title_01'];?><em></em></h5>

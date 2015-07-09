@@ -1,6 +1,5 @@
 <?php
 /**
-<<<<<<< HEAD
 好商城V3 33hao.com 提供
 
 网址：www.33hao.com
@@ -9,16 +8,6 @@
 
  */
 defined('InShopNC') or exit('Access Invalid!');
-=======
-shopx yywxx.com 提供
-
-网址：www.yywxx.com
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
- */
-defined('IN_OS') or exit('Access Invalid!');
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 class flea_classControl extends SystemControl{
 	public function __construct(){
 		parent::__construct();

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!'); return array (
-=======
-<?php defined('IN_OS') or exit('Access Invalid!'); return array (
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'captcha_status_goodsqa' => '1',
   'captcha_status_login' => '1',
   'captcha_status_register' => '1',
@@ -25,19 +21,11 @@
   'flea_app_open' => '1',
   'flea_hot_search' => '男装,手机,笔记本,古董,奢侈品',
   'flea_isuse' => '1',
-<<<<<<< HEAD
   'flea_loginpic' => 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.33hao.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.33hao.com/";}}',
   'flea_site_description' => '好商城V3系统闲置市场',
   'flea_site_keywords' => '好商城V3系统闲置市场',
   'flea_site_name' => '好商城V3系统闲置市场',
   'flea_site_title' => '好商城V3系统闲置市场',
-=======
-  'flea_loginpic' => 'a:4:{i:1;a:2:{s:3:"pic";s:5:"flea_1.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:2;a:2:{s:3:"pic";s:5:"flea_2.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:3;a:2:{s:3:"pic";s:5:"flea_3.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:4;a:2:{s:3:"pic";s:5:"flea_4.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}i:5;a:2:{s:3:"pic";s:5:"flea_5.jpg";s:3:"url";s:22:"http://www.yywxx.com/";}}',
-  'flea_site_description' => 'shopx系统闲置市场',
-  'flea_site_keywords' => 'shopx系统闲置市场',
-  'flea_site_name' => 'shopx系统闲置市场',
-  'flea_site_title' => 'shopx系统闲置市场',
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'goods_verify' => '0',
   'groupbuy_allow' => '1',
   'groupbuy_price' => '10',
@@ -58,7 +46,6 @@
   'live_pic4' => '',
   'login_pic' => 'a:4:{i:0;s:5:"1.jpg";i:1;s:5:"2.jpg";i:2;s:5:"3.jpg";i:3;s:5:"4.jpg";}',
   'malbum_max_sum' => '200',
-<<<<<<< HEAD
   'md5_key' => 'b6f11b4a20236b2b7d15bca5730eb7b6',
   'member_grade' => 'a:4:{i:0;a:3:{s:5:"level";i:0;s:10:"level_name";s:2:"V0";s:9:"exppoints";i:0;}i:1;a:3:{s:5:"level";i:1;s:10:"level_name";s:2:"V1";s:9:"exppoints";i:1000;}i:2;a:3:{s:5:"level";i:2;s:10:"level_name";s:2:"V2";s:9:"exppoints";i:10000;}i:3;a:3:{s:5:"level";i:3;s:10:"level_name";s:2:"V3";s:9:"exppoints";i:20000;}}',
   'member_logo' => 'user_center.png',
@@ -66,24 +53,6 @@
   'mobile_apk_version' => '3.0.2',
   'mobile_app' => 'mb_app.png',
   'mobile_ios' => 'http://v3.33hao.com/v3.api',
-=======
-  'md5_key' => 'b30db883ec47a6d447727f8ce6e50cd2',
-  'member_grade' => 'a:4:{i:0;a:3:{s:5:"level";i:0;s:10:"level_name";s:2:"V0";s:9:"exppoints";i:0;}i:1;a:3:{s:5:"level";i:1;s:10:"level_name";s:2:"V1";s:9:"exppoints";i:1000;}i:2;a:3:{s:5:"level";i:2;s:10:"level_name";s:2:"V2";s:9:"exppoints";i:10000;}i:3;a:3:{s:5:"level";i:3;s:10:"level_name";s:2:"V3";s:9:"exppoints";i:20000;}}',
-  'member_logo' => 'user_center.png',
-  'microshop_goods_default_class' => '0',
-  'microshop_header_pic' => '',
-  'microshop_isuse' => '1',
-  'microshop_logo' => '',
-  'microshop_personal_limit' => '50',
-  'microshop_seo_description' => 'shopx,微商城,随心看,个人秀,店铺街',
-  'microshop_seo_keywords' => 'shopx,微商城,随心看,个人秀,店铺街,网上购物',
-  'microshop_store_banner' => '',
-  'microshop_style' => 'default',
-  'mobile_apk' => 'http://v3.yywxx.com/v3.apk',
-  'mobile_apk_version' => '3.0.2',
-  'mobile_app' => 'mb_app.png',
-  'mobile_ios' => 'http://v3.yywxx.com/v3.api',
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'mobile_isuse' => '1',
   'pointprod_isuse' => '1',
   'pointshop_isuse' => '1',
@@ -125,17 +94,10 @@
   'sina_wb_akey' => '',
   'sina_wb_skey' => '',
   'site_bank_account' => '银行:中国银行,币种:人民币,账号:xxxxxxxxxxx,姓名:XXX,开户行:中国银行XX分行',
-<<<<<<< HEAD
   'site_email' => 'abc@33hao.com',
   'site_logo' => 'logo.png',
   'site_logowx' => '04781087584534013.png',
   'site_name' => ' 33hao  v3',
-=======
-  'site_email' => 'abc@yywxx.com',
-  'site_logo' => 'logo.png',
-  'site_logowx' => '04781087584534013.png',
-  'site_name' => 'shopx',
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
   'site_phone' => '23456789,88997788',
   'site_status' => '1',
   'site_tel400' => '4008008000',

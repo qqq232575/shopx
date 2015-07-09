@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 <div class="page">
   <div class="fixed-bar">
     <div class="item-title">
@@ -32,11 +28,7 @@
         </th>
       </tr>
       <tr>
-<<<<<<< HEAD
         <td>33hao.com提醒：请仔细阅读以下各注意事项：<ul>
-=======
-        <td>yywxx.com提醒：请仔细阅读以下各注意事项：<ul>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
             <li>登录密码长度不能小于6</li>
             <li>会员名称，用于登录会员中心</li>
             <li>店主卖家账号，用于登录商家中心，可与店主账号不同</li>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-=======
-<?php defined('IN_OS') or exit('Access Invalid!');?>
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 
 <div class="page">
   <div class="fixed-bar">
@@ -80,11 +76,7 @@
             % </td>
           <td class="vatop tips">必须为0-100的整数</td>
         </tr>
-<<<<<<< HEAD
 	<!--v3-10 33hao.com-->
-=======
-	<!--v3-10 yywxx.com-->
->>>>>>> 467667b4415dab752ffe27b4111586efecff99c1
 	<tr>
           <td colspan="2" class="required"><label for="parent_id"><?php echo $lang['goods_class_add_sup_class'];?>:</label></td>
         </tr>
